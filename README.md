@@ -15,6 +15,7 @@ The following is required to build the `pokemon-ace-notes` website
 6. Serve a local version for development: `mkdocs serve`
 
 ## Contributing
+- [Create a new discussion](https://github.com/it-is-final/pokemon-ace-notes/discussions/)
 - [Create a new issue](https://github.com/it-is-final/pokemon-ace-notes/issues)
 - [Create a pull request](https://github.com/it-is-final/pokemon-ace-notes/pulls)
 
