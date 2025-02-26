@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+# pokemon-ace-notes
+A collection of tutorials and guides for arbitrary code execution (ACE) in the Pokémon generation III games.
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Resources
+- [ACE3 by E-Sh4rk](https://e-sh4rk.github.io/ACE3/): A collection of tutorials for advanced ACE in Pokémon Emerald version
+- [Sleipnir17's Pastebin](https://pastebin.com/u/Sleipnir17): A large collection of pre-made ACE codes for all of the Pokémon generation III games.
+- [E-Sh4rk's CodeGenerator](https://e-sh4rk.github.io/CodeGenerator/): A tool for creating ACE codes as well as containing a collection of configurable ACE codes.
+- [merrp's Pastebin](https://pastebin.com/u/merrp)
