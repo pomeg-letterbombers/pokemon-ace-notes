@@ -14,6 +14,15 @@ The following is required to build the `pokemon-ace-notes` website
 5. Install dependencies: `pip install -r requirements.txt`
 6. Serve a local version for development: `mkdocs serve`
 
+## Contributing
+- [Create a new issue](https://github.com/it-is-final/pokemon-ace-notes/issues)
+- [Create a pull request](https://github.com/it-is-final/pokemon-ace-notes/pulls)
+
 ## Useful references for contributors
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 - [MkDocs](https://www.mkdocs.org/)
+
+## Licence
+© Luong Truong and pokemon-ace-notes contributors 2025.
+The content of pokemon-ace-notes is licenced under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1), the licence can also be found in [LICENCE](LICENCE).
+Underlying source code used to display the content is licenced under the MIT licence, which can be found in [LICENCE-CODE](LICENCE-CODE).
