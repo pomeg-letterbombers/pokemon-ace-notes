@@ -19,5 +19,5 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
   - git-committers:
-    repository: it-is-final/pokemon-ace-notes
-    branch: main
+      repository: it-is-final/pokemon-ace-notes
+      branch: main
