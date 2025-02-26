@@ -13,3 +13,7 @@ markdown_extensions:
   - pymdownx.superfences
 theme:
   name: material
+  features:
+    - content.code.annotate
+plugins:
+  - git-authors
