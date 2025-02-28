@@ -10,7 +10,7 @@ nav:
       - Box 14 exit code: frlg/exit-codes/box-14-exit.md
       - Exit code bootstrap: frlg/exit-codes/exit-code-bootstrap.md
     - Complex payloads:
-      - Hex writer: frlg/complex-payloads/index.md
+      - Hexwriter: frlg/complex-payloads/hex-writer.md
 
 markdown_extensions:
   - tables
