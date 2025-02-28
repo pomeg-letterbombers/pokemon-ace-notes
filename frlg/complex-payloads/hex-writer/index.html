@@ -1,0 +1,1534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://it-is-final.github.io/pokemon-ace-notes/frlg/complex-payloads/hex-writer/">
+      
+      
+        <link rel="prev" href="../../exit-codes/exit-code-bootstrap/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Hexwriter - pokemon-ace-notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frlg-hexwriter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="pokemon-ace-notes" class="md-header__button md-logo" aria-label="pokemon-ace-notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pokemon-ace-notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hexwriter
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/it-is-final/pokemon-ace-notes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pokemon-ace-notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="pokemon-ace-notes" class="md-nav__button md-logo" aria-label="pokemon-ace-notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    pokemon-ace-notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/it-is-final/pokemon-ace-notes/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pokemon-ace-notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    FireRed/LeafGreen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            FireRed/LeafGreen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exit codes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Exit codes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exit-codes/box-14-exit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Box 14 exit code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exit-codes/exit-code-bootstrap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exit code bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Complex payloads
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Complex payloads
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hexwriter
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Hexwriter
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preamble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preamble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-exit-of-the-hexwriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing the exit of the hexwriter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-these-codes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How these codes work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How these codes work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mail-corruption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mail corruption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#box-name-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Box name codes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Box name codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-and-acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Acknowledgements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preamble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preamble
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-exit-of-the-hexwriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing the exit of the hexwriter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-these-codes-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How these codes work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How these codes work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mail-corruption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mail corruption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#box-name-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Box name codes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Box name codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code 6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-and-acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      References and Acknowledgements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="frlg-hexwriter">FR/LG Hexwriter</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This guide is only for US/European versions of Pokémon FireRed/Leafgreen.
+A Japanese version will be made, but it will take some time.</p>
+</div>
+<h2 id="preamble">Preamble</h2>
+<p>Recently there has been efforts to simplify the writing of the hexadecimal writer (hexwriter) with the 'advent' of mail corruption.
+This is one of those efforts.</p>
+<h2 id="prequisites">Prequisites</h2>
+<ul>
+<li>Game Boy Advance console or a highly-accurate emulator (like mGBA 0.9.0+)</li>
+<li>These codes do not work if the <code>PC</code> register is aligned, e.g. executing ACE through an inaccurate emulator</li>
+<li>If you are not using 0x351, check that the glitch Pokémon that you are using has bit 1 of its entrypoint set.
+     If it is not set, that means it executes with an aligned <code>PC</code> register and you must use a different Pokémon</li>
+<li>Knowledge on how to perform mail corruption and grab ACE</li>
+<li>The box 14 exit code, the name of box 14 should be <code>Foì</code><ul>
+<li>This specific set-up does not require any bootstrap if you are writing box name codes only</li>
+<li>Instructions on how to write this can be found <a href="../../exit-codes/box-14-exit/">here</a></li>
+</ul>
+</li>
+<li>The exit code bootstrap.<ul>
+<li>This is technically not necessary for the box name codes and can be created after the creation of the hexwriter</li>
+<li>This will allow the hexwriter to exit properly via <code>r0</code></li>
+<li>Instructions on how to create this can be found <a href="../../exit-codes/box-14-exit/">here</a></li>
+</ul>
+</li>
+<li>Snorlax and Omanyte has been seen on the save file</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These mail words will be different if your game's language is not English, consult Bulbapedia for a translation.</p>
+</div>
+<p>Make sure that Box 3, Slot 1 is empty then give the last party member mail and write the following message to the mail:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">ENG</label><label for="__tabbed_1_2">FRA</label><label for="__tabbed_1_3">ITA</label><label for="__tabbed_1_4">GER</label><label for="__tabbed_1_5">SPA</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>OMANYTE      SNORLAX
+LISTEN       ???
+THICK FAT    MINUS
+PICKUP       MARVEL SCALE
+LIKELY TO
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>AMONITA      RONFLEX
+QUELQU&#39;UN    ???
+ISOGRAISSE   MINUS
+RAMASSAGE    ECAILLE SPE.
+TU VAS
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>OMANYTE      SNORLAX
+DI           ???
+GRASSOSPESSO MENO
+RACCOLTA     PELLEDURA
+AVETE
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>AMONITAS     RELAXO
+ZUHÖREN      ???
+SPECKSCHICHT MINUS
+MITNAHME     NOTSCHUTZ
+VERMUTLICH
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>OMANYTE      SNORLAX
+A            ???
+SEBO         MENOS
+RECOGIDA     ESCAMA ESP.
+VER
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>A bad egg should appear in Box 3, Slot 1, move this to Box 10, Slot 2.</p>
+<p>Then write and then execute the following box names:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">ENG/ITA/SPA</label><label for="__tabbed_2_2">FRA</label><label for="__tabbed_2_3">GER</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>### CODE 1 ###
+Box  1: C C U n 7 T … o [CCUn7T…o]
+Box  2: _ _ _ 7 F Q q _ [   7FQq ]
+Box  3: _ _ n F … o _ _ [  nF…o  ]
+Box  4: _ 9 F Q q _ _ _ [ 9FQq   ]
+Box  5: t R … o , F ? n [tR…o,F?n]
+Box  6: _ _ _ C P Q m _ [   CPQm ]
+Box  7: _ _ o F … o _ _ [  oF…o  ]
+Box  8: _ ” F Q q _ _ _ [ ”FQq   ]
+Box  9: F F … o ’ F Q q [FF…o’FQq]
+Box 10: _ _ _ N G … o _ [   NG…o ]
+Box 11: _ _ ♀ F w q _ _ [  ♀Fwq  ]
+Box 12: _ s R … o _ _ _ [ sR…o   ]
+Box 13: d F ? n ‘ F Q m [dF?n‘FQm]
+
+### CODE 2 ###
+Box  1: C C U n W M … o [CCUnWM…o]
+Box  2: _ _ _ k J ? n _ [   kJ?n ]
+Box  3: _ _ W P ? n _ _ [  WP?n  ]
+Box  4: _ “ F ? n _ _ _ [ “F?n   ]
+Box  5: A F ! q P K … o [AF!qPK…o]
+Box  6: _ _ _ t P ? n _ [   tP?n ]
+Box  7: _ _ 0 Q ? n _ _ [  0Q?n  ]
+Box  8: _ G T ? n _ _ _ [ GT?n   ]
+Box  9: – R ! s H K … o [–R!sHK…o]
+Box 10: _ _ _ ” H ? n _ [   ”H?n ]
+Box 11: _ _ z R ? n _ _ [  zR?n  ]
+Box 12: _ J R ? n _ _ _ [ JR?n   ]
+Box 13: – R ! s _ _ _ _ [–R!s    ]
+
+### CODE 3 ###
+Box  1: C C U n z K … o [CCUnzK…o]
+Box  2: _ _ _ 0 L ? n _ [   0L?n ]
+Box  3: _ _ Q P ? n _ _ [  QP?n  ]
+Box  4: _ M F ! q _ _ _ [ MF!q   ]
+Box  5: 1 H l o I M ? n [1HloIM?n]
+Box  6: _ _ _ l P ? n _ [   lP?n ]
+Box  7: _ _ F H ? n _ _ [  FH?n  ]
+Box  8: _ – R ! s _ _ _ [ –R!s   ]
+Box  9: L I … o R M R n [LI…oRMRn]
+Box 10: _ _ _ Z Q R n _ [   ZQRn ]
+Box 11: _ _ – R ! s _ _ [  –R!s  ]
+Box 12: _ _ _ _ … _ _ _ [    …   ]
+Box 13: _ _ _ … _ _ _ _ [   …    ]
+
+### CODE 4 ###
+Box  1: C C U n G H … o [CCUnGH…o]
+Box  2: _ _ _ t M ? n _ [   tM?n ]
+Box  3: _ _ . R ? n _ _ [  .R?n  ]
+Box  4: _ C U ? n _ _ _ [ CU?n   ]
+Box  5: Y F ! q N I l o [YF!qNIlo]
+Box  6: _ _ _ Y M ? n _ [   YM?n ]
+Box  7: _ _ l P ? n _ _ [  lP?n  ]
+Box  8: _ … H ? n _ _ _ [ …H?n   ]
+Box  9: – R ! s P K … o [–R!sPK…o]
+Box 10: _ _ _ 6 P ? n _ [   6P?n ]
+Box 11: _ _ C S ? n _ _ [  CS?n  ]
+Box 12: _ G F ? n _ _ _ [ GF?n   ]
+Box 13: – R ! s _ _ _ _ [–R!s    ]
+
+### CODE 5 ###
+Box  1: C C U n , I l o [CCUn,Ilo]
+Box  2: _ _ _ q M ? n _ [   qM?n ]
+Box  3: _ _ P P ? n _ _ [  PP?n  ]
+Box  4: _ F I ? n _ _ _ [ FI?n   ]
+Box  5: k F ! q X H … o [kF!qXH…o]
+Box  6: _ _ _ 1 M ? n _ [   1M?n ]
+Box  7: _ _ x R ? n _ _ [  xR?n  ]
+Box  8: _ 0 R ? n _ _ _ [ 0R?n   ]
+Box  9: C U ? n – R ! s [CU?n–R!s]
+Box 10: _ _ _ 4 J l o _ [   4Jlo ]
+Box 11: _ _ 0 I ? n _ _ [  0I?n  ]
+Box 12: _ k M ? n _ _ _ [ kM?n   ]
+Box 13: e P ? n – R ! s [eP?n–R!s]
+
+### CODE 6 ###
+Box  1: C C U n N I l o [CCUnNIlo]
+Box  2: _ _ _ b M ? n _ [   bM?n ]
+Box  3: _ _ c R ? n _ _ [  cR?n  ]
+Box  4: _ 2 S ? n _ _ _ [ 2S?n   ]
+Box  5: H F ? n w F ! q [HF?nwF!q]
+Box  6: _ _ _ l K … o _ [   lK…o ]
+Box  7: _ _ 1 L ? n _ _ [  1L?n  ]
+Box  8: _ E O ? n _ _ _ [ EO?n   ]
+Box  9: G S ? n – R ! s [GS?n–R!s]
+Box 10: _ _ _ m F l o _ [   mFlo ]
+Box 11: _ _ y L R o _ _ [  yLRo  ]
+Box 12: _ m H R o _ _ _ [ mHRo   ]
+Box 13: _ H ? n – R ! s [ H?n–R!s]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>### CODE 1 ###
+Box  1: C C U n 7 T … o [CCUn7T…o]
+Box  2: _ _ _ 7 F Q q _ [   7FQq ]
+Box  3: _ _ n F … o _ _ [  nF…o  ]
+Box  4: _ 9 F Q q _ _ _ [ 9FQq   ]
+Box  5: t R … o , F ? n [tR…o,F?n]
+Box  6: _ _ _ C P Q m _ [   CPQm ]
+Box  7: _ _ o F … o _ _ [  oF…o  ]
+Box  8: _ » F Q q _ _ _ [ »FQq   ]
+Box  9: F F … o ’ F Q q [FF…o’FQq]
+Box 10: _ _ _ N G … o _ [   NG…o ]
+Box 11: _ _ ♀ F w q _ _ [  ♀Fwq  ]
+Box 12: _ s R … o _ _ _ [ sR…o   ]
+Box 13: d F ? n ‘ F Q m [dF?n‘FQm]
+
+### CODE 2 ###
+Box  1: C C U n W M … o [CCUnWM…o]
+Box  2: _ _ _ k J ? n _ [   kJ?n ]
+Box  3: _ _ W P ? n _ _ [  WP?n  ]
+Box  4: _ « F ? n _ _ _ [ «F?n   ]
+Box  5: A F ! q P K … o [AF!qPK…o]
+Box  6: _ _ _ t P ? n _ [   tP?n ]
+Box  7: _ _ 0 Q ? n _ _ [  0Q?n  ]
+Box  8: _ G T ? n _ _ _ [ GT?n   ]
+Box  9: – R ! s H K … o [–R!sHK…o]
+Box 10: _ _ _ » H ? n _ [   »H?n ]
+Box 11: _ _ z R ? n _ _ [  zR?n  ]
+Box 12: _ J R ? n _ _ _ [ JR?n   ]
+Box 13: – R ! s _ _ _ _ [–R!s    ]
+
+### CODE 3 ###
+Box  1: C C U n z K … o [CCUnzK…o]
+Box  2: _ _ _ 0 L ? n _ [   0L?n ]
+Box  3: _ _ Q P ? n _ _ [  QP?n  ]
+Box  4: _ M F ! q _ _ _ [ MF!q   ]
+Box  5: 1 H l o I M ? n [1HloIM?n]
+Box  6: _ _ _ l P ? n _ [   lP?n ]
+Box  7: _ _ F H ? n _ _ [  FH?n  ]
+Box  8: _ – R ! s _ _ _ [ –R!s   ]
+Box  9: L I … o R M R n [LI…oRMRn]
+Box 10: _ _ _ Z Q R n _ [   ZQRn ]
+Box 11: _ _ – R ! s _ _ [  –R!s  ]
+Box 12: _ _ _ _ … _ _ _ [    …   ]
+Box 13: _ _ _ … _ _ _ _ [   …    ]
+
+### CODE 4 ###
+Box  1: C C U n G H … o [CCUnGH…o]
+Box  2: _ _ _ t M ? n _ [   tM?n ]
+Box  3: _ _ . R ? n _ _ [  .R?n  ]
+Box  4: _ C U ? n _ _ _ [ CU?n   ]
+Box  5: Y F ! q N I l o [YF!qNIlo]
+Box  6: _ _ _ Y M ? n _ [   YM?n ]
+Box  7: _ _ l P ? n _ _ [  lP?n  ]
+Box  8: _ … H ? n _ _ _ [ …H?n   ]
+Box  9: – R ! s P K … o [–R!sPK…o]
+Box 10: _ _ _ 6 P ? n _ [   6P?n ]
+Box 11: _ _ C S ? n _ _ [  CS?n  ]
+Box 12: _ G F ? n _ _ _ [ GF?n   ]
+Box 13: – R ! s _ _ _ _ [–R!s    ]
+
+### CODE 5 ###
+Box  1: C C U n , I l o [CCUn,Ilo]
+Box  2: _ _ _ q M ? n _ [   qM?n ]
+Box  3: _ _ P P ? n _ _ [  PP?n  ]
+Box  4: _ F I ? n _ _ _ [ FI?n   ]
+Box  5: k F ! q X H … o [kF!qXH…o]
+Box  6: _ _ _ 1 M ? n _ [   1M?n ]
+Box  7: _ _ x R ? n _ _ [  xR?n  ]
+Box  8: _ 0 R ? n _ _ _ [ 0R?n   ]
+Box  9: C U ? n – R ! s [CU?n–R!s]
+Box 10: _ _ _ 4 J l o _ [   4Jlo ]
+Box 11: _ _ 0 I ? n _ _ [  0I?n  ]
+Box 12: _ k M ? n _ _ _ [ kM?n   ]
+Box 13: e P ? n – R ! s [eP?n–R!s]
+
+### CODE 6 ###
+Box  1: C C U n N I l o [CCUnNIlo]
+Box  2: _ _ _ b M ? n _ [   bM?n ]
+Box  3: _ _ c R ? n _ _ [  cR?n  ]
+Box  4: _ 2 S ? n _ _ _ [ 2S?n   ]
+Box  5: H F ? n w F ! q [HF?nwF!q]
+Box  6: _ _ _ l K … o _ [   lK…o ]
+Box  7: _ _ 1 L ? n _ _ [  1L?n  ]
+Box  8: _ E O ? n _ _ _ [ EO?n   ]
+Box  9: G S ? n – R ! s [GS?n–R!s]
+Box 10: _ _ _ m F l o _ [   mFlo ]
+Box 11: _ _ y L R o _ _ [  yLRo  ]
+Box 12: _ m H R o _ _ _ [ mHRo   ]
+Box 13: _ H ? n – R ! s [ H?n–R!s]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>### CODE 1 ###
+Box  1: C C U n 7 T … o [CCUn7T…o]
+Box  2: _ _ _ 7 F Q q _ [   7FQq ]
+Box  3: _ _ n F … o _ _ [  nF…o  ]
+Box  4: _ 9 F Q q _ _ _ [ 9FQq   ]
+Box  5: t R … o , F ? n [tR…o,F?n]
+Box  6: _ _ _ C P Q m _ [   CPQm ]
+Box  7: _ _ o F … o _ _ [  oF…o  ]
+Box  8: _ “ F Q q _ _ _ [ “FQq   ]
+Box  9: F F … o ’ F Q q [FF…o’FQq]
+Box 10: _ _ _ N G … o _ [   NG…o ]
+Box 11: _ _ ♀ F w q _ _ [  ♀Fwq  ]
+Box 12: _ s R … o _ _ _ [ sR…o   ]
+Box 13: d F ? n ‘ F Q m [dF?n‘FQm]
+
+### CODE 2 ###
+Box  1: C C U n W M … o [CCUnWM…o]
+Box  2: _ _ _ k J ? n _ [   kJ?n ]
+Box  3: _ _ W P ? n _ _ [  WP?n  ]
+Box  4: _ „ F ? n _ _ _ [ „F?n   ]
+Box  5: A F ! q P K … o [AF!qPK…o]
+Box  6: _ _ _ t P ? n _ [   tP?n ]
+Box  7: _ _ 0 Q ? n _ _ [  0Q?n  ]
+Box  8: _ G T ? n _ _ _ [ GT?n   ]
+Box  9: – R ! s H K … o [–R!sHK…o]
+Box 10: _ _ _ “ H ? n _ [   “H?n ]
+Box 11: _ _ ü R ? n _ _ [  üR?n  ]
+Box 12: _ B R ? n _ _ _ [ BR?n   ]
+Box 13: – R ! s _ _ _ _ [–R!s    ]
+
+### CODE 3 ###
+Box  1: C C U n z K … o [CCUnzK…o]
+Box  2: _ _ _ 0 L ? n _ [   0L?n ]
+Box  3: _ _ Q P ? n _ _ [  QP?n  ]
+Box  4: _ M F ! q _ _ _ [ MF!q   ]
+Box  5: 1 H l o I M ? n [1HloIM?n]
+Box  6: _ _ _ l P ? n _ [   lP?n ]
+Box  7: _ _ F H ? n _ _ [  FH?n  ]
+Box  8: _ – R ! s _ _ _ [ –R!s   ]
+Box  9: L I … o R M R n [LI…oRMRn]
+Box 10: _ _ _ Z Q R n _ [   ZQRn ]
+Box 11: _ _ – R ! s _ _ [  –R!s  ]
+Box 12: _ _ _ _ … _ _ _ [    …   ]
+Box 13: _ _ _ … _ _ _ _ [   …    ]
+
+### CODE 4 ###
+Box  1: C C U n G H … o [CCUnGH…o]
+Box  2: _ _ _ t M ? n _ [   tM?n ]
+Box  3: _ _ . R ? n _ _ [  .R?n  ]
+Box  4: _ C U ? n _ _ _ [ CU?n   ]
+Box  5: Y F ! q N I l o [YF!qNIlo]
+Box  6: _ _ _ Y M ? n _ [   YM?n ]
+Box  7: _ _ l P ? n _ _ [  lP?n  ]
+Box  8: _ … H ? n _ _ _ [ …H?n   ]
+Box  9: – R ! s P K … o [–R!sPK…o]
+Box 10: _ _ _ 8 P ? n _ [   8P?n ]
+Box 11: _ _ ü T ? n _ _ [  üT?n  ]
+Box 12: _ 0 F ? n _ _ _ [ 0F?n   ]
+Box 13: – R ! s _ _ _ _ [–R!s    ]
+
+### CODE 5 ###
+Box  1: C C U n , I l o [CCUn,Ilo]
+Box  2: _ _ _ q M ? n _ [   qM?n ]
+Box  3: _ _ P P ? n _ _ [  PP?n  ]
+Box  4: _ F I ? n _ _ _ [ FI?n   ]
+Box  5: k F ! q Ö H … o [kF!qÖH…o]
+Box  6: _ _ _ 1 M ? n _ [   1M?n ]
+Box  7: _ _ z R ? n _ _ [  zR?n  ]
+Box  8: _ 0 R ? n _ _ _ [ 0R?n   ]
+Box  9: Ö F ? n – R ! s [ÖF?n–R!s]
+Box 10: _ _ _ 4 J l o _ [   4Jlo ]
+Box 11: _ _ 0 I ? n _ _ [  0I?n  ]
+Box 12: _ k M ? n _ _ _ [ kM?n   ]
+Box 13: e P ? n – R ! s [eP?n–R!s]
+
+### CODE 6 ###
+Box  1: C C U n b M … o [CCUnbM…o]
+Box  2: _ _ _ z H ? n _ [   zH?n ]
+Box  3: _ _ ü R ? n _ _ [  üR?n  ]
+Box  4: _ 6 T ? n _ _ _ [ 6T?n   ]
+Box  5: w F ! q l K … o [wF!qlK…o]
+Box  6: _ _ _ 1 L ? n _ [   1L?n ]
+Box  7: _ _ E O ? n _ _ [  EO?n  ]
+Box  8: _ G S ? n _ _ _ [ GS?n   ]
+Box  9: – R ! s m F l o [–R!smFlo]
+Box 10: _ _ _ y L R o _ [   yLRo ]
+Box 11: _ _ m H R o _ _ [  mHRo  ]
+Box 12: _ _ F ? n _ _ _ [  F?n   ]
+Box 13: – R ! s _ _ _ _ [–R!s    ]
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>The bad egg is now ready to be used as the hexwriter.
+Its hex data should be identical to the original version of the hexwriter (if you chose to enter the last code as is).
+Move this bad egg to Box 14, Slot 29 and execute ACE.
+Most likely whatever is written in the box names would be interpreted as a bad egg, however if you want certainty that the hexwriter is working properly, write the following names and execute ACE.</p>
+<div class="highlight"><pre><span></span><code>Box  1: F0 00 00 00
+Box  2: F0 00 00 00
+Box  3: BF AE CD DC
+Box  4: A5 E6 DF FF
+Box  5: 00 00 03 02
+Box  6: BF AE CD DC
+Box  7: A5 E6 DF 00
+Box  8: 53 00 00 00
+Box  9: 53 00 00 00
+Boxes 10-14: 00 00 00 00
+</code></pre></div>
+<p>A shiny male Farfetch’d named “E-Sh4rk” should appear in Box 14, Slot 28, and its OT should be “E-Sh4rk”.</p>
+<details class="info">
+<summary>Advanced details</summary>
+<ul>
+<li>The writing destination of the hexwriter can be changed by modifying the value of r12.
+  As long as the value of r12 is greater than or equal to 0x02000000, it will write to the value specified in r12.</li>
+<li>Replacing a byte with <code>␣␣</code> in a box name will skip writing a byte to the corresponding location.
+  The blank characters must be spaces!</li>
+<li>Skipping a whole box name of bytes can be done with any character followed by seven spaces</li>
+<li>Code 6 can be executed with part of the name of Box 12(GER)/13(ENG/FRA/ITA/SPA) changed from <code>␣ F ? n</code> to <code>l F ? n</code>.
+  This changes the exit opcode from <code>BX r0</code> to <code>BX lr</code>, this is largely kept for older FR/LG advanced ACE setups.</li>
+</ul>
+<p>Below is the hexadecimal data of the hexwriter bad egg:
+<div class="highlight"><pre><span></span><code>8A 80 8F E2 00 0E B8 E8
+02 04 5C E3 66 C0 4F 32
+09 10 D8 E7 B1 10 51 E2
+10 10 91 32 0B B2 81 50
+00 B0 9C 45 01 00 1A E3
+01 B0 CC 14 00 B0 A0 13
+07 00 5A E3 01 A0 8A 32
+00 A0 A0 23 01 90 89 22
+01 90 89 E2 7E 00 59 E3
+40 F0 4F 42 10 FF 2F E1
+</code></pre></div></p>
+</details>
+<h2 id="changing-the-exit-of-the-hexwriter">Changing the exit of the hexwriter</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.</p>
+</div>
+<p>These are some short codes that change the exit opcode of the hexwriter.
+Place the hexwriter back in Box 10, Slot 19 and execute one of these codes depending on the desired exit.</p>
+<p><strong>BX r0</strong>
+<div class="highlight"><pre><span></span><code>Box  1: B C U n 0 T … o [BCUn0T…o]
+Box  2: _ F o ‘ F Q q a [ Fo‘FQqa]
+Box  3: … o […o]
+</code></pre></div></p>
+<p><strong>BX lr</strong>
+<div class="highlight"><pre><span></span><code>Box  1: B C U n m F l o [BCUnmFlo]
+Box  2: _ F o ‘ F Q q a [ Fo‘FQqa]
+Box  3: … o […o]
+</code></pre></div></p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If the hexwriter is not working as expected, please refer to <a href="https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/#appendix-in-case-of-failure">this troubleshooting guide</a> for the hexwriter.</p>
+<h2 id="how-these-codes-work">How these codes work</h2>
+<p><div class="highlight"><pre><span></span><code>SBC r11, pc, #0x2F40
+</code></pre></div>
+This subtracts <code>0x2F40</code> from the <code>pc</code> register, and due to the instruction being <code>SBC</code> and the carry flag is unset, it also subtracts an extra <code>0x1</code> from the result.
+Since it is expected that the code will be executed using <code>0x351</code> where it executes in ARM mode with the <code>pc</code> register's bit 1 set to <code>1</code>, the result assigned to <code>r11</code> will be <code>0xA7</code> (167) bytes before the PID of Box 10, Slot 2.
+I have chosen an offset of <code>0xA7</code> as that it and (most) later offsets are writable using the European character set which allows storing using <code>STR r12, [r11, {offset}]!</code> and for the most part remove the need to waste an opcode incrementing <code>r11</code>.
+It also allowed <code>STRB</code> to be usable for writing part of the hexwriter as that is encoded similarly to <code>STR</code>.</p>
+<p><div class="highlight"><pre><span></span><code>STR r12, [r11, r14, LSR #25]! ; encoded as `E7ABCCAE`
+</code></pre></div>
+merrp is to be credited for using this trick to be able to increment <code>r11</code> using <code>STR</code> with what would be unwritable offsets thanks to the limitations of the European character set.
+Since <code>r14</code> is always initially a ROM address where the most significant byte of the address is usually <code>0x8</code>, if the value is shifted right by 25 bits, it will become <code>0x4</code>.
+This allows writing to the address stored in <code>r11</code> + <code>0x4</code> which is highly useful for the purposes of writing the hexwriter, as we do not need to waste more opcodes on writing half of each instruction then using <code>STRH</code> which takes up more space.
+However for FireRed and LeafGreen, since we have access to mail corruption, and it so happens that some of the halfwords are writable as mail words, we can still use <code>STRH</code> for those instructions where half of it is already written by mail corruption.</p>
+<p>From this, the codes are generally structured as the following:
+<div class="highlight"><pre><span></span><code>SBC r11, pc, #0x2F40
+MOVS r12, #{opcode_1} ?
+STR r12, [r11, #{offset}]!
+MOVS r12, #{opcode_2} ?
+STR r12, [r11, r14, LSR #25]!
+MOVS r12, #{opcode_3} ?
+STR r12, [r11, r14, LSR #25]!
+</code></pre></div>
+with some codes using different instructions due to either having a halfword already written with the mail corruption enabling us to use <code>STRH</code> and using <code>MOVS</code> with only half of the instruction as the immediate or having an unwritable offset.</p>
+<h3 id="mail-corruption">Mail corruption</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only the English words are shown, mostly to keep the documentation simple</p>
+</div>
+<p>The mail corruption allows directly writing halfwords that would have made the main code writing process longer.
+When choosing mail words to write, words that were available by default were chosen over unlockable words whenever possible.
+If the only word options are unlockable words then words that are likely to be unlocked in a regular playthrough of FR/LG are given priority over other unlockable words.
+Below is a table of words and their respective indexes written in the glitchy mail (an * means that byte was overwritten by a box name code):</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Index (hex)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OMANYTE</td>
+<td>2A8A</td>
+</tr>
+<tr>
+<td>SNORLAX</td>
+<td>2A8F</td>
+</tr>
+<tr>
+<td>LISTEN</td>
+<td>0E00</td>
+</tr>
+<tr>
+<td>THICK FAT</td>
+<td>0402</td>
+</tr>
+<tr>
+<td>MINUS</td>
+<td>045C</td>
+</tr>
+<tr>
+<td>PICKUP</td>
+<td>0466</td>
+</tr>
+<tr>
+<td>MARVEL SCALE</td>
+<td>044F</td>
+</tr>
+<tr>
+<td>LIKELY TO</td>
+<td>1009</td>
+</tr>
+</tbody>
+</table>
+<details class="question">
+<summary>What about mail word 4?</summary>
+<p>While there are candidates for mail word 4, the problem is that they are only unlockable after the postgame which complicates writing this hexwriter for players who have went for New Game+.
+For those who are curious, here are the candidates for mail slot 4.</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Index (hex)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCARY FACE / AZUMARILL</td>
+<td>**B8</td>
+</tr>
+</tbody>
+</table>
+<p>and here is box code 1 for those who have those words:
+<div class="highlight"><pre><span></span><code>Box  1: C C U n 7 T … o [CCUn7T…o]
+Box  2: _ _ _ 7 F Q q _ [   7FQq ]
+Box  3: _ _ n F … o _ _ [  nF…o  ]
+Box  4: _ 9 F Q q _ _ _ [ 9FQq   ]
+Box  5: t F … o – F Q q [tF…o–FQq]
+Box  6: _ _ _ o F … o _ [   oF…o ]
+Box  7: _ _ ” F Q q _ _ [  ”FQq  ]
+Box  8: _ F F … o _ _ _ [ FF…o   ]
+Box  9: ’ F Q q N G … o [’FQqNG…o]
+Box 10: _ _ _ ♀ F w q _ [   ♀Fwq ]
+Box 11: _ _ s R … o _ _ [  sR…o  ]
+Box 12: _ d F ? n _ _ _ [ dF?n   ]
+Box 13: ‘ F Q m _ _ _ _ [‘FQm    ]
+</code></pre></div></p>
+</details>
+<p>While some of these mail words do not exactly correspond to a halfword within the hexwriter, the least significant byte of the word index does.
+Code 1 overwrites the wrong upper halves of the mail halfwords, correcting the wrong data written initially.</p>
+<h3 id="box-name-codes">Box name codes</h3>
+<p>Below are the inputs to E-Sh4rk's CodeGenerator for each box name code along with the exact bytes that each code writes, and their starting offsets
+If you see * in the writes section, that means part of it was already written by mail corruption or variable according to the note attached</p>
+<h4 id="code-1">Code 1</h4>
+<p>Starting offset: 0x0 + 0xA7 = 0xA7
+<div class="highlight"><pre><span></span><code>@@ exit = &quot;Bootstrapped&quot;
+@@
+SBC r11, pc, #0x2F40 ; Box 10, Slot 4 - 0xC8
+MOVS r12, #0xA80 ; STRB ignores the upper 24 bits
+STRB r12, [r11, #0xA8]
+MOVS r12, #0xE2
+STRB r12, [r11, #0xAA]
+MOVS r12, #0xE800 ;
+ADC r12, r12, #0xB8 ; MOVS r12, #0xE8 if using mail word 4
+STRH r12, [r11, #0xAD] ; STRB r12, [r11, #0xAE] if using mail word 4
+MOVS r12, #0xE3
+STRB r12, [r11, #0xB2]
+MOVS r12, #0xC0
+STRB r12, [r11, #0xB4]
+MOVS r12, #0x32
+STRB r12, [r11, #0xB6]!
+MOVS r12, #0xE7D8 ?
+STRH r12, [r11, #0x3]
+</code></pre></div></p>
+<p>Writes:
+<div class="highlight"><pre><span></span><code>**80**E2
+****B8E8
+******E3
+**C0**32
+****D8E7
+</code></pre></div></p>
+<h4 id="code-2">Code 2</h4>
+<p>Starting offset: 0x14 + 0xA7 = 0xBB
+<div class="highlight"><pre><span></span><code>@@ exit = &quot;Bootstrapped&quot;
+@@
+SBC r11, pc, #0x2F40
+MOVS r12, #0xE25110B1 ?
+STR r12, [r11, #0xBB]!
+MOVS r12, #0x32911010 ?
+0xE7ABCCAE
+MOVS r12, #0x5081B20B ?
+0xE7ABCCAE
+</code></pre></div></p>
+<p>Writes:
+<div class="highlight"><pre><span></span><code>B11051E2
+10109132
+0BB28150
+</code></pre></div></p>
+<h4 id="code-3">Code 3</h4>
+<p>Starting offset: 0x20 + 0xA7 = 0xC7
+<div class="highlight"><pre><span></span><code>@@ exit = &quot;Bootstrapped&quot;
+@@
+SBC r11, pc, #0x2F40
+MOVS r12, #0x459CB000 ?
+STR r12, [r11, #0xC7]!
+MOVS r12, #0xE31A0001 ?
+0xE7ABCCAE
+MOVS r12, #0x14CCB001 ?
+0xE7ABCCAE
+</code></pre></div></p>
+<p>Writes:
+<div class="highlight"><pre><span></span><code>00B09C45
+01001AE3
+01B0CC14
+</code></pre></div></p>
+<h4 id="code-4">Code 4</h4>
+<p>Starting offset: 0x2C + 0xA7 = 0xD3
+<div class="highlight"><pre><span></span><code>@@ exit = &quot;Bootstrapped&quot;
+@@
+SBC r11, pc, #0x2F40
+MOVS r12, #0x13A0B000 ?
+STR r12, [r11, #0xD3]!
+MOVS r12, #0xE35A0007 ?
+0xE7ABCCAE
+MOVS r12, #0x328AA001 ?
+0xE7ABCCAE
+</code></pre></div></p>
+<p>Writes:
+<div class="highlight"><pre><span></span><code>00B0A013
+07005AE3
+01A08A32
+</code></pre></div></p>
+<h4 id="code-5">Code 5</h4>
+<p>Starting offset: 0x38 + 0xA7 = 0xDF
+<div class="highlight"><pre><span></span><code>@@ exit = &quot;Bootstrapped&quot;
+@@
+SBC r11, pc, #0x2F40
+MOVS r12, #0x23A0A000 ?
+STR r12, [r11, #0xDF]!
+MOVS r12, #0x22899001 ?
+0xE7ABCCAE
+MOVS r12, #0xE2899001 ?
+0xE7ABCCAE
+</code></pre></div></p>
+<p>Writes:
+<div class="highlight"><pre><span></span><code>00A0A023
+01908922
+019089E2
+</code></pre></div></p>
+<h4 id="code-6">Code 6</h4>
+<p>Starting offset: 0x44 + 0xA7 = 0xEB
+<div class="highlight"><pre><span></span><code>@@ exit = &quot;Bootstrapped&quot;
+@@
+SBC r11, pc, #0x2F40
+MOVS r12, #0xE359007E ?
+STR r12, [r11, #0xEB]!
+MOVS r12, #0x424FF040 ?
+0xE7ABCCAE
+; MOVS r12, #0xE12FFF10 ?
+MVN r12, #0xE1
+BIC r12, r12, #0xED00000
+BIC r12, r12, #0x1000000E ; r12 = E12FFF10 BX r0
+ADC r12, r12, #0x0 ; #0xE for BX lr exit
+0xE7ABCCAE
+</code></pre></div></p>
+<p>Writes:
+<div class="highlight"><pre><span></span><code>7E0059E3
+40F04F42
+1*FF2FE1 # 0 if using `BX r0` exit E if using `BX lr` exit
+</code></pre></div></p>
+<h2 id="references-and-acknowledgements">References and Acknowledgements</h2>
+<ul>
+<li><a href="https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/">E-Sh4rk's original article for the hexwriter</a></li>
+<li><a href="https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778">Adrichu00's method of writing the hexwriter</a></li>
+<li>RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs</li>
+<li>merrp on the Glitch City Research Institute Discord for the <code>STR+4</code> opcode used in the codes.</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 28, 2025</span>
+  </span>
+
+    
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/it-is-final" class="md-author" title="@it-is-final">
+          
+          <img src="https://avatars.githubusercontent.com/u/52998298?v=4&size=72" alt="it-is-final">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">pokemon-ace-notes</span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
