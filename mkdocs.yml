@@ -23,6 +23,7 @@ theme:
   features:
     - content.code.annotate
   font:
+    text: Source Sans 3
     code: Source Code Pro
 plugins:
   - git-revision-date-localized:
