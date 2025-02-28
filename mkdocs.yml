@@ -27,6 +27,8 @@ theme:
   font:
     text: Source Sans 3
     code: Source Code Pro
+  palette:
+    primary: black
 plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
