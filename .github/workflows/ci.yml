@@ -26,7 +26,4 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2
-      - name: "Deploy mkdocs"
-        run: mkdocs gh-deploy --force
-        env:
-          MKDOCS_GIT_COMMITERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
+      - run: env MKDOCS_GIT_COMMITERS_APIKEY=${{ secrets.GITHUB_TOKEN }} mkdocs gh-deploy --force
