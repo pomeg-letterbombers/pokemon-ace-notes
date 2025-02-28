@@ -3,7 +3,7 @@ The purpose of this bootstrap is to allow more complex ACE payloads such as the 
 
 ## Prequisites
 - Prior knowledge on activating grab ACE
-- A box 14 exit code, the setup can be found [here](FRLG_GrabACE_ShortExit.md)
+- A box 14 exit code, the setup can be found [here](box-14-exit.md)
 
 ## How to create
 Make sure Box 10, Slot 19 is empty, then write and execute the following box name codes
@@ -118,7 +118,7 @@ This means the code worked, you do not need to keep the names of Boxes 2 and 3, 
 ## How it works
 The bootstrap sets `r0` to the address of the Thumb code contained within its data that contains the exit code instructions, that being an instruction that clears `r0` and an instruction that branches the `PC` back to the return address stored in `LR`.
 
-More details on how the grab ACE exit works can be found on the short exit guide’s [explanation](../box-14-exit/#explanation).
+More details on how the grab ACE exit works can be found on the short exit guide’s [explanation](../box-14-exit.md#explanation).
 
 The standard variant created by either the box names or the hexwriter is a shiny female Beedrill with name `Â␣␣nÔ␣␣v␣␣` and OT `␣î␣C␣␣␣`.
 

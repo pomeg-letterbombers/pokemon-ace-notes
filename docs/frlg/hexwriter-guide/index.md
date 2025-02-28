@@ -16,11 +16,11 @@ This is one of those efforts.
 - Knowledge on how to perform mail corruption and grab ACE
 - The box 14 exit code, the name of box 14 should be ` Foì`
     - This specific set-up does not require any bootstrap if you are writing box name codes only
-    - Instructions on how to write this can be found [here](ExitCodes/FRLG_GrabACE_ShortExit.md)
+    - Instructions on how to write this can be found [here](../exit-codes/box-14-exit.md)
 - The exit code bootstrap.
     - This is technically not necessary for the box name codes and can be created after the creation of the hexwriter
     - This will allow the hexwriter to exit properly via `r0`
-    - Instructions on how to create this can be found [here](ExitCodes/GrabACEBootstrap.md)
+    - Instructions on how to create this can be found [here](../exit-codes/box-14-exit.md)
 - Snorlax and Omanyte has been seen on the save file
 
 
@@ -369,56 +369,54 @@ Then write and then execute the following box names:
 
     ```
 
-!!! info
-    If you chose to set the exit of the hexwriter to `BX lr` you need to know of the following:
-    - More advanced setups such as the HeXecutor do not work as is
-    - You need a different exit code bootstrap that directly clears at least the least significant byte of `r0` in its data placed before the hexwriter, otherwise the hexwriter will not exit properly.
-
 The bad egg is now ready to be used as the hexwriter.
 Its hex data should be identical to the original version of the hexwriter (if you chose to enter the last code as is).
 Move this bad egg to Box 14, Slot 29 and execute ACE.
 Most likely whatever is written in the box names would be interpreted as a bad egg, however if you want certainty that the hexwriter is working properly, write the following names and execute ACE.
-```
-Box  1: 00000000
-Box  2: 00000000
-Box  3: C6E9D7DF
-Box  4: EDFFFFFF
-Box  5: FFFF0002
-Box  6: 00000000
-Box  7: 00000000
-Box  8: 71000000
-Box  9: 71000000
-Boxes 10-14: 00000000
-```
-A shiny Chansey named 'Lucky' should appear in Box 14, Slot 28.
 
-If you want to know what the hex data for the hexwriter is supposed to be, it is the following:
 ```
-8A808FE2
-000EB8E8
-02045CE3
-66C04F32
-0910D8E7
-B11051E2
-10109132
-0BB28150
-00B09C45
-01001AE3
-01B0CC14
-00B0A013
-07005AE3
-01A08A32
-00A0A023
-01908922
-019089E2
-7E0059E3
-40F04F42
-10FF2FE1
+Box  1: F0 00 00 00
+Box  2: F0 00 00 00
+Box  3: BF AE CD DC
+Box  4: A5 E6 DF FF
+Box  5: 00 00 03 02
+Box  6: BF AE CD DC
+Box  7: A5 E6 DF 00
+Box  8: 53 00 00 00
+Box  9: 53 00 00 00
+Boxes 10-14: 00 00 00 00
 ```
+
+A shiny male Farfetch’d named “E-Sh4rk” should appear in Box 14, Slot 28, and its OT should be “E-Sh4rk”.
+
+??? info "Advanced details"
+
+    - The writing destination of the hexwriter can be changed by modifying the value of r12.
+      As long as the value of r12 is greater than or equal to 0x02000000, it will write to the value specified in r12.
+    - Replacing a byte with `␣␣` in a box name will skip writing a byte to the corresponding location.
+      The blank characters must be spaces!
+    - Skipping a whole box name of bytes can be done with any character followed by seven spaces
+    - Code 6 can be executed with part of the name of Box 12(GER)/13(ENG/FRA/ITA/SPA) changed from `␣ F ? n` to `l F ? n`.
+      This changes the exit opcode from `BX r0` to `BX lr`, this is largely kept for older FR/LG advanced ACE setups.
+    
+    Below is the hexadecimal data of the hexwriter bad egg:
+    ```
+    8A 80 8F E2 00 0E B8 E8
+    02 04 5C E3 66 C0 4F 32
+    09 10 D8 E7 B1 10 51 E2
+    10 10 91 32 0B B2 81 50
+    00 B0 9C 45 01 00 1A E3
+    01 B0 CC 14 00 B0 A0 13
+    07 00 5A E3 01 A0 8A 32
+    00 A0 A0 23 01 90 89 22
+    01 90 89 E2 7E 00 59 E3
+    40 F0 4F 42 10 FF 2F E1
+    ```
 
 ## Changing the exit of the hexwriter
 !!! warning
     These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.
+
 These are some short codes that change the exit opcode of the hexwriter.
 Place the hexwriter back in Box 10, Slot 19 and execute one of these codes depending on the desired exit.
 
@@ -469,38 +467,54 @@ STR r12, [r11, r14, LSR #25]!
 with some codes using different instructions due to either having a halfword already written with the mail corruption enabling us to use `STRH` and using `MOVS` with only half of the instruction as the immediate or having an unwritable offset.
 
 ### Mail corruption
-The mail corruption allows directly writing halfwords that would have made the main code writing process longer.
-With the mail written at the start of the process, here is the index of each word we wrote (an * means that byte was overwritten by a box name code):
-|Word|Index (hex)|
-|-|-|
-|DREAM EATER / OMANYTE / GARDEVOIR|**8A|
-|SNORLAX / SKY ATTACK / METANG|**8F|
-|LISTEN|0E00|
-|THICK FAT|0402|
-|MINUS|**5C|
-|PICKUP|**66|
-|MARVEL SCALE|**4F|
-|LIKELY TO|1009|
 
-While there are candidates for mail word 4, the problem is that they are only unlockable after the postgame which complicates writing this hexwriter for players who have went for New Game+.
-For those who are curious, here are the candidates for mail slot 4.
-|SCARY FACE / AZUMARILL|**B8|
-and here is box code 1 for those who have those words:
-```
-Box  1: C C U n 7 T … o	[CCUn7T…o]
-Box  2: _ _ _ 7 F Q q _	[   7FQq ]
-Box  3: _ _ n F … o _ _	[  nF…o  ]
-Box  4: _ 9 F Q q _ _ _	[ 9FQq   ]
-Box  5: t F … o – F Q q	[tF…o–FQq]
-Box  6: _ _ _ o F … o _	[   oF…o ]
-Box  7: _ _ ” F Q q _ _	[  ”FQq  ]
-Box  8: _ F F … o _ _ _	[ FF…o   ]
-Box  9: ’ F Q q N G … o	[’FQqNG…o]
-Box 10: _ _ _ ♀ F w q _	[   ♀Fwq ]
-Box 11: _ _ s R … o _ _	[  sR…o  ]
-Box 12: _ d F ? n _ _ _	[ dF?n   ]
-Box 13: ‘ F Q m _ _ _ _	[‘FQm    ]
-```
+!!! note
+    Only the English words are shown, mostly to keep the documentation simple
+
+The mail corruption allows directly writing halfwords that would have made the main code writing process longer.
+When choosing mail words to write, words that were available by default were chosen over unlockable words whenever possible.
+If the only word options are unlockable words then words that are likely to be unlocked in a regular playthrough of FR/LG are given priority over other unlockable words.
+Below is a table of words and their respective indexes written in the glitchy mail (an * means that byte was overwritten by a box name code):
+
+| Word         | Index (hex) |
+| ------------ | ----------- |
+| OMANYTE      | 2A8A        |
+| SNORLAX      | 2A8F        |
+| LISTEN       | 0E00        |
+| THICK FAT    | 0402        |
+| MINUS        | 045C        |
+| PICKUP       | 0466        |
+| MARVEL SCALE | 044F        |
+| LIKELY TO    | 1009        |
+
+??? question "What about mail word 4?"
+
+    While there are candidates for mail word 4, the problem is that they are only unlockable after the postgame which complicates writing this hexwriter for players who have went for New Game+.
+    For those who are curious, here are the candidates for mail slot 4.
+
+    | Word                   | Index (hex) |
+    | ---------------------- | ----------- |
+    | SCARY FACE / AZUMARILL | \*\*B8      |
+
+    and here is box code 1 for those who have those words:
+    ```
+    Box  1: C C U n 7 T … o	[CCUn7T…o]
+    Box  2: _ _ _ 7 F Q q _	[   7FQq ]
+    Box  3: _ _ n F … o _ _	[  nF…o  ]
+    Box  4: _ 9 F Q q _ _ _	[ 9FQq   ]
+    Box  5: t F … o – F Q q	[tF…o–FQq]
+    Box  6: _ _ _ o F … o _	[   oF…o ]
+    Box  7: _ _ ” F Q q _ _	[  ”FQq  ]
+    Box  8: _ F F … o _ _ _	[ FF…o   ]
+    Box  9: ’ F Q q N G … o	[’FQqNG…o]
+    Box 10: _ _ _ ♀ F w q _	[   ♀Fwq ]
+    Box 11: _ _ s R … o _ _	[  sR…o  ]
+    Box 12: _ d F ? n _ _ _	[ dF?n   ]
+    Box 13: ‘ F Q m _ _ _ _	[‘FQm    ]
+    ```
+
+While some of these mail words do not exactly correspond to a halfword within the hexwriter, the least significant byte of the word index does.
+Code 1 overwrites the wrong upper halves of the mail halfwords, correcting the wrong data written initially.
 
 ### Box name codes
 Below are the inputs to E-Sh4rk's CodeGenerator for each box name code along with the exact bytes that each code writes, and their starting offsets
