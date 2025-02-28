@@ -274,6 +274,101 @@ Then write and then execute the following box names:
     Box 13: _ H ? n – R ! s	[ H?n–R!s]
     ```
 
+=== "GER"
+
+    ```
+    ### CODE 1 ###
+    Box  1: C C U n 7 T … o	[CCUn7T…o]
+    Box  2: _ _ _ 7 F Q q _	[   7FQq ]
+    Box  3: _ _ n F … o _ _	[  nF…o  ]
+    Box  4: _ 9 F Q q _ _ _	[ 9FQq   ]
+    Box  5: t R … o , F ? n	[tR…o,F?n]
+    Box  6: _ _ _ C P Q m _	[   CPQm ]
+    Box  7: _ _ o F … o _ _	[  oF…o  ]
+    Box  8: _ “ F Q q _ _ _	[ “FQq   ]
+    Box  9: F F … o ’ F Q q	[FF…o’FQq]
+    Box 10: _ _ _ N G … o _	[   NG…o ]
+    Box 11: _ _ ♀ F w q _ _	[  ♀Fwq  ]
+    Box 12: _ s R … o _ _ _	[ sR…o   ]
+    Box 13: d F ? n ‘ F Q m	[dF?n‘FQm]
+
+    ### CODE 2 ###
+    Box  1: C C U n W M … o	[CCUnWM…o]
+    Box  2: _ _ _ k J ? n _	[   kJ?n ]
+    Box  3: _ _ W P ? n _ _	[  WP?n  ]
+    Box  4: _ „ F ? n _ _ _	[ „F?n   ]
+    Box  5: A F ! q P K … o	[AF!qPK…o]
+    Box  6: _ _ _ t P ? n _	[   tP?n ]
+    Box  7: _ _ 0 Q ? n _ _	[  0Q?n  ]
+    Box  8: _ G T ? n _ _ _	[ GT?n   ]
+    Box  9: – R ! s H K … o	[–R!sHK…o]
+    Box 10: _ _ _ “ H ? n _	[   “H?n ]
+    Box 11: _ _ ü R ? n _ _	[  üR?n  ]
+    Box 12: _ B R ? n _ _ _	[ BR?n   ]
+    Box 13: – R ! s _ _ _ _	[–R!s    ]
+
+    ### CODE 3 ###
+    Box  1: C C U n z K … o	[CCUnzK…o]
+    Box  2: _ _ _ 0 L ? n _	[   0L?n ]
+    Box  3: _ _ Q P ? n _ _	[  QP?n  ]
+    Box  4: _ M F ! q _ _ _	[ MF!q   ]
+    Box  5: 1 H l o I M ? n	[1HloIM?n]
+    Box  6: _ _ _ l P ? n _	[   lP?n ]
+    Box  7: _ _ F H ? n _ _	[  FH?n  ]
+    Box  8: _ – R ! s _ _ _	[ –R!s   ]
+    Box  9: L I … o R M R n	[LI…oRMRn]
+    Box 10: _ _ _ Z Q R n _	[   ZQRn ]
+    Box 11: _ _ – R ! s _ _	[  –R!s  ]
+    Box 12: _ _ _ _ … _ _ _	[    …   ]
+    Box 13: _ _ _ … _ _ _ _	[   …    ]
+
+    ### CODE 4 ###
+    Box  1: C C U n G H … o	[CCUnGH…o]
+    Box  2: _ _ _ t M ? n _	[   tM?n ]
+    Box  3: _ _ . R ? n _ _	[  .R?n  ]
+    Box  4: _ C U ? n _ _ _	[ CU?n   ]
+    Box  5: Y F ! q N I l o	[YF!qNIlo]
+    Box  6: _ _ _ Y M ? n _	[   YM?n ]
+    Box  7: _ _ l P ? n _ _	[  lP?n  ]
+    Box  8: _ … H ? n _ _ _	[ …H?n   ]
+    Box  9: – R ! s P K … o	[–R!sPK…o]
+    Box 10: _ _ _ 8 P ? n _	[   8P?n ]
+    Box 11: _ _ ü T ? n _ _	[  üT?n  ]
+    Box 12: _ 0 F ? n _ _ _	[ 0F?n   ]
+    Box 13: – R ! s _ _ _ _	[–R!s    ]
+
+    ### CODE 5 ###
+    Box  1: C C U n , I l o	[CCUn,Ilo]
+    Box  2: _ _ _ q M ? n _	[   qM?n ]
+    Box  3: _ _ P P ? n _ _	[  PP?n  ]
+    Box  4: _ F I ? n _ _ _	[ FI?n   ]
+    Box  5: k F ! q Ö H … o	[kF!qÖH…o]
+    Box  6: _ _ _ 1 M ? n _	[   1M?n ]
+    Box  7: _ _ z R ? n _ _	[  zR?n  ]
+    Box  8: _ 0 R ? n _ _ _	[ 0R?n   ]
+    Box  9: Ö F ? n – R ! s	[ÖF?n–R!s]
+    Box 10: _ _ _ 4 J l o _	[   4Jlo ]
+    Box 11: _ _ 0 I ? n _ _	[  0I?n  ]
+    Box 12: _ k M ? n _ _ _	[ kM?n   ]
+    Box 13: e P ? n – R ! s	[eP?n–R!s]
+
+    ### CODE 6 ###
+    Box  1: C C U n b M … o	[CCUnbM…o]
+    Box  2: _ _ _ z H ? n _	[   zH?n ]
+    Box  3: _ _ ü R ? n _ _	[  üR?n  ]
+    Box  4: _ 6 T ? n _ _ _	[ 6T?n   ]
+    Box  5: w F ! q l K … o	[wF!qlK…o]
+    Box  6: _ _ _ 1 L ? n _	[   1L?n ]
+    Box  7: _ _ E O ? n _ _	[  EO?n  ]
+    Box  8: _ G S ? n _ _ _	[ GS?n   ]
+    Box  9: – R ! s m F l o	[–R!smFlo]
+    Box 10: _ _ _ y L R o _	[   yLRo ]
+    Box 11: _ _ m H R o _ _	[  mHRo  ]
+    Box 12: _ _ F ? n _ _ _	[  F?n   ]
+    Box 13: – R ! s _ _ _ _	[–R!s    ]
+
+    ```
+
 !!! info
     If you chose to set the exit of the hexwriter to `BX lr` you need to know of the following:
     - More advanced setups such as the HeXecutor do not work as is
