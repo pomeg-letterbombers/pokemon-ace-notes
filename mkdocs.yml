@@ -11,7 +11,6 @@ nav:
       - Exit code bootstrap: frlg/exit-codes/exit-code-bootstrap.md
     - Complex payloads:
       - Hexwriter: frlg/complex-payloads/hex-writer.md
-
 markdown_extensions:
   - tables
   - admonition
@@ -23,6 +22,9 @@ theme:
   name: material
   features:
     - content.code.annotate
+  font:
+    text: Source Sans 3
+    code: Source Code Pro
 plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
