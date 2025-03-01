@@ -435,7 +435,92 @@ Box  3: … o	[…o]
 ```
 
 ## Troubleshooting
-If the hexwriter is not working as expected, please refer to [this troubleshooting guide](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/#appendix-in-case-of-failure) for the hexwriter.
+
+=== "ENG/ITA/SPA"
+
+    ```
+    Box  1: x “ U n … F g m	[x“Un…Fgm]
+    Box  2: _ _ _ , G ? n _	[   ,G?n ]
+    Box  3: _ _ 3 G R n _ _	[  3GRn  ]
+    Box  4: _ … F Q m _ _ _	[ …FQm   ]
+    Box  5: 4 C U n F “ Q n	[4CUnF“Qn]
+    Box  6: _ _ _ A _ B m _	[   A Bm ]
+    Box  7: _ _ ” … h m _ _	[  ”…hm  ]
+    Box  8: _ _ … ! l _ _ _	[  …!l   ]
+    Box  9: X R U n / D R m	[XRUn/DRm]
+    Box 10: _ _ _ _ _ _ … _	[      … ]
+    Box 11: _ _ _ _ _ … _ _	[     …  ]
+    Box 12: _ _ _ _ … _ _ _	[    …   ]
+    Box 13: _ _ _ … _ _ _ _	[   …    ]
+    ```
+
+=== "FRA"
+
+    ```
+    Box  1: x « U n … F g m	[x«Un…Fgm]
+    Box  2: _ _ _ , G ? n _	[   ,G?n ]
+    Box  3: _ _ 3 G R n _ _	[  3GRn  ]
+    Box  4: _ … F Q m _ _ _	[ …FQm   ]
+    Box  5: 4 C U n F « Q n	[4CUnF«Qn]
+    Box  6: _ _ _ A _ B m _	[   A Bm ]
+    Box  7: _ _ » … h m _ _	[  »…hm  ]
+    Box  8: _ _ … ! l _ _ _	[  …!l   ]
+    Box  9: X R U n / D R m	[XRUn/DRm]
+    Box 10: _ _ _ _ _ _ … _	[      … ]
+    Box 11: _ _ _ _ _ … _ _	[     …  ]
+    Box 12: _ _ _ _ … _ _ _	[    …   ]
+    Box 13: _ _ _ … _ _ _ _	[   …    ]
+    ```
+
+=== "GER"
+
+    ```
+    Box  1: x „ U n … F g m	[x„Un…Fgm]
+    Box  2: _ _ _ , G ? n _	[   ,G?n ]
+    Box  3: _ _ 3 G R n _ _	[  3GRn  ]
+    Box  4: _ … F Q m _ _ _	[ …FQm   ]
+    Box  5: 4 C U n F „ Q n	[4CUnF„Qn]
+    Box  6: _ _ _ A _ B m _	[   A Bm ]
+    Box  7: _ _ “ … h m _ _	[  “…hm  ]
+    Box  8: _ _ … ! l _ _ _	[  …!l   ]
+    Box  9: X R U n / D R m	[XRUn/DRm]
+    Box 10: _ _ _ _ _ _ … _	[      … ]
+    Box 11: _ _ _ _ _ … _ _	[     …  ]
+    Box 12: _ _ _ _ … _ _ _	[    …   ]
+    Box 13: _ _ _ … _ _ _ _	[   …    ]
+    ```
+
+| No. | TID   |
+| --: | :---: |
+|   1 | 25369 |
+|   2 | 63160 |
+|   3 | 59230 |
+|   4 | 62133 |
+|   5 | 63457 |
+|   6 | 62210 |
+|   7 | 17057 |
+|   8 | 00652 |
+|   9 | 62876 |
+|  10 | 58139 |
+|  11 | 50381 |
+|  12 | 50080 |
+|  13 | 58209 |
+|  14 | 53899 |
+|  15 | 50080 |
+|  16 | 45706 |
+|  17 | 29322 |
+|  18 | 58327 |
+|  19 | 12943 |
+|  20 | 57407 |
+
+| Code No. | TID No.       |
+| -------: | :------------ |
+|        1 | 1, 2, 3, 4, 5 |
+|        2 | 6, 7, 8       |
+|        3 | 9, 10, 11     |
+|        4 | 12, 13, 14    |
+|        5 | 15, 16, 17    |
+|        6 | 18, 19, 20    |
 
 ## How these codes work
 ```
