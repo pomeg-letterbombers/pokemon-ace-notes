@@ -12,6 +12,8 @@ nav:
     - Complex payloads:
       - Hexwriter: frlg/complex-payloads/hex-writer.md
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - tables
   - admonition
   - pymdownx.details

@@ -435,7 +435,119 @@ Box  3: … o	[…o]
 ```
 
 ## Troubleshooting
-If the hexwriter is not working as expected, please refer to [this troubleshooting guide](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/#appendix-in-case-of-failure) for the hexwriter.
+!!! note
+    The troubleshooting code uses the Box 14 exit code.
+    If it has been renamed, please [restore the exit code](../exit-codes/box-14-exit.md) before proceeding further in this section.
+
+Refer to this section the hexwriter is not writing data or causes a crash upon execution.
+Place the wrong hexwriter back in Box 10, Slot 19, then write the following box names.
+
+=== "ENG/ITA/SPA"
+
+    ```
+    Box  1: x “ U n … F g m	[x“Un…Fgm]
+    Box  2: _ _ _ , G ? n _	[   ,G?n ]
+    Box  3: _ _ 3 G R n _ _	[  3GRn  ]
+    Box  4: _ … F Q m _ _ _	[ …FQm   ]
+    Box  5: 4 C U n F “ Q n	[4CUnF“Qn]
+    Box  6: _ _ _ A _ B m _	[   A Bm ]
+    Box  7: _ _ ” … h m _ _	[  ”…hm  ]
+    Box  8: _ _ … ! l _ _ _	[  …!l   ]
+    Box  9: X R U n / D R m	[XRUn/DRm]
+    Box 10: _ _ _ _ _ _ … _	[      … ]
+    Box 11: _ _ _ _ _ … _ _	[     …  ]
+    Box 12: _ _ _ _ … _ _ _	[    …   ]
+    Box 13: _ _ _ … _ _ _ _	[   …    ]
+    ```
+
+=== "FRA"
+
+    ```
+    Box  1: x « U n … F g m	[x«Un…Fgm]
+    Box  2: _ _ _ , G ? n _	[   ,G?n ]
+    Box  3: _ _ 3 G R n _ _	[  3GRn  ]
+    Box  4: _ … F Q m _ _ _	[ …FQm   ]
+    Box  5: 4 C U n F « Q n	[4CUnF«Qn]
+    Box  6: _ _ _ A _ B m _	[   A Bm ]
+    Box  7: _ _ » … h m _ _	[  »…hm  ]
+    Box  8: _ _ … ! l _ _ _	[  …!l   ]
+    Box  9: X R U n / D R m	[XRUn/DRm]
+    Box 10: _ _ _ _ _ _ … _	[      … ]
+    Box 11: _ _ _ _ _ … _ _	[     …  ]
+    Box 12: _ _ _ _ … _ _ _	[    …   ]
+    Box 13: _ _ _ … _ _ _ _	[   …    ]
+    ```
+
+=== "GER"
+
+    ```
+    Box  1: x „ U n … F g m	[x„Un…Fgm]
+    Box  2: _ _ _ , G ? n _	[   ,G?n ]
+    Box  3: _ _ 3 G R n _ _	[  3GRn  ]
+    Box  4: _ … F Q m _ _ _	[ …FQm   ]
+    Box  5: 4 C U n F „ Q n	[4CUnF„Qn]
+    Box  6: _ _ _ A _ B m _	[   A Bm ]
+    Box  7: _ _ “ … h m _ _	[  “…hm  ]
+    Box  8: _ _ … ! l _ _ _	[  …!l   ]
+    Box  9: X R U n / D R m	[XRUn/DRm]
+    Box 10: _ _ _ _ _ _ … _	[      … ]
+    Box 11: _ _ _ _ _ … _ _	[     …  ]
+    Box 12: _ _ _ _ … _ _ _	[    …   ]
+    Box 13: _ _ _ … _ _ _ _	[   …    ]
+    ```
+
+Before executing this code please make sure that:
+
+- Box 14, Slot 30 is empty
+- You have saved the game beforehand, you will need a restoration point as this code will modify the TID
+
+Once you have that sorted, do the following steps:
+
+1. Execute the code
+2. View the trainer card afterwards
+3. The TID should change, check its value against the below table and note down whether they match
+4. Repeat this process 19 more times
+
+| No. | TID   |
+| --: | :---- |
+|   1 | 25369 |
+|   2 | 63160 |
+|   3 | 59230 |
+|   4 | 62133 |
+|   5 | 63457 |
+|   6 | 62210 |
+|   7 | 17057 |
+|   8 | 00652 |
+|   9 | 62876 |
+|  10 | 58139 |
+|  11 | 50381 |
+|  12 | 50080 |
+|  13 | 58209 |
+|  14 | 53899 |
+|  15 | 50080 |
+|  16 | 45706 |
+|  17 | 29322 |
+|  18 | 58327 |
+|  19 | 12943 |
+|  20 | 57407 |
+
+For `BX lr` exit, TID 20 should be 57241.
+
+Once you are done with checking the TIDs, restart the game back to the previous save, you do not need the modified TID anymore.
+For any TID number that does not match the above table, refer to the below table for the code to reexecute.
+Keep in mind the following:
+
+- If multiple erroneous TID numbers are covered by the same code number, that code number only needs to be reexecuted once.
+- Please note that the hexwriter bad egg **must** be in Box 10, Slot 2 when reexecuting these codes.
+
+| Code No. | TID No.       |
+| -------: | :------------ |
+|        1 | 1, 2, 3, 4, 5 |
+|        2 | 6, 7, 8       |
+|        3 | 9, 10, 11     |
+|        4 | 12, 13, 14    |
+|        5 | 15, 16, 17    |
+|        6 | 18, 19, 20    |
 
 ## How these codes work
 ```
