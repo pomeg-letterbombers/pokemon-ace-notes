@@ -435,6 +435,12 @@ Box  3: … o	[…o]
 ```
 
 ## Troubleshooting
+!!! note
+    The troubleshooting code uses the Box 14 exit code.
+    If it has been renamed, please [restore the exit code](../exit-codes/box-14-exit.md) before proceeding further in this section.
+
+Refer to this section the hexwriter is not writing data or causes a crash upon execution.
+Place the wrong hexwriter back in Box 10, Slot 19, then write the following box names.
 
 === "ENG/ITA/SPA"
 
@@ -490,6 +496,18 @@ Box  3: … o	[…o]
     Box 13: _ _ _ … _ _ _ _	[   …    ]
     ```
 
+Before executing this code please make sure that:
+
+- Box 14, Slot 30 is empty
+- You have saved the game beforehand, you will need a restoration point as this code will modify the TID
+
+Once you have that sorted, do the following steps:
+
+1. Execute the code
+2. View the trainer card afterwards
+3. The TID should change, check its value against the below table and note down whether they match
+4. Repeat this process 19 more times
+
 | No. | TID   |
 | --: | :---- |
 |   1 | 25369 |
@@ -512,6 +530,15 @@ Box  3: … o	[…o]
 |  18 | 58327 |
 |  19 | 12943 |
 |  20 | 57407 |
+
+For `BX lr` exit, TID 20 should be 57241.
+
+Once you are done with checking the TIDs, restart the game back to the previous save, you do not need the modified TID anymore.
+For any TID number that does not match the above table, refer to the below table for the code to reexecute.
+Keep in mind the following:
+
+- If multiple erroneous TID numbers are covered by the same code number, that code number only needs to be reexecuted once.
+- Please note that the hexwriter bad egg **must** be in Box 10, Slot 2 when reexecuting these codes.
 
 | Code No. | TID No.       |
 | -------: | :------------ |
