@@ -25,10 +25,6 @@ This is one of those efforts.
 
 
 ## Instructions
-!!! note
-    
-    These mail words will be different if your game's language is not English, consult Bulbapedia for a translation.
-
 Make sure that Box 3, Slot 1 is empty then give the last party member mail and write the following message to the mail:
 
 === "ENG"
@@ -418,7 +414,7 @@ A shiny male Farfetch’d named “E-Sh4rk” should appear in Box 14, Slot 28, 
     These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.
 
 These are some short codes that change the exit opcode of the hexwriter.
-Place the hexwriter back in Box 10, Slot 19 and execute one of these codes depending on the desired exit.
+Place the hexwriter back in Box 10, Slot 2 and execute one of these codes depending on the desired exit.
 
 **BX r0**
 ```
