@@ -439,7 +439,7 @@ Box 14: 74 09 00 00
 ```
 
 A bad egg should have appeared in Box 14, Slot 28.
-This bad egg can be placed anywhere, starting from the ACE entrypoint of your grab ACE Pokémon (in the case of 0x351, starting from Box 13, Slot 8).
+This bad egg can be placed anywhere, starting from the ACE entrypoint of your grab ACE Pokémon (in the case of 0x351, starting from Box 13, Slot 10).
 Please make sure you placed the crafting table bad egg at least 31 box slots before the exit code bootstrap.
 Otherwise the ACE will jump over the bootstrap and the hexwriter will not safely exit.
 
