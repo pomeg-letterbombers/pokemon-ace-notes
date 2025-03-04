@@ -414,9 +414,10 @@ However this will be solved by the payload you should write described in the nex
 
 ## Crafting table bad egg
 This bad egg does the following:
-    - It changes the destination address of the hexwriter to the first location containing 56 consecutive `00` bytes, starting from the box slot ahead of itself.
-    - After setting a destination address of the hexwriter, will cause a jump to a location 30 box slots after itself.
-      This defines a working area of 30 box slots to store work-in-progress payloads that will not be executed by ACE.
+
+- It changes the destination address of the hexwriter to the first location containing 56 consecutive `00` bytes, starting from the box slot ahead of itself.
+- After setting a destination address of the hexwriter, will cause a jump to a location 30 box slots after itself.
+    This defines a working area of 30 box slots to store work-in-progress payloads that will not be executed by ACE.
 
 To create this bad egg, write the following box names and execute the hexwriter.
 
