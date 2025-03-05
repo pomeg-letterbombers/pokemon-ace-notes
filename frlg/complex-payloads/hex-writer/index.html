@@ -444,9 +444,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#changing-the-exit-of-the-hexwriter" class="md-nav__link">
+  <a href="#crafting-table-bad-egg" class="md-nav__link">
     <span class="md-ellipsis">
-      Changing the exit of the hexwriter
+      Crafting table bad egg
     </span>
   </a>
   
@@ -456,6 +456,15 @@
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-exit-of-the-hexwriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing the exit of the hexwriter
     </span>
   </a>
   
@@ -641,9 +650,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#changing-the-exit-of-the-hexwriter" class="md-nav__link">
+  <a href="#crafting-table-bad-egg" class="md-nav__link">
     <span class="md-ellipsis">
-      Changing the exit of the hexwriter
+      Crafting table bad egg
     </span>
   </a>
   
@@ -653,6 +662,15 @@
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-the-exit-of-the-hexwriter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing the exit of the hexwriter
     </span>
   </a>
   
@@ -803,7 +821,7 @@ This is one of those efforts.</p>
 <li>The exit code bootstrap.<ul>
 <li>This is technically not necessary for the box name codes and can be created after the creation of the hexwriter</li>
 <li>This will allow the hexwriter to exit properly via <code>r0</code></li>
-<li>Instructions on how to create this can be found <a href="../../exit-codes/box-14-exit/">here</a></li>
+<li>Instructions on how to create this can be found <a href="../../exit-codes/exit-code-bootstrap/">here</a></li>
 </ul>
 </li>
 <li>Snorlax and Omanyte has been seen on the save file</li>
@@ -1176,23 +1194,80 @@ Boxes 10-14: 00 00 00 00
 40 F0 4F 42 10 FF 2F E1
 </code></pre></div></p>
 </details>
-<h2 id="changing-the-exit-of-the-hexwriter">Changing the exit of the hexwriter</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.</p>
-</div>
-<p>These are some short codes that change the exit opcode of the hexwriter.
-Place the hexwriter back in Box 10, Slot 2 and execute one of these codes depending on the desired exit.</p>
-<p><strong>BX r0</strong>
-<div class="highlight"><pre><span></span><code>Box  1: B C U n 0 T … o [BCUn0T…o]
-Box  2: _ F o ‘ F Q q a [ Fo‘FQqa]
-Box  3: … o […o]
-</code></pre></div></p>
-<p><strong>BX lr</strong>
-<div class="highlight"><pre><span></span><code>Box  1: B C U n m F l o [BCUnmFlo]
-Box  2: _ F o ‘ F Q q a [ Fo‘FQqa]
-Box  3: … o […o]
-</code></pre></div></p>
+<p>Please note that by default, the hexwriter can only write on the first 56 bytes of Box 14, Slot 28, as such it cannot write large payloads by itself.
+However this will be solved by the payload you should write described in the next section.</p>
+<h2 id="crafting-table-bad-egg">Crafting table bad egg</h2>
+<p>This bad egg does the following:</p>
+<ul>
+<li>It changes the destination address of the hexwriter to the first location containing 56 consecutive <code>00</code> bytes, starting from the box slot ahead of itself.</li>
+<li>After setting a destination address of the hexwriter, will cause a jump to a location 30 box slots after itself.
+    This defines a working area of 30 box slots to store work-in-progress payloads that will not be executed by ACE.</li>
+</ul>
+<p>To create this bad egg, write the following box names and execute the hexwriter.</p>
+<div class="highlight"><pre><span></span><code>Box  1: 46 C0 8F E2
+Box  2: 00 80 A0 E3
+Box  3: 08 90 9C E7
+Box  4: 04 80 88 E2
+Box  5: 00 00 00 FF
+Box  6: 00 00 59 E3
+Box  7: 08 C0 8C 10
+Box  8: 20 F0 4F 12
+Box  9: 38 00 58 E3
+Box 10: 00 00 00 FF
+Box 11: 28 F0 4F 32
+Box 12: 02 90 1F E5
+Box 13: 09 F0 8F E0
+Box 14: 74 09 00 00
+</code></pre></div>
+<p>A bad egg should have appeared in Box 14, Slot 28.
+This bad egg can be placed anywhere, starting from the ACE entrypoint of your grab ACE Pokémon (in the case of 0x351, starting from Box 13, Slot 10).
+Please make sure you placed the crafting table bad egg at least 31 box slots before the exit code bootstrap.
+Otherwise the ACE will jump over the bootstrap and the hexwriter will not safely exit.</p>
+<p>At this point, you have an easier way of writing arbitary data via the combination of both the hexwriter and the crafting table bad egg.
+However the crafting table modifies the CPSR status flags upon being executed.
+The standard box name codes rely on these status flags being unset (0), due to using instructions such as <code>ADC</code>/<code>SBC</code> as well as having certain filler instructions that may cause the game to behave unexpectedly if certain status flags are set.
+As such you will be creating a small payload that will unset all of the CPSR status flags, allowing regular box name codes to be executed without moving the crafting table, and hexwriter to a location before the ACE entrypoint.
+This also serves as a test to check if the crafting table is working correctly.</p>
+<p>Write the following box names, and execute the hexwriter:</p>
+<div class="highlight"><pre><span></span><code>Box  1: 00 B0 A0 E3
+Box  2: 01 B0 9B E2
+Box  3: 40 F0 8F E2
+Box  4: 00 00 00 00
+Box  5: 00 00 00 02
+Box  6: 00 00 00 00
+Box  7: 00 00 00 00
+Box  8: D0 0E 00 00
+Boxes 9-14: 00 00 00 00
+</code></pre></div>
+<p>A Bulbasaur holding a TM should appear in the box slot after the crafting table bad egg, place it at least 31 slots after the crafting table.</p>
+<p>If that does not happen, that means you have made a mistake in the creation of the crafting table.
+To correct this, move the crafting table back to Box 14, Slot 28, rewrite the crafting table creation code and try creating the Bulbasaur again.</p>
+<p>At this point in time, the recommended box setup is as follows:</p>
+<div class="highlight"><pre><span></span><code>BOX 13:
+
+-  -  -  -  -  -
+-  -  -  -  C  +
++  +  +  +  +  +
++  +  +  +  +  +
++  +  +  +  +  +
+
+BOX 14:
+
++  +  +  +  +  +
++  +  +  +  +  E
+-  -  -  -  -  B
+-  -  -  -  -  -
+-  -  -  -  W  -
+
+-: Empty slot
++: Crafting table area (will be skipped)
+C: Crafting table bad egg
+B: CPSR status reset (Bulbasaur)
+E: Exit code bootstrap
+W: Hexwriter
+</code></pre></div>
+<p>This particular box setup will prepare you for step 6 and later in <a href="https://gist.github.com/Theocatic/39ed337ecd590b47fad14f791cf16bb5">Theocatic’s scripting environment</a> where payloads for that ASE setup expect this particular box layout.</p>
+<p>If you want to execute standard box name codes with grab ACE again, move the hexwriter bad egg to somewhere within the crafting table area then execute the box name code as normal.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1397,6 +1472,23 @@ Keep in mind the following:</p>
 </tr>
 </tbody>
 </table>
+<h2 id="changing-the-exit-of-the-hexwriter">Changing the exit of the hexwriter</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.</p>
+</div>
+<p>These are some short codes that change the exit opcode of the hexwriter.
+Place the hexwriter back in Box 10, Slot 2 and execute one of these codes depending on the desired exit.</p>
+<p><strong>BX r0</strong>
+<div class="highlight"><pre><span></span><code>Box  1: B C U n 0 T … o [BCUn0T…o]
+Box  2: _ F o ‘ F Q q a [ Fo‘FQqa]
+Box  3: … o […o]
+</code></pre></div></p>
+<p><strong>BX lr</strong>
+<div class="highlight"><pre><span></span><code>Box  1: B C U n m F l o [BCUnmFlo]
+Box  2: _ F o ‘ F Q q a [ Fo‘FQqa]
+Box  3: … o […o]
+</code></pre></div></p>
 <h2 id="how-these-codes-work">How these codes work</h2>
 <p><div class="highlight"><pre><span></span><code>SBC r11, pc, #0x2F40
 </code></pre></div>
@@ -1629,7 +1721,7 @@ ADC r12, r12, #0x0 ; #0xE for BX lr exit
 </code></pre></div></p>
 <h2 id="references-and-acknowledgements">References and Acknowledgements</h2>
 <ul>
-<li><a href="https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/">E-Sh4rk's original article for the hexwriter</a></li>
+<li><a href="https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/">E-Sh4rk's original article for the hexwriter, crafting egg, and CPSR status reset</a></li>
 <li><a href="https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778">Adrichu00's method of writing the hexwriter</a></li>
 <li>RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs</li>
 <li>merrp on the Glitch City Research Institute Discord for the <code>STR+4</code> opcode used in the codes.</li>
@@ -1654,7 +1746,7 @@ ADC r12, r12, #0x0 ; #0xE for BX lr exit
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 5, 2025 23:35:01">March 5, 2025</span>
   </span>
 
     
