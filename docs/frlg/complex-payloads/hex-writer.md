@@ -495,7 +495,7 @@ E: Exit code bootstrap
 W: Hexwriter
 ```
 
-This particular box setup will prepare you for step 6 and later in [Theocatic’s arbitrary script execution (ASE) setup](https://gist.github.com/Theocatic/39ed337ecd590b47fad14f791cf16bb5) where payloads for that ASE setup expect this particular box layout.
+This particular box setup will prepare you for step 6 and later in [Theocatic’s scripting environment](https://gist.github.com/Theocatic/39ed337ecd590b47fad14f791cf16bb5) where payloads for that ASE setup expect this particular box layout.
 
 If you want to execute standard box name codes with grab ACE again, move the hexwriter bad egg to somewhere within the crafting table area then execute the box name code as normal.
 
