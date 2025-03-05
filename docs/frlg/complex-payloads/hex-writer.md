@@ -20,7 +20,7 @@ This is one of those efforts.
 - The exit code bootstrap.
     - This is technically not necessary for the box name codes and can be created after the creation of the hexwriter
     - This will allow the hexwriter to exit properly via `r0`
-    - Instructions on how to create this can be found [here](../exit-codes/box-14-exit.md)
+    - Instructions on how to create this can be found [here](../exit-codes/exit-code-bootstrap.md)
 - Snorlax and Omanyte has been seen on the save file
 
 
@@ -409,26 +409,95 @@ A shiny male Farfetch’d named “E-Sh4rk” should appear in Box 14, Slot 28, 
     40 F0 4F 42 10 FF 2F E1
     ```
 
-## Changing the exit of the hexwriter
-!!! warning
-    These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.
+Please note that by default, the hexwriter can only write on the first 56 bytes of Box 14, Slot 28, as such it cannot write large payloads by itself.
+However this will be solved by the payload you should write described in the next section.
 
-These are some short codes that change the exit opcode of the hexwriter.
-Place the hexwriter back in Box 10, Slot 2 and execute one of these codes depending on the desired exit.
+## Crafting table bad egg
+This bad egg does the following:
 
-**BX r0**
+- It changes the destination address of the hexwriter to the first location containing 56 consecutive `00` bytes, starting from the box slot ahead of itself.
+- After setting a destination address of the hexwriter, will cause a jump to a location 30 box slots after itself.
+    This defines a working area of 30 box slots to store work-in-progress payloads that will not be executed by ACE.
+
+To create this bad egg, write the following box names and execute the hexwriter.
+
 ```
-Box  1: B C U n 0 T … o	[BCUn0T…o]
-Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
-Box  3: … o	[…o]
+Box  1: 46 C0 8F E2
+Box  2: 00 80 A0 E3
+Box  3: 08 90 9C E7
+Box  4: 04 80 88 E2
+Box  5: 00 00 00 FF
+Box  6: 00 00 59 E3
+Box  7: 08 C0 8C 10
+Box  8: 20 F0 4F 12
+Box  9: 38 00 58 E3
+Box 10: 00 00 00 FF
+Box 11: 28 F0 4F 32
+Box 12: 02 90 1F E5
+Box 13: 09 F0 8F E0
+Box 14: 74 09 00 00
 ```
 
-**BX lr**
+A bad egg should have appeared in Box 14, Slot 28.
+This bad egg can be placed anywhere, starting from the ACE entrypoint of your grab ACE Pokémon (in the case of 0x351, starting from Box 13, Slot 10).
+Please make sure you placed the crafting table bad egg at least 31 box slots before the exit code bootstrap.
+Otherwise the ACE will jump over the bootstrap and the hexwriter will not safely exit.
+
+At this point, you have an easier way of writing arbitary data via the combination of both the hexwriter and the crafting table bad egg.
+However the crafting table modifies the CPSR status flags upon being executed.
+The standard box name codes rely on these status flags being unset (0), due to using instructions such as `ADC`/`SBC` as well as having certain filler instructions that may cause the game to behave unexpectedly if certain status flags are set.
+As such you will be creating a small payload that will unset all of the CPSR status flags, allowing regular box name codes to be executed without moving the crafting table, and hexwriter to a location before the ACE entrypoint.
+This also serves as a test to check if the crafting table is working correctly.
+
+Write the following box names, and execute the hexwriter:
+
 ```
-Box  1: B C U n m F l o	[BCUnmFlo]
-Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
-Box  3: … o	[…o]
+Box  1: 00 B0 A0 E3
+Box  2: 01 B0 9B E2
+Box  3: 40 F0 8F E2
+Box  4: 00 00 00 00
+Box  5: 00 00 00 02
+Box  6: 00 00 00 00
+Box  7: 00 00 00 00
+Box  8: D0 0E 00 00
+Boxes 9-14: 00 00 00 00
 ```
+
+A Bulbasaur holding a TM should appear in the box slot after the crafting table bad egg, place it at least 31 slots after the crafting table.
+
+If that does not happen, that means you have made a mistake in the creation of the crafting table.
+To correct this, move the crafting table back to Box 14, Slot 28, rewrite the crafting table creation code and try creating the Bulbasaur again.
+
+At this point in time, the recommended box setup is as follows:
+
+```
+BOX 13:
+
+-  -  -  -  -  -
+-  -  -  -  C  +
++  +  +  +  +  +
++  +  +  +  +  +
++  +  +  +  +  +
+
+BOX 14:
+
++  +  +  +  +  +
++  +  +  +  +  E
+-  -  -  -  -  B
+-  -  -  -  -  -
+-  -  -  -  W  -
+
+-: Empty slot
++: Crafting table area (will be skipped)
+C: Crafting table bad egg
+B: CPSR status reset (Bulbasaur)
+E: Exit code bootstrap
+W: Hexwriter
+```
+
+This particular box setup will prepare you for step 6 and later in [Theocatic’s scripting environment](https://gist.github.com/Theocatic/39ed337ecd590b47fad14f791cf16bb5) where payloads for that ASE setup expect this particular box layout.
+
+If you want to execute standard box name codes with grab ACE again, move the hexwriter bad egg to somewhere within the crafting table area then execute the box name code as normal.
 
 ## Troubleshooting
 !!! note
@@ -544,6 +613,27 @@ Keep in mind the following:
 |        4 | 12, 13, 14    |
 |        5 | 15, 16, 17    |
 |        6 | 18, 19, 20    |
+
+## Changing the exit of the hexwriter
+!!! warning
+    These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.
+
+These are some short codes that change the exit opcode of the hexwriter.
+Place the hexwriter back in Box 10, Slot 2 and execute one of these codes depending on the desired exit.
+
+**BX r0**
+```
+Box  1: B C U n 0 T … o	[BCUn0T…o]
+Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
+Box  3: … o	[…o]
+```
+
+**BX lr**
+```
+Box  1: B C U n m F l o	[BCUnmFlo]
+Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
+Box  3: … o	[…o]
+```
 
 ## How these codes work
 ```
@@ -770,7 +860,7 @@ Writes:
 ```
 
 ## References and Acknowledgements
-- [E-Sh4rk's original article for the hexwriter](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/)
+- [E-Sh4rk's original article for the hexwriter, crafting egg, and CPSR status reset](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/)
 - [Adrichu00's method of writing the hexwriter](https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778)
 - RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs
 - merrp on the Glitch City Research Institute Discord for the `STR+4` opcode used in the codes.
