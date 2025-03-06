@@ -11,6 +11,8 @@ nav:
       - Exit code bootstrap: frlg/exit-codes/exit-code-bootstrap.md
     - Complex payloads:
       - Hexwriter: frlg/complex-payloads/hex-writer.md
+  - Technical documentation:
+    - Writing the hexwriter: technical-documentation/writing-hexwriter.md
 markdown_extensions:
   - attr_list
   - md_in_html
