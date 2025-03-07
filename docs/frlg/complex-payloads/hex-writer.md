@@ -29,7 +29,7 @@ For each hexadecimal string encoded in a box name:
 - Snorlax and Omanyte has been seen on the save file
 
 
-## Instructions
+## Creating the hexwriter
 Make sure that Box 3, Slot 1 is empty then give the last party member mail and write the following message to the mail:
 
 === "ENG"
