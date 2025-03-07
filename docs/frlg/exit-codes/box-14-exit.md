@@ -24,6 +24,7 @@ Box name codes using this exit code do not require the use of an additional boot
 Box 14 should be named `␣Foì`, this is the Box 14 exit code.
 
 If the game crashes or softlocks it may have been caused by the following:
+
 - Incorrectly written box names
 - There are Pokémon (visible or not) after the entrypoint of your glitch Pokémon (for 0x0351, it is Box 13, Slot 8)
     - Move any valuable non-bootstrap Pokémon to any box slot before the entrypoint

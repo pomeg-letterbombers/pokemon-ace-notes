@@ -640,9 +640,6 @@ Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
 Box  3: … o	[…o]
 ```
 
-## How these codes work
-
-
 ## References and Acknowledgements
 - [E-Sh4rk's original article for the hexwriter, crafting egg, and CPSR status reset](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/)
 - [Adrichu00's method of writing the hexwriter](https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778)
