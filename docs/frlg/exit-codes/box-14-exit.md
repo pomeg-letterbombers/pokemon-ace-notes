@@ -2,24 +2,25 @@ This exit code allows box name codes to be longer by moving the exit code to the
 Box name codes using this exit code do not require the use of an additional bootstrap Pokémon.
 
 ## Instructions
-1. Write the following box names:
-    ```
-    Box  1: z ♀ l o k … Q n	[z♀lok…Qn]
-    Box  2: ♀ Q n n U U n _	[♀QnnUUn ]
-    Box  3: _ _ y ‘ ? q _ _	[  y‘?q  ]
-    Box  4: _ _ _ _ … _ _ _	[    …   ]
-    Box  5: _ _ _ … _ _ _ _	[   …    ]
-    Box  6: _ _ _ _ _ _ … _	[      … ]
-    Box  7: _ _ _ _ _ … _ _	[     …  ]
-    Box  8: _ _ _ _ … _ _ _	[    …   ]
-    Box  9: _ _ _ … _ _ _ _	[   …    ]
-    Box 10: _ _ _ _ _ _ … _	[      … ]
-    Box 11: _ _ _ _ _ … _ _	[     …  ]
-    Box 12: _ _ _ _ … _ _ _	[    …   ]
-    Box 13: _ _ _ … _ _ _ _	[   …    ]
-    Box 14: _ F o _ _ _ _ _	[ Fo     ]
-    ```
-2. Execute the code
+
+Write and execute the following box names:
+
+```
+Box  1: z ♀ l o k … Q n	[z♀lok…Qn]
+Box  2: ♀ Q n n U U n _	[♀QnnUUn ]
+Box  3: _ _ y ‘ ? q _ _	[  y‘?q  ]
+Box  4: _ _ _ _ … _ _ _	[    …   ]
+Box  5: _ _ _ … _ _ _ _	[   …    ]
+Box  6: _ _ _ _ _ _ … _	[      … ]
+Box  7: _ _ _ _ _ … _ _	[     …  ]
+Box  8: _ _ _ _ … _ _ _	[    …   ]
+Box  9: _ _ _ … _ _ _ _	[   …    ]
+Box 10: _ _ _ _ _ _ … _	[      … ]
+Box 11: _ _ _ _ _ … _ _	[     …  ]
+Box 12: _ _ _ _ … _ _ _	[    …   ]
+Box 13: _ _ _ … _ _ _ _	[   …    ]
+Box 14: _ F o _ _ _ _ _	[ Fo     ]
+```
 
 Box 14 should be named `␣Foì`, this is the Box 14 exit code.
 
@@ -31,6 +32,7 @@ If the game crashes or softlocks it may have been caused by the following:
     - Use group selection to remove any potential leftover invisible Pokémon before the entrypoint
 
 ## Acknowledgements
+
 - E-Sh4rk for creating the [CodeGenerator](https://e-sh4rk.github.io/CodeGenerator)
 - Sleipnir17 for creating the [short exit code setup code](https://e-sh4rk.github.io/EmeraldACE_web/doc/FRLG_Short_Exit_Codes_Guide.pdf) which this code is derived from
 - merrp for the [Map Warp code](https://www.youtube.com/watch?v=yVhK4pLC9ac) which inspired the creation of the Box 14 exit code.

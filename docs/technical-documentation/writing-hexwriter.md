@@ -1,8 +1,10 @@
 ## Preamble
+
 In December 2024, efforts has been started to simplify the writing of the hexadecimal writer (hexwriter) with the power of mail corruption being able to modify Pokémon data.
 The version of the hexwriter guide present on this website was from one of these efforts.
 
 ## Code details
+
 ```
 SBC r11, pc, #0x2F40
 ```
@@ -82,11 +84,14 @@ While some of these mail words do not exactly correspond to a halfword within th
 Code 1 overwrites the wrong upper halves of the mail halfwords, correcting the wrong data written initially.
 
 ### Box name codes
+
 Below are the inputs to E-Sh4rk's CodeGenerator for each box name code along with the exact bytes that each code writes, and their starting offsets
 If you see * in the writes section, that means part of it was already written by mail corruption or variable according to the note attached
 
 #### Code 1
+
 Starting offset: 0x0 + 0xA7 = 0xA7
+
 ```
 @@ exit = "Bootstrapped"
 @@
@@ -118,7 +123,9 @@ Writes:
 ```
 
 #### Code 2
+
 Starting offset: 0x14 + 0xA7 = 0xBB
+
 ```
 @@ exit = "Bootstrapped"
 @@
@@ -139,7 +146,9 @@ B11051E2
 ```
 
 #### Code 3
+
 Starting offset: 0x20 + 0xA7 = 0xC7
+
 ```
 @@ exit = "Bootstrapped"
 @@
@@ -160,7 +169,9 @@ Writes:
 ```
 
 #### Code 4
+
 Starting offset: 0x2C + 0xA7 = 0xD3
+
 ```
 @@ exit = "Bootstrapped"
 @@
@@ -181,7 +192,9 @@ Writes:
 ```
 
 #### Code 5
+
 Starting offset: 0x38 + 0xA7 = 0xDF
+
 ```
 @@ exit = "Bootstrapped"
 @@
@@ -202,7 +215,9 @@ Writes:
 ```
 
 #### Code 6
+
 Starting offset: 0x44 + 0xA7 = 0xEB
+
 ```
 @@ exit = "Bootstrapped"
 @@
@@ -227,6 +242,7 @@ Writes:
 ```
 
 ## References and Acknowledgements
+
 - [E-Sh4rk's original article for the hexwriter, crafting egg, and CPSR status reset](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/)
 - [Adrichu00's method of writing the hexwriter](https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778)
 - RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs

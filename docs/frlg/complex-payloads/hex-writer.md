@@ -1,7 +1,6 @@
 !!! info
 
     This guide is only for US/European versions of Pokémon FireRed/Leafgreen.
-    A Japanese version will be made, but it will take some time.
 
 The hexadecimal writer (hexwriter) is a bad egg that interprets the box names as hexadecimal strings and writes the hexadecimal to user-defined location (typically somewhere within the PC boxes).
 This bypasses the game’s regular (and limited) character encoding, easing the process of writing arbitrary data to a given location.
@@ -14,6 +13,7 @@ For each hexadecimal string encoded in a box name:
 - 4 bytes ✕ 14 names = a total of 56 bytes can be written to a location all at once 
 
 ## Prequisites
+
 - Game Boy Advance console or a highly-accurate emulator (like mGBA 0.9.0+)
    - These codes do not work if the `PC` register is aligned, e.g. executing ACE through an inaccurate emulator
    - If you are not using 0x351, check that the glitch Pokémon that you are using has bit 1 of its entrypoint set.
@@ -30,6 +30,7 @@ For each hexadecimal string encoded in a box name:
 
 
 ## Creating the hexwriter
+
 Make sure that Box 3, Slot 1 is empty then give the last party member mail and write the following message to the mail:
 
 === "ENG"
@@ -397,7 +398,7 @@ A shiny male Farfetch’d named “E-Sh4rk” should appear in Box 14, Slot 28, 
     - Replacing a byte with `␣␣` in a box name will skip writing a byte to the corresponding location.
       The blank characters must be spaces!
     - Skipping a whole box name of bytes can be done with any character followed by seven spaces
-    - Code 6 can be executed with part of the name of Box 12(GER)/13(ENG/FRA/ITA/SPA) changed from `␣ F ? n` to `l F ? n`.
+    - Code 6 can be executed with part of the name of Box 12(GER)/13(ENG/FRA/ITA/SPA) changed from `␣ H ? n` to `l H ? n`.
       This changes the exit opcode from `BX r0` to `BX lr`, this is largely kept for older FR/LG advanced ACE setups.
     
     Below is the hexadecimal data of the hexwriter bad egg:
@@ -418,6 +419,7 @@ Please note that by default, the hexwriter can only write on the first 56 bytes 
 However this will be solved by the payload you should write described in the next section.
 
 ## Crafting table bad egg
+
 This bad egg does the following:
 
 - It changes the destination address of the hexwriter to the first location containing 56 consecutive `00` bytes, starting from the box slot ahead of itself.
@@ -505,6 +507,7 @@ This particular box setup will prepare you for step 6 and later in [Theocatic’
 If you want to execute standard box name codes with grab ACE again, move the hexwriter bad egg to somewhere within the crafting table area then execute the box name code as normal.
 
 ## Troubleshooting
+
 !!! note
     The troubleshooting code uses the Box 14 exit code.
     If it has been renamed, please [restore the exit code](../exit-codes/box-14-exit.md) before proceeding further in this section.
@@ -620,28 +623,47 @@ Keep in mind the following:
 |        6 | 18, 19, 20    |
 
 ## Changing the exit of the hexwriter
-!!! warning
-    These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.
 
-These are some short codes that change the exit opcode of the hexwriter.
-Place the hexwriter back in Box 10, Slot 2 and execute one of these codes depending on the desired exit.
+These are some short codes that change the exit instruction of the hexwriter.
+Place the hexwriter back in Box 10, Slot 2 and execute one of these codes to change the exit.
+By default they change the exit to `BX r0` but follow the annotation on Box 5 to change the exit to `BX lr`.
 
-**BX r0**
-```
-Box  1: B C U n 0 T … o	[BCUn0T…o]
-Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
-Box  3: … o	[…o]
-```
+=== "ENG/ITA/SPA"
 
-**BX lr**
-```
-Box  1: B C U n m F l o	[BCUnmFlo]
-Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
-Box  3: … o	[…o]
-```
+    ```
+    Box  1: l … l o z ♀ Q o	[l…loz♀Qo]
+    Box  2: ♀ Q n F F U n _	[♀QnFFUn ]
+    Box  3: _ _ g … ? q _ _	[  g…?q  ]
+    Box  4: _ C S U n _ _ _	[ CSUn   ]
+    Box  5: l ” Q o c … ? q	[l”Qoc…?q] (change 'l' to ' ' for BX lr)
+    Box  6: _ F o _ _ _ _ _	[ Fo     ]
+    ```
+
+=== "FRA"
+
+    ```
+    Box  1: l … l o z ♀ Q o	[l…loz♀Qo]
+    Box  2: ♀ Q n F F U n _	[♀QnFFUn ]
+    Box  3: _ _ g … ? q _ _	[  g…?q  ]
+    Box  4: _ C S U n _ _ _	[ CSUn   ]
+    Box  5: l » Q o c … ? q	[l»Qoc…?q] (change 'l' to ' ' for BX lr)
+    Box  6: _ F o _ _ _ _ _	[ Fo     ]
+    ```
+
+=== "GER"
+
+    ```
+    Box  1: l … l o z ♀ Q o	[l…loz♀Qo]
+    Box  2: ♀ Q n F F U n _	[♀QnFFUn ]
+    Box  3: _ _ g … ? q _ _	[  g…?q  ]
+    Box  4: _ C S U n _ _ _	[ CSUn   ]
+    Box  5: l “ Q o c … ? q	[l“Qoc…?q] (change 'l' to ' ' for BX lr)
+    Box  6: _ F o _ _ _ _ _	[ Fo     ]
+    ```
 
 ## References and Acknowledgements
+
 - [E-Sh4rk's original article for the hexwriter, crafting egg, and CPSR status reset](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/)
 - [Adrichu00's method of writing the hexwriter](https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778)
 - RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs
-- merrp on the Glitch City Research Institute Discord for the `STR+4` opcode used in the codes.
+- merrp of the Glitch City Research Institute Discord for the `STR+4` opcode used in the codes.
