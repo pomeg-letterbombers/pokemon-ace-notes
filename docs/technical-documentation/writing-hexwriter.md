@@ -3,67 +3,70 @@
 In December 2024, efforts has been started to simplify the writing of the hexadecimal writer (hexwriter) with the power of mail corruption being able to modify Pokémon data.
 The version of the hexwriter guide present on this website was from one of these efforts.
 
-## Code details
+## Memory storing techniques
+
+The main reason why this version of the hexwriter guide is shorter than the others is that it uses an unconventional form of `STR <rd>, [<rn>, #0x4]!`.
+Usually the standard form of this instruction is unwritable using the US/European character encoding.
+
+However with a scaled register offset, we can use the bit shifted value of a regsiter, and use that as the offset for `STR`.
+Thankfully there are some bit-shift operations[^1] available for use with the limited charset, allowing a way to write some `STR` instruction with unwritable offsets.
+In addition, with writeback (`!`), it also increments by the offset which saves an `ADC` or `LDRSB` instruction used to increment `rn` to where we want to write our data to.
+Below is what the instruction looks like in ARM assembly:
 
 ```
-SBC r11, pc, #0x2F40
+STR <rd>, [<rn>, <rm>, LSR #nn]!
 ```
-This subtracts `0x2F40` from the `pc` register, and due to the instruction being `SBC` and the carry flag is unset, it also subtracts an extra `0x1` from the result.
-Since it is expected that the code will be executed using `0x351` where it executes in ARM mode with the `pc` register's bit 1 set to `1`, the result assigned to `r11` will be `0xA7` (167) bytes before the PID of Box 10, Slot 2.
-I have chosen an offset of `0xA7` as that it and (most) later offsets are writable using the European character set which allows storing using `STR r12, [r11, {offset}]!` and for the most part remove the need to waste an opcode incrementing `r11`.
-It also allowed `STRB` to be usable for writing part of the hexwriter as that is encoded similarly to `STR`.
+
+`lr` is always initially a ROM address when executing grab ACE, where the most significant byte is always 0x8.
+By performing a bit shift right (can be `LSR` or `ASR`) by 25, we can get an offset of 0x4 from `lr`, allowing the `STR` instruction to always write to `rn+4` which is highly useful for the hexwriter.
+
+Since the hexwriter writing codes use `r12` to store the working values and `r11` to store the destination, the `STR` works out to what is shown below:
 
 ```
-STR r12, [r11, r14, LSR #25]! ; encoded as `E7ABCCAE`
+E7ABCCAE	STR r12, [r11, lr, LSR #25]!
 ```
-merrp is to be credited for using this trick to be able to increment `r11` using `STR` with what would be unwritable offsets thanks to the limitations of the European character set.
-Since `r14` is always initially a ROM address where the most significant byte of the address is usually `0x8`, if the value is shifted right by 25 bits, it will become `0x4`.
-This allows writing to the address stored in `r11` + `0x4` which is highly useful for the purposes of writing the hexwriter, as we do not need to waste more opcodes on writing half of each instruction then using `STRH` which takes up more space.
-However for FireRed and LeafGreen, since we have access to mail corruption, and it so happens that some of the halfwords are writable as mail words, we can still use `STRH` for those instructions where half of it is already written by mail corruption.
 
-From this, the codes are generally structured as the following:
-```
-SBC r11, pc, #0x2F40
-MOVS r12, #{opcode_1} ?
-STR r12, [r11, #{offset}]!
-MOVS r12, #{opcode_2} ?
-STR r12, [r11, r14, LSR #25]!
-MOVS r12, #{opcode_3} ?
-STR r12, [r11, r14, LSR #25]!
-```
-with some codes using different instructions due to either having a halfword already written with the mail corruption enabling us to use `STRH` and using `MOVS` with only half of the instruction as the immediate or having an unwritable offset.
+[^1]:
+    The writable scaled register offsets are:
+
+    - `LSL` with `rm` as `r0`, and `shift_imm` being an even value
+    - `LSR` with `rm` as `r1` to `lr`, and `shift_imm` being an odd value
+    - `ASR` with `rm` as `r0` to `pc`, and `shift_imm` being an odd value
+    - There are probably more not covered, but these are the more useful operations.
 
 ### Mail corruption
 
-!!! note
-    Only the English words are shown, mostly to keep the documentation simple
+In FireRed/LeafGreen, mail corruption allows directly writing into the first 9 halfwords of Box 3, Slot 1.
+This allows for (mostly) bypassing the need to use arithmetic to compute bytes 0-17 of the hexwriter.
 
-The mail corruption allows directly writing halfwords that would have made the main code writing process longer.
+Even when there is not a easy chat system word with an index that corresponds to a halfword within the hexwriter data, there is certainly a word where the lower 8 bits of the index matches.
+As such, a single `MOVS` and `STRB` can be used to overwrite the upper 8 bits of the halfword in this case.
+
 When choosing mail words to write, words that were available by default were chosen over unlockable words whenever possible.
 If the only word options are unlockable words then words that are likely to be unlocked in a regular playthrough of FR/LG are given priority over other unlockable words.
-Below is a table of words and their respective indexes written in the glitchy mail (an * means that byte was overwritten by a box name code):
+In cases where the only words available are words that are locked to the post game or needs a time-consuming extra step, `STRH` is used to fill in the space instead.
+Below is the mail message with the words substituted for their respective hexadecimal indexes:
 
-| Word         | Index (hex) |
-| ------------ | ----------- |
-| OMANYTE      | 2A8A        |
-| SNORLAX      | 2A8F        |
-| LISTEN       | 0E00        |
-| THICK FAT    | 0402        |
-| MINUS        | 045C        |
-| PICKUP       | 0466        |
-| MARVEL SCALE | 044F        |
-| LIKELY TO    | 1009        |
+```
+2A8A	2A8F
+0E00	0000
+0402	045C
+0466	044F
+1009
+```
 
 ??? question "What about mail word 4?"
 
-    While there are candidates for mail word 4, the problem is that they are only unlockable after the postgame which complicates writing this hexwriter for players who have went for New Game+.
-    For those who are curious, here are the candidates for mail slot 4.
+    At the time it was considered that using mail word 4 is simply not worth it, due to all of the candidates for it being only unlockable in the post-game.
+    However it is found to be possible to unlock one of the candidates via unlocking the National Dex from running the script via NPC.
+    Still the savings from using that word is only 4 characters, and the player would still need to go out of their way to unlock the National Dex before using it, so it was omitted.
+    Below is the word that can be feasibly unlocked before the post game.
 
     | Word                   | Index (hex) |
     | ---------------------- | ----------- |
-    | SCARY FACE / AZUMARILL | \*\*B8      |
+    | AZUMARILL              | 2AB8        |
 
-    and here is box code 1 for those who have those words:
+    Here is the orignal code 1 that used mail word 4:
     ```
     Box  1: C C U n 7 T … o	[CCUn7T…o]
     Box  2: _ _ _ 7 F Q q _	[   7FQq ]
@@ -80,170 +83,128 @@ Below is a table of words and their respective indexes written in the glitchy ma
     Box 13: ‘ F Q m _ _ _ _	[‘FQm    ]
     ```
 
-While some of these mail words do not exactly correspond to a halfword within the hexwriter, the least significant byte of the word index does.
-Code 1 overwrites the wrong upper halves of the mail halfwords, correcting the wrong data written initially.
+## Determining the initial `SBC` offset
 
-### Box name codes
+With the right immediate for the initial `SBC` instruction used to set the value of `r11`, an initial `STR` instruction can be used to both store the first data value, and advance `r11` all at once.
 
-Below are the inputs to E-Sh4rk's CodeGenerator for each box name code along with the exact bytes that each code writes, and their starting offsets
-If you see * in the writes section, that means part of it was already written by mail corruption or variable according to the note attached
+- This removes an additional `ADC`/`SBC` or `LDRH`/`LDRSB` usually used to further adjust `r11`.
 
-#### Code 1
+To be able to use the initial large `STR` offset, this immediate must set `r11` to an address at least 0xA1 bytes before the box slot as that is the first writable offset after 0x0 (space).
 
-Starting offset: 0x0 + 0xA7 = 0xA7
+- Due to the `pc` register having a value that is always 0xA[^2] ahead of BOX_NAMES_START, and `shifter_operand` being restricted to `0x0`-`0xFF` bit rotated right by a multiple of 2, 0xA1 cannot be used as all immediates that have an offset of 0xA1 before a box slot are all located within Box 14.
+- Due to `SBC` always adding an additional subtraction by ~CARRY_FLAG (which is always 1 under normal circumstances), the `STR` offset has +1 added to account for this.
+- This leaves 0xA7 as the lowest possible offset that can be used as the first initial `STR` offset, let this be PID_OFFSET
 
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40 ; Box 10, Slot 4 - 0xC8
-MOVS r12, #0xA80 ; STRB ignores the upper 24 bits
-STRB r12, [r11, #0xA8]
-MOVS r12, #0xE2
-STRB r12, [r11, #0xAA]
-MOVS r12, #0xE800 ;
-ADC r12, r12, #0xB8 ; MOVS r12, #0xE8 if using mail word 4
-STRH r12, [r11, #0xAD] ; STRB r12, [r11, #0xAE] if using mail word 4
-MOVS r12, #0xE3
-STRB r12, [r11, #0xB2]
-MOVS r12, #0xC0
-STRB r12, [r11, #0xB4]
-MOVS r12, #0x32
-STRB r12, [r11, #0xB6]!
-MOVS r12, #0xE7D8 ?
-STRH r12, [r11, #0x3]
-```
+[^2]:
+    Due to the ACE entrypoint of 0x351 having both bit 0 unset, and bit 1 set, the `pc` register is not word-aligned which affects `pc`-relative operations.
+    Specifically, it is +0x2 from the value the `pc` register is expected to be.
 
-Writes:
-```
-**80**E2
-****B8E8
-******E3
-**C0**32
-****D8E7
-```
+As such immediate needs to satify the below equation:
 
-#### Code 2
+- (BOX_NAMES_START + 0xA) - immediate - 1 = BOX_SLOT_ADDRESS - 0xA7
+    - The value of `pc` is the address of the current instruction + 0xA when `pc` is misaligned (executed from 0x351)
+    - Since the instruction is `SBC`, the immediate is subtracted by ~CARRY_FLAG which is always `1` under normal circumstances
 
-Starting offset: 0x14 + 0xA7 = 0xBB
+Using the below algorithm, a list of immediates that satisfy the above equation can be generated:
 
 ```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0xE25110B1 ?
-STR r12, [r11, #0xBB]!
-MOVS r12, #0x32911010 ?
-0xE7ABCCAE
-MOVS r12, #0x5081B20B ?
-0xE7ABCCAE
+BIT_LENGTH <- 32
+BIT_MASK <- 2**BIT_LENGTH - 1
+VALID_CHARS <- [...] # Codepoints of every writable character
+VALID_IMMEDIATES <- {
+    (c >> i * 2) | ((c << (BIT_LENGTH - i * 2)) & BIT_MASK)
+    FOR i IN range(0, 16)
+    FOR c IN VALID_CHARS
+    }
+PC_OFFSET <- 8 # Working with standard values makes calculation easier
+PID_OFFSET <- 0xA8
+offsets <- []
+distance <- PC_OFFSET
+FOR box_number IN range(BOXES, 0, -1):
+    FOR box_slot IN range(SLOTS, 0, -1):
+        distance <- distance + BOX_MON_SIZE
+        FOR immediate IN VALID_IMMEDIATES:
+            IF immediate = (distance + PID_OFFSET):
+                offsets.add([box_number, box_slot, immediate])
 ```
 
-Writes:
-```
-B11051E2
-10109132
-0BB28150
-```
+Immediate 0x2F40 was found which targets Box 10, Slot 2, let this be INITIAL_OFFSET.
 
-#### Code 3
+## Box name codes
 
-Starting offset: 0x20 + 0xA7 = 0xC7
+Each box name code starts with this instruction:
 
 ```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0x459CB000 ?
-STR r12, [r11, #0xC7]!
-MOVS r12, #0xE31A0001 ?
-0xE7ABCCAE
-MOVS r12, #0x14CCB001 ?
-0xE7ABCCAE
+SBC r11, pc, INITIAL_OFFSET
 ```
 
-Writes:
-```
-00B09C45
-01001AE3
-01B0CC14
-```
+Codes are generally structured as the following:
 
-#### Code 4
+- All of them generally start with the following instructions:
+  ```
+  MOV r12, { data } ? ; Some data is computed by hand instead
+  ```
 
-Starting offset: 0x2C + 0xA7 = 0xD3
+- The first 32-bit word stored use this `STR` instruction:
+  ```
+  STR r12, [r11, { PID_OFFSET + offset }]!
+  ```
 
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0x13A0B000 ?
-STR r12, [r11, #0xD3]!
-MOVS r12, #0xE35A0007 ?
-0xE7ABCCAE
-MOVS r12, #0x328AA001 ?
-0xE7ABCCAE
-```
+- All other words after the first use this `STR` instruction:
+  ```
+  STR r12, [r11, lr, LSR #25]!
+  ```
 
-Writes:
-```
-00B0A013
-07005AE3
-01A08A32
-```
+- Code 1 is an exception, all bytes and halfwords (except for the last byte and halfword) in that code is structured like the following:
+  ```
+  STRB r12, [r11, { PID_OFFSET + offset }] ; STRH for halfword
+  ```
 
-#### Code 5
+- The last byte type data stored in Code 1 is structured like this (to get around STRH offset limitations):
+  ```
+  STRB r12, [r11, { PID_OFFSET + offset }]!
+  ```
 
-Starting offset: 0x38 + 0xA7 = 0xDF
+- The last halfword in Code 1 stored uses the following instruction:
+  ```
+  STRH r12, [r11, {offset - last_byte_offset}]
+  ```
 
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0x23A0A000 ?
-STR r12, [r11, #0xDF]!
-MOVS r12, #0x22899001 ?
-0xE7ABCCAE
-MOVS r12, #0xE2899001 ?
-0xE7ABCCAE
-```
+Below is a table, mapping each word (4-byte sequence) to at least an offset in the box name codes.
 
-Writes:
-```
-00A0A023
-01908922
-019089E2
-```
+!!! note inline end "Legend"
 
-#### Code 6
+    - Each offset has a type associated with it, corresponding to the `STR` type used for the data.
+    - **Boldface** indicates that the highlighted part was written by mail corruption.
 
-Starting offset: 0x44 + 0xA7 = 0xEB
+| Code No. | Data                 | Offset(s) (B/H/W) |
+| -------: | :------------------- | :---------------- |
+|        1 | E2**8F**80**8A**     | 0x1 (B), 0x3 (B)  |
+|        1 | E8B8**0E00**         | 0x6 (H)           |
+|        1 | E3**5C0402**         | 0xB (B)           |
+|        1 | 32**4F**C0**66**     | 0xD (B), 0xF (B)  |
+|        1 | E7D8**1009**         | 0x12 (H)          |
+|        2 | E25110B1             | 0x14 (W)          |
+|        2 | 32911010             | 0x18 (W)          |
+|        2 | 5081B20B             | 0x1C (W)          |
+|        3 | 459CB000             | 0x20 (W)          |
+|        3 | E31A0001             | 0x24 (W)          |
+|        3 | 14CCB001             | 0x28 (W)          |
+|        4 | 13A0B000             | 0x2C (W)          |
+|        4 | E35A0007             | 0x30 (W)          |
+|        4 | 328AA001             | 0x34 (W)          |
+|        5 | 23A0A000             | 0x38 (W)          |
+|        5 | 22899001             | 0x3C (W)          |
+|        5 | E2899001             | 0x40 (W)          |
+|        6 | E359007E             | 0x44 (W)          |
+|        6 | 424FF040             | 0x48 (W)          |
+|        6 | E12FFF10[^3]         | 0x4C (W)          |
 
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0xE359007E ?
-STR r12, [r11, #0xEB]!
-MOVS r12, #0x424FF040 ?
-0xE7ABCCAE
-; MOVS r12, #0xE12FFF10 ?
-MVN r12, #0xE1
-BIC r12, r12, #0xED00000
-BIC r12, r12, #0x1000000E ; r12 = E12FFF10 BX r0
-ADC r12, r12, #0x0 ; #0xE for BX lr exit
-0xE7ABCCAE
-```
-
-Writes:
-```
-7E0059E3
-40F04F42
-1*FF2FE1 # 0 if using `BX r0` exit E if using `BX lr` exit
-```
+[^3]: E12FFF1E for `BX lr` exit
 
 ## References and Acknowledgements
 
 - [E-Sh4rk's original article for the hexwriter, crafting egg, and CPSR status reset](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/)
 - [Adrichu00's method of writing the hexwriter](https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778)
 - RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs
-- merrp on the Glitch City Research Institute Discord for the `STR+4` opcode used in the codes.
+- merrp of the Glitch City Research Institute Discord for showing off various cool tricks with ARM assembly
