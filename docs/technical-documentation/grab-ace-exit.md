@@ -34,8 +34,9 @@ While `MOV r0, #0x0` is not writable in its standard form, `MOVS r0, #0x0` is (i
 `BIC r0, #0xFF` is also an acceptable alternative since the return type of `DoMonPlaceChange` is `u8`, clearing the lower 8 bits of `r0` is enough to return `false`.
 
 However `BX lr` is not writable with the standard character set, glitchers have to come up with a way to be able to write `BX lr`.
-The opcode for `BX lr` can be computed into a register then be stored in an address **after** the current value of the `pc` register.
-Exiting this way works
+The opcode for `BX lr` can be computed into a register then be stored in a word-aligned address **after** the current value of the `pc` register.
+This means that the `STR` instruction must be located on the first half of Box 13, or earlier, as read-ahead will mean that the `BX lr` instruction will not be executed.
+Thus while this method works, will also add to the length of the box name payload, the only upside to this method is that it works wihtout needing a genuine GBA BIOS.
 
 ??? info "BX lr computation instructions"
 
