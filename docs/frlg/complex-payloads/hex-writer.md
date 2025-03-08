@@ -1,14 +1,19 @@
-# FR/LG Hexwriter
 !!! info
 
     This guide is only for US/European versions of Pokémon FireRed/Leafgreen.
-    A Japanese version will be made, but it will take some time.
 
-## Preamble
-Recently there has been efforts to simplify the writing of the hexadecimal writer (hexwriter) with the 'advent' of mail corruption.
-This is one of those efforts.
+The hexadecimal writer (hexwriter) is a bad egg that interprets the box names as hexadecimal strings and writes the hexadecimal to user-defined location (typically somewhere within the PC boxes).
+This bypasses the game’s regular (and limited) character encoding, easing the process of writing arbitrary data to a given location.
+
+For each hexadecimal string encoded in a box name:
+
+- Each character (‘0’-‘9’, ‘A’-‘F’) represents a nibble
+    - Two nibbles make a byte
+    - Each box name is eight characters long, therefore are eight nibbles long, and four bytes long
+- 4 bytes ✕ 14 names = a total of 56 bytes can be written to a location all at once 
 
 ## Prequisites
+
 - Game Boy Advance console or a highly-accurate emulator (like mGBA 0.9.0+)
    - These codes do not work if the `PC` register is aligned, e.g. executing ACE through an inaccurate emulator
    - If you are not using 0x351, check that the glitch Pokémon that you are using has bit 1 of its entrypoint set.
@@ -24,7 +29,8 @@ This is one of those efforts.
 - Snorlax and Omanyte has been seen on the save file
 
 
-## Instructions
+## Creating the hexwriter
+
 Make sure that Box 3, Slot 1 is empty then give the last party member mail and write the following message to the mail:
 
 === "ENG"
@@ -392,7 +398,7 @@ A shiny male Farfetch’d named “E-Sh4rk” should appear in Box 14, Slot 28, 
     - Replacing a byte with `␣␣` in a box name will skip writing a byte to the corresponding location.
       The blank characters must be spaces!
     - Skipping a whole box name of bytes can be done with any character followed by seven spaces
-    - Code 6 can be executed with part of the name of Box 12(GER)/13(ENG/FRA/ITA/SPA) changed from `␣ F ? n` to `l F ? n`.
+    - Code 6 can be executed with part of the name of Box 12(GER)/13(ENG/FRA/ITA/SPA) changed from `␣ H ? n` to `l H ? n`.
       This changes the exit opcode from `BX r0` to `BX lr`, this is largely kept for older FR/LG advanced ACE setups.
     
     Below is the hexadecimal data of the hexwriter bad egg:
@@ -413,6 +419,7 @@ Please note that by default, the hexwriter can only write on the first 56 bytes 
 However this will be solved by the payload you should write described in the next section.
 
 ## Crafting table bad egg
+
 This bad egg does the following:
 
 - It changes the destination address of the hexwriter to the first location containing 56 consecutive `00` bytes, starting from the box slot ahead of itself.
@@ -500,6 +507,7 @@ This particular box setup will prepare you for step 6 and later in [Theocatic’
 If you want to execute standard box name codes with grab ACE again, move the hexwriter bad egg to somewhere within the crafting table area then execute the box name code as normal.
 
 ## Troubleshooting
+
 !!! note
     The troubleshooting code uses the Box 14 exit code.
     If it has been renamed, please [restore the exit code](../exit-codes/box-14-exit.md) before proceeding further in this section.
@@ -615,252 +623,47 @@ Keep in mind the following:
 |        6 | 18, 19, 20    |
 
 ## Changing the exit of the hexwriter
-!!! warning
-    These codes require a genuine GBA BIOS, if you do not have one, you will have to rewrite the Box 14 exit then reexecute code 6 with the desired exit.
 
-These are some short codes that change the exit opcode of the hexwriter.
-Place the hexwriter back in Box 10, Slot 2 and execute one of these codes depending on the desired exit.
+These are some short codes that change the exit instruction of the hexwriter.
+Place the hexwriter back in Box 10, Slot 2 and execute one of these codes to change the exit.
+By default they change the exit to `BX r0` but follow the annotation on Box 5 to change the exit to `BX lr`.
 
-**BX r0**
-```
-Box  1: B C U n 0 T … o	[BCUn0T…o]
-Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
-Box  3: … o	[…o]
-```
+=== "ENG/ITA/SPA"
 
-**BX lr**
-```
-Box  1: B C U n m F l o	[BCUnmFlo]
-Box  2: _ F o ‘ F Q q a	[ Fo‘FQqa]
-Box  3: … o	[…o]
-```
-
-## How these codes work
-```
-SBC r11, pc, #0x2F40
-```
-This subtracts `0x2F40` from the `pc` register, and due to the instruction being `SBC` and the carry flag is unset, it also subtracts an extra `0x1` from the result.
-Since it is expected that the code will be executed using `0x351` where it executes in ARM mode with the `pc` register's bit 1 set to `1`, the result assigned to `r11` will be `0xA7` (167) bytes before the PID of Box 10, Slot 2.
-I have chosen an offset of `0xA7` as that it and (most) later offsets are writable using the European character set which allows storing using `STR r12, [r11, {offset}]!` and for the most part remove the need to waste an opcode incrementing `r11`.
-It also allowed `STRB` to be usable for writing part of the hexwriter as that is encoded similarly to `STR`.
-
-```
-STR r12, [r11, r14, LSR #25]! ; encoded as `E7ABCCAE`
-```
-merrp is to be credited for using this trick to be able to increment `r11` using `STR` with what would be unwritable offsets thanks to the limitations of the European character set.
-Since `r14` is always initially a ROM address where the most significant byte of the address is usually `0x8`, if the value is shifted right by 25 bits, it will become `0x4`.
-This allows writing to the address stored in `r11` + `0x4` which is highly useful for the purposes of writing the hexwriter, as we do not need to waste more opcodes on writing half of each instruction then using `STRH` which takes up more space.
-However for FireRed and LeafGreen, since we have access to mail corruption, and it so happens that some of the halfwords are writable as mail words, we can still use `STRH` for those instructions where half of it is already written by mail corruption.
-
-From this, the codes are generally structured as the following:
-```
-SBC r11, pc, #0x2F40
-MOVS r12, #{opcode_1} ?
-STR r12, [r11, #{offset}]!
-MOVS r12, #{opcode_2} ?
-STR r12, [r11, r14, LSR #25]!
-MOVS r12, #{opcode_3} ?
-STR r12, [r11, r14, LSR #25]!
-```
-with some codes using different instructions due to either having a halfword already written with the mail corruption enabling us to use `STRH` and using `MOVS` with only half of the instruction as the immediate or having an unwritable offset.
-
-### Mail corruption
-
-!!! note
-    Only the English words are shown, mostly to keep the documentation simple
-
-The mail corruption allows directly writing halfwords that would have made the main code writing process longer.
-When choosing mail words to write, words that were available by default were chosen over unlockable words whenever possible.
-If the only word options are unlockable words then words that are likely to be unlocked in a regular playthrough of FR/LG are given priority over other unlockable words.
-Below is a table of words and their respective indexes written in the glitchy mail (an * means that byte was overwritten by a box name code):
-
-| Word         | Index (hex) |
-| ------------ | ----------- |
-| OMANYTE      | 2A8A        |
-| SNORLAX      | 2A8F        |
-| LISTEN       | 0E00        |
-| THICK FAT    | 0402        |
-| MINUS        | 045C        |
-| PICKUP       | 0466        |
-| MARVEL SCALE | 044F        |
-| LIKELY TO    | 1009        |
-
-??? question "What about mail word 4?"
-
-    While there are candidates for mail word 4, the problem is that they are only unlockable after the postgame which complicates writing this hexwriter for players who have went for New Game+.
-    For those who are curious, here are the candidates for mail slot 4.
-
-    | Word                   | Index (hex) |
-    | ---------------------- | ----------- |
-    | SCARY FACE / AZUMARILL | \*\*B8      |
-
-    and here is box code 1 for those who have those words:
     ```
-    Box  1: C C U n 7 T … o	[CCUn7T…o]
-    Box  2: _ _ _ 7 F Q q _	[   7FQq ]
-    Box  3: _ _ n F … o _ _	[  nF…o  ]
-    Box  4: _ 9 F Q q _ _ _	[ 9FQq   ]
-    Box  5: t F … o – F Q q	[tF…o–FQq]
-    Box  6: _ _ _ o F … o _	[   oF…o ]
-    Box  7: _ _ ” F Q q _ _	[  ”FQq  ]
-    Box  8: _ F F … o _ _ _	[ FF…o   ]
-    Box  9: ’ F Q q N G … o	[’FQqNG…o]
-    Box 10: _ _ _ ♀ F w q _	[   ♀Fwq ]
-    Box 11: _ _ s R … o _ _	[  sR…o  ]
-    Box 12: _ d F ? n _ _ _	[ dF?n   ]
-    Box 13: ‘ F Q m _ _ _ _	[‘FQm    ]
+    Box  1: l … l o z ♀ Q o	[l…loz♀Qo]
+    Box  2: ♀ Q n F F U n _	[♀QnFFUn ]
+    Box  3: _ _ g … ? q _ _	[  g…?q  ]
+    Box  4: _ C S U n _ _ _	[ CSUn   ]
+    Box  5: l ” Q o c … ? q	[l”Qoc…?q] (change 'l' to ' ' for BX lr)
+    Box  6: _ F o _ _ _ _ _	[ Fo     ]
     ```
 
-While some of these mail words do not exactly correspond to a halfword within the hexwriter, the least significant byte of the word index does.
-Code 1 overwrites the wrong upper halves of the mail halfwords, correcting the wrong data written initially.
+=== "FRA"
 
-### Box name codes
-Below are the inputs to E-Sh4rk's CodeGenerator for each box name code along with the exact bytes that each code writes, and their starting offsets
-If you see * in the writes section, that means part of it was already written by mail corruption or variable according to the note attached
+    ```
+    Box  1: l … l o z ♀ Q o	[l…loz♀Qo]
+    Box  2: ♀ Q n F F U n _	[♀QnFFUn ]
+    Box  3: _ _ g … ? q _ _	[  g…?q  ]
+    Box  4: _ C S U n _ _ _	[ CSUn   ]
+    Box  5: l » Q o c … ? q	[l»Qoc…?q] (change 'l' to ' ' for BX lr)
+    Box  6: _ F o _ _ _ _ _	[ Fo     ]
+    ```
 
-#### Code 1
-Starting offset: 0x0 + 0xA7 = 0xA7
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40 ; Box 10, Slot 4 - 0xC8
-MOVS r12, #0xA80 ; STRB ignores the upper 24 bits
-STRB r12, [r11, #0xA8]
-MOVS r12, #0xE2
-STRB r12, [r11, #0xAA]
-MOVS r12, #0xE800 ;
-ADC r12, r12, #0xB8 ; MOVS r12, #0xE8 if using mail word 4
-STRH r12, [r11, #0xAD] ; STRB r12, [r11, #0xAE] if using mail word 4
-MOVS r12, #0xE3
-STRB r12, [r11, #0xB2]
-MOVS r12, #0xC0
-STRB r12, [r11, #0xB4]
-MOVS r12, #0x32
-STRB r12, [r11, #0xB6]!
-MOVS r12, #0xE7D8 ?
-STRH r12, [r11, #0x3]
-```
+=== "GER"
 
-Writes:
-```
-**80**E2
-****B8E8
-******E3
-**C0**32
-****D8E7
-```
-
-#### Code 2
-Starting offset: 0x14 + 0xA7 = 0xBB
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0xE25110B1 ?
-STR r12, [r11, #0xBB]!
-MOVS r12, #0x32911010 ?
-0xE7ABCCAE
-MOVS r12, #0x5081B20B ?
-0xE7ABCCAE
-```
-
-Writes:
-```
-B11051E2
-10109132
-0BB28150
-```
-
-#### Code 3
-Starting offset: 0x20 + 0xA7 = 0xC7
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0x459CB000 ?
-STR r12, [r11, #0xC7]!
-MOVS r12, #0xE31A0001 ?
-0xE7ABCCAE
-MOVS r12, #0x14CCB001 ?
-0xE7ABCCAE
-```
-
-Writes:
-```
-00B09C45
-01001AE3
-01B0CC14
-```
-
-#### Code 4
-Starting offset: 0x2C + 0xA7 = 0xD3
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0x13A0B000 ?
-STR r12, [r11, #0xD3]!
-MOVS r12, #0xE35A0007 ?
-0xE7ABCCAE
-MOVS r12, #0x328AA001 ?
-0xE7ABCCAE
-```
-
-Writes:
-```
-00B0A013
-07005AE3
-01A08A32
-```
-
-#### Code 5
-Starting offset: 0x38 + 0xA7 = 0xDF
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0x23A0A000 ?
-STR r12, [r11, #0xDF]!
-MOVS r12, #0x22899001 ?
-0xE7ABCCAE
-MOVS r12, #0xE2899001 ?
-0xE7ABCCAE
-```
-
-Writes:
-```
-00A0A023
-01908922
-019089E2
-```
-
-#### Code 6
-Starting offset: 0x44 + 0xA7 = 0xEB
-```
-@@ exit = "Bootstrapped"
-@@
-SBC r11, pc, #0x2F40
-MOVS r12, #0xE359007E ?
-STR r12, [r11, #0xEB]!
-MOVS r12, #0x424FF040 ?
-0xE7ABCCAE
-; MOVS r12, #0xE12FFF10 ?
-MVN r12, #0xE1
-BIC r12, r12, #0xED00000
-BIC r12, r12, #0x1000000E ; r12 = E12FFF10 BX r0
-ADC r12, r12, #0x0 ; #0xE for BX lr exit
-0xE7ABCCAE
-```
-
-Writes:
-```
-7E0059E3
-40F04F42
-1*FF2FE1 # 0 if using `BX r0` exit E if using `BX lr` exit
-```
+    ```
+    Box  1: l … l o z ♀ Q o	[l…loz♀Qo]
+    Box  2: ♀ Q n F F U n _	[♀QnFFUn ]
+    Box  3: _ _ g … ? q _ _	[  g…?q  ]
+    Box  4: _ C S U n _ _ _	[ CSUn   ]
+    Box  5: l “ Q o c … ? q	[l“Qoc…?q] (change 'l' to ' ' for BX lr)
+    Box  6: _ F o _ _ _ _ _	[ Fo     ]
+    ```
 
 ## References and Acknowledgements
+
 - [E-Sh4rk's original article for the hexwriter, crafting egg, and CPSR status reset](https://e-sh4rk.github.io/ACE3/emerald/hex-writer/hex-writer/)
 - [Adrichu00's method of writing the hexwriter](https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778)
 - RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs
-- merrp on the Glitch City Research Institute Discord for the `STR+4` opcode used in the codes.
+- merrp of the Glitch City Research Institute Discord for the `STR+4` opcode used in the codes.

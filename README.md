@@ -24,6 +24,6 @@ The following is required to build the `pokemon-ace-notes` website
 - [MkDocs](https://www.mkdocs.org/)
 
 ## Licence
-© Luong Truong and pokemon-ace-notes contributors 2025.
+© pokemon-ace-notes contributors 2025.
 The content of pokemon-ace-notes is licenced under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1), the licence can also be found in [LICENCE](LICENCE).
 Underlying source code used to display the content is licenced under the MIT licence, which can be found in [LICENCE-CODE](LICENCE-CODE).
