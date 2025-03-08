@@ -67,6 +67,7 @@ Below is the mail message with the words substituted for their respective hexade
     | AZUMARILL              | 2AB8        |
 
     Here is the orignal code 1 that used mail word 4:
+    
     ```
     Box  1: C C U n 7 T … o	[CCUn7T…o]
     Box  2: _ _ _ 7 F Q q _	[   7FQq ]
