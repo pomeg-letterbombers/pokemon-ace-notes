@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exit-code-bootstrap" class="md-skip">
+        <a href="#prequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -311,8 +311,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -342,8 +340,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -400,39 +396,6 @@
       How to utilise the bootstrap
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      How it works
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical details
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Technical details">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#box-name-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Box name codes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -535,6 +498,93 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/writing-hexwriter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing the hexwriter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/grab-ace-exit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grab ACE exit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -551,8 +601,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -613,39 +661,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      How it works
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#technical-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical details
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Technical details">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#box-name-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Box name codes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#acknowledgements" class="md-nav__link">
     <span class="md-ellipsis">
       Acknowledgements
@@ -673,8 +688,10 @@
   
 
 
-<h1 id="exit-code-bootstrap">Exit Code Bootstrap</h1>
-<p>The purpose of this bootstrap is to allow more complex ACE payloads such as the hexwriter, and the hexecutor to be able to exit out of execution and hand back control to the game.</p>
+  <h1>Exit code bootstrap</h1>
+
+<p>The purpose of this bootstrap is to allow more complex ACE payloads such as the hexwriter, and the hexecutor to be able to exit out of execution and hand back control to the game.
+It sets <code>r0</code> to the address of the bootstrap’s OT, which contains the exit code written in Thumb.</p>
 <h2 id="prequisites">Prequisites</h2>
 <ul>
 <li>Prior knowledge on activating grab ACE</li>
@@ -735,12 +752,11 @@ Box 13: k R R o _ F ! q [kRRo F!q]
 </div>
 </div>
 <p>A shiny female Beedrill should appear in Box 10, Slot 19, its name should be <code>Â␣␣nÔ␣␣v␣␣</code> and its OT should be <code>␣î␣C␣␣␣</code>.
-This is the exit code bootstrap, place it in Box 13, Slot 9 or later.</p>
+This is the exit code bootstrap, place it after the entrypoint of your grab ACE Pokémon (for 0x351 it is Box 13, Slot 10).</p>
 <h3 id="create-via-hexwriter">Create via Hexwriter</h3>
 <p>This method is provided as a quick way to adapt a <code>BX lr</code> hexwriter setup to a <code>BX r0</code> setup.</p>
-<ol>
-<li>Write the following box names (ignore the spaces, they are provided for readability).
-    <div class="highlight"><pre><span></span><code>Box  1: 00 00 00 00
+<p>Write the following box names, then execute the hexwriter (ignore the spaces, they are provided for readability)</p>
+<div class="highlight"><pre><span></span><code>Box  1: 00 00 00 00
 Box  2: 00 00 00 00
 Box  3: 03 00 8F E2
 Box  4: 0F 00 00 EA
@@ -754,9 +770,7 @@ Box 11: 00 00 00 00
 Box 12: 00 00 00 00
 Box 13: 00 00 00 00
 Box 14: 00 00 00 00
-</code></pre></div></li>
-<li>Execute the hexwriter</li>
-</ol>
+</code></pre></div>
 <p>A shiny female Beedrill should appear in either Box 14, Slot 28 or the first available slot of the crafting table, its name should be <code>Â␣␣nÔ␣␣v␣␣</code> and its OT should be <code>␣î␣C␣␣␣</code>.
 This is the exit code bootstrap, place it in Box 13, Slot 9 or later.</p>
 <h2 id="testing-the-bootstrap">Testing the bootstrap</h2>
@@ -794,50 +808,12 @@ This means the code worked, you do not need to keep the names of Boxes 2 and 3, 
 <li>Payloads that utilise the bootstrap must either never write to <code>r0</code>, or store the value of <code>r0</code> somewhere else (like another register) then write the value back to <code>r0</code> before exiting.</li>
 <li>Payloads should exit with <code>BX r0</code> which jumps to the code contained in the bootstrap which handles the exiting for you</li>
 </ul>
-<h2 id="how-it-works">How it works</h2>
-<p>The bootstrap sets <code>r0</code> to the address of the Thumb code contained within its data that contains the exit code instructions, that being an instruction that clears <code>r0</code> and an instruction that branches the <code>PC</code> back to the return address stored in <code>LR</code>.</p>
-<p>More details on how the grab ACE exit works can be found on the short exit guide’s <a href="../box-14-exit/#explanation">explanation</a>.</p>
-<p>The standard variant created by either the box names or the hexwriter is a shiny female Beedrill with name <code>Â␣␣nÔ␣␣v␣␣</code> and OT <code>␣î␣C␣␣␣</code>.</p>
-<p>The nickname is composed of the following ARM instructions:
-<div class="highlight"><pre><span></span><code>E28F0003    ADD r0, pc, #3
-EA00000F    B #0x44
-</code></pre></div></p>
-<p>The OT is composed of the following Thumb instructions:
-<div class="highlight"><pre><span></span><code>2000    MOV r0, #0 ; clears r0
-BD00    POP {pc} ; branches to related function to shifting Pokémon
-</code></pre></div></p>
-<h2 id="technical-details">Technical details</h2>
-<h3 id="box-name-codes">Box name codes</h3>
-<p>Below is the CodeGenerator input:
-<div class="highlight"><pre><span></span><code>@@exit=&quot;Bootstrapped&quot;
-@@
-SBC r11, pc, #0x2940
-MOVS r12, #0xE200
-BIC r12, #0xFF000 ; E200 &amp; ~FF000 = 200
-STRH r12, [r11, #10] ; Store misc flags
-MOVS r12, #0xE28F0003 ? ; E28F0003 ADD r0, pc, #0x3
-STR r12, [r11]! ; Store in chars 0-3 of nickname
-MOVS r12, #0xFF
-ADC r11, #3 ; r11 = Box 10, Slot 19 + 12
-ADC r12, #0xEA000000 ; r12 = EA0000FF
-BIC r12, #0xCF0 ; r12 &amp; ~BF0 = EA00000F B pc + #0x3C
-STRH r12, [r11, #16] ; Store species
-STRH r12, [r11, #20] ; Store checksum
-MOVS r10, #0xFF00 ; Temporarily store in r10
-STR r12, [r11]! ; Store in chars 4-7 of nickname
-ADC r11, #11 ; r11 = Box 10, Slot 19 + 23
-ADC r12, r10, #0xBD000000 ; move value of r10 to r12
-BIC r12, #0xDF00 ; r12 &amp; ~DF00 = BD002000
-; 2000 MOV r0, #0
-; BD00 POP {pc}
-STR r12, [r11]! ; Store chars 0-3 of OT
-</code></pre></div></p>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <ul>
 <li>E-Sh4rk for creating the CodeGenerator, the <code>Create Pokemon from nothing (with exit code bootstrap)</code> code, and the <code>Certificate Exit Bootstrap</code> code which the exit code bootstrap codes is based off</li>
 <li>Sleipnir17 for creating the short exit code setup code which this code is derived from</li>
 <li>RETIRE for providing better methods to construct the Thumb code</li>
-<li>RationalPsycho on the Glitch City Research Institute for suggesting the use of mail to simplify the writing process</li>
+<li>RationalPsycho on the Glitch City Research Institute for suggesting the use of mail to simplify the writing process (though for this bootstrap, it ended up not being used)</li>
 </ul>
 
 
@@ -859,7 +835,7 @@ STR r12, [r11]! ; Store chars 0-3 of OT
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2025 13:50:35">February 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 7, 2025 10:02:14">March 7, 2025</span>
   </span>
 
     
