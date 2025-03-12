@@ -784,16 +784,18 @@ VALID_IMMEDIATES &lt;- {
     FOR i IN range(0, 16)
     FOR c IN VALID_CHARS
     }
-PC_OFFSET &lt;- 8 # Working with standard values makes calculation easier
+BOX_MON_SIZE &lt;- 80
+BOXES &lt;- 14
+SLOTS &lt;- 30
+PC_OFFSET &lt;- 8 # SUB and aligned pc offsets is easier to remember
 PID_OFFSET &lt;- 0xA8
 offsets &lt;- []
 distance &lt;- PC_OFFSET
 FOR box_number IN range(BOXES, 0, -1):
     FOR box_slot IN range(SLOTS, 0, -1):
         distance &lt;- distance + BOX_MON_SIZE
-        FOR immediate IN VALID_IMMEDIATES:
-            IF immediate = (distance + PID_OFFSET):
-                offsets.add([box_number, box_slot, immediate])
+        if (offset &lt;- distance + PID_OFFSET) in VALID_IMMEDIATES:
+            offsets.add([box_number, box_slot, offset])
 </code></pre></div>
 <p>Immediate 0x2F40 was found which targets Box 10, Slot 2, let this be INITIAL_OFFSET.</p>
 <h2 id="box-name-codes">Box name codes</h2>
@@ -1001,7 +1003,7 @@ Specifically, it is +0x2 from the value the <code>pc</code> register is expected
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 8, 2025 07:36:07">March 8, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 12, 2025 02:54:16">March 12, 2025</span>
   </span>
 
     
