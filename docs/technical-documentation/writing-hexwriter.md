@@ -117,16 +117,18 @@ VALID_IMMEDIATES <- {
     FOR i IN range(0, 16)
     FOR c IN VALID_CHARS
     }
-PC_OFFSET <- 8 # Working with standard values makes calculation easier
+BOX_MON_SIZE <- 80
+BOXES <- 14
+SLOTS <- 30
+PC_OFFSET <- 8 # SUB and aligned pc offsets is easier to remember
 PID_OFFSET <- 0xA8
 offsets <- []
 distance <- PC_OFFSET
 FOR box_number IN range(BOXES, 0, -1):
     FOR box_slot IN range(SLOTS, 0, -1):
         distance <- distance + BOX_MON_SIZE
-        FOR immediate IN VALID_IMMEDIATES:
-            IF immediate = (distance + PID_OFFSET):
-                offsets.add([box_number, box_slot, immediate])
+        if (offset <- distance + PID_OFFSET) in VALID_IMMEDIATES:
+            offsets.add([box_number, box_slot, offset])
 ```
 
 Immediate 0x2F40 was found which targets Box 10, Slot 2, let this be INITIAL_OFFSET.
