@@ -9,16 +9,7 @@ Write and execute the following box names:
 Box  1: z ♀ l o k … Q n	[z♀lok…Qn]
 Box  2: ♀ Q n n U U n _	[♀QnnUUn ]
 Box  3: _ _ y ‘ ? q _ _	[  y‘?q  ]
-Box  4: A A A A A A A A	[AAAAAAAA]
-Box  5: A A A A A A A A	[AAAAAAAA]
-Box  6: A A A A A A A A	[AAAAAAAA]
-Box  7: A A A A A A A A	[AAAAAAAA]
-Box  8: A A A A A A A A	[AAAAAAAA]
-Box  9: A A A A A A A A	[AAAAAAAA]
-Box 10: A A A A A A A A	[AAAAAAAA]
-Box 11: A A A A A A A A	[AAAAAAAA]
-Box 12: A A A A A A A A	[AAAAAAAA]
-Box 13: A A A A A A A A	[AAAAAAAA]
+Boxes 4-13: A A A A A A A A	[AAAAAAAA]
 Box 14: _ F o _ _ _ _ _	[ Fo     ]
 ```
 
