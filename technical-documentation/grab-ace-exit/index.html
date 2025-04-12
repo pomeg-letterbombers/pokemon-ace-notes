@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
@@ -187,6 +187,7 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Home
     
@@ -208,6 +209,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -217,6 +219,7 @@
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     FireRed/LeafGreen
@@ -244,6 +247,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -253,6 +257,7 @@
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Exit codes
@@ -280,6 +285,7 @@
       <a href="../../frlg/exit-codes/box-14-exit/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Box 14 exit code
     
@@ -299,8 +305,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../frlg/exit-codes/improved-box-14-exit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Improved box 14 exit code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../frlg/exit-codes/exit-code-bootstrap/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Exit code bootstrap
@@ -332,6 +362,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -341,6 +372,7 @@
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Complex payloads
@@ -367,6 +399,7 @@
     <li class="md-nav__item">
       <a href="../../frlg/complex-payloads/hex-writer/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Hexwriter
@@ -407,6 +440,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -416,6 +450,7 @@
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Technical documentation
@@ -442,6 +477,7 @@
     <li class="md-nav__item">
       <a href="../writing-hexwriter/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Writing the hexwriter
@@ -472,6 +508,7 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Grab ACE exit
     
@@ -483,6 +520,7 @@
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
+  
   
   <span class="md-ellipsis">
     Grab ACE exit
@@ -537,6 +575,15 @@
   <a href="#box-14-exit" class="md-nav__link">
     <span class="md-ellipsis">
       Box 14 exit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved-box-14-exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved box 14 exit
     </span>
   </a>
   
@@ -646,6 +693,15 @@
   <a href="#box-14-exit" class="md-nav__link">
     <span class="md-ellipsis">
       Box 14 exit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improved-box-14-exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Improved box 14 exit
     </span>
   </a>
   
@@ -769,7 +825,7 @@ In box name form, it looks like this:</p>
 Box 11: … o […o]
 </code></pre></div>
 <p>This form of the exit is also used, for codes that need to fit one more instruction then what the standard exit allows:</p>
-<div class="highlight"><pre><span></span><code>E3C000FF    BIC r0, #0xFF ; r0 &amp; 0xFF = 0, set return value as false
+<div class="highlight"><pre><span></span><code>E3C000FF    BIC r0, #0xFF ; r0 &amp; 0xFF = 0, set return value to false
 ; (insert extra unrelated instruction)
 E3B0FFD5    MOVS pc, #0x354
 </code></pre></div>
@@ -780,7 +836,7 @@ Box 11: … o […o]
 </code></pre></div>
 <h3 id="box-14-exit">Box 14 exit</h3>
 <p>This exit consists of the following instructions in the name of Box 14:</p>
-<div class="highlight"><pre><span></span><code>E3C000FF    BIC r0, #0xFF ; set return value as false
+<div class="highlight"><pre><span></span><code>E3C000FF    BIC r0, #0xFF ; set return value to false
 E12FFF1E    BX lr
 </code></pre></div>
 <p>and in box form, it looks like this:</p>
@@ -797,6 +853,23 @@ E5ACB3ED    STR r11, [r12, #0x3ED]! ; Store BX LR in Box 14 name
 E3C000FF    BIC r0, #0xFF
 00000000    ; becomes BX lr (E12FFF1E)
 </code></pre></div>
+<h3 id="improved-box-14-exit">Improved box 14 exit</h3>
+<p>Mettrich came up with this exit which does not require a set up code to write a BX instruction to the name of box 14.
+Instead it just requires changing the name of Box 14 as well as changing the box wallpapers.
+This code jumps to the <code>BX lr</code> instruction located in the GBA BIOS.</p>
+<p>The exit consists of the following instructions:</p>
+<div class="highlight"><pre><span></span><code>E3B0CFFF    MOVS r12, #0x3FC
+E3B00000    MOVS r0, #0x0 ; set return value to false
+020CFFD5    ANDEQ pc, r12, #0x354 ; jump to 0x354 (BX lr)
+</code></pre></div>
+<p>The box name component of the exit looks like this:</p>
+<div class="highlight"><pre><span></span><code>Box 14: U … o _ _ … o a [U…o  …oa]
+</code></pre></div>
+<p>And below are the box wallpaper settings needed for the exit:</p>
+<ul>
+<li>Box 1: STARS (0x0C)</li>
+<li>Box 2: DESERT (0x02)</li>
+</ul>
 <h3 id="r0-bootstrap"><code>r0</code> bootstrap</h3>
 <p>The current exit code bootstrap (called the <code>r0</code> bootstrap to distinguish it from an older bootstrap) consists of two parts.
 It is a shiny female Beedrill with name <code>Â␣␣nÔ␣␣v␣␣</code> and OT <code>␣î␣C␣␣␣</code>.</p>
@@ -867,6 +940,7 @@ The current version of this bootstrap is made entirely by mail corruption and be
 <li><a href="https://mlaurent.ovh/">E-Sh4rk</a> for his <a href="https://e-sh4rk.github.io/CodeGenerator/">CodeGenerator</a> which was used to create many of the box name codes</li>
 <li><a href="https://youtube.com/@RETIREglitch">RETIRE</a> for suggesting a better way to jump to a return address in Thumb (<code>POP {pc}</code>)</li>
 <li><a href="https://www.youtube.com/@detelony">デテロニー</a> for the <a href="https://www.youtube.com/watch?v=i9d4AyI2l1A">Japanese FR/LG ACE setup</a> which also convinced me to use <code>POP {pc}</code>.</li>
+<li>Mettrich on the Glitch City Research Institute Discord server for creating the improved box 14 exit.</li>
 </ul>
 
 
@@ -888,7 +962,7 @@ The current version of this bootstrap is made entirely by mail corruption and be
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 8, 2025 09:59:18">March 8, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 12, 2025 13:46:13">April 12, 2025</span>
   </span>
 
     
@@ -962,7 +1036,9 @@ The current version of this bootstrap is made entirely by mail corruption and be
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
