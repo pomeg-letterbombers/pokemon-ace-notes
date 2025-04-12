@@ -87,7 +87,7 @@ Box 11: … o	[…o]
 This form of the exit is also used, for codes that need to fit one more instruction then what the standard exit allows:
 
 ```
-E3C000FF	BIC r0, #0xFF ; r0 & 0xFF = 0, set return value as false
+E3C000FF	BIC r0, #0xFF ; r0 & 0xFF = 0, set return value to false
 ; (insert extra unrelated instruction)
 E3B0FFD5	MOVS pc, #0x354
 ```
@@ -105,7 +105,7 @@ Box 11: … o	[…o]
 This exit consists of the following instructions in the name of Box 14:
 
 ```
-E3C000FF	BIC r0, #0xFF ; set return value as false
+E3C000FF	BIC r0, #0xFF ; set return value to false
 E12FFF1E	BX lr
 ```
 
@@ -128,6 +128,31 @@ E5ACB3ED	STR r11, [r12, #0x3ED]! ; Store BX LR in Box 14 name
 E3C000FF    BIC r0, #0xFF
 00000000    ; becomes BX lr (E12FFF1E)
 ```
+
+### Improved box 14 exit
+
+Mettrich came up with this exit which does not require a set up code to write a BX instruction to the name of box 14.
+Instead it just requires changing the name of Box 14 as well as changing the box wallpapers.
+This code jumps to the `BX lr` instruction located in the GBA BIOS.
+
+The exit consists of the following instructions:
+
+```
+E3B0CFFF    MOVS r12, #0x3FC
+E3B00000    MOVS r0, #0x0 ; set return value to false
+020CFFD5    ANDEQ pc, r12, #0x354 ; jump to 0x354 (BX lr)
+```
+
+The box name component of the exit looks like this:
+
+```
+Box 14: U … o _ _ … o a	[U…o  …oa]
+```
+
+And below are the box wallpaper settings needed for the exit:
+
+- Box 1: STARS (0x0C)
+- Box 2: DESERT (0x02)
 
 ### `r0` bootstrap
 
@@ -218,3 +243,4 @@ Which is interpreted as:
 - [E-Sh4rk](https://mlaurent.ovh/) for his [CodeGenerator](https://e-sh4rk.github.io/CodeGenerator/) which was used to create many of the box name codes
 - [RETIRE](https://youtube.com/@RETIREglitch) for suggesting a better way to jump to a return address in Thumb (`POP {pc}`)
 - [デテロニー](https://www.youtube.com/@detelony) for the [Japanese FR/LG ACE setup](https://www.youtube.com/watch?v=i9d4AyI2l1A) which also convinced me to use `POP {pc}`.
+- Mettrich on the Glitch City Research Institute Discord server for creating the improved box 14 exit.
