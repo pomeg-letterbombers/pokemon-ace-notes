@@ -14,11 +14,11 @@
         <link rel="prev" href="../../..">
       
       
-        <link rel="next" href="../improved-box-14-exit/">
+        <link rel="next" href="../exit-code-bootstrap/">
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -367,29 +367,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../improved-box-14-exit/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Improved box 14 exit code
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../exit-code-bootstrap/" class="md-nav__link">
         
   
@@ -644,17 +621,56 @@
 
   <h1>Box 14 exit code</h1>
 
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For best results, make sure you are using real hardware or an accurate emulator (such as mGBA 0.9.0+) with a genuine GBA BIOS.</p>
+<p>If you do not have, or want to use those, please refer to the old <a href="../old-box-14-exit/">Box 14 exit code guide</a> instead.</p>
+</div>
 <p>This exit code allows box name codes to be longer by moving the exit code to the name of Box 14, in contrast to the standard exit code spanning the names of Box 10 and 11.
 Box name codes using this exit code do not require the use of an additional bootstrap Pokémon.</p>
 <h2 id="instructions">Instructions</h2>
-<p>Write and execute the following box names:</p>
-<div class="highlight"><pre><span></span><code>Box  1: z ♀ l o k … Q n [z♀lok…Qn]
-Box  2: ♀ Q n n U U n _ [♀QnnUUn ]
-Box  3: _ _ y ‘ ? q _ _ [  y‘?q  ]
-Boxes 4-13: A A A A A A A A [AAAAAAAA]
-Box 14: _ F o _ _ _ _ _ [ Fo     ]
+<p>Change the name of box 14 to the following:</p>
+<div class="highlight"><pre><span></span><code>Box 14: U … o _ _ … o a [U…o  …oa]
 </code></pre></div>
-<p>Box 14 should be named <code>␣Foì</code>, this is the Box 14 exit code.</p>
+<p>Then set the box wallpapers to the following:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">ENG</label><label for="__tabbed_1_2">GER</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Box 1: ETCETERA → STARS</li>
+<li>Box 2: SCENERY 1 → DESERT</li>
+<li>Box 3 and later: anything</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Box 1: SONSTIGES → STERN</li>
+<li>Box 2: LISTE1 → WÜSTE</li>
+<li>Box 3 and later: anything</li>
+</ul>
+</div>
+</div>
+</div>
+<p>The exit code should now be set up, any codes with the “Bootstrapped” exit should work without crashing or softlocking.</p>
+<details class="info">
+<summary>Optional test code</summary>
+<p>Write the following box names and then trigger ACE.</p>
+<div class="highlight"><pre><span></span><code>Box  1: 4 C U n n R … o [4CUnnR…o]
+Box  2: P R o / F w m _ [PRo/Fwm ]
+Box  3: _ _ V H 0 o _ _ [  VH0o  ]
+Box  4: _ … H R n _ _ _ [ …HRn   ]
+Box  5: / F Q m D F Q m [/FQmDFQm]
+Box  6: _ _ _ _ _ _ … _ [      … ]
+Box  7: _ _ _ _ _ … _ _ [     …  ]
+Box  8: _ _ _ _ … _ _ _ [    …   ]
+Box  9: _ _ _ … _ _ _ _ [   …    ]
+Box 10: _ _ _ _ _ _ … _ [      … ]
+Box 11: _ _ _ _ _ … _ _ [     …  ]
+Box 12: _ _ _ _ … _ _ _ [    …   ]
+Box 13: _ _ _ … _ _ _ _ [   …    ]
+</code></pre></div>
+<p>A shiny Bulbasaur should appear in Box 10, Slot 19, that means the exit code is working as expected.</p>
+</details>
 <p>If the game crashes or softlocks it may have been caused by the following:</p>
 <ul>
 <li>Incorrectly written box names</li>
@@ -667,8 +683,7 @@ Box 14: _ F o _ _ _ _ _ [ Fo     ]
 <h2 id="acknowledgements">Acknowledgements</h2>
 <ul>
 <li>E-Sh4rk for creating the <a href="https://e-sh4rk.github.io/CodeGenerator">CodeGenerator</a></li>
-<li>Sleipnir17 for creating the <a href="https://e-sh4rk.github.io/EmeraldACE_web/doc/FRLG_Short_Exit_Codes_Guide.pdf">short exit code setup code</a> which this code is derived from</li>
-<li>merrp for the <a href="https://www.youtube.com/watch?v=yVhK4pLC9ac">Map Warp code</a> which inspired the creation of the Box 14 exit code.</li>
+<li>Mettrich on the Glitch City Research Institute Discord server for creating the improved box 14 exit.</li>
 </ul>
 
 
@@ -690,7 +705,7 @@ Box 14: _ F o _ _ _ _ _ [ Fo     ]
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 17, 2025 07:13:39">March 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 19, 2025 06:38:55">April 19, 2025</span>
   </span>
 
     
