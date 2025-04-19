@@ -19,9 +19,8 @@ For each hexadecimal string encoded in a box name:
    - If you are not using 0x351, check that the glitch Pokémon that you are using has bit 1 of its entrypoint set.
      If it is not set, that means it executes with an aligned `PC` register and you must use a different Pokémon
 - Knowledge on how to perform mail corruption and grab ACE
-- The box 14 exit code, the name of box 14 should be ` Foì`
-    - This specific set-up does not require any bootstrap if you are writing box name codes only
-    - Instructions on how to write this can be found [here](../exit-codes/box-14-exit.md)
+- The box 14 exit code
+    - Instructions on how to set this up can be found [here](../exit-codes/box-14-exit.md)
 - The exit code bootstrap.
     - This is technically not necessary for the box name codes and can be created after the creation of the hexwriter
     - This will allow the hexwriter to exit properly via `r0`
