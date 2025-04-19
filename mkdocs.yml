@@ -8,7 +8,6 @@ nav:
   - FireRed/LeafGreen:
     - Exit codes:
       - Box 14 exit code: frlg/exit-codes/box-14-exit.md
-      - Improved box 14 exit code: frlg/exit-codes/improved-box-14-exit.md
       - Exit code bootstrap: frlg/exit-codes/exit-code-bootstrap.md
     - Complex payloads:
       - Hexwriter: frlg/complex-payloads/hex-writer.md
