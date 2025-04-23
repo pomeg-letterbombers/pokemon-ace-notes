@@ -6,6 +6,8 @@ copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.o
 nav:
   - Home: index.md
   - FireRed/LeafGreen:
+    - Getting started:
+      - Introduction: frlg/getting-started/introduction.md
     - Exit codes:
       - Box 14 exit code: frlg/exit-codes/box-14-exit.md
       - Exit code bootstrap: frlg/exit-codes/exit-code-bootstrap.md
