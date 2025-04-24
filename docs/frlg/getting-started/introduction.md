@@ -15,7 +15,7 @@ Within this context, ACE is a very powerful replacement of the GameShark or the 
 
 Pokémon FireRed/LeafGreen have two ACE vulnerabilities that are commonly used:
 
-- An invalid attack animation (commonly referred to as move ACE or attack ACE)[^1] with a callback within `gPokemonStorage`.
+- An invalid attack animation (commonly referred to as move ACE or attack ACE) with a callback within `gPokemonStorage`.
 - A buffer overflow from the name of an invalid species (commonly referred to as a glitch species) that overwrites the pointer to the `monPlaceChangeFunc` function in `gStorage`, which is usually executed by performing a swap between this species and another species.
     - When using this ACE vulnerability, the invalid species chosen overwrites this pointer to an address that is within `gPokemonStorage`
 
@@ -25,7 +25,7 @@ When the program counter jumps into the boxes, all of the data written there end
 As such ACE codes in FireRed/LeafGreen are just carefully written ARM/Thumb machine code[^5].
 
 Since December 2023, grab/swap ACE has been the mainstream method of accessing ACE on FireRed/LeafGreen with move/attack ACE seen as the outdated method.
-This is because grab/swap ACE is much more accessible, only requiring the copy of FireRed/LeafGreen, whereas move/attack ACE requires the use of a second game (usually Pokémon Emerald, but can also be a second copy of FireRed/LeafGreen) to be able to access this form of ACE.
+This is because grab/swap ACE is much more accessible, only requiring the copy of FireRed/LeafGreen, whereas move/attack ACE requires the use of a second game (usually Pokémon Emerald, but can also be a second copy of FireRed/LeafGreen) to be able to access this form of ACE[^1].
 As such, most of the FireRed/LeafGreen tutorials on this website will be operating under the assumption that you have access to grab/swap ACE, rather than move/attack ACE.
 
 [^1]:
