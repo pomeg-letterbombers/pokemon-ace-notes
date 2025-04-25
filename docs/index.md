@@ -2,6 +2,8 @@
 
 A collection of tutorials and guides for arbitrary code execution (ACE) in the Pokémon generation III games.
 
+[Start here](frlg/getting-started/introduction.md){ .md-button .md-button--primary }
+
 ## Resources
 
 - [ACE3 by E-Sh4rk](https://e-sh4rk.github.io/ACE3/): A collection of tutorials for advanced ACE in Pokémon Emerald version
