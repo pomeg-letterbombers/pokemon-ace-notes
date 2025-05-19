@@ -7,7 +7,7 @@ The following is required to build the `pokemon-ace-notes` website
 - Git
 - PowerShell (for Windows) or bash/zsh (for Mac/Linux)
 
-1. Clone the repository: `git clone https://github.com/it-is-final/pokemon-ace-notes.git`
+1. Clone the repository: `git clone https://github.com/pomeg-letterbombers/pokemon-ace-notes.git`
 2. Change directory: `cd pokemon-ace-notes`
 3. Set up a virtual environment: `python -m venv venv`
 4. Activate the virtual environment: `.\venv\Scripts\activate.ps1` (PowerShell) or `source ./venv/bin/activate` (bash/zsh)
@@ -15,9 +15,9 @@ The following is required to build the `pokemon-ace-notes` website
 6. Serve a local version for development: `mkdocs serve`
 
 ## Contributing
-- [Create a new discussion](https://github.com/it-is-final/pokemon-ace-notes/discussions/)
-- [Create a new issue](https://github.com/it-is-final/pokemon-ace-notes/issues)
-- [Create a pull request](https://github.com/it-is-final/pokemon-ace-notes/pulls)
+- [Create a new discussion](https://github.com/pomeg-letterbombers/pokemon-ace-notes/discussions/)
+- [Create a new issue](https://github.com/pomeg-letterbombers/pokemon-ace-notes/issues)
+- [Create a pull request](https://github.com/pomeg-letterbombers/pokemon-ace-notes/pulls)
 
 ## Useful references for contributors
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
