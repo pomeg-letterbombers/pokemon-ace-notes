@@ -235,7 +235,7 @@ Which is interpreted as:
 
 ## Acknowledgements
 
-- [pret](https://github.com/pret/) (Pokémon Reverse Engineering Tools) for the `pokefirered` decompilation which allowed me to make sense of the exit
+- [pret](https://github.com/pret/) for the `pokefirered` decompilation which allowed me to make sense of the exit
 - Adrichu00 for clarifying to me how the game handles the task call when a glitch Pokémon with a long name is involved
 - [merrp](https://youtube.com/@pokemerrp) for showing various tricks which allowed 
 - RationalPsycho for suggesting the use of mail to shorten the process of writing payloads
