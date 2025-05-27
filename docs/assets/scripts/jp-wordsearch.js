@@ -133,7 +133,7 @@ const leafGreenData = new Map([
   [0xfff9, 0x27f027f],
 ]);
 
-const POKEMON_STROAGE_ADDR = 0x0202924C
+const POKEMON_STROAGE_ADDR = 0x0202924C;
 const EV_ADJUST_SSTRUCTS = new Set([8, 22]);
 const EXP_ADJUST_SSTRUCTS = new Set([6, 7, 12, 13, 18, 19]);
 const PID_SUBSTRUCTURE_ORDERS = [
@@ -161,7 +161,7 @@ const PID_SUBSTRUCTURE_ORDERS = [
   'MAEG',
   'MEGA',
   'MEAG',
-]
+];
 
 function getAdjustmentType(pid) {
   if (typeof pid !== "number") {
@@ -169,10 +169,10 @@ function getAdjustmentType(pid) {
   }
   const pmod = (pid >>> 0) % 24;
   if (EV_ADJUST_SSTRUCTS.has(pmod)) {
-    return "EV"
+    return "EV";
   }
   if (EXP_ADJUST_SSTRUCTS.has(pmod)) {
-    return "Experience"
+    return "Experience";
   }
   return null;
 }
@@ -265,5 +265,5 @@ document.getElementById("word-search-form").addEventListener("submit", function(
     resultRow.append(wordCell);
     resultsBody.append(resultRow);
   }
-})
+});
 })();
