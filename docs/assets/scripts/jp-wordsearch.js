@@ -210,14 +210,42 @@ function calculateBoxLocation(entrypoint) {
   return [boxNumber, slotNumber];
 }
 
+document.getElementById("pid-input").addEventListener("input", function() {
+  const n = Number(this.value);
+  if (isNaN(n) || !(n >= 0 && n <= 0xFFFFFFFF)) {
+    this.setCustomValidity("Invalid personality value");
+    this.reportValidity();
+  } else {
+    this.setCustomValidity("");
+  }
+});
+
+document.getElementById("tid-input").addEventListener("input", function() {
+  const n = Number(this.value);
+  if (isNaN(n) || !(n >= 0 && n <= 65535)) {
+    this.setCustomValidity("Invalid trainer ID");
+    this.reportValidity();
+  } else {
+    this.setCustomValidity("");
+  }
+});
+
 document.getElementById("word-search-form").onsubmit = () => false;
 document.getElementById("word-search-form").addEventListener("submit", function(e) {
   e.preventDefault();
   const params = new FormData(this);
-  const pid = parseInt(params.get("pid"), 16);
+  const pid = Number(params.get("pid"));
   const tid = Number(params.get("tid"));
   const gameVersion = params.get("game-version");
   let speciesList;
+  if (!this.elements["pid"].checkValidity()) {
+    this.elements["pid"].reportValidity();
+    return;
+  }
+  if (!this.elements["tid"].checkValidity()) {
+    this.elements["tid"].reportValidity();
+    return;
+  }
   if (typeof gameVersion !== "string") {
     throw new Error("Malformed input");
   }

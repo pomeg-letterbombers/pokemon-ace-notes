@@ -1,6 +1,6 @@
 .web-tool-form {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: max-content auto;
     gap: 0.5em 1em;
     place-content: start;
     width: max-content;
@@ -8,9 +8,24 @@
 
 .web-tool-form fieldset {
     grid-column: 1 / span 2;
-    gap: inherit;
 }
 
 .web-tool-form .wide-input {
     grid-column: 1 / span 2;
+}
+
+dl.single-line-dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+dl.single-line-dl dt {
+    grid-column: 1;
+    font-weight: 600;
+}
+
+dl.single-line-dl dd {
+    grid-column: 2;
+    margin: 0;
+    padding: 0;
 }
