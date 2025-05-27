@@ -32,8 +32,6 @@ markdown_extensions:
       alternate_style: true
 extra_css:
   - stylesheets/web-tool-form.css
-extra_javascript:
-  - javascripts/jp-wordsearch.js
 theme:
   name: material
   logo: assets/logo.png

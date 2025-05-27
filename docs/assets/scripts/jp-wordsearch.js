@@ -136,6 +136,32 @@ const leafGreenData = new Map([
 const POKEMON_STROAGE_ADDR = 0x0202924C
 const EV_ADJUST_SSTRUCTS = new Set([8, 22]);
 const EXP_ADJUST_SSTRUCTS = new Set([6, 7, 12, 13, 18, 19]);
+const PID_SUBSTRUCTURE_ORDERS = [
+  'GAEM',
+  'GAME',
+  'GEAM',
+  'GEMA',
+  'GMAE',
+  'GMEA',
+  'AGEM',
+  'AGME',
+  'AEGM',
+  'AEMG',
+  'AMGE',
+  'AMEG',
+  'EGAM',
+  'EGMA',
+  'EAGM',
+  'EAMG',
+  'EMGA',
+  'EMAG',
+  'MGAE',
+  'MGEA',
+  'MAGE',
+  'MAEG',
+  'MEGA',
+  'MEAG',
+]
 
 function getAdjustmentType(pid) {
   if (typeof pid !== "number") {
@@ -212,7 +238,7 @@ document.getElementById("word-search-form").addEventListener("submit", function(
       speciesWords.push(result);
     }
   }
-  document.getElementById("pid-substructure-order").innerText = (pid >>> 0) % 24;
+  document.getElementById("pid-substructure-order").innerText = `${(pid >>> 0) % 24} (${PID_SUBSTRUCTURE_ORDERS[(pid >>> 0) % 24]})`;
   document.getElementById("encryption-key").innerText = "0x" + (((pid >>> 0) ^ (tid >>> 0)) & ((1 << 16) - 1)).toString(16).toUpperCase();
   document.getElementById("corruption-type").innerText = adjustmentType ?? "None";
   const resultsBody = document.getElementById("results-body");
@@ -240,5 +266,4 @@ document.getElementById("word-search-form").addEventListener("submit", function(
     resultsBody.append(resultRow);
   }
 })
-
 })();

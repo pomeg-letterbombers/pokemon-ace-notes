@@ -1,16 +1,14 @@
 .web-tool-form {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 0.25em 1em;
+    gap: 0.5em 1em;
     place-content: start;
+    width: max-content;
 }
 
 .web-tool-form fieldset {
-    display: grid;
     grid-column: 1 / span 2;
-    grid-template-columns: inherit;
     gap: inherit;
-    place-content: inherit;
 }
 
 .web-tool-form .wide-input {
