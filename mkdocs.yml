@@ -4,8 +4,7 @@ repo_name: pokemon-ace-notes
 repo_url: https://github.com/pomeg-letterbombers/pokemon-ace-notes/
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">pokemon-ace-notes</span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 nav:
-  - Home: index.md
-  - FireRed/LeafGreen:
+  - (ENG/EUR) FireRed/LeafGreen:
     - Getting started:
       - Introduction: frlg/getting-started/introduction.md
     - Exit codes:
@@ -13,9 +12,14 @@ nav:
       - Exit code bootstrap: frlg/exit-codes/exit-code-bootstrap.md
     - Complex payloads:
       - Hexwriter: frlg/complex-payloads/hex-writer.md
+  - (JPN) FireRed/LeafGreen:
+    - Getting started:
+      - Introduction: frlg-jpn/getting-started/introduction.md
+      - Setting up arbitrary code execution: frlg-jpn/getting-started/ace-set-up.md
   - Technical documentation:
     - Writing the hexwriter: technical-documentation/writing-hexwriter.md
     - Grab ACE exit: technical-documentation/grab-ace-exit.md
+    - Japanese FireRed/LeafGreen ACE setup: technical-documentation/jpn-grab-ace-set-up.md
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -26,6 +30,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+extra_css:
+  - stylesheets/web-tool-form.css
 theme:
   name: material
   logo: assets/logo.png
@@ -41,5 +47,6 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
   - git-committers:
-      repository: it-is-final/pokemon-ace-notes
+      repository: pomeg-letterbombers/pokemon-ace-notes
       branch: main
+      token: !!python/object/apply:os.getenv ["MKDOCS_GIT_COMMITTERS_APIKEY"]
