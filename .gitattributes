@@ -30,8 +30,8 @@ docs/** -linguist-documentation
 *.css txt
 *.js text
 *.md text linguist-detectable
-*.{yml, yaml} text
-*.{htm, html} text diff=html
+*.{yml,yaml} text
+*.{htm,html} text diff=html
 
 *.svg text
 *.png binary
