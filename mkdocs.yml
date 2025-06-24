@@ -6,15 +6,16 @@ copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.o
 nav:
   - Home: index.md
   - FireRed and LeafGreen:
-    - Getting started:
+    - Getting Started:
       - Introduction: frlg/getting-started/introduction.md
-    - Exit codes:
-      - Box 14 exit code: frlg/exit-codes/box-14-exit.md
-      - Exit code bootstrap: frlg/exit-codes/exit-code-bootstrap.md
-    - Complex payloads:
+      - Mail Glitch: frlg/getting-started/mail-glitch.md
+    - Exit Codes:
+      - Box 14 Exit Code: frlg/exit-codes/box-14-exit.md
+      - Exit Code Bootstrap: frlg/exit-codes/exit-code-bootstrap.md
+    - Complex Payloads:
       - Hexwriter: frlg/complex-payloads/hex-writer.md
-  - Technical documentation:
-    - Writing the hexwriter: technical-documentation/writing-hexwriter.md
+  - Technical Documentation:
+    - Writing the Hexwriter: technical-documentation/writing-hexwriter.md
     - Grab ACE exit: technical-documentation/grab-ace-exit.md
 markdown_extensions:
   - attr_list
