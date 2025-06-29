@@ -12,6 +12,7 @@ The purpose of this tutorial is to prepare the mail glitch on your save file, th
     +   CH’DING the trade Farfetch’d learns **Knock Off** at level **21**.
 *   A Pokémon with the move **Recycle**.
     +   MIMIEN the trade Mr. Mime learns **Recycle** at level **33**.
+    +   Porygon learns **Recycle** at level **44**.
 *   A consumable item (e.g. a berry).
     +   A **Sitrus Berry** works best as its consumption will trigger at 50% HP.
 *   Mail
