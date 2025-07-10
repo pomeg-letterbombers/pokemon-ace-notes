@@ -18,6 +18,7 @@ nav:
   - Technical Documentation:
     - Writing the Hexwriter: technical-documentation/writing-hexwriter.md
     - Grab ACE exit: technical-documentation/grab-ace-exit.md
+    - Getting ACE in Japanese FireRed and LeafGreen: technical-documentation/getting-ace-in-jpn-frlg.md
 markdown_extensions:
   - attr_list
   - md_in_html
