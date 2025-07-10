@@ -120,6 +120,6 @@ In non-Japanese FireRed and LeafGreen, the mail glitch allows modifying the PID 
 
 Unfortunately in Japanese FireRed and LeafGreen, the mail glitch covers an area of the data structure that is more difficult to modify due to needing to account for encryption. As such this usage of the mail glitch in the Japanese games is limited, with it being mainly used for getting ACE in the Japanese games.
 
-## Epilogue
+## Conclusion
 
 You should now be able to prepare the mail glitch on a save file, and know how to use it for item corruption and for modifying Pokémon data.
