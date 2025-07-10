@@ -35,6 +35,8 @@ theme:
   favicon: assets/favicon.png
   features:
     - content.code.annotate
+    - navigation.tabs
+    - navigation.sections
   font:
     text: Source Sans 3
     code: Source Code Pro
