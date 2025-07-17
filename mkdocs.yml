@@ -9,7 +9,8 @@ nav:
     - Getting Started:
       - Introduction: frlg/getting-started/introduction.md
       - Mail Glitch: frlg/getting-started/mail-glitch.md
-      - Getting swap/grab ACE in Japanese FireRed and LeafGreen: frlg/getting-started/jpn-ace.md
+      - Non-Japanese ACE setup: frlg/getting-started/non-jpn-ace.md
+      - Japanese ACE setup: frlg/getting-started/jpn-ace.md
     - Exit Codes:
       - Box 14 Exit Code: frlg/exit-codes/box-14-exit.md
       - Exit Code Bootstrap: frlg/exit-codes/exit-code-bootstrap.md
