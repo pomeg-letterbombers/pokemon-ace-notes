@@ -1,5 +1,5 @@
 ---
-title: "Non-Japanese ACE setup: Pre-Elite Four"
+title: "Non-Japanese ACE Setup: Pre-Elite Four"
 ---
 
 In this tutorial (also known as HOCK 2.O), you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
