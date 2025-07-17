@@ -1,5 +1,4 @@
 ---
-title: pokemon-ace-notes
 hide:
   - title
   - navigation
