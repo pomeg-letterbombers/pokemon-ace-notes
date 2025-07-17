@@ -1,5 +1,5 @@
 ---
-title: "Japanese ACE setup: Getting donor Pokémon via RNG manipulation"
+title: "Japanese ACE Setup: Getting the donor Pokémon via RNG manipulation"
 ---
 
 For this method, you should be familiar with RNG manipulation in Pokémon FireRed and LeafGreen. If not, you should either follow the other method ([Brute forcing at the Celadon Game Corner](#brute-forcing-at-the-celadon-game-corner)), or follow these guides for either [retail](https://retailrng.com/frlg/) or [emulator](https://www.pokemonrng.com/fire-red-and-leaf-green/).

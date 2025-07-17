@@ -1,5 +1,5 @@
 ---
-title: "Japanese ACE setup: Getting donor Pokémon"
+title: "Japanese ACE Setup: Getting the donor Pokémon"
 ---
 
 In the game, make sure that you have large amounts of coins and Rare Candies (mail glitch’s item duplication should allow you to obtain large amounts of each easily). It is also recommended to have a party of only one Pokémon, this just makes mass checking easier. At the Celadon Game Corner, save in front of the clerk that gives out the prize Pokémon.
