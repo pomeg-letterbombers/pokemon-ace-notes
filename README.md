@@ -9,7 +9,7 @@ The following is required to build the `pokemon-ace-notes` website
 
 1. Clone the repository: `git clone https://github.com/pomeg-letterbombers/pokemon-ace-notes.git`
 2. Change directory: `cd pokemon-ace-notes`
-3. Set up a virtual environment: `python -m venv venv`
+3. Set up a virtual environment: `python -m venv .venv`
 4. Activate the virtual environment: `.\venv\Scripts\activate.ps1` (PowerShell) or `source ./venv/bin/activate` (bash/zsh)
 5. Install dependencies: `pip install -r requirements.txt`
 6. Serve a local version for development: `mkdocs serve`
