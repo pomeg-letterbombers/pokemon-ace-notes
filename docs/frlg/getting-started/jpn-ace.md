@@ -1,12 +1,12 @@
 ---
-title: Getting swap/grab ACE in Japanese FireRed and LeafGreen
+title: Japanese ACE setup
 ---
 
 In this tutorial, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
-*   Your save has the mail glitch active.
+*   Your save has the mail glitch active, and you know how to use it.
     +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
 
 ## Getting the donor Pokémon
@@ -99,7 +99,7 @@ As such, with this Pokémon (we will call it the initial ACE species), we will o
 
 Make sure that the entrypoint of the initial ACE species, and all box slots following it are **empty**, and that you have two or less party members because this code will overwrite one of the party slots with glitch species 0xFFC9.
 
-Then set your box names as shown below, then trigger ACE by swapping another Pokémon with this Pokémon, as shown in the provided figure.
+Set your box names to the ones shown below:
 
 ```
 Box  1:	リ び … ｏ く ＿ ゼ ｎ	[リび…ｏく　ゼｎ]
@@ -110,6 +110,8 @@ Box  5:	Ｏ 　 　 　 　 　 　 　	[Ｏ]
 Box  6+: (anything)
 ```
 
+Then in the PC’s **Move Pokémon** mode, grab any Pokémon (except for the glitch Pokémon), and make sure the cursor is **orange** (press <kbd>SELECT</kbd> if it is not). Then swap this Pokémon with the glitch Pokémon by hovering it over the glitch Pokémon then pressing <kbd>A</kbd>. This should move the glitch Pokémon into the cursor, press <kbd>A</kbd> again and the other Pokémon should come back into the cursor. Place this Pokémon anywhere afterwards. An image below has been provided to illustrate how it should look.
+
 <figure markdown="span">
 
 ![Swapping two Pokémon in the PC](../../assets/images/frlg/getting-started/jpn-lg-ace/SwappingAction.png)
@@ -117,11 +119,11 @@ Box  6+: (anything)
 
 </figure>
 
-After performing the swap, your game should not crash. Exit the Move Pokémon mode, then enter Deposit mode. In the third party slot, a glitch Pokémon should have appeared (as shown below), make sure to deposit it somewhere in the boxes.
+After performing the swap, your game should not crash. If that is so, then you have just learned how to trigger ACE through swapping! Exit the Move Pokémon mode, then enter Deposit mode. In the third party slot, a glitch Pokémon should have appeared (as shown below), make sure to deposit it somewhere in the boxes.
 
 ![A glitch Pokémon in party slot 3](../../assets/images/frlg/getting-started/jpn-lg-ace/FinalResult.png)
 
-If you see this (note that the name might vary, but as long as it looks similar, then its the correct Pokémon), that means the code worked, and you have ACE set up in Japanese FireRed or LeafGreen.
+If you see this (note that the name might vary, but as long as it looks similar, then its the correct Pokémon), that means the code worked, and you have ACE set up in Japanese FireRed or LeafGreen. You can trigger ACE at any time with this glitch Pokémon by setting the correct box names for your code beforehand then performing the aforementioned swapping with **this** glitch Pokémon.
 
 ### In case of failure
 
