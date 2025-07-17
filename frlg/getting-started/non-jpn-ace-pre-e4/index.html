@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://pomeg-letterbombers.github.io/pokemon-ace-notes/frlg/getting-started/jpn-ace-donor-rng/">
+        <link rel="canonical" href="https://pomeg-letterbombers.github.io/pokemon-ace-notes/frlg/getting-started/non-jpn-ace-pre-e4/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Japanese ACE setup: Getting donor Pokémon via RNG manipulation - pokemon-ace-notes</title>
+        <title>Non-Japanese ACE setup: Pre-Elite Four - pokemon-ace-notes</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#species-word-finder" class="md-skip">
+        <a href="#prequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Japanese ACE setup: Getting donor Pokémon via RNG manipulation
+              Non-Japanese ACE setup: Pre-Elite Four
             
           </span>
         </div>
@@ -783,9 +783,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#species-word-finder" class="md-nav__link">
+  <a href="#prequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Species word finder
+      Prequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checking-if-everything-worked" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking if everything worked
     </span>
   </a>
   
@@ -810,105 +828,301 @@
   
 
 
-  <h1>Japanese ACE setup: Getting donor Pokémon via RNG manipulation</h1>
+  <h1>Non-Japanese ACE setup: Pre-Elite Four</h1>
 
-<p>For this method, you should be familiar with RNG manipulation in Pokémon FireRed and LeafGreen. If not, you should either follow the other method (<a href="#brute-forcing-at-the-celadon-game-corner">Brute forcing at the Celadon Game Corner</a>), or follow these guides for either <a href="https://retailrng.com/frlg/">retail</a> or <a href="https://www.pokemonrng.com/fire-red-and-leaf-green/">emulator</a>.</p>
-<p>While you can target any encounter for the RNG manipulation, it is recommended (especially for retail) that you use either the Eevee at Celadon Mansion, or Scyther<sup>FR</sup>/Pinsir<sup>LG</sup> at the Celadon Game Corner (ideally the ones with high stats) as the target encounter for this RNG manipulation. As such further instructions will assume that you are targeting either of these encounters for the RNG manipulation (make deviations as needed if you are <strong>not</strong> targeting these encounters).</p>
+<p>In this tutorial (also known as HOCK 2.O), you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.</p>
+<h2 id="prequisites">Prequisites</h2>
+<ul>
+<li>Your save has the mail glitch active, and you know how to use it.<ul>
+<li>If not, please read <a href="../mail-glitch/">this article</a> to learn how to activate it.</li>
+</ul>
+</li>
+<li>8 HP Ups<ul>
+<li>These can be purchased or cloned via the mail glitch.</li>
+</ul>
+</li>
+</ul>
+<h2 id="procedure">Procedure</h2>
+<p>Make sure that Box 3, Slot 1 is <strong>empty</strong> before you do this.</p>
+<p>Then activate the mail glitch, you should see the following screen</p>
+<figure>
+
+<img alt="Image" src="../../../assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png" />
+
+<figcaption>
+
+The glitched mail on English FireRed and LeafGreen.
+
+</figcaption>
+</figure>
+<p><strong>Set</strong> the message of the glitched mail to be the following.</p>
+<table>
+    <tbody>
+        <tr>
+            <th scope="row">English</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>HIGHS</td>
+                        </tr>
+                        <tr>
+                            <td>I CHOOSE YOU</td>
+                            <td>WANDERING</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">French</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>HAUTEUR</td>
+                        </tr>
+                        <tr>
+                            <td>CE SERA TOI</td>
+                            <td>NOMADE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Italian</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>SUL SERIO</td>
+                        </tr>
+                        <tr>
+                            <td>FATTI AVANTI</td>
+                            <td>CRUDELE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">German</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>HÖHEN</td>
+                        </tr>
+                        <tr>
+                            <td>DU BIST DRAN</td>
+                            <td>LATSCH</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Spanish</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>(?)</td>
+                            <td>INFANTIL</td>
+                        </tr>
+                        <tr>
+                            <td>TE ELIJO</td>
+                            <td>RIDÍCULO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Confirm</strong> the message.</p>
+<p>After confirming the message, a glitch species should appear in Box 3, Slot 1. This should be species 0x0200. It should have the following characteristics:</p>
+<ul>
+<li>Species name is one of the following depending on your language:
+    <table>
+        <tbody>
+            <tr>
+                <th scope="row">English</th>
+                <td><samp>HOCK</samp></td>
+            </tr>
+            <tr>
+                <th scope="row">French</th>
+                <td><samp style="white-space: pre">     TONNE</samp></td>
+            </tr>
+            <tr>
+                <th scope="row">Italian</th>
+                <td><samp>CK</samp></td>
+            </tr>
+            <tr>
+                <th scope="row">German</th>
+                <td><samp>HOCK</samp></td>
+            </tr>
+            <tr>
+                <th scope="row">Spanish</th>
+                <td><samp>ENO</samp></td>
+            </tr>
+        </tbody>
+    </table></li>
+<li>Level 4</li>
+<li>Female</li>
+</ul>
+<p>If the glitch species does not have the correct name, or a bad egg appeared instead, do the glitched mail message again, and make sure that Box 3, Slot 1 is <strong>empty</strong>.</p>
+<p>Move species 0x0200 into your party then give it:</p>
+<ul>
+<li><strong>8</strong> HP Ups<ul>
+<li>This provides <strong>80</strong> HP effort values.</li>
+</ul>
+</li>
+<li><strong>1</strong> <strong>HP</strong> effort value<ul>
+<li>This can be provided by Caterpie, which can be found in the Viridian Forest.</li>
+</ul>
+</li>
+<li><strong>1</strong> <strong>Attack</strong> effort value<ul>
+<li>This can be provided by defeating <strong>1</strong> Doduo, which can be found on Route 16.</li>
+<li>This can also be provided by defeating <strong>1</strong> Mankey, which can be found on Route 22.</li>
+</ul>
+</li>
+</ul>
+<p>After giving it these EVs, place it back into Box 3, Slot 1.</p>
+<p>Activate the mail glitch again, then set the message of the glitched mail to be the following:</p>
 <div class="admonition note">
-<p class="admonition-title">For emulator users</p>
-<p>We are assuming that you are using a Lua script (like the one <a href="https://github.com/Real96/PokeLua/blob/main/Gen%203/mGBA/FRLG_RNG_mGBA.lua">here</a>) to perform the RNG manipulation. If you wish to not use Lua scripts, follow the instructions for console users. Keep in mind though that there are currently issues with emulators not being able to hit initial seeds in the same manner as console, so you are on your own if you choose to do the console method on emulator.</p>
+<p class="admonition-title">Note</p>
+<p>You will see the message that you have entered in the first glitched mail. This is completely normal, and is intended.</p>
+<p>The words entered for this message are the same, but the position of the second and fourth words have been swapped. You do not need to re-enter the first or third words.</p>
 </div>
-<p>First open the <a href="https://pomeg-letterbombers.github.io/ace-setup-tools/donor-search/"><strong>Donor Search</strong></a> tool, this tool allows you to find the target advance(s) for a suitable donor Pokémon. We recommend setting the parameters as shown below.</p>
-<dl>
-<dt>Game version</dt>
-<dd>
-<p>Set this to the game version you are playing on.</p>
-</dd>
-<dt>Encounter type</dt>
-<dd>
-<p>Set this to <strong>Static</strong>.</p>
-</dd>
-<dt>Seed</dt>
-<dd>
-<p><strong>For console:</strong> Set this to an early seed (i.e. a low frame number) in one of these spreadsheets. Choose the spreadsheet appropriate for your game version.</p>
+<table>
+    <tbody>
+        <tr>
+            <th scope="row">English</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>WANDERING</td>
+                        </tr>
+                        <tr>
+                            <td>I CHOOSE YOU</td>
+                            <td>HIGHS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">French</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>NOMADE</td>
+                        </tr>
+                        <tr>
+                            <td>CE SERA TOI</td>
+                            <td>HAUTEUR</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Italian</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>CRUDELE</td>
+                        </tr>
+                        <tr>
+                            <td>FATTI AVANTI</td>
+                            <td>SUL SERIO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">German</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>LATSCH</td>
+                        </tr>
+                        <tr>
+                            <td>DU BIST DRAN</td>
+                            <td>HÖHEN</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Spanish</th>
+            <td>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>(?)</td>
+                            <td>RIDÍCULO</td>
+                        </tr>
+                        <tr>
+                            <td>TE ELIJO</td>
+                            <td>INFANTIL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p><strong>Confirm</strong> the message.</p>
+<p>After confirming this message, check Box 3, Slot 1. The 0x0200 should have become species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.</p>
+<p><img alt="The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100." src="../../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before triggering any kind of ACE, make sure that:</p>
 <ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1GMRFM1obLDcYbR6GR6KrE8UZotA7djUTw8PxqVFnCVY/edit?pli=1&amp;gid=1608943801#gid=1608943801">FireRed 1.0</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1aQeWaZSi1ycSytrNEOwxJNoEg-K4eItYagU_dh9VIeU/edit?gid=791743105#gid=791743105">FireRed 1.1</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1LSRVD0_zK6vyd6ettUDfaCFJbm00g451d8s96dqAbA4/edit?gid=1862478029#gid=1862478029">LeafGreen</a></li>
+<li>Done all prerequisite steps for that particular code (e.g. created specific bootstraps, in correct location, etc.)</li>
+<li>You have changed the box names to the ones for your code. Make sure that you have entered these codes correctly!</li>
+<li>The entrypoint (Box 13, Slot 7) and all spaces after it are <strong>empty</strong>.<ul>
+<li>If the Pokémon occupying these spaces are bootstrap Pokémon (Pokémon containing special data for various ACE setups to use), they should be fine occupying these spaces as long as they are for the form of ACE you are using (the covered form in this tutorial is <strong>grab/swap</strong> ACE).</li>
 </ul>
-<p><strong>For emulator:</strong> After starting the game, press <kbd>A</kbd> or <kbd>START</kbd> on the title screen and pause the game (using <kbd>Ctrl</kbd> + <kbd>P</kbd> or whatever other keybind your emulator uses). Then note down whatever initial seed shows up in the script’s interface. Or you can just write any 16-bit value (0–65535), then use your script’s initial seed bot to hit that seed.</p>
-</dd>
-<dt>Species word settings</dt>
-<dd>
-<p>By default (i.e. no checkboxes under this group are checked), the searcher will exclude any unlockable words from the search. These checkboxes allows the tool to also search through the certain unlockable words.</p>
-<ul>
-<li><strong>Use unlockable words</strong> will allow the <strong>species word</strong> to also be a word that is unlockable before entering the Hall of Fame.</li>
-<li><strong>Use post-Elite Four words</strong> will allow the <strong>species word</strong> to be also be a word that is unlockable after entering the Hall of Fame.</li>
+</li>
 </ul>
-</dd>
-<dt>Initial advances</dt>
-<dd>
-<p>Set this to <strong>350</strong> for the Celadon Mansion Eevee, or <strong>550</strong> for the Game Corner prize Pokémon.</p>
-</dd>
-<dt>Advances</dt>
-<dd>
-<p>Set this to <strong>100</strong>.</p>
-</dd>
-<dt>Delay</dt>
-<dd>
-<ul>
-<li><strong>For console:</strong> Set this to <strong>0</strong>.</li>
-<li><strong>For emulator:</strong> Set this to <strong>4</strong> for the Celadon Mansion Eevee, or <strong>3</strong> for the Game Corner prize Pokémon.</li>
-</ul>
-</dd>
-</dl>
-<p>Once you have entered these parameters, click on <kbd>Find</kbd>.</p>
-<p>The <i>Results</i> table should be populated with entries. Each entry consists of an <i>Advance</i> number, and the PID of the corresponding generated Pokémon. Select one of these targets to target for the RNG manipulation.  If you are unsure on which advance to target, use the below guide.</p>
-<ul>
-<li><strong>For Celadon Mansion Eevee:</strong> Target the advance closest to advance <strong>400</strong>.</li>
-<li><strong>For Game Corner Scyther<sup>FR</sup>/Pinsir<sup>LG</sup>:</strong> Target the advance closest to advance <strong>600</strong>.</li>
-</ul>
-<p>Once you have the target Pokémon, then continue to the next section.</p>
-<h2 id="species-word-finder">Species word finder</h2>
-<p>Next you will be using a tool (we call it the <strong>Species Word Finder</strong>) to both determine if the Pokémon is suitable for use as a donor Pokémon and find various important variables for this tutorial. The tool is provided at <a href="https://pomeg-letterbombers.github.io/ace-setup-tools/species-word-finder/">https://pomeg-letterbombers.github.io/ace-setup-tools/species-word-finder/</a>. This tool takes the Pokémon’s personality value (PID), its original trainer’s ID number (TID), the game version as well as a few optional parameters that widens the range of mail words are searched. Below is an explanation for each item in the results area:</p>
-<dl>
-<dt>PID substructure order</dt>
-<dd>
-<p>This is the order in which the encrypted substructures of the Pokémon’s data is laid out, with <strong>G</strong> for <strong>Growth</strong>, <strong>A</strong> for <strong>Attacks</strong>, <strong>E</strong> for <strong>EVs/Conditions</strong>, and <strong>M</strong> for <strong>Miscellaneous</strong>. This is just technical details for people who want to know more.</p>
-</dd>
-<dt>Encryption key</dt>
-<dd>
-<p>This is one half of a value that is used to encrypt the Pokémon data. This half happens to be relevant for the operations we are doing. This half is formed by: (<var>PID</var> mod 65536) &oplus; <var>TID</var>.</p>
-</dd>
-<dt>Adjustment type</dt>
-<dd>
-<p>Can be “EV”, “Experience”, or “None”. This determines which stats you will have to adjust in order for the mail corruption to keep the Pokémon’s checksum valid. If this value is <strong>None</strong>, that means the Pokémon is not suitable for use as a donor Pokémon.</p>
-</dd>
-<dt>Species index</dt>
-<dd>
-<p>This is the internal index that is used to identify this “species” in the game’s code.</p>
-</dd>
-<dt>Entrypoint</dt>
-<dd>
-<p>When ACE is triggered, this is the <strong>earliest point</strong> in the PC boxes where the program counter can start reading machine code from. This and all slots after it <strong>will</strong> be interpreted as machine code. Make sure that this and all following box slots are <strong>empty</strong> (or contain Pokémon with special data expressly for ACE applications) when triggering ACE. Note that due to ASLR, where the program counter actually enters in the boxes can vary from execution to execution.</p>
-</dd>
-<dt>Word index</dt>
-<dd>
-<p>This is the internal index that is used to identify this word in the game’s code.</p>
-</dd>
-<dt>Word group</dt>
-<dd>
-<p>This is the word group of the <strong>species word</strong>, which may be useful if you prefer to use the default group view to find the word you want to enter.</p>
-</dd>
-<dt>Word</dt>
-<dd>
-<p>This is the <strong>species word</strong>, which is the word that overwrites your species in a way that it turns your Pokémon into one of the many glitch Pokémon that can trigger ACE.</p>
-</dd>
-</dl>
-<p>Enter the Pokémon’s PID and its TID, select the game you are using, then click <kbd>Find</kbd>.</p>
-<p>If you see results in the table, that means the Pokémon is suitable for use as a donor Pokémon. Take note of the <strong>encryption key</strong>, and <strong>adjustment type</strong>, as well as the <strong>entrypoint</strong>, <strong>species index</strong>, and <strong>word</strong> of one of the table entries (if there are multiple, you can use the <a href="https://pomeg-letterbombers.github.io/ace-setup-tools/adjustment-calc/">Checksum Adjustment Calculator</a> to check each species, then select the one that requires the least amount of effort to adjust, make sure that <strong>Search easy chat words</strong> is checked).</p>
-<p>If you see a <strong>None</strong> adjustment type, and/or no results in the table, that means the Pokémon is not suitable for use as a donor Pokémon. You should not be seeing this, if you do, make sure that the <strong>Species word settings</strong> are the same ones you used for Donor Search then try again.</p>
-<p><a class="md-button primary" href="../jpn-ace/#adjusting-the-donor-pokémon">Back to main tutorial</a></p>
+</div>
+<p>To trigger ACE with this Pokémon, in the PC’s <strong>Move Pokémon</strong> mode, grab any Pokémon (except for the glitch Pokémon), and make sure the cursor is <strong>orange</strong> (press <kbd>SELECT</kbd> if it is not). Then swap this Pokémon with the glitch Pokémon by hovering it over the glitch Pokémon then pressing <kbd>A</kbd>. This should move the glitch Pokémon into the cursor, press <kbd>A</kbd> again and the other Pokémon should come back into the cursor. Place this Pokémon anywhere afterwards.</p>
+<p><img alt="Swapping two Pokémon in the PC" src="../../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png" /></p>
+<h2 id="checking-if-everything-worked">Checking if everything worked</h2>
+<p>Make sure that Box 10, Slot 19 is <strong>empty</strong>, then set your box names to the ones shown below.</p>
+<div class="highlight"><pre><span></span><code>Box  1: 4 C U n n R … o [4CUnnR…o]
+Box  2: P R o / F w m _ [PRo/Fwm ]
+Box  3: _ _ V H . o _ _ [  VH.o  ]
+Box  4: _ … H R n _ _ _ [ …HRn   ]
+Box  5: / F Q m D F Q m [/FQmDFQm]
+Box  6: _ _ _ _ _ _ … _ [      … ]
+Box  7: _ _ _ _ _ … _ _ [     …  ]
+Box  8: _ _ _ _ … _ _ _ [    …   ]
+Box  9: _ _ _ … _ _ _ _ [   …    ]
+Box 10: _ _ _ _ _ … o a [     …oa]
+Box 11: … o _ _ _ _ _ _ […o      ]
+</code></pre></div>
+<p>Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.</p>
 
 
 
@@ -929,7 +1143,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2025 18:22:01 UTC">July 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 17, 2025 18:43:59 UTC">July 17, 2025</span>
   </span>
 
     
