@@ -1,3 +1,6 @@
+---
+title: "Box 14 Exit"
+---
 !!! warning
 
     For best results, make sure you are using real hardware or an accurate emulator (such as mGBA 0.9.0+) with a genuine GBA BIOS.

@@ -1,7 +1,6 @@
 ---
 title: Box 14 exit code (old)
 ---
-
 !!! tip
 
     Use the [improved Box 14 exit code](box-14-exit.md) if you are on retail hardware or an accurate emulator with a genuine GBA BIOS.

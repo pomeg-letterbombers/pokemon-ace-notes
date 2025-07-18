@@ -1,3 +1,6 @@
+---
+title: "Writing the Hexwriter"
+---
 ## Preamble
 
 In December 2024, efforts has been started to simplify the writing of the hexadecimal writer (hexwriter) with the power of mail corruption being able to modify Pokémon data.

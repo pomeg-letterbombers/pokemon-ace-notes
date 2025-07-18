@@ -1,3 +1,6 @@
+---
+title: "Hexwriter"
+---
 !!! info
 
     This guide is only for US/European versions of Pokémon FireRed/Leafgreen.

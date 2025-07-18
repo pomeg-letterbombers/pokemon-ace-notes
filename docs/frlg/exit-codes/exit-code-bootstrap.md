@@ -1,3 +1,6 @@
+---
+title: "Exit Code Bootstrap"
+---
 The purpose of this bootstrap is to allow more complex ACE payloads such as the hexwriter, and the hexecutor to be able to exit out of execution and hand back control to the game.
 It sets `r0` to the address of the bootstrap’s OT, which contains the exit code written in Thumb.
 

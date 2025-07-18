@@ -1,3 +1,6 @@
+---
+title: "Grab ACE Exit"
+---
 ## How to exit ACE?
 
 Under normal circumstances, when swapping two Pokémon in the PC the game does the following:

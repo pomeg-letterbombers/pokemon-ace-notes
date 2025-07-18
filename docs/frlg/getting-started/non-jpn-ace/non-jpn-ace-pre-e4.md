@@ -1,5 +1,5 @@
 ---
-title: "Non-Japanese ACE Setup: Pre-Elite Four"
+title: "Non-Japanese ACE Setup: Pre-Elite Four Route"
 ---
 
 In this tutorial (also known as HOCK 2.O), you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
@@ -19,7 +19,7 @@ Then activate the mail glitch, you should see the following screen
 
 <figure markdown="span">
 
-![Image](../../assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
+![Image](../../../assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
 <figcaption markdown="span">
 
 The glitched mail on English FireRed and LeafGreen.
@@ -271,7 +271,7 @@ The words entered for this message are the same, but the position of the second 
 
 After confirming this message, check Box 3, Slot 1. The 0x0200 should have become species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.
 
-![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
+![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](../../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
 
 <div class="admonition note" markdown="block">
 <p class="admonition-title">Note</p>
@@ -287,7 +287,7 @@ Before triggering any kind of ACE, make sure that:
 
 To trigger ACE with this Pokémon, in the PC’s **Move Pokémon** mode, grab any Pokémon (except for the glitch Pokémon), and make sure the cursor is **orange** (press <kbd>SELECT</kbd> if it is not). Then swap this Pokémon with the glitch Pokémon by hovering it over the glitch Pokémon then pressing <kbd>A</kbd>. This should move the glitch Pokémon into the cursor, press <kbd>A</kbd> again and the other Pokémon should come back into the cursor. Place this Pokémon anywhere afterwards.
 
-![Swapping two Pokémon in the PC](../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
+![Swapping two Pokémon in the PC](../../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
 
 ## Checking if everything worked
 

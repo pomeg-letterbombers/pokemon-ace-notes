@@ -1,5 +1,5 @@
 ---
-title: ニドくん method
+title: "Japanese ACE Setup: ニドくん Route"
 ---
 
 <div class="admonition important" markdown="block">
@@ -55,16 +55,14 @@ Daycare section depends on ニドくん’s experience:
 </dd>
 </dl>
 
-## Instructions
-
-### Getting ニドくん
+## Getting ニドくん
 
 1.  Go to the Underground Pass entrance on Route 5, and trade a Nidoran♀ with the girl.
 
-![The trading location](../../assets/images/frlg/getting-started/jpn-lg-ace/TradeLocation.png)
-![Nidoran standing in the limelight with dialogue underneath it](../../assets/images/frlg/getting-started/jpn-lg-ace/GettingNidoranM.png)
+![The trading location](../../../assets/images/frlg/getting-started/jpn-lg-ace/TradeLocation.png)
+![Nidoran standing in the limelight with dialogue underneath it](../../../assets/images/frlg/getting-started/jpn-lg-ace/GettingNidoranM.png)
 
-### Preparing ニドくん
+## Preparing ニドくん
 
 <div class="admonition warning" markdown="block">
 <p class="admonition-title">Warning</p>
@@ -79,26 +77,26 @@ Make sure you save **here**, and do not perform further saves until instructed s
 3.  Deposit ニドくん in the daycare and walk 74 steps, ending your last step in front of the daycare man.
 4.  Withdraw ニドくん from the daycare, his experience should be 493.
 
-    ![The Pokémon stats screen with a Nidoran♂, his experience is at 493](../../assets/images/frlg/getting-started/jpn-lg-ace/FinalExperience.png)
+    ![The Pokémon stats screen with a Nidoran♂, his experience is at 493](../../../assets/images/frlg/getting-started/jpn-lg-ace/FinalExperience.png)
 
 5.  Place ニドくん into the first slot of box 3, and withdraw another box Pokémon to be the sixth party member.
 
-    ![The Pokémon box menu with Nidoran♂ in Box 3, Slot 1](../../assets/images/frlg/getting-started/jpn-lg-ace/NidoranLocation.png)
+    ![The Pokémon box menu with Nidoran♂ in Box 3, Slot 1](../../../assets/images/frlg/getting-started/jpn-lg-ace/NidoranLocation.png)
 
-### Corrupting ニドくん
+## Corrupting ニドくん
 
 1.  Give Retro Mail to the sixth party member, and write the following message to the mail.
     +   レベル as the 3rd word.
     +   Delete the 5th word.
     +   All other words left untouched.
     
-    ![A glitched mail with レベル as the 3rd word, nothing as the 5th word and the rest are ???](../../assets/images/frlg/getting-started/jpn-lg-ace/GlitchedMailMessage.png)
+    ![A glitched mail with レベル as the 3rd word, nothing as the 5th word and the rest are ???](../../../assets/images/frlg/getting-started/jpn-lg-ace/GlitchedMailMessage.png)
 
 2.  Confirm the mail, then check the Box 3 again, a glitch Pokémon should take the place of ニドくん.
 
-    ![A question mark in Box 3, Slot 1](../../assets/images/frlg/getting-started/jpn-lg-ace/InitialACEMon.png)
+    ![A question mark in Box 3, Slot 1](../../../assets/images/frlg/getting-started/jpn-lg-ace/InitialACEMon.png)
 
-### Finalising ACE
+## Finalising ACE
 
 1.  Move four party members into the boxes with the last party member to move still held by the orange hand (can be activated by pressing SELECT).
 2.  Rename Boxes 1-5 to the following:
@@ -113,12 +111,12 @@ Make sure you save **here**, and do not perform further saves until instructed s
 
 3.  With a Pokémon still in the orange hand, go back to Box 3, and swap the glitch Pokémon with the Pokémon then back again.
 
-    ![The process of swapping two Pokémon](../../assets/images/frlg/getting-started/jpn-lg-ace/SwappingAction.png)
+    ![The process of swapping two Pokémon](../../../assets/images/frlg/getting-started/jpn-lg-ace/SwappingAction.png)
 
 4.  Exit out of Move Pokémon mode then enter deposit mode, in the third party slot there should be another glitch Pokémon in party slot 3.
     *   You should probably place it somewhere in the boxes.
 
-    ![A glitch Pokémon in party slot 3](../../assets/images/frlg/getting-started/jpn-lg-ace/FinalResult.png)
+    ![A glitch Pokémon in party slot 3](../../../assets/images/frlg/getting-started/jpn-lg-ace/FinalResult.png)
 
 That is it, you have setup ACE in Japanese LeafGreen!
 
@@ -135,7 +133,9 @@ If a **bad egg** appeared in party slot 3, or the game crashed after performing 
 *   You somehow got the wrong glitch Pokémon.
     +   This only applies to cases where a crash, or nothing occurred rather than a bad egg appearing. If a bad egg appeared at all, that means the code was executed incorrectly, but the glitch Pokémon is still triggering ACE properly.
     +   First of all, check all of the other items on this list before you consider this to be the cause.
-    +   You should redo the [Preparing ニドくん](#preparing-ニドくん) section.
+    +   You should redo the [Preparing ニドくん](#preparing) section.
+
+## Appendix
 
 ### Removing the initial ACE Pokémon
 
