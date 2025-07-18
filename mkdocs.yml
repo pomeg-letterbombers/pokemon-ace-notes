@@ -13,6 +13,9 @@ nav:
         - "frlg/getting-started/non-jpn-ace/index.md"
         - "frlg/getting-started/non-jpn-ace/non-jpn-ace-pre-e4.md"
         - "frlg/getting-started/non-jpn-ace/non-jpn-ace-post-e4.md"
+        - "frlg/getting-started/non-jpn-ace/mimien-route.md"
+        - "frlg/getting-started/non-jpn-ace/nino-nina-route.md"
+        - "frlg/getting-started/non-jpn-ace/other-empty-slot-routes.md"
       - "Japanese ACE Setup":
         - "frlg/getting-started/jpn-ace/index.md"
         - "frlg/getting-started/jpn-ace/jpn-ace.md"

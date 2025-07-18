@@ -9,6 +9,24 @@ Here you can find tutorials for setting up ACE in non-Japanese FireRed and LeafG
 *   [**Post-Elite Four route**](./non-jpn-ace-post-e4.md)
     +   This method allows for obtaining 0x0351 using one mail corruption.
     +   The drawback of this method is that it relies on having mail words that are only available **after** beating the Elite Four.
+    +   It requires that the player has seen Magikarp on the save before, which should be likely on a normal playthrough.
+*   [Mimien route](./mimien-route.md)
+    +   This was the original route used for obtaining species 0x0351.
+    +   It depends on the trade Pokémon MIMIEN.
+    +   It is a single mail corruption and requires careful management of MIMIEN’s EVs.
+    +   Mistakes on this route are irreversible without a save before performing this route.
+*   [NINO/NINA route](./nino-nina-route.md)
+    +   This is the later casual route for obtaining species 0x0351, popularized by Papa Jefé in his video tutorials.
+    +   It depends on the trade Pokémon NINA<sup>FR</sup>/NINO<sup>LG</sup>.
+    +   It uses multiple mail messages, some EV training, and requires specific Pokédex entries.
+    +   The steps are different depending on game version.
+    +   Mistakes on this route are irreversible without a save before performing this route.
+*   [Other empty slot corruption routes](./other-empty-slot-routes.md)
+    +   **These routes are only doable on English, Italian, and German language FireRed and LeafGreen.**
+    +   These are the routes originally devised by speedrunners to get an ACE species faster. The version of this route for English is largely used by speedrunners to quickly enter the Hall of Fame.
+    +   These routes do not require any EV training, and generates an ACE species (note: **not** species 0x0351) that can be used to execute box name codes.
+    +   These routes are meant for saves that have **not** entered the Hall of Fame. For those saves that did, the main Post-Elite Four route is largely similar except that it allows obtaining the standard ACE species (0x0351) directly.
+    +   The steps are different depending on game version.
 
 ## Extra resources
 
