@@ -1,5 +1,5 @@
 ---
-title: "Box 14 Exit"
+title: "Box 14 Exit Code"
 ---
 !!! warning
 

@@ -19,6 +19,7 @@ nav:
         - "frlg/getting-started/jpn-ace/jpn-lg-ace.md"
     - "Exit Codes":
       - "frlg/exit-codes/box-14-exit.md"
+      - "frlg/exit-codes/old-box-14-exit.md"
       - "frlg/exit-codes/exit-code-bootstrap.md"
     - "Complex Payloads":
       - "frlg/complex-payloads/hex-writer.md"

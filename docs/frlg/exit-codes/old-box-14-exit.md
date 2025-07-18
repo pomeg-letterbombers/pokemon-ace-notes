@@ -1,5 +1,5 @@
 ---
-title: Box 14 exit code (old)
+title: Box 14 Exit Code (BIOS-less)
 ---
 !!! tip
 
@@ -15,11 +15,11 @@ Box name codes using this exit code do not require the use of an additional boot
 Write and execute the following box names:
 
 ```
-Box  1: z ♀ l o k … Q n	[z♀lok…Qn]
-Box  2: ♀ Q n n U U n _	[♀QnnUUn ]
-Box  3: _ _ y ‘ ? q _ _	[  y‘?q  ]
-Boxes 4-13: A A A A A A A A	[AAAAAAAA]
-Box 14: _ F o _ _ _ _ _	[ Fo     ]
+Box  1:	z ♀ l o k … Q n	[z♀lok…Qn]
+Box  2:	♀ Q n n U U n  	[♀QnnUUn]
+Box  3:	A A y ‘ ? q    	[AAy‘?q]
+Boxes 4-13:	A              	[A]
+Box 14:	_ F o          	[ Fo]
 ```
 
 Box 14 should be named `␣Foì`, this is the Box 14 exit code.
