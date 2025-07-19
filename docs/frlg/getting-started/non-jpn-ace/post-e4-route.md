@@ -137,6 +137,10 @@ If you see this, that means you have successfully set up ACE! Continue reading t
 
 ![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](../../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
 
+## Appendix
+
+### How to trigger ACE
+
 <div class="admonition note" markdown="block">
 <p class="admonition-title">Note</p>
 
@@ -153,13 +157,13 @@ To trigger ACE with this Pokémon, in the PC’s **Move Pokémon** mode, grab an
 
 ![Swapping two Pokémon in the PC](../../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
 
-## Checking if everything worked
+### Checking if everything worked
 
 Make sure that Box 10, Slot 19 is **empty**, then set your box names to the ones shown below.
 
 ```
 Box  1: 4 C U n n R … o	[4CUnnR…o]
-Box  2: P R o / F w m  	[PRo/Fwm]
+Box  2: P R o / F w m  	[PRo/Fwm]    (change '/' to 'B' for inaccurate emulators)
 Box  3: A A V H . o    	[AAVH.o]
 Box  4: A … H R n      	[A…HRn]
 Box  5: / F Q m D F Q m	[/FQmDFQm]
