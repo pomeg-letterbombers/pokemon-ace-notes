@@ -7,11 +7,11 @@ In this route, you will be setting up arbitrary code execution in Japanese FireR
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
 
 ## Getting the donor Pokémon
 
-For this route, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](../../../technical-documentation/jpn-grab-ace-set-up.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
+For this route, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](../../../technical-documentation/getting-ace-in-jpn-frlg.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
 
 There are two (somewhat viable) methods that you could use to acquire the donor Pokémon: RNG manipulation, and brute forcing at the Celadon Game Corner.
 
@@ -22,7 +22,7 @@ There are two (somewhat viable) methods that you could use to acquire the donor 
 
 ### With RNG manipulation
 
-For this method, you should be familiar with RNG manipulation in Pokémon FireRed and LeafGreen. If not, you should either follow the other method ([Brute forcing at the Celadon Game Corner](#brute-forcing-at-the-celadon-game-corner)), or follow these guides for either [retail](https://retailrng.com/frlg/) or [emulator](https://www.pokemonrng.com/fire-red-and-leaf-green/).
+For this method, you should be familiar with RNG manipulation in Pokémon FireRed and LeafGreen. If not, you should either follow the other method ([Without RNG manipulation](#without-rng-manipulation)), or follow these guides for either [retail](https://retailrng.com/frlg/) or [emulator](https://www.pokemonrng.com/fire-red-and-leaf-green/).
 
 While you can target any encounter for the RNG manipulation, it is recommended (especially for retail) that you use either the Eevee at Celadon Mansion, or Scyther<sup>FR</sup>/Pinsir<sup>LG</sup> at the Celadon Game Corner (ideally the ones with high stats) as the target encounter for this RNG manipulation. As such further instructions will assume that you are targeting either of these encounters for the RNG manipulation (make deviations as needed if you are **not** targeting these encounters).
 

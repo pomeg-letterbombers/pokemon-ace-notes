@@ -133,7 +133,7 @@ If a **bad egg** appeared in party slot 3, or the game crashed after performing 
 *   You somehow got the wrong glitch Pokémon.
     +   This only applies to cases where a crash, or nothing occurred rather than a bad egg appearing. If a bad egg appeared at all, that means the code was executed incorrectly, but the glitch Pokémon is still triggering ACE properly.
     +   First of all, check all of the other items on this list before you consider this to be the cause.
-    +   You should redo the [Preparing ニドくん](#preparing) section.
+    +   You should redo the [Preparing ニドくん](#preparing-ニドくん) section.
 
 ## Appendix
 

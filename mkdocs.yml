@@ -40,6 +40,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+          kwds:
+            case: lower
 theme:
   name: material
   logo: assets/logo.png
