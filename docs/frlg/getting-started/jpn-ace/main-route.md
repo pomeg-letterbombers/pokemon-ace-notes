@@ -2,7 +2,7 @@
 title: "Japanese ACE Setup: Main Route"
 ---
 
-In this tutorial, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
@@ -11,7 +11,7 @@ In this tutorial, you will be setting up arbitrary code execution in Japanese Fi
 
 ## Getting the donor Pokémon
 
-For this method, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](../../../technical-documentation/jpn-grab-ace-set-up.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
+For this route, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](../../../technical-documentation/jpn-grab-ace-set-up.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
 
 There are two (somewhat viable) methods that you could use to acquire the donor Pokémon: RNG manipulation, and brute forcing at the Celadon Game Corner.
 
@@ -103,7 +103,7 @@ Once you have the target Pokémon, then continue to the [Species word finder](#s
 
 In the game, make sure that you have large amounts of coins and Rare Candies (mail glitch’s item duplication should allow you to obtain large amounts of each easily). It is also recommended to have a party of only one Pokémon, this just makes mass checking easier. At the Celadon Game Corner, save in front of the clerk that gives out the prize Pokémon.
 
-Then buy a prize Pokémon (we recommend Scyther<sup>FR</sup>/Pinsir<sup>LG</sup>), then find the Pokémon’s IVs using an IV calculator (any is fine, as long as it is for generations 3, 4, or 5).
+Then buy a prize Pokémon (we recommend Scyther<sup>FR</sup>/Pinsir<sup>LG</sup>, but you can look at the comparison table below for using some of the other Game Corner Pokémon), then find the Pokémon’s IVs using an IV calculator (any is fine, as long as it is for generations 3, 4, or 5).
 
 <table markdown="block">
 <thead>
