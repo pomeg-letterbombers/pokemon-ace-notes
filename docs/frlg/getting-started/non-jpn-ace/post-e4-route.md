@@ -156,12 +156,9 @@ Box  2: P R o / F w m _	[PRo/Fwm ]
 Box  3: _ _ V H . o _ _	[  VH.o  ]
 Box  4: _ … H R n _ _ _	[ …HRn   ]
 Box  5: / F Q m D F Q m	[/FQmDFQm]
-Box  6: _ _ _ _ _ _ … _	[      … ]
-Box  7: _ _ _ _ _ … _ _	[     …  ]
-Box  8: _ _ _ _ … _ _ _	[    …   ]
-Box  9: _ _ _ … _ _ _ _	[   …    ]
-Box 10: _ _ _ _ _ … o a	[     …oa]
-Box 11: … o _ _ _ _ _ _	[…o      ]
+Box  6:	_ F o H I . o r	[ FoHI.or]
+Box  7:	B n            	[Bn]
+Box  8+: (anything)
 ```
 
 Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.
