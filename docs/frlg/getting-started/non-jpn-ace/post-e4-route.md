@@ -28,6 +28,13 @@ The glitched mail on English FireRed and LeafGreen.
 
 **Set** the message of the glitched mail to be exactly the following.
 
+<div class="admonition note" markdown="block">
+<p class="admonition-title">Note</p>
+
+If you are doing this route after unlocking the National Mode of the Pokédex, make sure that you enter the Pokémon words from the **POKéMON group**, not POKéMON2 group, or A-Z mode.
+
+</div>
+
 <table>
     <tbody>
         <tr>
