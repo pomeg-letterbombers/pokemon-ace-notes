@@ -127,7 +127,7 @@ If you are doing this route after unlocking the National Mode of the Pokédex, m
 
 **Confirm** the message.
 
-After confirming the message, check the PC, a glitch species should appear in Box 3, Slot 1. This should be species 0x0351. It should have the following characteristics:
+After confirming the message, check the PC, a glitch species should appear in Box 3, Slot 1. This should be glitch species 0x0351. It should have the following characteristics:
 
 *   Has a name similar to <samp>ËÁÈîÂ Î ËÁ</samp>.
 *   Male
