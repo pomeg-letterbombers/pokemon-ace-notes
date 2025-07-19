@@ -7,6 +7,7 @@ In this route, you will be setting up arbitrary code execution in non-Japanese F
 
 *   Your save has the mail glitch active, and you know how to use it.
     +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
+*   You have seen Magikarp before on this save.
 
 ## Procedure
 
