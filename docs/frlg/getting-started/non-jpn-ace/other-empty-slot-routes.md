@@ -17,7 +17,7 @@ In these routes, you will be setting up arbitrary code execution in non-Japanese
 *   Your save has the mail glitch active, and you know how to use it.
     +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
 
-## Instructions
+## Procedure
 
 **Make sure that Box 3, Slot 1 is empty before performing these instructions**
 
