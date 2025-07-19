@@ -25,7 +25,7 @@ Here you can find tutorials for setting up ACE in non-Japanese FireRed and LeafG
     +   **These routes are only doable on English, Italian, and German language FireRed and LeafGreen.**
     +   These are the routes originally devised by speedrunners to get an ACE species faster. The version of this route for English is largely used by speedrunners to quickly enter the Hall of Fame.
     +   These routes do not require any EV training, and generates an ACE species (note: **not** species 0x0351) that can be used to execute box name codes.
-    +   These routes are meant for saves that have **not** entered the Hall of Fame. For those saves that did, the main Post-Elite Four route is largely similar except that it allows obtaining the standard ACE species (0x0351) directly.
+    +   These routes are meant for saves that have **not** entered the Hall of Fame. For those saves that did, the main post-Elite Four route is largely similar except that it allows obtaining the standard ACE species (0x0351) directly.
     +   The steps are different depending on game version.
 
 ## Extra resources
