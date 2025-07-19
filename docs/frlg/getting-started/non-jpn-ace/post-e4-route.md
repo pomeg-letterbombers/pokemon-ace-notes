@@ -1,8 +1,7 @@
 ---
 title: "Non-Japanese ACE Setup: Post-Elite Four Route"
 ---
-
-In this tutorial, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
