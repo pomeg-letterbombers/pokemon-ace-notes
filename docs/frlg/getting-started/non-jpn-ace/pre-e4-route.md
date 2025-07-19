@@ -268,7 +268,7 @@ The words entered for this message are the same, but the position of the second 
 
 **Confirm** the message.
 
-After confirming this message, check Box 3, Slot 1. The 0x0200 should have become species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.
+After confirming this message, check Box 3, Slot 1. The 0x0200 should have become species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. This is your ACE Pokémon. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.
 
 ![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](../../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
 

@@ -173,6 +173,8 @@ If you are doing this route after unlocking the National Mode of the Pokédex, m
 
 After confirming the message, check the PC, a glitch species should appear in Box 3, Slot 1. This should be glitch species 0x1453 on English versions, or 0x1457 on Italian versions. This is your ACE Pokémon.
 
+If you see this, that means you have successfully set up ACE! Continue reading to learn how to trigger ACE with this Pokémon.
+
 <div class="admonition note" markdown="block">
 <p class="admonition-title">Note</p>
 
@@ -202,6 +204,8 @@ Exit the PC from any box. Then activate the mail glitch. **Set** the message of 
 **Confirm** the message.
 
 After confirming the message, check the PC, a glitch species should appear in Box 3, Slot 1. This should be glitch species 0xE1DE. This is your ACE Pokémon.
+
+If you see this, that means you have successfully set up ACE! Continue reading to learn how to trigger ACE with this Pokémon.
 
 ### German LeafGreen
 
