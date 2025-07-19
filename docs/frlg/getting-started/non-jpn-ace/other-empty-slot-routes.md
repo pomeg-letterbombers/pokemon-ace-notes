@@ -1,3 +1,3 @@
 ---
-title: "Other Empty Slot Corruption Routes"
+title: "Non-Japanese ACE Setup: Other Empty Slot Corruption Routes"
 ---

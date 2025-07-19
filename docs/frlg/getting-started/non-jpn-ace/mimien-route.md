@@ -1,3 +1,3 @@
 ---
-title: "Mimien Route"
+title: "Non-Japanese ACE Setup: MIMIEN Route"
 ---
