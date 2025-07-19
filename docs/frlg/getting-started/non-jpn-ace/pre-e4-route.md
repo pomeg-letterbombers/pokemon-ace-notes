@@ -295,9 +295,9 @@ Make sure that Box 10, Slot 19 is **empty**, then set your box names to the ones
 
 ```
 Box  1: 4 C U n n R … o	[4CUnnR…o]
-Box  2: P R o / F w m _	[PRo/Fwm ]
-Box  3: _ _ V H . o _ _	[  VH.o  ]
-Box  4: _ … H R n _ _ _	[ …HRn   ]
+Box  2: P R o / F w m  	[PRo/Fwm]
+Box  3: A A V H . o    	[AAVH.o]
+Box  4: A … H R n      	[A…HRn]
 Box  5: / F Q m D F Q m	[/FQmDFQm]
 Box  6:	_ F o H I . o r	[ FoHI.or]
 Box  7:	B n            	[Bn]
