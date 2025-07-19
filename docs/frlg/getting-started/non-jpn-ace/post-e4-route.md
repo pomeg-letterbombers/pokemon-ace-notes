@@ -7,7 +7,7 @@ In this tutorial, you will be setting up arbitrary code execution in non-Japanes
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
 
 ## Procedure
 
