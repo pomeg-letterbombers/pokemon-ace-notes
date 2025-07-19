@@ -3,10 +3,10 @@ title: "Non-Japanese ACE Setup"
 ---
 Here you can find tutorials for setting up ACE in non-Japanese FireRed and LeafGreen. The **bolded** methods are the recommended methods for learning how to achieve ACE in Pokémon FireRed and LeafGreen, the other methods are presented for those who are curious.
 
-*   [**Pre-Elite Four route**](./non-jpn-ace-pre-e4.md)
-    +   Otherwise known as HOCK 2.O, this route allows for obtaining the glitch species 0x0351 from corrupting an empty slot without needing mail words only available after beating the Elite Four.
+*   [**Pre-Elite Four route** (HOCK 2.O)](./pre-e4-route.md)
+    +   This route allows for obtaining the glitch species 0x0351 from corrupting an empty slot without needing mail words only available after beating the Elite Four.
     +   This method is slightly slower than the postgame method in that it uses two mail corruptions, one for the intermediate species, and one for the turning the intermediate species to 0x0351. The intermediate species will be EV trained in between the mail corruptions.
-*   [**Post-Elite Four route**](./non-jpn-ace-post-e4.md)
+*   [**Post-Elite Four route**](./post-e4-route.md)
     +   This method allows for obtaining 0x0351 using one mail corruption.
     +   The drawback of this method is that it relies on having mail words that are only available **after** beating the Elite Four.
     +   It requires that the player has seen Magikarp on the save before, which should be likely on a normal playthrough.

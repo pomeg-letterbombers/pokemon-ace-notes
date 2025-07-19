@@ -11,15 +11,15 @@ nav:
       - "frlg/getting-started/mail-glitch.md"
       - "Non-Japanese ACE Setup":
         - "frlg/getting-started/non-jpn-ace/index.md"
-        - "frlg/getting-started/non-jpn-ace/non-jpn-ace-pre-e4.md"
-        - "frlg/getting-started/non-jpn-ace/non-jpn-ace-post-e4.md"
+        - "frlg/getting-started/non-jpn-ace/pre-e4-route.md"
+        - "frlg/getting-started/non-jpn-ace/post-e4-route.md"
         - "frlg/getting-started/non-jpn-ace/mimien-route.md"
         - "frlg/getting-started/non-jpn-ace/nino-nina-route.md"
         - "frlg/getting-started/non-jpn-ace/other-empty-slot-routes.md"
       - "Japanese ACE Setup":
         - "frlg/getting-started/jpn-ace/index.md"
-        - "frlg/getting-started/jpn-ace/jpn-ace.md"
-        - "frlg/getting-started/jpn-ace/jpn-lg-ace.md"
+        - "frlg/getting-started/jpn-ace/main-route.md"
+        - "frlg/getting-started/jpn-ace/nido-kun-route.md"
     - "Exit Codes":
       - "frlg/exit-codes/box-14-exit.md"
       - "frlg/exit-codes/old-box-14-exit.md"
