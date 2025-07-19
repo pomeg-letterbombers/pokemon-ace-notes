@@ -172,3 +172,8 @@ Box  8+: (anything)
 ```
 
 Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.
+
+## Credits
+
+*   Papa Jefé for originally discovering this route
+*   gifvex for discovering the ability to corrupt empty slots into glitch Pokémon with the mail glitch.
