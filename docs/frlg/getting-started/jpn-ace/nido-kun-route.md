@@ -83,7 +83,7 @@ Make sure you save **here**, and do not perform further saves until instructed s
     
     ![A glitched mail with レベル as the 3rd word, nothing as the 5th word and the rest are ???](../../../assets/images/frlg/getting-started/jpn-lg-ace/GlitchedMailMessage.png)
 
-2.  Confirm the mail, then check the Box 3 again, a glitch Pokémon should take the place of ニドくん.
+2.  Confirm the mail, then check the Box 3 again, ニドくん should have become a glitch Pokémon.
 
     ![A question mark in Box 3, Slot 1](../../../assets/images/frlg/getting-started/jpn-lg-ace/InitialACEMon.png)
 
