@@ -16,10 +16,11 @@ In this route, you will be setting up arbitrary code execution in non-Japanese F
 EV train MIMIEN so it has:
 
 *   **81 HP** EVs
-    +   This can be provided by Caterpie, which can be found in the Viridian Forest.
+    +   You can give MIMIEN HP Ups, which can be purchased or cloned. They provide **10** HP EVs each.
+    +   This can be provided by Caterpie, which can be found in the Viridian Forest. They yield **1** HP EV each.
 *   **3 Attack** EVs
-    +   This can be provided by defeating **1** Doduo, which can be found on Route 16.
-    +   This can also be provided by defeating **1** Mankey, which can be found on Route 22.
+    +   This can be provided by defeating Doduo, which can be found on Route 16. They yield **1** Attack EV each.
+    +   This can also be provided by defeating Mankey, which can be found on Route 22. They yield **1** Attack EV each.
 
 After giving it these EVs, place it back into Box 3, Slot 1.
 
