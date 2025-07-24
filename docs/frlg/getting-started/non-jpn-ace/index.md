@@ -34,9 +34,9 @@ Here you can find tutorials for setting up ACE in non-Japanese FireRed and LeafG
 
 ## Extra resources
 
-*   [Papa Jefé’s video tutorial](https://www.youtube.com/watch?v=3jkcq8e9NO4&t)
+*   [Papa Jefé’s video tutorial (FireRed)](https://www.youtube.com/watch?v=3jkcq8e9NO4&t)
     *   You do not need to watch the whole video, but the rest of the video contains examples of how ACE can be used along with extensively using mail #255 corruption (mail glitch) in unique ways.
-*   [Papa Jefé’s video tutorial](https://www.youtube.com/watch?v=8d2kd2_iVps)
+*   [Papa Jefé’s video tutorial (LeafGreen)](https://www.youtube.com/watch?v=8d2kd2_iVps)
 *   [Papa Jefé’s written tutorial](https://docs.google.com/document/d/1khCyziorop1M2AI0JNLSaMqK3fV_SfIXeSYmevQ3DfE/)
 *   [merrp’s video demonstration](https://www.youtube.com/watch?v=yVhK4pLC9ac)
 *   [merrp’s grab/swap ACE Pastebin](https://pastebin.com/pDXf5rGD)
