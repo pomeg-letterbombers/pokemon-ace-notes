@@ -121,7 +121,7 @@ The glitched mail on English FireRed and LeafGreen.
 
 **Confirm** the message.
 
-After confirming the message, a glitch species should appear in Box 3, Slot 1. This should be species 0x0200. It should have the following characteristics:
+After confirming the message, a glitch species should appear in Box 3, Slot 1. This should be glitch species 0x0200. It should have the following characteristics:
 
 *   Species name is one of the following depending on your language:
     <table>
@@ -153,7 +153,7 @@ After confirming the message, a glitch species should appear in Box 3, Slot 1. T
 
 If the glitch species does not have the correct name, or a bad egg appeared instead, do the glitched mail message again, and make sure that Box 3, Slot 1 is **empty**.
 
-Move species 0x0200 into your party then give it:
+Move glitch species 0x0200 into your party then give it:
 
 *   **8** HP Ups
     +   This provides **80** HP effort values.
@@ -268,7 +268,7 @@ The words entered for this message are the same, but the position of the second 
 
 **Confirm** the message.
 
-After confirming this message, check Box 3, Slot 1. The 0x0200 should have become species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. This is your ACE Pokémon. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.
+After confirming this message, check Box 3, Slot 1. The 0x0200 should have become glitch species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. This is your ACE Pokémon. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.
 
 ![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](../../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
 
@@ -309,7 +309,36 @@ Box  8+: (anything)
 
 Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.
 
+### Technical details
+
+First, with the first glitched mail, the encryption key[^1] for the “Pokémon” in the empty slot is changed from 0 to 0x3E000200, which will cause the empty slot’s data to be interpreted as a glitch Pokémon (glitch species 0x200) instead. The reason why this particular corruption is not interpreted as a bad egg is because the data in the empty slot (which is now 0x0200 × 12 + 0x3E00 × 12), adds up to a 16-bit value of 0 (this game’s code uses wrapping unsigned 16-bit arithmetic for the checksum), which is the same as the initial checksum of 0, thus its seen as valid Pokémon data. For the rest of this explanation (and for brevity), this glitch species will be called HOCK.
+
+We prepare HOCK for the second (and final) glitched mail, which modifies the PID to read the EVs substructure as the Growth substructure. From the new encryption key, HOCK already has two Attack EVs, so we only need to give it an extra Attack EV and 81 HP EVs, totalling to 81 HP EVs and 3 Attack EVs. With the next glitched mail, these will be read as the species index and they will combine (they are combined with this calculation: <var>hpEV</var> + <var>attackEV</var> × 256) to form species index 0x0351 which corresponds to glitch species 0x0351.[^2] This mail simply swaps the values of the PID high (upper 16 bits), and the SID of HOCK which keeps the same encryption key but changes the substructure order.
+
+After entering the glitched mail, we are left with glitch species 0x0351 with no nickname.
+
+Below shows what is happening to the PID, TID, SID, encryption key, as well as the substructure order (shown in the parentheses after the corresponding PID) during the process of turning an empty slot into glitch species 0x0351.
+
+Personality value
+
+:   0x00000000 (GAEM) → 0x1E000000 (GAEM) → 0x20000000 (AEGM)
+
+Trainer ID (TID)
+
+:   0 (0x0000) → 512 (0x0200) → 512 (0x0200)
+
+Secret ID (SID)
+
+:   0 → 8192 (0x2000) → 7680 (0x1E00)
+
+Encryption key
+
+:   0x00000000 → 0x3E000200 → 0x3E000200
+
+[^1]: The encryption key is formed by this calculation: <var>PID</var> &oplus; (<var>TID</var> + <var>SID</var> &times; 65536)
+[^2]: You can read more at the provided link (courtesy of Bulbapedia) on how the data substructures are arranged and what is stored in each one. <https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_data_substructures_(Generation_III)>
+
 ## Credits
 
-*   gifvex and the Pokémon speedrunning community for creating the original version of this route, and discovering the ability to corrupt empty slots into glitch Pokémon with the mail glitch.
+*   gifvex and the Pokémon speedrunning community for discovering the ability to corrupt empty slots into glitch Pokémon with the mail glitch.
 *   Papa Jefé for confirming that this route works on other languages.

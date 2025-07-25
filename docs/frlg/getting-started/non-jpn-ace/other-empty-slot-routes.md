@@ -391,6 +391,8 @@ Box  8+: (anything)
 
 Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.
 
+### Technical details
+
 ### Background information
 
 The original English version of this route was devised by speedrunners to get an ACE species faster, and is largely used by speedrunners to get to the Hall of Fame faster. Instructions for other game languages on this page might not be as optimised as the English version is.

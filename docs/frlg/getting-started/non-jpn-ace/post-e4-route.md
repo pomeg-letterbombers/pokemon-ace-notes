@@ -174,6 +174,32 @@ Box  8+: (anything)
 
 Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.
 
+### Technical details
+
+First, with the glitched mail, the encryption key[^1] for the “Pokémon” in the empty slot is changed from 0 to 0x3CAF0351, which will cause the empty slot’s data to be interpreted as a glitch Pokémon instead. The reason why this particular corruption is not interpreted as a bad egg is because the data in the empty slot (which is now 0x0351 × 12 + 0x3CAF × 12), adds up to a 16-bit value of 0 (this game’s code uses wrapping unsigned 16-bit arithmetic for the checksum), which is the same as the initial checksum of 0, thus its seen as valid Pokémon data.
+
+After entering the glitched mail, we are left with glitch species 0x0351 with no nickname.
+
+Below shows what is happening to the PID, TID, SID, encryption key, as well as the substructure order (shown in the parentheses after the corresponding PID) during the process of turning an empty slot into glitch species 0x0351.
+
+Personality value
+
+:   0x00000000 (GAEM) → 0x162E2753 (EGMA)
+
+Trainer ID (TID)
+
+:   0 (0x0000) → 512 (0x2402)
+
+Secret ID (SID)
+
+:   0 → 10881 (0x2A81)
+
+Encryption key
+
+:   0x00000000 → 0x3CAF0351
+
+[^1]: The encryption key is formed by this calculation: <var>PID</var> &oplus; (<var>TID</var> + <var>SID</var> &times; 65536)
+
 ## Credits
 
 *   Papa Jefé for originally discovering this route
