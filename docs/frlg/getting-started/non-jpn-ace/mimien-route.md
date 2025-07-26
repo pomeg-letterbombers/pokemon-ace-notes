@@ -120,7 +120,7 @@ Trainer ID (TID)
 
 Secret ID (SID)
 
-:   0 → 8192 (0x2000)
+:   0 → 0
 
 Encryption key
 
