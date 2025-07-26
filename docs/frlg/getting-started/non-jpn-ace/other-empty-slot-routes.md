@@ -341,24 +341,24 @@ With this bootstrap, make sure to keep the two box slots before the bootstrap em
 
 If you decide you do not want this bootstrap anymore, then you can get rid of it via group selection. To do this, change the cursor to the orange cursor (press <kbd>SELECT</kbd> to do this), then hover over the bad egg, hold <kbd>A</kbd> and move the cursor to a different slot in the box, then let go of <kbd>A</kbd>. Then replace that group by pressing <kbd>A</kbd> again. The bad egg should have disappeared in the group.
 
-### Code for creating 0x0351 in Box 10, Slot 19
+### Code for creating 0x0351 in Box 9, Slot 30
 
-This box name code will create glitch species 0x0351 in Box 10, Slot 19 which is the standard ACE Pokémon in non-Japanese FireRed and LeafGreen.
+This box name code will create glitch species 0x0351 in Box 9, Slot 30 which is the standard ACE Pokémon in non-Japanese FireRed and LeafGreen.
 
-Make sure that Box 10, Slot 19 is **empty**, then set your box names to the ones shown below.
+Make sure that Box 9, Slot 30 is **empty**, then set your box names to the ones shown below.
 
 ```
-Box  1:	4 C U n n R … o	[4CUnnR…o]
-Box  2:	P R o / F w m  	[PRo/Fwm]   (change '/' to 'B' for inaccurate emulators)
-Box  3:	A A W U . o    	[AAWU.o]
-Box  4:	A V H ? n      	[AVH?n]
+Box  1:	C C U n n R E o	[CCUnnREo]
+Box  2:	P R o / G w m  	[PRo/Gwm]   (change '/' to 'B' for inaccurate emulators)
+Box  3:	A A W U B o    	[AAWUBo]
+Box  4:	A V H B n      	[AVHBn]
 Box  5:	/ F Q m D F Q m	[/FQmDFQm]
-Box  6:	_ V o H I . o r	[ VoHI.or]
+Box  6:	_ V o H I C o r	[ VoHICor]
 Box  7:	B n            	[Bn]
-Box  8+: (anything)
+Box 8+:	(anything)
 ```
 
-Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a glitch species should have appeared in Box 10, Slot 19. This should be glitch species 0x0351. It should have the following characteristics:
+Then trigger ACE. Then enter the PC, and look at Box 9, a glitch species should have appeared in slot 30. This should be glitch species 0x0351. It should have the following characteristics:
 
 *   Has a name similar to <samp>ËÁÈîÂ Î ËÁ</samp>.
 *   Male
@@ -376,20 +376,20 @@ You can dispose of the other ACE species if you wish by doing the following:
 
 ### Checking if everything worked
 
-Make sure that Box 10, Slot 19 is **empty**, then set your box names to the ones shown below.
+Make sure that Box 9, Slot 30 is **empty**, then set your box names to the ones shown below.
 
 ```
-Box  1: 4 C U n n R … o	[4CUnnR…o]
-Box  2: P R o / F w m  	[PRo/Fwm]    (change '/' to 'B' for inaccurate emulators)
-Box  3: A A V H . o    	[AAVH.o]
-Box  4: A … H R n      	[A…HRn]
-Box  5: / F Q m D F Q m	[/FQmDFQm]
-Box  6:	_ V o H I . o r	[ VoHI.or]
+Box  1:	C C U n n R E o	[CCUnnREo]
+Box  2:	P R o / G w m  	[PRo/Gwm]   (change '/' to 'B' for inaccurate emulators)
+Box  3:	A A T S , m    	[AATS,m]
+Box  4:	A / F Q m      	[A/FQm]
+Box  5:	D F Q m        	[DFQm]
+Box  6:	_ V o H I C o r	[ VoHICor]
 Box  7:	B n            	[Bn]
-Box  8+: (anything)
+Box 8+:	(anything)
 ```
 
-Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.
+Then trigger ACE. Then enter the PC, and look at Box 9, a shiny, level 0, female Bulbasaur should have appeared in slot 30. That means the ACE is working properly. You can safely delete this Bulbasaur after doing this code.
 
 ### Technical details
 

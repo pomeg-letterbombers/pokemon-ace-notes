@@ -758,20 +758,20 @@ To trigger ACE with this Pokémon, in the PC’s **Move Pokémon** mode, grab an
 
 ### Checking if everything worked
 
-Make sure that Box 10, Slot 19 is **empty**, then set your box names to the ones shown below.
+Make sure that Box 9, Slot 30 is **empty**, then set your box names to the ones shown below.
 
 ```
-Box  1: 4 C U n n R … o	[4CUnnR…o]
-Box  2: P R o / F w m  	[PRo/Fwm]    (change '/' to 'B' for inaccurate emulators)
-Box  3: A A V H . o    	[AAVH.o]
-Box  4: A … H R n      	[A…HRn]
-Box  5: / F Q m D F Q m	[/FQmDFQm]
-Box  6:	_ V o H I . o r	[ VoHI.or]
+Box  1:	C C U n n R E o	[CCUnnREo]
+Box  2:	P R o / G w m  	[PRo/Gwm]   (change '/' to 'B' for inaccurate emulators)
+Box  3:	A A T S , m    	[AATS,m]
+Box  4:	A / F Q m      	[A/FQm]
+Box  5:	D F Q m        	[DFQm]
+Box  6:	_ V o H I C o r	[ VoHICor]
 Box  7:	B n            	[Bn]
-Box  8+: (anything)
+Box 8+:	(anything)
 ```
 
-Then trigger ACE. Then enter the PC, and view Box 10, Slot 19, a shiny, level 0, female Bulbasaur should have appeared. That means the ACE is working properly. You can safely delete this Bulbasuar after doing this code.
+Then trigger ACE. Then enter the PC, and look at Box 9, a shiny, level 0, female Bulbasaur should have appeared in slot 30. That means the ACE is working properly. You can safely delete this Bulbasaur after doing this code.
 
 ### Technical details
 
