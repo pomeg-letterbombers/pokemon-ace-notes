@@ -353,7 +353,7 @@ Box  2:	P R o / F w m  	[PRo/Fwm]   (change '/' to 'B' for inaccurate emulators)
 Box  3:	A A W U . o    	[AAWU.o]
 Box  4:	A V H ? n      	[AVH?n]
 Box  5:	/ F Q m D F Q m	[/FQmDFQm]
-Box  6:	_ F o H I . o r	[ FoHI.or]
+Box  6:	_ V o H I . o r	[ VoHI.or]
 Box  7:	B n            	[Bn]
 Box  8+: (anything)
 ```
@@ -384,7 +384,7 @@ Box  2: P R o / F w m  	[PRo/Fwm]    (change '/' to 'B' for inaccurate emulators
 Box  3: A A V H . o    	[AAVH.o]
 Box  4: A … H R n      	[A…HRn]
 Box  5: / F Q m D F Q m	[/FQmDFQm]
-Box  6:	_ F o H I . o r	[ FoHI.or]
+Box  6:	_ V o H I . o r	[ VoHI.or]
 Box  7:	B n            	[Bn]
 Box  8+: (anything)
 ```
