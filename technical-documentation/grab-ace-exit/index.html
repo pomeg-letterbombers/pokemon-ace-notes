@@ -452,6 +452,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -504,12 +510,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frlg/getting-started/non-jpn-ace/non-jpn-ace-pre-e4/" class="md-nav__link">
+      <a href="../../frlg/getting-started/non-jpn-ace/pre-e4-route/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Non-Japanese ACE Setup: Pre-Elite Four Route
+    Pre-Elite Four Route (HOCK 2.O)
     
   </span>
   
@@ -527,12 +533,81 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frlg/getting-started/non-jpn-ace/non-jpn-ace-post-e4/" class="md-nav__link">
+      <a href="../../frlg/getting-started/non-jpn-ace/post-e4-route/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Non-Japanese ACE Setup: Post-Elite Four Route
+    Post-Elite Four Route
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frlg/getting-started/non-jpn-ace/mimien-route/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIMIEN Route
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frlg/getting-started/non-jpn-ace/nino-nina-route/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NINO/NINA Route
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frlg/getting-started/non-jpn-ace/other-empty-slot-routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Other Empty Slot Corruption Routes
     
   </span>
   
@@ -620,12 +695,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frlg/getting-started/jpn-ace/jpn-ace/" class="md-nav__link">
+      <a href="../../frlg/getting-started/jpn-ace/main-route/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Japanese ACE Setup: Main Route
+    Main Route
     
   </span>
   
@@ -643,12 +718,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frlg/getting-started/jpn-ace/jpn-lg-ace/" class="md-nav__link">
+      <a href="../../frlg/getting-started/jpn-ace/nido-kun-route/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Japanese ACE Setup: ニドくん Route
+    ニドくん Route
     
   </span>
   
@@ -1291,7 +1366,7 @@ BX lr ; jump to return address
 <p>However <code>BX lr</code> is not writable with the standard character set, glitchers have to come up with a way to be able to write <code>BX lr</code>.
 The opcode for <code>BX lr</code> can be computed into a register then be stored in a word-aligned address <strong>after</strong> the current value of the <code>pc</code> register.
 This means that the <code>STR</code> instruction must be located on the first half of Box 13, or earlier, as read-ahead will mean that the <code>BX lr</code> instruction will not be executed.
-Thus while this method works, will also add to the length of the box name payload, the only upside to this method is that it works wihtout needing a genuine GBA BIOS.</p>
+Thus while this method works, will also add to the length of the box name payload, the only upside to this method is that it works without needing a genuine GBA BIOS.</p>
 <details class="info">
 <summary>BX lr computation instructions</summary>
 <div class="highlight"><pre><span></span><code>E3E0B6EE    MVN r11, #0xEE00000
@@ -1431,7 +1506,7 @@ The current version of this bootstrap is made entirely by mail corruption and be
 </code></pre></div>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <ul>
-<li><a href="https://github.com/pret/">pret</a> (Pokémon Reverse Engineering Tools) for the <code>pokefirered</code> decompilation which allowed me to make sense of the exit</li>
+<li><a href="https://github.com/pret/">pret</a> for the <code>pokefirered</code> decompilation which allowed me to make sense of the exit</li>
 <li>Adrichu00 for clarifying to me how the game handles the task call when a glitch Pokémon with a long name is involved</li>
 <li><a href="https://youtube.com/@pokemerrp">merrp</a> for showing various tricks which allowed </li>
 <li>RationalPsycho for suggesting the use of mail to shorten the process of writing payloads</li>
@@ -1461,7 +1536,7 @@ The current version of this bootstrap is made entirely by mail corruption and be
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 18, 2025 16:20:54 UTC">July 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 22, 2025 11:35:37 UTC">July 22, 2025</span>
   </span>
 
     
