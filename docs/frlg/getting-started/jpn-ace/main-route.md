@@ -2,16 +2,16 @@
 title: "Japanese ACE Setup: Main Route"
 ---
 
-In this tutorial, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
 
 ## Getting the donor Pokémon
 
-For this method, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](../../../technical-documentation/jpn-grab-ace-set-up.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
+For this route, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](../../../technical-documentation/getting-ace-in-jpn-frlg.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
 
 There are two (somewhat viable) methods that you could use to acquire the donor Pokémon: RNG manipulation, and brute forcing at the Celadon Game Corner.
 
@@ -22,7 +22,7 @@ There are two (somewhat viable) methods that you could use to acquire the donor 
 
 ### With RNG manipulation
 
-For this method, you should be familiar with RNG manipulation in Pokémon FireRed and LeafGreen. If not, you should either follow the other method ([Brute forcing at the Celadon Game Corner](#brute-forcing-at-the-celadon-game-corner)), or follow these guides for either [retail](https://retailrng.com/frlg/) or [emulator](https://www.pokemonrng.com/fire-red-and-leaf-green/).
+For this method, you should be familiar with RNG manipulation in Pokémon FireRed and LeafGreen. If not, you should either follow the other method ([Without RNG manipulation](#without-rng-manipulation)), or follow these guides for either [retail](https://retailrng.com/frlg/) or [emulator](https://www.pokemonrng.com/fire-red-and-leaf-green/).
 
 While you can target any encounter for the RNG manipulation, it is recommended (especially for retail) that you use either the Eevee at Celadon Mansion, or Scyther<sup>FR</sup>/Pinsir<sup>LG</sup> at the Celadon Game Corner (ideally the ones with high stats) as the target encounter for this RNG manipulation. As such further instructions will assume that you are targeting either of these encounters for the RNG manipulation (make deviations as needed if you are **not** targeting these encounters).
 
@@ -35,67 +35,64 @@ We are assuming that you are using a Lua script (like the one [here](https://git
 
 First open the [**Donor Search**](https://pomeg-letterbombers.github.io/ace-setup-tools/donor-search/) tool, this tool allows you to find the target advance(s) for a suitable donor Pokémon. We recommend setting the parameters as shown below.
 
-<dl markdown="block">
-<dt>Game version</dt>
-<dd markdown="block">
+Game version
 
-Set this to the game version you are playing on.
+:   Set this to the game version you are playing on.
 
-</dd>
-<dt>Encounter type</dt>
-<dd markdown="block">
+Encounter type
 
-Set this to **Static**.
+:   Set this to **Static**.
 
-</dd>
-<dt>Seed</dt>
-<dd markdown="block">
+Seed
 
-**For console:** Set this to an early seed (i.e. a low frame number) in one of these spreadsheets. Choose the spreadsheet appropriate for your game version.
+:   **For console:** Set this to an early seed (i.e. a low frame number) in one of these spreadsheets. Choose the spreadsheet appropriate for your game version.
 
-*   [FireRed 1.0](https://docs.google.com/spreadsheets/d/1GMRFM1obLDcYbR6GR6KrE8UZotA7djUTw8PxqVFnCVY/edit?pli=1&gid=1608943801#gid=1608943801)
-*   [FireRed 1.1](https://docs.google.com/spreadsheets/d/1aQeWaZSi1ycSytrNEOwxJNoEg-K4eItYagU_dh9VIeU/edit?gid=791743105#gid=791743105)
-*   [LeafGreen](https://docs.google.com/spreadsheets/d/1LSRVD0_zK6vyd6ettUDfaCFJbm00g451d8s96dqAbA4/edit?gid=1862478029#gid=1862478029)
+    *   [FireRed 1.0](https://docs.google.com/spreadsheets/d/1GMRFM1obLDcYbR6GR6KrE8UZotA7djUTw8PxqVFnCVY/edit?pli=1&gid=1608943801#gid=1608943801)
+    *   [FireRed 1.1](https://docs.google.com/spreadsheets/d/1aQeWaZSi1ycSytrNEOwxJNoEg-K4eItYagU_dh9VIeU/edit?gid=791743105#gid=791743105)
+    *   [LeafGreen](https://docs.google.com/spreadsheets/d/1LSRVD0_zK6vyd6ettUDfaCFJbm00g451d8s96dqAbA4/edit?gid=1862478029#gid=1862478029)
+:   **For emulator:** After starting the game, press <kbd>A</kbd> or <kbd>START</kbd> on the title screen and pause the game (using <kbd>Ctrl</kbd> + <kbd>P</kbd> or whatever other keybind your emulator uses). Then note down whatever initial seed shows up in the script’s interface. Or you can just write any 16-bit value (0–65535), then use your script’s initial seed bot to hit that seed.
 
-**For emulator:** After starting the game, press <kbd>A</kbd> or <kbd>START</kbd> on the title screen and pause the game (using <kbd>Ctrl</kbd> + <kbd>P</kbd> or whatever other keybind your emulator uses). Then note down whatever initial seed shows up in the script’s interface. Or you can just write any 16-bit value (0–65535), then use your script’s initial seed bot to hit that seed.
+Species word settings
 
-</dd>
-<dt>Species word settings</dt>
-<dd markdown="block">
+:   By default (i.e. no checkboxes under this group are checked), the searcher will exclude any unlockable words from the search. These checkboxes allows the tool to also search through the certain unlockable words.
+:   **Use unlockable words** will allow the **species word** to also be a word that is unlockable before entering the Hall of Fame.
+:   **Use post-Elite Four words** will allow the **species word** to be also be a word that is unlockable after entering the Hall of Fame.
 
-By default (i.e. no checkboxes under this group are checked), the searcher will exclude any unlockable words from the search. These checkboxes allows the tool to also search through the certain unlockable words.
+Initial advances
 
-*   **Use unlockable words** will allow the **species word** to also be a word that is unlockable before entering the Hall of Fame.
-*   **Use post-Elite Four words** will allow the **species word** to be also be a word that is unlockable after entering the Hall of Fame.
+:   Set this to **350** for the Celadon Mansion Eevee, or **550** for the Game Corner prize Pokémon.
 
-</dd>
-<dt>Initial advances</dt>
-<dd markdown="block">
+Advances
 
-Set this to **350** for the Celadon Mansion Eevee, or **550** for the Game Corner prize Pokémon.
+:   Set this to **100**.
 
-</dd>
-<dt>Advances</dt>
-<dd markdown="block">
+Delay
 
-Set this to **100**.
-
-</dd>
-<dt>Delay</dt>
-<dd markdown="block">
-
-*   **For console:** Set this to **0**.
-*   **For emulator:** Set this to **4** for the Celadon Mansion Eevee, or **3** for the Game Corner prize Pokémon.
-
-</dd>
-</dl>
+:   **For console:** Set this to **0**.
+:   **For emulator:** Set this to **4** for the Celadon Mansion Eevee, or **3** for the Game Corner prize Pokémon.
 
 Once you have entered these parameters, click on <kbd>Find</kbd>.
 
-The <i>Results</i> table should be populated with entries. Each entry consists of an <i>Advance</i> number, and the PID of the corresponding generated Pokémon. Select one of these targets to target for the RNG manipulation.  If you are unsure on which advance to target, use the below guide.
+The <i>Results</i> table should be populated with entries. Each entry consists of an <i>Advance</i> number, and the PID of the corresponding generated Pokémon. Select one of these targets to target for the RNG manipulation.  If you are unsure on which advance to target, use the below guide (target the advance closest to **Target advance**).
 
-*   **For Celadon Mansion Eevee:** Target the advance closest to advance **400**.
-*   **For Game Corner Scyther<sup>FR</sup>/Pinsir<sup>LG</sup>:** Target the advance closest to advance **600**.
+<table>
+<thead>
+<tr>
+<th scope="col">Target</th>
+<th scope="col">Target advance</th>
+</tr>
+</thead>
+<tbody markdown="block">
+<tr>
+<th scope="row">Celadon Mansion Eevee</th>
+<td>400</td>
+</tr>
+<tr>
+<th scope="row">Game Corner Pokémon</th>
+<td>600</td>
+</tr>
+</tbody>
+</table>
 
 Once you have the target Pokémon, then continue to the [Species word finder](#species-word-finder) section.
 
@@ -103,7 +100,7 @@ Once you have the target Pokémon, then continue to the [Species word finder](#s
 
 In the game, make sure that you have large amounts of coins and Rare Candies (mail glitch’s item duplication should allow you to obtain large amounts of each easily). It is also recommended to have a party of only one Pokémon, this just makes mass checking easier. At the Celadon Game Corner, save in front of the clerk that gives out the prize Pokémon.
 
-Then buy a prize Pokémon (we recommend Scyther<sup>FR</sup>/Pinsir<sup>LG</sup>), then find the Pokémon’s IVs using an IV calculator (any is fine, as long as it is for generations 3, 4, or 5).
+Then buy a prize Pokémon (we recommend Scyther<sup>FR</sup>/Pinsir<sup>LG</sup>, but you can look at the comparison table below for using some of the other Game Corner Pokémon), then find the Pokémon’s IVs using an IV calculator (any is fine, as long as it is for generations 3, 4, or 5).
 
 <table markdown="block">
 <thead>
@@ -151,44 +148,30 @@ Once you have the IVs, you will be using a tool (we call this **IVs to PID**) to
 
 With this tool, set the parameters as shown below:
 
-<dl markdown="block">
-<dt>HP, Attack, Defense, Sp.Attack, Sp.Defense, Speed</dt>
-<dd markdown="block">
+HP, Attack, Defense, Sp.Attack, Sp.Defense, Speed
 
-**Input** your Pokémon’s corresponding **IV**.
+:   **Input** your Pokémon’s corresponding **IV**.
 
-</dd>
-<dt>Nature</dt>
-<dd markdown="block">
+Nature
 
-**Select** your Pokémon’s **nature**.
+:   **Select** your Pokémon’s **nature**.
 
-</dd>
-<dt>Ability</dt>
-<dd markdown="block">
+Ability
 
-If the Pokémon has two distinct abilities, then **select** **0** for the first ability, or **1** for the second ability. You can quickly find out the ability number using a website like <https://pokemondb.net>. Otherwise leave this blank.
+:   If the Pokémon has two distinct abilities, then **select** **0** for the first ability, or **1** for the second ability. You can quickly find out the ability number using a website like <https://pokemondb.net>. Otherwise leave this blank.
 
-</dd>
-<dt>Gender</dt>
-<dd markdown="block">
+Gender
 
-**Select** your Pokémon’s **gender**.
+:   **Select** your Pokémon’s **gender**.
 
-</dd>
-<dt>Gender ratio</dt>
-<dd markdown="block">
+Gender ratio
 
-**Select** your Pokémon’s **gender ratio**. Once again, you can use a website to find this information.
+:   **Select** your Pokémon’s **gender ratio**. Once again, you can use a website to find this information.
 
-</dd>
-<dt>TID</dt>
-<dd markdown="block">
+TID
 
-You can safely ignore this, it has no bearing on this process.
+:   You can safely ignore this, it has no bearing on this process.
 
-</dd>
-</dl>
 
 Once you have entered these parameters, click <kbd>Find</kbd>. Results should have populated the table in the tool, ignore all results not labelled **Method 1** (maybe include **Method 4** if you are playing on a **really** old emulator), these are the potential PIDs that this prize Pokémon could have.
 
@@ -200,70 +183,45 @@ Next you will be using a tool (we call it the **Species Word Finder**) to both d
 
 Below is an explanation of the **Species word settings**:
 
-<dl markdown="block">
-<dt>Species word settings</dt>
-<dd markdown="block">
+Species word settings
 
-By default (i.e. no checkboxes under this group are checked), the searcher will exclude any unlockable words from the search. These checkboxes allows the tool to also search through the certain unlockable words.
-
-*   **Use unlockable words** will allow the **species word** to also be a word that is unlockable before entering the Hall of Fame.
-*   **Use post-Elite Four words** will allow the **species word** to be also be a word that is unlockable after entering the Hall of Fame.
-
-</dd>
-</dl>
+:   By default (i.e. no checkboxes under this group are checked), the searcher will exclude any unlockable words from the search. These checkboxes allows the tool to also search through the certain unlockable words.
+:   **Use unlockable words** will allow the **species word** to also be a word that is unlockable before entering the Hall of Fame.
+:   **Use post-Elite Four words** will allow the **species word** to be also be a word that is unlockable after entering the Hall of Fame.
 
 Below is an explanation for each item in the **results area**:
 
-<dl markdown="block">
-<dt>PID substructure order</dt>
-<dd markdown="block">
+PID substructure order
 
-This is the order in which the encrypted substructures of the Pokémon’s data is laid out, with **G** for **Growth**, **A** for **Attacks**, **E** for **EVs/Conditions**, and **M** for **Miscellaneous**. This is just technical details for people who want to know more.
+:   This is the order in which the encrypted substructures of the Pokémon’s data is laid out, with **G** for **Growth**, **A** for **Attacks**, **E** for **EVs/Conditions**, and **M** for **Miscellaneous**. This is just technical details for people who want to know more.
 
-</dd>
-<dt>Encryption key</dt>
-<dd markdown="block">
+Encryption key
 
-This is one half of a value that is used to encrypt the Pokémon data. This half happens to be relevant for the operations we are doing. This half is formed by: (<var>PID</var> mod 65536) &oplus; <var>TID</var>.
+:   This is one half of a value that is used to encrypt the Pokémon data. This half happens to be relevant for the operations we are doing. This half is formed by: (<var>PID</var> mod 65536) &oplus; <var>TID</var>.
 
-</dd>
-<dt>Adjustment type</dt>
-<dd markdown="block">
+Adjustment type
 
-Can be “EV”, “Experience”, or “None”. This determines which stats you will have to adjust in order for the mail corruption to keep the Pokémon’s checksum valid. If this value is **None**, that means the Pokémon is not suitable for use as a donor Pokémon.
+:   Can be “EV”, “Experience”, or “None”. This determines which stats you will have to adjust in order for the mail corruption to keep the Pokémon’s checksum valid. If this value is **None**, that means the Pokémon is not suitable for use as a donor Pokémon.
 
-</dd>
-<dt>Species index</dt>
-<dd markdown="block">
+Species index
 
-This is the internal index that is used to identify this “species” in the game’s code.
+:   This is the internal index that is used to identify this “species” in the game’s code.
 
-</dd>
-<dt>Entrypoint</dt>
-<dd markdown="block">
+Entrypoint
 
-When ACE is triggered, this is the **earliest point** in the PC boxes where the program counter can start reading machine code from. This and all slots after it **will** be interpreted as machine code. Make sure that this and all following box slots are **empty** (or contain Pokémon with special data expressly for ACE applications) when triggering ACE. Note that due to ASLR, where the program counter actually enters in the boxes can vary from execution to execution.
+:   When ACE is triggered, this is the **earliest point** in the PC boxes where the program counter can start reading machine code from. This and all slots after it **will** be interpreted as machine code. Make sure that this and all following box slots are **empty** (or contain Pokémon with special data expressly for ACE applications) when triggering ACE. Note that due to ASLR, where the program counter actually enters in the boxes can vary from execution to execution.
 
-</dd>
-<dt>Word index</dt>
-<dd markdown="block">
+Word index
 
-This is the internal index that is used to identify this word in the game’s code.
+:   This is the internal index that is used to identify this word in the game’s code.
 
-</dd>
-<dt>Word group</dt>
-<dd markdown="block">
+Word group
 
-This is the word group of the **species word**, which may be useful if you prefer to use the default group view to find the word you want to enter.
+:   This is the word group of the **species word**, which may be useful if you prefer to use the default group view to find the word you want to enter.
 
-</dd>
-<dt>Word</dt>
-<dd markdown="block">
+Word
 
-This is the **species word**, which is the word that overwrites your species in a way that it turns your Pokémon into one of the many glitch Pokémon that can trigger ACE.
-
-</dd>
-</dl>
+:   This is the **species word**, which is the word that overwrites your species in a way that it turns your Pokémon into one of the many glitch Pokémon that can trigger ACE.
 
 Enter the Pokémon’s PID (if the IVs to PID tool returned multiple, then select one) and its TID, select the game you are using, then click <kbd>Find</kbd>.
 
@@ -294,10 +252,32 @@ Make sure to adjust the stats before following the instructions in the next sect
 
 Place the donor Pokémon in Box 3, Slot 1. Then trigger the mail glitch. What you will write will depend on the adjustment type, and how you adjusted your Pokémon specifically. A graphic has also been provided as a visual aid.
 
-*   **Experience-adjusted Pokémon:** The **species word** must be the **third** word, and the **checksum word** must be the **fifth** word.
-*   **EV-adjusted Pokémon (all):** The **species word** must be the **ninth** word
-    +   **HP/Attack:** The **checksum word** must be the **third** word.
-    +   **Sp.Attack/Sp.Defense:** The **checksum word** must be the **fifth** word.
+<table>
+<thead>
+<tr>
+<th scope="col">Adjustment type</th>
+<th scope="col">Species word position</th>
+<th scope="col">Checksum word positon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Experience</th>
+<td>3rd</td>
+<td>5th</td>
+</tr>
+<tr>
+<th scope="row">EV (HP/Attack)</th>
+<td>9th</td>
+<td>3rd</td>
+</tr>
+<tr>
+<th scope="row">EV (Sp.Attack/Sp.Defense)</th>
+<td>9th</td>
+<td>5th</td>
+</tr>
+</tbody>
+</table>
 
 <div class="grid" markdown>
 <figure markdown="span">
@@ -320,14 +300,18 @@ Confirm the mail, then check Box 3 again. A **glitch Pokémon** (usually shown a
 
 If a **bad egg** appeared instead it could be caused by the following:
 
-*   The words are in the wrong slot of the glitch mail.
-    +   If you have a recovery point, at the point when you are writing mail, make sure that you are writing the correct words in the right places.
-*   The Pokémon is not adjusted correctly.
-    +   If you have a recovery point before writing the mail, depending on the adjustment type, you should do the following:
-        -   **Experience-adjusted Pokémon:** If the experience is over the what the adjusted experience should be, redo the [Adjusting the donor Pokémon](#adjusting-the-donor-pokémon) instructions with the new experience. Otherwise add more experience until it is equal to what the adjusted experience should be.
-        -   **EV-adjusted Pokémon:** If you have not been tracking your EVs properly, you should redo the EVs while tracking them properly. If you somehow saved right before the mail corruption (despite explicit warnings against this), then you must start again and [reacquire a donor Pokémon](#getting-the-donor-pokémon).
-*   The reported PID used as the Pokémon's PID in the tool is not the Pokémon's PID.
-    +   This case only happens if the donor Pokémon is not obtained via RNG manipulation, and from the IVs to PID tool there were multiple possible PIDs for the given set of IVs, gender, nature, and ability. In this case, start back at [Getting the donor Pokémon](#getting-the-donor-pokémon) and if there is no other possible PIDs that allow the donor Pokémon to be useable, then you must catch a different Pokémon.
+The words are in the wrong slot of the glitch mail.
+
+:   If you have a recovery point, at the point when you are writing mail, make sure that you are writing the correct words in the right places.
+
+The Pokémon is not adjusted correctly.
+
+:   **Experience-adjusted Pokémon:** If the experience is over the what the adjusted experience should be, redo the [Adjusting the donor Pokémon](#adjusting-the-donor-pokémon) instructions with the new experience. Otherwise add more experience until it is equal to what the adjusted experience should be.
+:   **EV-adjusted Pokémon:** If you have not been tracking your EVs properly, you should redo the EVs while tracking them properly. If you somehow saved right before the mail corruption (despite explicit warnings against this), then you must start again and [reacquire a donor Pokémon](#getting-the-donor-pokémon).
+
+The reported PID used as the Pokémon's PID in the tool is not the Pokémon's PID.
+
+:   This case only happens if the donor Pokémon is not obtained via RNG manipulation, and from the IVs to PID tool there were multiple possible PIDs for the given set of IVs, gender, nature, and ability. In this case, start back at [Getting the donor Pokémon](#getting-the-donor-pokémon) and if there is no other possible PIDs that allow the donor Pokémon to be useable, then you must catch a different Pokémon.
 
 ## Creating 0xFFC9
 
@@ -378,16 +362,22 @@ If you see this (note that the name might vary, but as long as it looks similar,
 
 If a **bad egg** appeared in party slot 3, or the game **crashed** after performing the swap, or **nothing** happened after performing the swap, it could be caused by the following:
 
-*   You made a mistake in writing the box names.
-    +   Redo the box names, and make sure you have entered the correct characters.
-    +   Check these box names again, its likely to be the cause of the crashes most of the time.
-*   There is Pokémon or invisible Pokémon (can be caused by Pal Park migration) in the box slots after the glitch Pokémon’s entrypoint, or you forgot to clear out your party.
-    +   You can move them out to an area of the PC before the entrypoint, or for the invisible Pokémon, you can use group selection to remove them.
-    +   Make sure that before executing the code, there are 2 or less Pokémon in your party.
-*   You somehow got the wrong glitch Pokémon.
-    +   This only applies to cases where a crash, or nothing occurred rather than a bad egg appearing. If a bad egg appeared at all, that means the code was executed incorrectly, but the glitch Pokémon is still triggering ACE properly.
-    +   First of all, check all of the other items on this list before you consider this to be the cause.
-    +   If you are sure about this being the cause, then follow the failure notice in the [Mail corrupting the donor Pokémon](#in-case-of-failure) section.
+You made a mistake in writing the box names.
+
+:   Redo the box names, and make sure you have entered the correct characters.
+
+:   Check these box names again, its likely to be the cause of the crashes most of the time.
+
+There is Pokémon or invisible Pokémon (can be caused by Pal Park migration) in the box slots after the glitch Pokémon’s entrypoint, or you forgot to clear out your party.
+
+:   You can move them out to an area of the PC before the entrypoint, or for the invisible Pokémon, you can use group selection to remove them.
+:   Make sure that before executing the code, there are 2 or less Pokémon in your party.
+
+You somehow got the wrong glitch Pokémon.
+
+:   This only applies to cases where a crash, or nothing occurred rather than a bad egg appearing. If a bad egg appeared at all, that means the code was executed incorrectly, but the glitch Pokémon is still triggering ACE properly.
+:   First of all, check all of the other items on this list before you consider this to be the cause.
+:   If you are sure about this being the cause, then follow the failure notice in the [Mail corrupting the donor Pokémon](#in-case-of-failure) section.
 
 ## Appendix
 

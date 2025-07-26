@@ -36,5 +36,5 @@ As such, most of the FireRed/LeafGreen tutorials on this website will be operati
 
 At the moment, all grab/swap ACE setups will require prior knowledge of, and the setting up of the [mail glitch](mail-glitch.md). After that, click on one of the links below depending on whether you are doing this on a non-Japanese FireRed and LeafGreen or a Japanese FireRed and LeafGreen, and follow further instructions from there.
 
-*   [Non-Japanese ACE setups](../jpn-ace/)
-*   [Japanese ACE setups](../non-jpn-ace/)
+*   [Non-Japanese ACE setups](non-jpn-ace/index.md)
+*   [Japanese ACE setups](jpn-ace/index.md)

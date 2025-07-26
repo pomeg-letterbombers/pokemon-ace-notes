@@ -104,26 +104,17 @@ After this, the substructure orders that would work for this setup is all of the
 
 Encryption key is the value used to encrypt the four substructures (Growth, Attacks, EVs, and Miscellaneous) of a Pokémon’s data. Given:
 
-<dl markdown>
-<dt><var>ID<sub>Trainer</sub></var></dt>
-<dd markdown>
+<var>ID<sub>Trainer</sub></var>
 
-The trainer’s ID number (more commonly referred to as the trainer ID).
+:   The trainer’s ID number (more commonly referred to as the trainer ID).
 
-</dd>
-<dt><var>ID<sub>Secret</sub></var></dt>
-<dd markdown>
+<var>ID<sub>Secret</sub></var>
 
-The trainer’s second unseen ID number (more commonly referred to as the secret ID).
+:   The trainer’s second unseen ID number (more commonly referred to as the secret ID).
 
-</dd>
-<dt><var>p</var></dt>
-<dd markdown>
+<var>p</var>
 
-The personality value of the Pokémon.
-
-</dd>
-</dl>
+:   The personality value of the Pokémon.
 
 Then the encryption key  
 <var>E</var> = <var>ID<sub>Trainer</sub></var> + (<var>ID<sub>Secret</sub></var> &sdot; 65536) &oplus; <var>p</var>

@@ -39,7 +39,7 @@ While `MOV r0, #0x0` is not writable in its standard form, `MOVS r0, #0x0` is (i
 However `BX lr` is not writable with the standard character set, glitchers have to come up with a way to be able to write `BX lr`.
 The opcode for `BX lr` can be computed into a register then be stored in a word-aligned address **after** the current value of the `pc` register.
 This means that the `STR` instruction must be located on the first half of Box 13, or earlier, as read-ahead will mean that the `BX lr` instruction will not be executed.
-Thus while this method works, will also add to the length of the box name payload, the only upside to this method is that it works wihtout needing a genuine GBA BIOS.
+Thus while this method works, will also add to the length of the box name payload, the only upside to this method is that it works without needing a genuine GBA BIOS.
 
 ??? info "BX lr computation instructions"
 
@@ -238,7 +238,7 @@ Which is interpreted as:
 
 ## Acknowledgements
 
-- [pret](https://github.com/pret/) (Pokémon Reverse Engineering Tools) for the `pokefirered` decompilation which allowed me to make sense of the exit
+- [pret](https://github.com/pret/) for the `pokefirered` decompilation which allowed me to make sense of the exit
 - Adrichu00 for clarifying to me how the game handles the task call when a glitch Pokémon with a long name is involved
 - [merrp](https://youtube.com/@pokemerrp) for showing various tricks which allowed 
 - RationalPsycho for suggesting the use of mail to shorten the process of writing payloads

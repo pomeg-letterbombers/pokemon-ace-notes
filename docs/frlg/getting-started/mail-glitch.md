@@ -123,3 +123,7 @@ Unfortunately in Japanese FireRed and LeafGreen, the mail glitch covers an area 
 ## Conclusion
 
 You should now be able to prepare the mail glitch on a save file, and know how to use it for item corruption and for modifying Pokémon data.
+
+## Credits
+
+*   [luckytyphlosion](https://www.youtube.com/channel/UChDv6rpkkaQ143oa-TmIiQQ) for originally discovering this version of the mail glitch.

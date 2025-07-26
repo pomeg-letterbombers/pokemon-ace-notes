@@ -5,20 +5,18 @@ title: "Japanese ACE Setup: ニドくん Route"
 <div class="admonition important" markdown="block">
 <p class="admonition-title">Important</p>
 
-This method uses a **LeafGreen-exclusive** trade Pokémon (ニドくん the Nidoran♂). If you are on **FireRed**, and you do not have the means to obtain the trade Pokémon via other means, then follow the [other tutorial](jpn-ace.md).
+This method uses a **LeafGreen-exclusive** trade Pokémon (ニドくん the Nidoran♂). If you are on **FireRed**, and you do not have the means to obtain the trade Pokémon via other means, then follow the [other tutorial](main-route.md).
 
 </div>
 
-This tutorial uses a trade Pokémon as the donor Pokémon for creating an ACE environment in Japanese FireRed and LeafGreen. This allows for more concrete instructions, as trade Pokémon have known data that is set.
+This route uses a trade Pokémon as the donor Pokémon for creating an ACE environment in Japanese FireRed and LeafGreen. This allows for more concrete instructions, as trade Pokémon have known data that is set.
 
 ## Requirements
 
 *   Mail glitch active on your save.
-    +   You can read the [Mail Glitch](mail-glitch.md) tutorial to learn how to do this. If you prefer a video tutorial then you can watch the part of [this video](https://youtu.be/3jkcq8e9NO4?t=147&feature=shared), only the first part is important for preparing the mail glitch.
-*   Have at least 6 Retro Mail in the bag.
-    +   You might need more Retro Mail to be able to clone enough Rare Candy to be able to level ニドくん to level 41.
+    +   You can read the [Mail Glitch](../mail-glitch.md) tutorial to learn how to do this. If you prefer a video tutorial then you can watch the part of [this video](https://youtu.be/3jkcq8e9NO4?t=147&feature=shared), only the first part is important for preparing the mail glitch.
 *   Have at enough Rare Candy to level ニドくん to level 9.
-    +   You can learn how to use mail glitch to clone Rare Candy [here](mail-glitch.md).
+    +   You can learn how to use mail glitch to clone Rare Candy [here](../mail-glitch.md).
 *   Have the ニドくん (Nidoran♂) trade available.
     +   This trade Pokémon has a lonely nature.
     +   The OT’s trainer ID is 63184.
@@ -28,32 +26,25 @@ There may be instances where you may already have ニドくん. In this case, yo
 *   Has more than 493 experience points.
 *   Is evolved.
 
-If ニドくん has any of the “bad” characteristics outlined above, then you cannot perform this method, and you must use the normal method used in [the main tutorial](jpn-ace.md), though you can continue to use ニドくん as the donor Pokémon (its PID is 0x4C970B9E, and is always that value). You can follow the path without RNG manipulation in that guide, and skip the section using the IVs to PID tool since its PID is already known.
+If ニドくん has any of the “bad” characteristics outlined above, then you cannot perform this method, and you must go through the [main route](main-route.md), though you can continue to use ニドくん as the donor Pokémon. You can skip straight to the [Species word finder](main-route.md#species-word-finder) subsection of that route, and ニドくん always has the same PID (0x4C970B9E), and TID (63184), so there is less guesswork to do in for that route.
 
-Otherwise below is a guide on what sections of this tutorial can be skipped if you already have ニドくん:
+Otherwise below is a guide on what sections of this route can be skipped if you already have ニドくん:
 
-<dl markdown="block">
-<dt>Getting ニドくん</dt>
-<dd markdown="block">
+Getting ニドくん
 
-Can be skipped
+:   Can be skipped.
 
-</dd>
-<dt>Preparing ニドくん</dt>
-<dd markdown="block">
+Preparing ニドくん
 
-Rare Candy section depends on ニドくん’s level:
+:   Rare Candy section depends on ニドくん’s level:
 
-*   If it is equal to 9, then it can be skipped entirely.
+    *   If it is equal to 9, then it can be skipped entirely.
 
-Daycare section depends on ニドくん’s experience:
+    Daycare section depends on ニドくん’s experience:
 
-*   If it is equal to 493, then it can be skipped entirely.
-*   If it is less than 493, and it is an odd value, then the amount of steps to take is reduced.
-*   If it is less than 493, and it is an even value, then a different method (e.g. wild battles) must be used to increase experience to 493 instead.
-
-</dd>
-</dl>
+    *   If it is equal to 493, then it can be skipped entirely.
+    *   If it is less than 493, and it is an odd value, then the amount of steps to take is reduced.
+    *   If it is less than 493, and it is an even value, then a different method (e.g. wild battles) must be used to increase experience to 493 instead.
 
 ## Getting ニドくん
 
@@ -92,7 +83,7 @@ Make sure you save **here**, and do not perform further saves until instructed s
     
     ![A glitched mail with レベル as the 3rd word, nothing as the 5th word and the rest are ???](../../../assets/images/frlg/getting-started/jpn-lg-ace/GlitchedMailMessage.png)
 
-2.  Confirm the mail, then check the Box 3 again, a glitch Pokémon should take the place of ニドくん.
+2.  Confirm the mail, then check the Box 3 again, ニドくん should have become a glitch Pokémon.
 
     ![A question mark in Box 3, Slot 1](../../../assets/images/frlg/getting-started/jpn-lg-ace/InitialACEMon.png)
 
@@ -124,16 +115,21 @@ That is it, you have setup ACE in Japanese LeafGreen!
 
 If a **bad egg** appeared in party slot 3, or the game crashed after performing the swap, or nothing happened after performing the swap, it could be caused by the following:
 
-*   You made a mistake in writing the box names.
-    +   Redo the box names, and make sure you have entered the correct characters.
-    +   Seriously check these box names again, its very likely to be the cause of the crashes most of the time.
-*   There is Pokémon or invisible Pokémon (can be caused by Pal Park migration) in the box slots after the glitch Pokémon’s entrypoint (for this initial ACE Pokémon, it is Box 12, Slot 28), or you forgot to clear out your party.
-    +   You can move them out to an area of the PC before the entrypoint, or for the invisible Pokémon, you can use group selection to remove them.
-    +   Make sure that before executing the code, there are 2 or less Pokémon in your party.
-*   You somehow got the wrong glitch Pokémon.
-    +   This only applies to cases where a crash, or nothing occurred rather than a bad egg appearing. If a bad egg appeared at all, that means the code was executed incorrectly, but the glitch Pokémon is still triggering ACE properly.
-    +   First of all, check all of the other items on this list before you consider this to be the cause.
-    +   You should redo the [Preparing ニドくん](#preparing) section.
+You made a mistake in writing the box names.
+
+:   Redo the box names, and make sure you have entered the correct characters.
+:   Check these box names again, its likely to be the cause of the crashes most of the time.
+
+There is Pokémon or invisible Pokémon (can be caused by Pal Park migration) in the box slots after the glitch Pokémon’s entrypoint (for this initial ACE Pokémon, it is Box 12, Slot 28), or you forgot to clear out your party.
+
+:   You can move them out to an area of the PC before the entrypoint, or for the invisible Pokémon, you can use group selection to remove them.
+:   Make sure that before executing the code, there are 2 or less Pokémon in your party.
+
+You somehow got the wrong glitch Pokémon.
+
+:   This only applies to cases where a crash, or nothing occurred rather than a bad egg appearing. If a bad egg appeared at all, that means the code was executed incorrectly, but the glitch Pokémon is still triggering ACE properly.
+:   First of all, check all of the other items on this list before you consider this to be the cause.
+:   You should redo the [Preparing ニドくん](#preparing-ニドくん) section.
 
 ## Appendix
 
