@@ -180,7 +180,7 @@ All ranges listed here include both the start number and the end number.
     +   96–127 (0x60–0x7F)
     +   160–191 (0xA0–0xBF)
     +   224–255 (0xE0–0xFF)
-*   Caught in within the range of:
+*   Caught in:
     +   Poké Ball (4)
     +   Safari Ball (5)
     +   Net Ball (6)
