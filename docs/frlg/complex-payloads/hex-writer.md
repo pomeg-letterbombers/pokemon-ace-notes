@@ -474,8 +474,7 @@ Boxes 9-14: 00 00 00 00
 
 A Bulbasaur holding a TM should appear in the box slot after the crafting table bad egg, place it at least 31 slots after the crafting table.
 
-If that does not happen, that means you have made a mistake in the creation of the crafting table.
-To correct this, move the crafting table back to Box 14, Slot 28, rewrite the crafting table creation code and try creating the Bulbasaur again.
+If that does not happen, that means you have made a mistake in the creation of the crafting table. Move the erroneous crafting table bad egg out of the ACE area (Box 13, Slot 7 and after is considered the ACE area), and redo creating the crafting table. You can delete the erroneous crafting table bad egg after this.
 
 At this point in time, the recommended box setup is as follows:
 
