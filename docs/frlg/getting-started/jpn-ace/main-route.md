@@ -50,6 +50,7 @@ Seed
     *   [FireRed 1.0](https://docs.google.com/spreadsheets/d/1GMRFM1obLDcYbR6GR6KrE8UZotA7djUTw8PxqVFnCVY/edit?pli=1&gid=1608943801#gid=1608943801)
     *   [FireRed 1.1](https://docs.google.com/spreadsheets/d/1aQeWaZSi1ycSytrNEOwxJNoEg-K4eItYagU_dh9VIeU/edit?gid=791743105#gid=791743105)
     *   [LeafGreen](https://docs.google.com/spreadsheets/d/1LSRVD0_zK6vyd6ettUDfaCFJbm00g451d8s96dqAbA4/edit?gid=1862478029#gid=1862478029)
+
 :   **For emulator:** After starting the game, press <kbd>A</kbd> or <kbd>START</kbd> on the title screen and pause the game (using <kbd>Ctrl</kbd> + <kbd>P</kbd> or whatever other keybind your emulator uses). Then note down whatever initial seed shows up in the script’s interface. Or you can just write any 16-bit value (0–65535), then use your script’s initial seed bot to hit that seed.
 
 Species word settings
