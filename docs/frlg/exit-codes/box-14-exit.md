@@ -26,10 +26,28 @@ Then set the box wallpapers to the following:
     - Box 2: SCENERY 1 → DESERT
     - Box 3 and later: anything
 
+=== "FRA"
+
+    - Box 1: AUTRES → ÉTOILES
+    - Box 2: PAYSAGES 1 → DÉSERT
+    - Box 3 and later: anything
+
+=== "ITA"
+
+    - Box 1: ALTRI → STELLE
+    - Box 2: SFONDI 1 → DESERTO
+    - Box 3 and later: anything
+
 === "GER"
 
     - Box 1: SONSTIGES → STERN
     - Box 2: LISTE1 → WÜSTE
+    - Box 3 and later: anything
+
+=== "SPA"
+
+    - Box 1: OTROS → ESTRELLAS
+    - Box 2: PAISAJE 1 → DESIERTO
     - Box 3 and later: anything
 
 The exit code should now be set up, any codes with the “Bootstrapped” exit should work without crashing or softlocking.
