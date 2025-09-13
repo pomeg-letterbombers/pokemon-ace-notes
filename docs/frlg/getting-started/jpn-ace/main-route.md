@@ -344,7 +344,19 @@ Box  5:	Ｏ 　 　 　 　 　 　 　	[Ｏ]
 Box  6+: (anything)
 ```
 
-Then in the PC’s **Move Pokémon** mode, grab any Pokémon (except for the glitch Pokémon), and make sure the cursor is **orange** (press <kbd>SELECT</kbd> if it is not). Then swap this Pokémon with the glitch Pokémon by hovering it over the glitch Pokémon then pressing <kbd>A</kbd>. This should move the glitch Pokémon into the cursor, press <kbd>A</kbd> again and the other Pokémon should come back into the cursor. Place this Pokémon anywhere afterwards. An image below has been provided to illustrate how it should look.
+Make sure you are in the PC’s **Move Pokémon** mode.
+
+Then switch the selection mode to **Relocate Mode** by pressing <kbd>SELECT</kbd>, the cursor should have changed to an orange colour indicating that the current mode is **Relocate Mode**.
+
+In Relocate mode, move the cursor over to any Pokémon then grab by pressing <kbd>A</kbd>.
+
+Move the cursor over to the glitch Pokémon if any other Pokémon was initially grabbed, or any other Pokémon if the glitch Pokémon was initially grabbed.
+
+Then swap these two Pokémon by pressing <kbd>A</kbd>. Then swap again.
+
+You can place the Pokémon anywhere else afterwards.
+
+An image below has been provided to illustrate how it should look.
 
 <figure markdown="span">
 
