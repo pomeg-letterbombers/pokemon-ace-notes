@@ -15,7 +15,7 @@ Box name codes using this exit code do not require the use of an additional boot
 Change the name of box 14 to the following:
 
 ```
-Box 14: U … o _ _ … o a	[U…o  …oa]
+Box 14: U . o _ _ , o a	[U.o  ,oa]
 ```
 
 Then set the box wallpapers to the following:
@@ -50,29 +50,35 @@ Then set the box wallpapers to the following:
     - Box 2: PAISAJE 1 → DESIERTO
     - Box 3 and later: anything
 
-The exit code should now be set up, any codes with the “Bootstrapped” exit should work without crashing or softlocking.
+The exit code should now be set up. Codes with the “Bootstrapped” exit should work without crashing or softlocking.
 
-??? info "Optional test code"
+<div class="admonition info" markdown="block">
+<p class="admonition-title">Optional test code</p>
 
-    Write the following box names and then trigger ACE.
+This code can be used as a quick test for testing the Box 14 exit. **Set** the names of the boxes as shown in the below code block:
 
-    ```
-    Box  1: 4 C U n n R … o	[4CUnnR…o]
-    Box  2: P R o / F w m _	[PRo/Fwm ]
-    Box  3: _ _ V H 0 o _ _	[  VH0o  ]
-    Box  4: _ … H R n _ _ _	[ …HRn   ]
-    Box  5: / F Q m D F Q m	[/FQmDFQm]
-    Box  6: _ _ _ _ _ _ … _	[      … ]
-    Box  7: _ _ _ _ _ … _ _	[     …  ]
-    Box  8: _ _ _ _ … _ _ _	[    …   ]
-    Box  9: _ _ _ … _ _ _ _	[   …    ]
-    Box 10: _ _ _ _ _ _ … _	[      … ]
-    Box 11: _ _ _ _ _ … _ _	[     …  ]
-    Box 12: _ _ _ _ … _ _ _	[    …   ]
-    Box 13: _ _ _ … _ _ _ _	[   …    ]
-    ```
+```
+Box  1: C C U n n R . o [CCUnnR.o]
+Box  2: P R o / G w m   [PRo/Gwm]
+Box  3: A A R G . m     [AARG.m]
+Box  4: A / F Q m       [A/FQm]
+Box  5: D F Q m         [DFQm]
+Box  6: A               [A]
+Box  7: A               [A]
+Box  8: A               [A]
+Box  9: A               [A]
+Box 10: A               [A]
+Box 11: A               [A]
+Box 12: A               [A]
+Box 13: A               [A]
+Box 14: (leave as is)
+```
 
-    A shiny Bulbasaur should appear in Box 10, Slot 19, that means the exit code is working as expected.
+Then trigger ACE.
+
+The game should not softlock or crash, and a level 0, shiny, female Kadabra should appear in the last slot of Box 9. This means the Box 14 exit has been correctly set up.
+
+</div>
 
 If the game crashes or softlocks it may have been caused by the following:
 

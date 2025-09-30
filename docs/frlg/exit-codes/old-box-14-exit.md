@@ -12,17 +12,51 @@ Box name codes using this exit code do not require the use of an additional boot
 
 ## Instructions
 
-Write and execute the following box names:
+**Set** the names of the boxes as shown in the below code block:
 
 ```
-Box  1:	z ♀ l o k … Q n	[z♀lok…Qn]
-Box  2:	♀ Q n n U U n  	[♀QnnUUn]
-Box  3:	A A y ‘ ? q    	[AAy‘?q]
-Boxes 4-13:	A              	[A]
+Box  1:	z L o o k F R n	[zLookFRn]
+Box  2:	5 R n n U U n  	[5RnnUUn]
+Box  3:	A A y 2 ? q    	[AAy2?q]
+Box  4:	A              	[A]
+Box  5:	A              	[A]
+Box  6:	_ F o H I C o r	[ FoHICor]
+Box  7:	B n            	[Bn]
+Boxes 8 to 13: (leave as is)
 Box 14:	_ F o          	[ Fo]
 ```
 
-Box 14 should be named `␣Foì`, this is the Box 14 exit code.
+Then trigger ACE.
+
+The code should rename Box 14 to `␣Foì`, the Box 14 exit code has now been set up. Codes with the “Bootstrapped” exit should work without crashing or softlocking.
+
+<div class="admonition info" markdown="block">
+<p class="admonition-title">Optional test code</p>
+
+This code can be used as a quick test for testing the Box 14 exit. Simply set the names of the boxes as shown in the below code block:
+
+```
+Box  1: C C U n n R . o [CCUnnR.o]
+Box  2: P R o / G w m   [PRo/Gwm]
+Box  3: A A R G . m     [AARG.m]
+Box  4: A / F Q m       [A/FQm]
+Box  5: D F Q m         [DFQm]
+Box  6: A               [A]
+Box  7: A               [A]
+Box  8: A               [A]
+Box  9: A               [A]
+Box 10: A               [A]
+Box 11: A               [A]
+Box 12: A               [A]
+Box 13: A               [A]
+Box 14: (leave as is)
+```
+
+Then trigger ACE.
+
+The game should not softlock or crash, and a level 0, shiny, female Kadabra should appear in the last slot of Box 9. This means the Box 14 exit has been correctly set up.
+
+</div>
 
 If the game crashes or softlocks it may have been caused by the following:
 
