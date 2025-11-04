@@ -6,7 +6,9 @@ hide:
 
 # FAQ and Troubleshooting
 
-## Is there’s a code for \[insert thing you want to do here\]?
+## General
+
+### Is there’s a code for \[insert thing you want to do here\]?
 
 Check these places first to see if there is an ACE code for that purpose:
 
@@ -38,7 +40,7 @@ inclined, you can also learn how to make an ACE code yourself. The FAQ
 should give a quick idea of what is needed to create an ACE code as well,
 as a few resources to help you.
 
-## The code isn’t working
+### The code isn’t working
 
 Before triggering ACE, make sure that you have tried to do the following:
 
@@ -69,7 +71,7 @@ If you have done all of htat and the code still does nothing or causes a
 crash, then read the following items to figure out what might have went
 wrong with your code.
 
-### You typed the box names wrong
+#### You typed the box names wrong
 
 Here are some characters that are commonly mistaken, you should pay close
 attention to them while entering the box names. Different websites use
@@ -94,7 +96,7 @@ such by the code author):
     `‥` (two-dot ellipsis), `.` (full stop, period) and `,` (comma).
 *   `_` (space in CodeGenerator) and `-` (hyphen, dash)
 
-### You have Pokémon data present in box slots that are meant to be empty
+#### You have Pokémon data present in box slots that are meant to be empty
 
 First make sure that you moved any Pokémon out of any box slots targeted
 by the code (unless the code explicitly instructs you to place or leave
@@ -129,11 +131,16 @@ The ghost data must be removed via group selection, see
 [*Using group selection to mass clear invisible bad eggs and ghost data*](#using-group-selection-to-mass-clear-invisible-bad-eggs-and-ghost-data)
 for more information.
 
-## How can I delete bad eggs and/or unwanted glitch Pokémon?
+#### You made a mistake in the ACE setup itself
+
+Usually, this can be attributed to the wrong ACE species and/or moves, as
+well as other bootstraps associated with the set up. 
+
+### How can I delete bad eggs and/or unwanted glitch Pokémon?
 
 There are multiple methods to do this, each will be covered one by one.
 
-### Using reverse Battle Tower cloning to delete Pokémon and bad eggs
+#### Using reverse Battle Tower cloning to delete Pokémon and bad eggs
 
 <div class="admonition note" markdown="block">
 <p class="admonition-title" markdown="span">Note</p>
@@ -168,7 +175,7 @@ Visual demonstration of reverse cloning is available in
 [this video](https://www.youtube.com/watch?v=BapXdh-lYMQ)
 by Sleipnir17.
 
-### Using a fast (de)cloner glitch Pokémon to delete Pokémon
+#### Using a fast (de)cloner glitch Pokémon to delete Pokémon
 
 First make sure that you have a fast cloner Pokémon to begin with. If
 you do not, then create one before proceeding. This guide will also
@@ -207,7 +214,7 @@ by Sleipnir17.
     species, for others (such as 0x3200 on English FireRed), it sometimes
     can result in a freeze.
 
-### Using group selection to clear invisible bad eggs
+#### Using group selection to clear invisible bad eggs
 
 Make sure you are in the PC’s **Move Pokémon** mode.
 
@@ -240,7 +247,7 @@ The GIF demonstration in *Using group selection to mass clear invisible bad eggs
 should apply to this method, just ignore the box switching or the grabbing
 of a whole box.
 
-### Using group selection to mass clear invisible bad eggs and ghost data
+#### Using group selection to mass clear invisible bad eggs and ghost data
 
 Ideally, this movement should start in a box that has all of its slots
 filled with Pokémon. This also assumes that the boxes you want to clear
@@ -278,7 +285,7 @@ for alternate methods to delete these particular invisible bad eggs.
 
 ![Orange hand grabbing a group of Pokémon from one box to the next](assets/images/faq/group_select.gif)
 
-## How can I make my own ACE code?
+### How can I make my own ACE code?
 
 For all ACE methods, you must know some ARM/Thumb assembly. The below
 resources should give you some sort of a grasp on ARM/Thumb assembly.
@@ -332,3 +339,121 @@ tools and resouces can help with scripting in the generation III games:
 *   [HexManiacAdvance](https://github.com/haven1433/HexManiacAdvance)
     by haven1433
 *   [Theocatic’s scripting environment documentation](https://gist.github.com/Theocatic/39ed337ecd590b47fad14f791cf16bb5#notes-on-writing-scripts-for-this-setup)
+
+## Pokémon FireRed and LeafGreen
+
+### The 0x0351 mail did not work
+
+<div class="admonition note" markdown="block">
+<p class="admonition-title" markdown="span">Note</p>
+
+This is for the [Post-Elite Four route](./frlg/getting-started/non-jpn-ace/post-e4-route.md).
+
+If you are doing the [Pre-Elite Four route](./frlg/getting-started/non-jpn-ace/pre-e4-route.md),
+this does not apply to you, go to
+[My HOCK turned into a bad egg](#my-hock-turned-into-a-bad-egg).
+
+</div>
+
+Make sure that you have selected the “MAGIKARP” word from the
+**POKéMON** group, not from A-Z mode or the POKéMON2 group. This is
+because the internal word index used for MAGIKARP differs between the one
+present in the POKéMON group and the one for the POKéMON2 group (which
+also gets used in A-Z mode if you have beaten the Elite Four).
+
+### My HOCK turned into a bad egg
+
+This means one of two causes (in order of likelihood):
+
+- You made a mistake in EV training
+- You entered the wrong mail words
+
+For both cases, provided that you have enough mail, you can just create
+another HOCK. You just simply delete the erroneous bad egg (you can use
+the steps described in
+[*Using group selection to clear invisible bad eggs*](#using-group-selection-to-clear-invisible-bad-eggs))
+and create HOCK again using the guide.
+
+### Bad eggs are appearing in Box 13
+
+This is a known side effect of glitch species 0x0351 (the main grab ACE
+Pokémon used for non-Japanese FireRed and LeafGreen), that has to do with
+its long name. Long story short, due to the long name, another internal
+pointer (variable that stores the address of something) is corrupted with
+an “address” that happens to point to somewhere within Box 13. It just
+turns out that this internal pointer is dereferenced (accessing the stuff
+the pointer “points” to) quite often when performing various actions in
+the PC, and some of these actions also happen to write values to whatever
+was supposed to be accessed via the pointer which causes the bad eggs you
+see in Box 13.
+
+Note that these bad eggs (or rather corruptions) will only ever affect
+the 7th, 8th, or 9th slots of Box 13. Thus you should **never** store
+valuable Pokémon or most special ACE Pokémon in these box slots, to avoid
+possible corruptions.
+
+Additionally, you can always immediately exit the PC upon viewing the
+information of 0x0351 (after placing it in a different slot). This should
+minimise the opportunities of running the game code that performs the
+unwanted corruptions to Box 13. For this prevention technique to work,
+you should store 0x0351 in a box other than Box 13 or Box 14.
+
+## Pokémon Emerald
+
+### I do not have a clean DOTS to EV train
+
+In that case, you can also try to acquire SEASOR the Horsea from the
+in-game trade in Pacifidlog Town, corrupting SEASOR works similarly as
+corrupting DOTS. If you do not have that option, then you can either
+need to trade in a DOTS from another save file, or acquire another
+Pokémon that has the same “corruption type” as DOTS or SEEDOT.
+
+More details on corruption types can be found in
+[this YouTube video by Sleipnir17](https://www.youtube.com/watch?v=9ZeP9Np6zeU).
+Keep in mind that if you choose to do this route, you will need to make
+sure that the Pokémon you are using is compatible with an “unmarked
+Caterpie” initiator (like Pluses).
+
+### I do not have a clean PLUSES
+
+In this case you can also try cloning a clean copy of DOTS, and giving
+that 10 Speed EVs (one Carbos) and evolving it into a Shiftry. That will
+work as a PLUSES replacement.
+
+As a last resort, you can always try doing the corruption using no
+corruption initiators (that is what PLUSES does in the corruption). The
+odds of success will be much lower than the typical Pomeg corruption
+process used in most ACE guides but it does work.
+
+### My trainer card stats look corrupted
+
+This is a known side effect of hatching glitch species 0x0611 (the initial
+glitch Pokémon that is hatched from an egg for ACE) that is caused by its
+very large National Pokédex number (33845). What happens is that the game
+will try to set the corresponding owned flags in the Pokédex (indexed by
+National Pokédex number) for entry 33845. The “flags” for the 33845th
+“entry” in the Pokédex happens to be located at the same memory address
+as where the save’s encryption key is stored, more precisely bit 20 is
+set. The encryption key also happens to change randomly (presumably to
+deter cheaters) so the corruption only happens 50% of the time as it
+depends on whether bit 20 of the encryption key is already set before
+the corruption.
+
+One way of avoiding the corruption (as well as fixing it, should you run
+into the misfortune of having it affect your save) is to save before you
+trigger ACE. Then try triggering ACE through hatching the egg. Check your
+trainer card. If it is normal then it should be fine to continue doing
+everything as normal. Otherwise if it shows the corruption, simply
+soft-reset and try triggering ACE again.
+
+A more reliable (and less random) way of avoiding the corruption is to
+simply not use species 0x0611 for executing your ACE codes. Instead you
+can use the many number of Emerald ACE guides such as
+[this one](https://gist.github.com/claydolwithexplosion/017f1784deebcd118b61d3ad917edb3c)
+or [this one](https://e-sh4rk.github.io/ACE3/)
+that will set you up with a stable species that does not rely on the egg
+hatch mechanic (avoiding the issue of “registering” 0x0611 into the
+Pokédex). Though if you already have the corruption prior to setting up
+stable ACE and none of the 0x0611 executions have fixed up the trainer
+card, then you can try the solution in the previous paragraph, or wait
+for someone to make a code that undoes the corruption.
