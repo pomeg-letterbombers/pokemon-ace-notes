@@ -14,7 +14,7 @@ In this route, you will be setting up arbitrary code execution in non-Japanese F
         -   64–95
         -   128–159
         -   192–223
-    +   These requirements should generally be enough for this route to work but if you want to know the full list of conditions for MIMIEN, read the [MIMIEN parity rules](#mimien-parity-rules) section.
+    +   These requirements should generally be enough for this route to work but if you want to know the full list of conditions for MIMIEN, read the [MIMIEN corruption parity rules](#mimien-corruption-parity-rules) section.
     
 
 ## Procedure

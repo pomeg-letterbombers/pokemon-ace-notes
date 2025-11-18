@@ -209,7 +209,7 @@ If you see this, that means you have successfully set up ACE! Continue reading t
 
 ### German LeafGreen
 
-In this section we will be creating glitch species 0xF3CF which can not be used as a standalone ACE species. This is due to its instability regarding its really long name (which will be seen during this tutorial). As such you should set the box names to the ones for your code **now**. For casual ACE, we recommend setting the box names to the code for creating 0x0351 as shown in [Code for creating 0x0351 in Box 10, Slot 19](#code-for-creating-0x0351-in-box-10-slot-19). Also after triggering ACE with this Pokémon, it will become a bad egg afterwards. As such this section focuses more on how to trigger ACE “safely” with this glitch species.
+In this section we will be creating glitch species 0xF3CF which can not be used as a standalone ACE species. This is due to its instability regarding its really long name (which will be seen during this tutorial). As such you should set the box names to the ones for your code **now**. For casual ACE, we recommend setting the box names to the code for creating 0x0351 as shown in [Code for creating 0x0351 in Box 9, Slot 30](#code-for-creating-0x0351-in-box-9-slot-30). Also after triggering ACE with this Pokémon, it will become a bad egg afterwards. As such this section focuses more on how to trigger ACE “safely” with this glitch species.
 
 **Make sure that Box 12, Slot 18 and all following box slots are empty.**
 
