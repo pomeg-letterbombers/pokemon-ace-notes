@@ -251,7 +251,7 @@ of a whole box.
 
 Ideally, this movement should start in a box that has all of its slots
 filled with Pokémon. This also assumes that the boxes you want to clear
-of invisible bad eggs also already had Pokémon moved to a different.
+of invisible bad eggs also already had Pokémon moved to a different box.
 
 Make sure you are in the PC’s **Move Pokémon** mode.
 
