@@ -3,29 +3,29 @@ title: "Non-Japanese ACE Setup"
 ---
 Here you can find tutorials for setting up ACE in non-Japanese FireRed and LeafGreen. The **bolded** methods are the recommended methods for learning how to achieve ACE in Pokémon FireRed and LeafGreen, the other methods are presented for those who are curious.
 
-[**Pre-Elite Four route** (HOCK 2.O)](./pre-e4-route.md)
+[**Pre-Elite Four route** (HOCK 2.O)](../frlg-non-jpn-pre-e4-route.md)
 
 :   This route allows for obtaining the glitch species 0x0351 from corrupting an empty slot without needing mail words only available after beating the Elite Four.
 :   This method is slightly slower than the postgame method in that it uses two mail corruptions, one for the intermediate species, and one for the turning the intermediate species to 0x0351. The intermediate species will be EV trained in between the mail corruptions.
 
-[**Post-Elite Four route**](./post-e4-route.md)
+[**Post-Elite Four route**](../frlg-non-jpn-post-e4-route.md)
 
 :   This route allows for obtaining 0x0351 using one mail corruption.
 :   The drawback of this method is that it relies on having mail words that are only available **after** beating the Elite Four.
 
-[Mimien route](./mimien-route.md)
+[Mimien route](../frlg-non-jpn-mimien-route.md)
 
 :   This is the original route used for obtaining species 0x0351.
 :   It depends on the trade Pokémon MIMIEN. It uses a single corruption to convert MIMIEN into glitch species into 0x0351. It requires careful management of MIMIEN’s EVs.
 :   Mistakes on this route are irreversible without a save before performing this route.
 
-[NINO/NINA route](./nino-nina-route.md)
+[NINO/NINA route](../frlg-non-jpn-nino-nina-route.md)
 
 :   This is the later casual route for obtaining species 0x0351, popularized by Papa Jefé in his video tutorials.
 :   It depends on the trade Pokémon NINA<sup>FR</sup>/NINO<sup>LG</sup>. It uses multiple mail messages, and some EV training to convert NINO/NINA into species 0x0351. The steps are different between FireRed and LeafGreen, and this route also requires that specific Pokémon has been “seen” by the player beforehand.
 :   Mistakes on this route are irreversible without a save before performing this route.
 
-[Other empty slot corruption routes](./other-empty-slot-routes.md)
+[Other empty slot corruption routes](../frlg-non-jpn-other-empty-slot-routes.md)
 
 :   **These routes are only doable on English, Italian, and German language FireRed and LeafGreen.**
 :   These are the routes originally devised by speedrunners to get an ACE species faster. The version of this route for English is largely used by speedrunners to quickly enter the Hall of Fame.

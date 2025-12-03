@@ -7,7 +7,7 @@ It sets `r0` to the address of the bootstrap’s OT, which contains the exit cod
 ## Prequisites
 
 - Prior knowledge on activating grab ACE
-- A box 14 exit code, the setup can be found [here](box-14-exit.md)
+- A box 14 exit code, the setup can be found [here](frlg-box-14-exit.md)
 
 ## How to create
 

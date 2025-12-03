@@ -5,7 +5,7 @@ title: "Japanese ACE Setup: ニドくん Route"
 <div class="admonition important" markdown="block">
 <p class="admonition-title">Important</p>
 
-This method uses a **LeafGreen-exclusive** trade Pokémon (ニドくん the Nidoran♂). If you are on **FireRed**, and you do not have the means to obtain the trade Pokémon via other means, then follow the [other tutorial](main-route.md).
+This method uses a **LeafGreen-exclusive** trade Pokémon (ニドくん the Nidoran♂). If you are on **FireRed**, and you do not have the means to obtain the trade Pokémon via other means, then follow the [other tutorial](frlg-jpn-main-route.md).
 
 </div>
 
@@ -14,9 +14,9 @@ This route uses a trade Pokémon as the donor Pokémon for creating an ACE envir
 ## Requirements
 
 *   Mail glitch active on your save.
-    +   You can read the [Mail Glitch](../mail-glitch.md) tutorial to learn how to do this. If you prefer a video tutorial then you can watch the part of [this video](https://youtu.be/3jkcq8e9NO4?t=147&feature=shared), only the first part is important for preparing the mail glitch.
+    +   You can read the [Mail Glitch](mail-glitch.md) tutorial to learn how to do this. If you prefer a video tutorial then you can watch the part of [this video](https://youtu.be/3jkcq8e9NO4?t=147&feature=shared), only the first part is important for preparing the mail glitch.
 *   Have at enough Rare Candy to level ニドくん to level 9.
-    +   You can learn how to use mail glitch to clone Rare Candy [here](../mail-glitch.md).
+    +   You can learn how to use mail glitch to clone Rare Candy [here](mail-glitch.md#using-the-mail-glitch).
 *   Have the ニドくん (Nidoran♂) trade available.
     +   This trade Pokémon has a lonely nature.
     +   The OT’s trainer ID is 63184.
@@ -26,7 +26,7 @@ There may be instances where you may already have ニドくん. In this case, yo
 *   Has more than 493 experience points.
 *   Is evolved.
 
-If ニドくん has any of the “bad” characteristics outlined above, then you cannot perform this method, and you must go through the [main route](main-route.md), though you can continue to use ニドくん as the donor Pokémon. You can skip straight to the [Species word finder](main-route.md#species-word-finder) subsection of that route, and ニドくん always has the same PID (0x4C970B9E), and TID (63184), so there is less guesswork to do in for that route.
+If ニドくん has any of the “bad” characteristics outlined above, then you cannot perform this method, and you must go through the [main route](frlg-jpn-main-route.md), though you can continue to use ニドくん as the donor Pokémon. You can skip straight to the [Species word finder](frlg-jpn-main-route.md#species-word-finder) subsection of that route, and ニドくん always has the same PID (0x4C970B9E), and TID (63184), so there is less guesswork to do in for that route.
 
 Otherwise below is a guide on what sections of this route can be skipped if you already have ニドくん:
 
@@ -50,8 +50,8 @@ Preparing ニドくん
 
 1.  Go to the Underground Pass entrance on Route 5, and trade a Nidoran♀ with the girl.
 
-![The trading location](../../../assets/images/frlg/getting-started/jpn-lg-ace/TradeLocation.png)
-![Nidoran standing in the limelight with dialogue underneath it](../../../assets/images/frlg/getting-started/jpn-lg-ace/GettingNidoranM.png)
+![The trading location](assets/images/frlg/getting-started/jpn-lg-ace/TradeLocation.png)
+![Nidoran standing in the limelight with dialogue underneath it](assets/images/frlg/getting-started/jpn-lg-ace/GettingNidoranM.png)
 
 ## Preparing ニドくん
 
@@ -68,11 +68,11 @@ Make sure you save **here**, and do not perform further saves until instructed s
 3.  Deposit ニドくん in the daycare and walk 74 steps, ending your last step in front of the daycare man.
 4.  Withdraw ニドくん from the daycare, his experience should be 493.
 
-    ![The Pokémon stats screen with a Nidoran♂, his experience is at 493](../../../assets/images/frlg/getting-started/jpn-lg-ace/FinalExperience.png)
+    ![The Pokémon stats screen with a Nidoran♂, his experience is at 493](assets/images/frlg/getting-started/jpn-lg-ace/FinalExperience.png)
 
 5.  Place ニドくん into the first slot of box 3, and withdraw another box Pokémon to be the sixth party member.
 
-    ![The Pokémon box menu with Nidoran♂ in Box 3, Slot 1](../../../assets/images/frlg/getting-started/jpn-lg-ace/NidoranLocation.png)
+    ![The Pokémon box menu with Nidoran♂ in Box 3, Slot 1](assets/images/frlg/getting-started/jpn-lg-ace/NidoranLocation.png)
 
 ## Corrupting ニドくん
 
@@ -81,11 +81,11 @@ Make sure you save **here**, and do not perform further saves until instructed s
     +   Delete the 5th word.
     +   All other words left untouched.
     
-    ![A glitched mail with レベル as the 3rd word, nothing as the 5th word and the rest are ???](../../../assets/images/frlg/getting-started/jpn-lg-ace/GlitchedMailMessage.png)
+    ![A glitched mail with レベル as the 3rd word, nothing as the 5th word and the rest are ???](assets/images/frlg/getting-started/jpn-lg-ace/GlitchedMailMessage.png)
 
 2.  Confirm the mail, then check the Box 3 again, ニドくん should have become a glitch Pokémon.
 
-    ![A question mark in Box 3, Slot 1](../../../assets/images/frlg/getting-started/jpn-lg-ace/InitialACEMon.png)
+    ![A question mark in Box 3, Slot 1](assets/images/frlg/getting-started/jpn-lg-ace/InitialACEMon.png)
 
 ## Finalising ACE
 
@@ -102,12 +102,12 @@ Make sure you save **here**, and do not perform further saves until instructed s
 
 3.  With a Pokémon still in the orange hand, go back to Box 3, and swap the glitch Pokémon with the Pokémon then back again.
 
-    ![The process of swapping two Pokémon](../../../assets/images/frlg/getting-started/jpn-lg-ace/SwappingAction.png)
+    ![The process of swapping two Pokémon](assets/images/frlg/getting-started/jpn-lg-ace/SwappingAction.png)
 
 4.  Exit out of Move Pokémon mode then enter deposit mode, in the third party slot there should be another glitch Pokémon in party slot 3.
     *   You should probably place it somewhere in the boxes.
 
-    ![A glitch Pokémon in party slot 3](../../../assets/images/frlg/getting-started/jpn-lg-ace/FinalResult.png)
+    ![A glitch Pokémon in party slot 3](assets/images/frlg/getting-started/jpn-lg-ace/FinalResult.png)
 
 That is it, you have setup ACE in Japanese LeafGreen!
 

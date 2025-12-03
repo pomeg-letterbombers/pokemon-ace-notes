@@ -6,7 +6,7 @@ title: "Non-Japanese ACE Setup: Other Empty Slot Corruption Routes"
 
 **These routes are only doable on English, Italian, and German language FireRed and LeafGreen.**
 
-If you want something that works for French, and Italian before the Elite Four, then do the main [pre-Elite Four route](pre-e4-route.md). If you want something that is doable after beating the Elite Four, then do the [Post-Elite Four route](post-e4-route.md).
+If you want something that works for French, and Italian before the Elite Four, then do the main [pre-Elite Four route](frlg-non-jpn-pre-e4-route.md). If you want something that is doable after beating the Elite Four, then do the [Post-Elite Four route](frlg-non-jpn-post-e4-route.md).
 
 </div>
 
@@ -15,7 +15,7 @@ In these routes, you will be setting up arbitrary code execution in non-Japanese
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
 
 ## Procedure
 
@@ -266,7 +266,7 @@ You can place the Pokémon anywhere else afterwards.
 
 An image below has been provided to illustrate how it should look.
 
-![Swapping two Pokémon in the PC](../../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
+![Swapping two Pokémon in the PC](assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
 
 ### ACE Entrypoints
 

@@ -1,3 +1,4 @@
+docs_dir: "content"
 site_name: pokemon-ace-notes
 site_url: https://pomeg-letterbombers.github.io/pokemon-ace-notes/
 repo_name: pokemon-ace-notes
@@ -7,30 +8,30 @@ nav:
   - "Home": "index.md"
   - "FireRed and LeafGreen":
     - "Getting Started":
-      - "frlg/getting-started/introduction.md"
-      - "frlg/getting-started/mail-glitch.md"
+      - "frlg-introduction.md"
+      - "mail-glitch.md"
       - "Non-Japanese ACE Setup":
-        - "frlg/getting-started/non-jpn-ace/index.md"
-        - "Pre-Elite Four Route (HOCK 2.O)": "frlg/getting-started/non-jpn-ace/pre-e4-route.md"
-        - "Post-Elite Four Route": "frlg/getting-started/non-jpn-ace/post-e4-route.md"
-        - "MIMIEN Route": "frlg/getting-started/non-jpn-ace/mimien-route.md"
-        - "NINO/NINA Route": "frlg/getting-started/non-jpn-ace/nino-nina-route.md"
-        - "Other Empty Slot Corruption Routes": "frlg/getting-started/non-jpn-ace/other-empty-slot-routes.md"
+        - "frlg-non-jpn-ace/index.md"
+        - "Pre-Elite Four Route (HOCK 2.O)": "frlg-non-jpn-pre-e4-route.md"
+        - "Post-Elite Four Route": "frlg-non-jpn-post-e4-route.md"
+        - "MIMIEN Route": "frlg-non-jpn-mimien-route.md"
+        - "NINO/NINA Route": "frlg-non-jpn-nino-nina-route.md"
+        - "Other Empty Slot Corruption Routes": "frlg-non-jpn-other-empty-slot-routes.md"
       - "Japanese ACE Setup":
-        - "frlg/getting-started/jpn-ace/index.md"
-        - "Main Route": "frlg/getting-started/jpn-ace/main-route.md"
-        - "ニドくん Route": "frlg/getting-started/jpn-ace/nido-kun-route.md"
+        - "frlg-jpn-ace/index.md"
+        - "Main Route": "frlg-jpn-main-route.md"
+        - "ニドくん Route": "frlg-jpn-nido-route.md"
     - "Exit Codes":
-      - "frlg/exit-codes/box-14-exit.md"
-      - "frlg/exit-codes/old-box-14-exit.md"
-      - "frlg/exit-codes/exit-code-bootstrap.md"
+      - "frlg-box-14-exit.md"
+      - "frlg-box-14-exit-biosless.md"
+      - "frlg-exit-code-bootstrap.md"
     - "Complex Payloads":
-      - "frlg/complex-payloads/hex-writer.md"
+      - "frlg-hex-writer.md"
   - "FAQ": "faq.md"
   - "Technical Documentation":
-    - "technical-documentation/writing-hexwriter.md"
-    - "technical-documentation/grab-ace-exit.md"
-    - "technical-documentation/getting-ace-in-jpn-frlg.md"
+    - "frlg-hexwriter-setup-explanation.md"
+    - "frlg-grab-ace-exit.md"
+    - "jpn-frlg-ace-explanation.md"
 markdown_extensions:
   - attr_list
   - md_in_html

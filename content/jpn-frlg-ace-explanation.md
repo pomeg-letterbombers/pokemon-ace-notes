@@ -28,7 +28,7 @@ The location of mail slot 255 is what makes Japanese FireRed and LeafGreen mail 
 In non-Japanese FireRed and LeafGreen games, mail slot 255 starts at the PID of the first slot of box 3.
 In the Japanese games, mail slot 255 starts 40 bytes within the first slot of box 3. The below image illustrates the area of the data structures that is written to by the mail glitch.
 
-![Illustration of the box Pokémon data structure, with the bytes between 0x28 and 0x39 circled, representing the “words” of mail slot 255 in Japanese FireRed and LeafGreen](../assets/images/technical-documentation/getting-ace-in-jpn-frlg/jp-mail-slot-255-words.png){ width="300px" }
+![Illustration of the box Pokémon data structure, with the bytes between 0x28 and 0x39 circled, representing the “words” of mail slot 255 in Japanese FireRed and LeafGreen](assets/images/technical-documentation/getting-ace-in-jpn-frlg/jp-mail-slot-255-words.png){ width="300px" }
 
 What this means is that non-Japanese setups will not work on Japanese versions as they rely on changing the PID/TID to adjust the substructure order or the encryption key to get the ACE Pokémon, which cannot be done in Japanese versions.
 Instead the Japanese ACE setups will instead aim to replace the species ID within the growth substructure to be the value of an ACE species, as well as another value (usually experience or effort values depending on the substructure order) to preserve the existing checksum.

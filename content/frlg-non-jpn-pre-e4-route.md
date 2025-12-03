@@ -6,7 +6,7 @@ In this route, you will be setting up arbitrary code execution in non-Japanese F
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
 *   8 HP Ups
     +   These can be purchased or cloned via the mail glitch.
 
@@ -18,7 +18,7 @@ Then activate the mail glitch, you should see the following screen
 
 <figure markdown="span">
 
-![Image](../../../assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
+![Image](assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
 <figcaption markdown="span">
 
 The glitched mail on English FireRed and LeafGreen.
@@ -270,7 +270,7 @@ The words entered for this message are the same, but the position of the second 
 
 After confirming this message, check Box 3, Slot 1. The 0x0200 should have become glitch species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. This is your ACE Pokémon. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.
 
-![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](../../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
+![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
 
 ## Appendix
 
@@ -302,7 +302,7 @@ You can place the Pokémon anywhere else afterwards.
 
 An image below has been provided to illustrate how it should look.
 
-![Swapping two Pokémon in the PC](../../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
+![Swapping two Pokémon in the PC](assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
 
 ### Checking if everything worked
 

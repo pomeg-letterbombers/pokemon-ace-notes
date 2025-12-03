@@ -47,7 +47,7 @@ Before triggering ACE, make sure that you have tried to do the following:
 *   Done all prerequisite steps for the **particular** code you wanted.
     This may include:
     +   Setting up a particular exit codes (e.g.
-        [Box 14 exit](./frlg/exit-codes/box-14-exit.md),
+        [Box 14 exit](frlg-box-14-exit.md),
         [Wallpaper exit](https://gist.github.com/claydolwithexplosion/017f1784deebcd118b61d3ad917edb3c#making-long-codes-with-wallpapers),
         [Certificate exit bootstrap](https://e-sh4rk.github.io/ACE3/emerald/getting-started/exit-code/),
         etc.)
@@ -347,9 +347,9 @@ tools and resouces can help with scripting in the generation III games:
 <div class="admonition note" markdown="block">
 <p class="admonition-title" markdown="span">Note</p>
 
-This is for the [Post-Elite Four route](./frlg/getting-started/non-jpn-ace/post-e4-route.md).
+This is for the [Post-Elite Four route](frlg-non-jpn-post-e4-route.md).
 
-If you are doing the [Pre-Elite Four route](./frlg/getting-started/non-jpn-ace/pre-e4-route.md),
+If you are doing the [Pre-Elite Four route](frlg-non-jpn-pre-e4-route.md),
 this does not apply to you, go to
 [My HOCK turned into a bad egg](#my-hock-turned-into-a-bad-egg).
 

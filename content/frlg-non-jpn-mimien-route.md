@@ -6,7 +6,7 @@ In this route, you will be setting up arbitrary code execution in non-Japanese F
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
 *   Your save either has the MIMIEN trade available or has the MIMIEN trade Pokémon, and you know its EVs.
     +   MIMIEN cannot be used for this method if its HP EVs is greater than 81, and its Attack EVs is greater than 3.
     +   Its Speed EVs should be within the range of:
@@ -97,7 +97,7 @@ You can place the Pokémon anywhere else afterwards.
 
 An image below has been provided to illustrate how it should look.
 
-![Swapping two Pokémon in the PC](../../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
+![Swapping two Pokémon in the PC](assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
 
 ### Checking if everything worked
 

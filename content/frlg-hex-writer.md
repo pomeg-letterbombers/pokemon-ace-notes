@@ -23,11 +23,11 @@ For each hexadecimal string encoded in a box name:
      If it is not set, that means it executes with an aligned `PC` register and you must use a different Pokémon
 - Knowledge on how to perform mail corruption and grab ACE
 - The box 14 exit code
-    - Instructions on how to set this up can be found [here](../exit-codes/box-14-exit.md)
+    - Instructions on how to set this up can be found [here](frlg-box-14-exit.md)
 - The exit code bootstrap.
     - This is technically not necessary for the box name codes and can be created after the creation of the hexwriter
     - This will allow the hexwriter to exit properly via `r0`
-    - Instructions on how to create this can be found [here](../exit-codes/exit-code-bootstrap.md)
+    - Instructions on how to create this can be found [here](frlg-exit-code-bootstrap.md)
 - Snorlax and Omanyte has been seen on the save file
 
 
@@ -511,7 +511,7 @@ If you want to execute standard box name codes with grab ACE again, move the hex
 
 !!! note
     The troubleshooting code uses the Box 14 exit code.
-    If it has been renamed, please [restore the exit code](../exit-codes/box-14-exit.md) before proceeding further in this section.
+    If it has been renamed, please [restore the exit code](frlg-box-14-exit.md) before proceeding further in this section.
 
 Refer to this section the hexwriter is not writing data or causes a crash upon execution.
 Place the wrong hexwriter back in Box 10, Slot 19, then write the following box names.
