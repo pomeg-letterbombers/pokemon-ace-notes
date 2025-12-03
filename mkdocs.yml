@@ -66,3 +66,23 @@ theme:
 plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
+  - redirects:
+      redirect_maps:
+        "frlg/getting-started/introduction.md": "frlg-introduction.md"
+        "frlg/getting-started/mail-glitch.md": "mail-glitch.md"
+        "frlg/getting-started/non-jpn-ace/index.md": "frlg-non-jpn-ace/index.md"
+        "frlg/getting-started/non-jpn-ace/pre-e4-route.md": "frlg-non-jpn-pre-e4-route.md"
+        "frlg/getting-started/non-jpn-ace/post-e4-route.md": "frlg-non-jpn-post-e4-route.md"
+        "frlg/getting-started/non-jpn-ace/mimien-route.md": "frlg-non-jpn-mimien-route.md"
+        "frlg/getting-started/non-jpn-ace/nino-nina-route.md": "frlg-non-jpn-nino-nina-route.md"
+        "frlg/getting-started/non-jpn-ace/other-empty-slot-routes.md": "frlg-non-jpn-other-empty-slot-routes.md"
+        "frlg/getting-started/jpn-ace/index.md": "frlg-jpn-ace/index.md"
+        "frlg/getting-started/jpn-ace/main-route.md": "frlg-jpn-main-route.md"
+        "frlg/getting-started/jpn-ace/nido-kun-route.md": "frlg-jpn-nido-route.md"
+        "frlg/exit-codes/box-14-exit.md": "frlg-box-14-exit.md"
+        "frlg/exit-codes/old-box-14-exit.md": "frlg-box-14-exit-biosless.md"
+        "frlg/exit-codes/exit-code-bootstrap.md": "frlg-exit-code-bootstrap.md"
+        "frlg/complex-payloads/hex-writer.md": "frlg-hex-writer.md"
+        "technical-documentation/writing-hexwriter.md": "frlg-hexwriter-setup-explanation.md"
+        "technical-documentation/grab-ace-exit.md": "frlg-grab-ace-exit.md"
+        "technical-documentation/getting-ace-in-jpn-frlg.md": "jpn-frlg-ace-explanation.md"
