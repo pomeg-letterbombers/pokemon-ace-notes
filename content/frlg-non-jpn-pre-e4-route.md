@@ -18,7 +18,7 @@ Then activate the mail glitch, you should see the following screen
 
 <figure markdown="span">
 
-![Image](assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
+![Mail with 9 words written on it. All 9 words are “???”.](assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
 <figcaption markdown="span">
 
 The glitched mail on English FireRed and LeafGreen.
