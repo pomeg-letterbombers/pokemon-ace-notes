@@ -13,7 +13,7 @@ A collection of tutorials, guides, and documentation for arbitrary code executio
 
 <div class="grid cards" markdown>
 
-*   [FireRed and LeafGreen](frlg/getting-started/introduction.md)
+*   [FireRed and LeafGreen](frlg-introduction.md)
 
 </div>
 

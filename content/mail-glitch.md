@@ -75,7 +75,7 @@ If Box 3, Slot 1 is populated, there may be other words mixed in, but that is no
 <div class="grid" markdown="block">
 <figure markdown="span">
 
-![Image](../../assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
+![Mail with 9 words written on it. All 9 words are “???”.](assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
 <figcaption markdown="span">
 
 The glitched mail on English FireRed and LeafGreen.
@@ -85,7 +85,7 @@ The glitched mail on English FireRed and LeafGreen.
 </figure>
 <figure markdown="span">
 
-![Image](../../assets/images/frlg/getting-started/mail-glitch/jpn-mail-glitch-example.png)
+![Mail with 9 words written on it. All 9 words are “???”.](assets/images/frlg/getting-started/mail-glitch/jpn-mail-glitch-example.png)
 <figcaption markdown="span">
 
 The glitched mail on Japanese FireRed and LeafGreen.

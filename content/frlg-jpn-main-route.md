@@ -7,11 +7,11 @@ In this route, you will be setting up arbitrary code execution in Japanese FireR
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
 
 ## Getting the donor Pokémon
 
-For this route, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](../../../technical-documentation/getting-ace-in-jpn-frlg.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
+For this route, you will need to acquire a Pokémon with a specific personality value (<abbr>PID</abbr>), which depends on the value of the donor Pokémon’s original trainer’s TID. More specific details (i.e. how it is calculated) about this PID is available [here](jpn-frlg-ace-explanation.md). In short, it allows for overwriting the species field with an the index of a specific mail word (let this mail word be called the **species word**) that will be interpreted as one of the many glitch species that can enable ACE in FireRed and LeafGreen[^1].
 
 There are two (somewhat viable) methods that you could use to acquire the donor Pokémon: RNG manipulation, and brute forcing at the Celadon Game Corner.
 
@@ -283,13 +283,13 @@ Place the donor Pokémon in Box 3, Slot 1. Then trigger the mail glitch. What yo
 <div class="grid" markdown>
 <figure markdown="span">
 
-![Pokémon mail screen with the 3rd and 5th word circled](../../../assets/images/frlg/getting-started/jpn-ace/experience-adjustment-graphic.png){ width=300px }
+![Pokémon mail screen with the 3rd and 5th word circled](assets/images/frlg/getting-started/jpn-ace/experience-adjustment-graphic.png){ width=300px }
 <figcaption>Guide for experience adjustment type</figcaption>
 
 </figure>
 <figure markdown="span">
 
-![Pokémon mail screen with the 3rd, 5th and 9th word circled](../../../assets/images/frlg/getting-started/jpn-ace/ev-adjustment-graphic.png){ width=300 }
+![Pokémon mail screen with the 3rd, 5th and 9th word circled](assets/images/frlg/getting-started/jpn-ace/ev-adjustment-graphic.png){ width=300 }
 <figcaption>Guide for EV adjustment type</figcaption>
 
 </figure>
@@ -360,14 +360,14 @@ An image below has been provided to illustrate how it should look.
 
 <figure markdown="span">
 
-![Swapping two Pokémon in the PC](../../../assets/images/frlg/getting-started/jpn-lg-ace/SwappingAction.png)
+![Swapping two Pokémon in the PC](assets/images/frlg/getting-started/jpn-lg-ace/SwappingAction.png)
 <figcaption>Swapping two Pokémon in the PC</figcaption>
 
 </figure>
 
 After performing the swap, your game should not crash. If that is so, then you have just learned how to trigger ACE through swapping! Exit the Move Pokémon mode, then enter Deposit mode. In the third party slot, a glitch Pokémon should have appeared (as shown below), make sure to deposit it somewhere in the boxes.
 
-![A glitch Pokémon in party slot 3](../../../assets/images/frlg/getting-started/jpn-lg-ace/FinalResult.png)
+![A glitch Pokémon in party slot 3](assets/images/frlg/getting-started/jpn-lg-ace/FinalResult.png)
 
 If you see this (note that the name might vary, but as long as it looks similar, then its the correct Pokémon), that means the code worked, and you have ACE set up in Japanese FireRed or LeafGreen. You can trigger ACE at any time with this glitch Pokémon by setting the correct box names for your code beforehand then performing the aforementioned swapping with **this** glitch Pokémon.
 

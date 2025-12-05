@@ -6,7 +6,7 @@ In this route, you will be setting up arbitrary code execution in non-Japanese F
 ## Prequisites
 
 *   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](../mail-glitch.md) to learn how to activate it.
+    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
 *   You have seen Magikarp before on this save.
 
 ## Procedure
@@ -17,7 +17,7 @@ Then activate the mail glitch, you should see the following screen
 
 <figure markdown="span">
 
-![Image](../../../assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
+![Image](assets/images/frlg/getting-started/mail-glitch/mail-glitch-example.png)
 <figcaption markdown="span">
 
 The glitched mail on English FireRed and LeafGreen.
@@ -135,7 +135,7 @@ After confirming the message, check the PC, a glitch species should appear in Bo
 
 If you see this, that means you have successfully set up ACE! Continue reading to learn how to trigger ACE with this Pokémon.
 
-![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](../../../assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
+![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
 
 ## Appendix
 
@@ -167,7 +167,7 @@ You can place the Pokémon anywhere else afterwards.
 
 An image below has been provided to illustrate how it should look.
 
-![Swapping two Pokémon in the PC](../../../assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
+![Swapping two Pokémon in the PC](assets/images/frlg/getting-started/non-jpn-ace/Using0351.png)
 
 ### Checking if everything worked
 
