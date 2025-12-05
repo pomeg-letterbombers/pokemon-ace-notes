@@ -2,7 +2,6 @@ name: ci
 on:
   push:
     branches:
-      - master 
       - main
   workflow_dispatch:
 permissions:
@@ -28,5 +27,8 @@ jobs:
           path: .cache 
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2
-      - run: env MKDOCS_GIT_COMMITERS_APIKEY=${{ secrets.GITHUB_TOKEN }} mkdocs gh-deploy --force
+      - run: pip install \
+              mkdocs-material \
+              mkdocs-git-revision-date-localized-plugin \
+              mkdocs-redirects
+      - run: mkdocs gh-deploy --force
