@@ -13,10 +13,10 @@ This route uses a trade Pokémon as the donor Pokémon for creating an ACE envir
 
 ## Requirements
 
-*   Mail glitch active on your save.
-    +   You can read the [Mail Glitch](mail-glitch.md) tutorial to learn how to do this. If you prefer a video tutorial then you can watch the part of [this video](https://youtu.be/3jkcq8e9NO4?t=147&feature=shared), only the first part is important for preparing the mail glitch.
+*   You have triggered the Mail glitch on your save.
+    +   You can read the [Mail Glitch](mail-glitch.md) tutorial to learn how to do this. If you prefer a video tutorial then you can watch the part of [this video](https://youtu.be/3jkcq8e9NO4?t=147&feature=shared), only the first part is important for triggering the Mail glitch.
 *   Have at enough Rare Candy to level ニドくん to level 9.
-    +   You can learn how to use mail glitch to clone Rare Candy [here](mail-glitch.md#using-the-mail-glitch).
+    +   You can learn how to use the question mark Mail to clone Rare Candy [here](mail-glitch.md#using-the-question-mark-mail).
 *   Have the ニドくん (Nidoran♂) trade available.
     +   This trade Pokémon has a lonely nature.
     +   The OT’s trainer ID is 63184.
@@ -135,7 +135,7 @@ You somehow got the wrong glitch Pokémon.
 
 ### Removing the initial ACE Pokémon
 
-You probably don’t want to keep the initial glitch Pokémon (created from mail glitch) in the boxes, to remove it please do the following:
+You probably don’t want to keep the initial glitch Pokémon (created from the question mark Mail) in the boxes, to remove it please do the following:
 
 1. Place the glitch Pokémon in the party (using the orange hand)
 2. Exit the PC, then go to the party menu

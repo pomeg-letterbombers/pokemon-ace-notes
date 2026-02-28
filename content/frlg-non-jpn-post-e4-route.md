@@ -1,19 +1,19 @@
 ---
 title: "Non-Japanese ACE Setup: Post-Elite Four Route"
 ---
-In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the question mark Mail, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
-*   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+*   You have triggered the Mail glitch on your save.
+    +   If not, please read [this article](mail-glitch.md) to learn how to trigger it.
 *   You have seen Magikarp before on this save.
 
 ## Procedure
 
 Make sure that Box 3, Slot 1 is **empty** before you do this.
 
-Then activate the mail glitch, you should see the following screen
+Then activate the question mark Mail, you should see the following screen
 
 <figure markdown="span">
 
@@ -215,4 +215,4 @@ Encryption key
 ## Credits
 
 *   Papa Jefé for originally discovering this route
-*   gifvex for discovering the ability to corrupt empty slots into glitch Pokémon with the mail glitch.
+*   gifvex for discovering the ability to corrupt empty slots into glitch Pokémon with the question mark Mail.

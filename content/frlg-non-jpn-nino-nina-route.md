@@ -1,12 +1,12 @@
 ---
 title: "Non-Japanese ACE Setup: NINO/NINA Route"
 ---
-In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform NINA/NINO the trade Nidorina/Nidorino into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the question mark Mail, you will transform NINA/NINO the trade Nidorina/Nidorino into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
-*   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+*   You have triggered the Mail glitch on your save.
+    +   If not, please read [this article](mail-glitch.md) to learn how to trigger it.
 *   These Pokémon has been registered as **seen** in your Pokédex:
     +   Eevee
         -   Can be registered at Bill’s PC at the Sea Cottage on Cerulean Cape.
@@ -29,7 +29,7 @@ If you are doing this route after unlocking the National Mode of the Pokédex, m
 
 Take NINA to the Move Deleter in Fuschia City. Delete all moves but **Poison Sting**.
 
-Place NINA in Box 3, Slot 1. Then activate the mail glitch.
+Place NINA in Box 3, Slot 1. Then trigger the question mark Mail.
 
 **Set** the message of the glitched mail to be the following:
 
@@ -129,7 +129,7 @@ Place it in the daycare south of Cerulean City, and then take two steps, then re
 
 It will become level 1, and all of its glitch moves will be replaced.
 
-Place NINA in Box 3, Slot 1. Then activate the mail glitch.
+Place NINA in Box 3, Slot 1. Then trigger the question mark Mail.
 
 **Set** the message of the glitched mail to be the following:
 
@@ -235,7 +235,7 @@ Move NINA the Parasect into your party and give it:
     +   This can be provided by defeating **3** Doduo, which can be found on Route 16.
     +   This can also be provided by defeating **3** Mankey, which can be found on Route 22.
 
-Place NINA in Box 3, Slot 1. Then activate the mail glitch.
+Place NINA in Box 3, Slot 1. Then trigger the question mark Mail.
 
 **Set** the message of the glitched mail to be the following:
 
@@ -335,7 +335,7 @@ NINA should have become glitch species 0x0351, which should have a name similar 
 
 Take NINO to the Move Deleter in Fuschia City. Delete all moves but **Poison Sting**.
 
-Place NINO in Box 3, Slot 1. Then activate the mail glitch.
+Place NINO in Box 3, Slot 1. Then trigger the question mark Mail.
 
 **Set** the message of the glitched mail to be the following:
 
@@ -433,7 +433,7 @@ After confirming the message, reenter the PC, NINO should have become a level 0 
 
 Go to Celadon Department Store, then buy a Poké Doll. Give NINO the Poké Doll.
 
-Place NINO in Box 3, Slot 1. Then activate the mail glitch.
+Place NINO in Box 3, Slot 1. Then trigger the question mark Mail.
 
 **Set** the message of the glitched mail to be the following:
 
@@ -640,7 +640,7 @@ Move NINO the Nidorino into your party and give it:
     +   This can be provided by defeating **3** Doduo, which can be found on Route 16.
     +   This can also be provided by defeating **3** Mankey, which can be found on Route 22.
 
-Place NINO in Box 3, Slot 1. Then activate the mail glitch.
+Place NINO in Box 3, Slot 1. Then trigger the question mark Mail.
 
 **Set** the message of the glitched mail to be the following:
 

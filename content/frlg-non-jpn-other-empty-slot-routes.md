@@ -10,12 +10,12 @@ If you want something that works for French, and Italian before the Elite Four, 
 
 </div>
 
-In these routes, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into a glitch species which can trigger ACE via swapping in the PC.
+In these routes, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the question mark Mail, you will transform an empty slot in the PC into a glitch species which can trigger ACE via swapping in the PC.
 
 ## Prequisites
 
-*   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+*   You have triggered the Mail glitch on your save.
+    +   If not, please read [this article](mail-glitch.md) to learn how to trigger it.
 
 ## Procedure
 
@@ -25,7 +25,7 @@ In these routes, you will be setting up arbitrary code execution in non-Japanese
 
 In this section, we will be creating glitch species 0x1453 on English versions or 0x1457 on Italian versions which can be used as a standalone ACE species.
 
-Make sure to leave the PC on Box 3. Then activate the mail glitch. **Set** the message of the glitched mail to be the following:
+Make sure to leave the PC on Box 3. Then trigger the question mark Mail. **Set** the message of the glitched mail to be the following:
 
 <table>
     <tbody>
@@ -87,7 +87,7 @@ Make sure to leave the PC on Box 3. Then activate the mail glitch. **Set** the m
 
 After confirming the message, reenter the PC in Move Pokémon mode, a glitch Pokémon should be present in Box 3, Slot 1. With the orange cursor (press <kbd>SELECT</kbd> to activate this), grab this glitch Pokémon then place it down again. Then exit the PC.
 
-Activate the mail glitch again, then **set** the message of the glitched mail to the following:
+Trigger the question mark Mail again, then **set** the message of the glitched mail to the following:
 
 <div class="admonition note" markdown="block">
 <p class="admonition-title">Note</p>
@@ -186,7 +186,7 @@ When executing codes designed for 0x0351 with 0x1453<sup>ENG</sup> or 0x1457<sup
 
 In this section we will be creating glitch species 0xE1DE which can be used as a standalone ACE species.
 
-Exit the PC from any box. Then activate the mail glitch. **Set** the message of the glitched mail to be the following:
+Exit the PC from any box. Then trigger the question mark Mail. **Set** the message of the glitched mail to be the following:
 
 <table>
     <tbody>
@@ -213,7 +213,7 @@ In this section we will be creating glitch species 0xF3CF which can not be used 
 
 **Make sure that Box 12, Slot 18 and all following box slots are empty.**
 
-Exit the PC from any box but Box 3. Then activate the mail glitch. **Set** the message of the glitched mail to be the following:
+Exit the PC from any box but Box 3. Then trigger the question mark Mail. **Set** the message of the glitched mail to be the following:
 
 <table>
     <tbody>
@@ -306,7 +306,7 @@ This table uses calculations that assume the maximum ASLR shift, which means tha
 
 Some of these ACE species (particularly 0x1453, and 0x1457) trigger ACE very early in the boxes so if you have many Pokémon in the boxes and you can not empty all box slots past the entrypoint, then you must create a bootstrap, as outlined below.
 
-Make sure that Box 3, Slot 1 is empty, then activate the mail glitch. **Set** the glitched mail message to the following:
+Make sure that Box 3, Slot 1 is empty, then trigger the question mark Mail. **Set** the glitched mail message to the following:
 
 <table>
     <tbody>
@@ -413,5 +413,5 @@ The original English version of this route was devised by speedrunners to get an
 
 ## Credits
 
-*   gifvex and the Pokémon speedrunning community for creating the original version of this route, and discovering the ability to corrupt empty slots into glitch Pokémon with the mail glitch.
+*   gifvex and the Pokémon speedrunning community for creating the original version of this route, and discovering the ability to corrupt empty slots into glitch Pokémon with the question mark Mail.
 *   merrp for creating the original version of the jump bootstrap for 0x1453.

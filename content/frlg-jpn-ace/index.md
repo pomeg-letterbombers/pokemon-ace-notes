@@ -1,7 +1,7 @@
 ---
 title: "Japanese ACE Setup"
 ---
-Here you can find tutorials for setting up ACE in Japanese FireRed and LeafGreen. There is not much choice for native ACE in this language as the mail glitch modifies a portion of Pokémon data that is more difficult to manipulate.
+Here you can find tutorials for setting up ACE in Japanese FireRed and LeafGreen. There is not much choice for native ACE in this language as the question mark Mail modifies a portion of Pokémon data that is more difficult to manipulate.
 
 [Main Route](../frlg-jpn-main-route.md)
 

@@ -1,9 +1,9 @@
 ---
 title: Getting ACE in Japanese FireRed and LeafGreen
 ---
-## How does mail glitch work?
+## How does question mark Mail work?
 
-To quickly explain why Japanese FireRed and LeafGreen mail glitch works slightly differently to non-Japanese FireRed and LeafGreen, we will need to talk about how the mail glitch works overall.
+To quickly explain why Japanese FireRed and LeafGreen question mark Mail works slightly differently to non-Japanese FireRed and LeafGreen, we will need to talk about how the question mark Mail works overall.
 
 In Pokémon FireRed and LeafGreen mail data is structured as follows (courtesy of [pret][pret_pokefirered_mail_struct]):
 
@@ -16,7 +16,7 @@ In Pokémon FireRed and LeafGreen mail data is structured as follows (courtesy o
 As this data is stored in a struct, these will all start at a word-aligned address (i.e. divisible by four).
 Mails are all stored together in an [array][pret_pokefirered_mail_array] in `SaveBlock1`.
 
-The mail glitch works by setting up a state where the number of occupied party mail slots is greater than the number of party Pokémon holding mail (usually only by one).
+The question mark Mail from a state where the number of occupied party mail slots is greater than the number of party Pokémon holding mail (usually only by one), usually done with the Mail glitch.
 Normally mail should not be able to be removed as a held item from a Pokémon without updating the mail’s associated slot, but in all generation III games, Knock Off and Recycle allows for the removal of mail as a held item without updating the mail slot the mail is associated with, recreating this state.
 
 After setting up this state, we fill up the rest of the party mail slots, and because of this misalignment, there will be still party Pokémon not holding mail.
@@ -24,9 +24,9 @@ When we attempt to give these Pokémon mail, the code that tries to [initialise]
 Despite this, the [code][pret_pokefirered_cb2_writemail] for writing the mail will still run, where it grabs the target mail ID to write to from the mail ID stored in the target Pokémon’s data structure, and writes the words for the “mail” there.
 By default, the mail ID stored in the data structure is mail 255 (0xFF) as that is the constant for “no mail”, so the “mail slot” being written to is slot 255[^1].
 
-The location of mail slot 255 is what makes Japanese FireRed and LeafGreen mail glitch slightly different from non-Japanese FireRed and LeafGreen.
+The location of mail slot 255 is what makes Japanese FireRed and LeafGreen question mark Mail slightly different from non-Japanese FireRed and LeafGreen.
 In non-Japanese FireRed and LeafGreen games, mail slot 255 starts at the PID of the first slot of box 3.
-In the Japanese games, mail slot 255 starts 40 bytes within the first slot of box 3. The below image illustrates the area of the data structures that is written to by the mail glitch.
+In the Japanese games, mail slot 255 starts 40 bytes within the first slot of box 3. The below image illustrates the area of the data structures that is written to by the question mark Mail.
 
 ![Illustration of the box Pokémon data structure, with the bytes between 0x28 and 0x39 circled, representing the “words” of mail slot 255 in Japanese FireRed and LeafGreen](assets/images/technical-documentation/getting-ace-in-jpn-frlg/jp-mail-slot-255-words.png){ width="300px" }
 
@@ -93,7 +93,7 @@ The substructure order is the determined by the result of personality value modu
 [bulbapedia_data_substructures]: https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_data_substructures_(Generation_III)
 
 As established earlier, mail slot 255 starts in the middle of substructures data of the first slot of box 3.
-Using this fact, we find out that we can use the mail glitch to replace the value of the species field (a 16-bit value) with our own one.
+Using this fact, we find out that we can use the question mark Mail to replace the value of the species field (a 16-bit value) with our own one.
 However in order to do this, we will need a substructure order where the species field is located within the “words” area of mail slot 255.
 This leaves all substructure orders with growth as the second or third substructure.
 However we will also need some way to modify the value of a different field to correct for the difference from the original checksum, to ensure that the donor Pokémon does not become a bad egg.
@@ -220,14 +220,14 @@ And the checksum word tool can probably find more efficient words (in terms of e
 
 Below are the people or groups that has helped with this in some way.
 
-*   [luckytyphlosion][luckytyphlosion_github] for discovering mail glitch, and PC swap/grab ACE in Pokémon FireRed and LeafGreen.
+*   [luckytyphlosion][luckytyphlosion_github] for discovering mail glitch, question mark Mail, and PC swap/grab ACE in Pokémon FireRed and LeafGreen.
 *   [merrp][merrp_youtube] for initially handling the exploitation of these new glitches, and creating the initial setup for PC swap/grab ACE in non-Japanese FireRed and LeafGreen.
     +   [FireRed/LeafGreen Birth Island Warp via 0x351 Grab ACE][merrp_frlg_demo]: the original demonstration video for PC swap/grab ACE.
 *   [Detelony (デテロニー)][detelony_youtube] for creating the setup for PC swap/grab ACE in Japanese FireRed and LeafGreen.
     +   [【任意コード実行】ポケモン ファイアレッド ･リーフグリーン 新発見されたバグを使用して任意コード実行【解説】][detelony_jpn_tutorial]: their tutorial for PC swap/grab ACE in Japanese FireRed and LeafGreen.
 *   [pret][pret_github] for their decompilations which allows understanding of the game’s code in a more familar manner.
     +   [pokefirered][pret_pokefirered]: decompilation for Pokémon FireRed and LeafGreen.
-*   [Adrichu00][adrichu00_github] for tracking down the code responsible for the mail glitch.
+*   [Adrichu00][adrichu00_github] for tracking down the code responsible for the question mark Mail.
 *   [Bulbapedia][bulbapedia] for the pages on the Pokémon data structure and substructures.
 
 [luckytyphlosion_github]: https://github.com/luckytyphlosion

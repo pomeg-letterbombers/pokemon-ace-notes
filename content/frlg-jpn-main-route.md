@@ -2,12 +2,12 @@
 title: "Japanese ACE Setup: Main Route"
 ---
 
-In this route, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the question mark Mail, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
-*   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+*   The save has the Mail glitch triggered at least once, and you know how to use the question mark Mail.
+    +   If not, please read [this article](mail-glitch.md) to learn how to trigger it and use the question mark Mail.
 
 ## Getting the donor Pokémon
 
@@ -99,7 +99,7 @@ Once you have the target Pokémon, then continue to the [Species word finder](#s
 
 ### Without RNG manipulation
 
-In the game, make sure that you have large amounts of coins and Rare Candies (mail glitch’s item duplication should allow you to obtain large amounts of each easily). It is also recommended to have a party of only one Pokémon, this just makes mass checking easier. At the Celadon Game Corner, save in front of the clerk that gives out the prize Pokémon.
+In the game, make sure that you have large amounts of coins and Rare Candies (question mark Mail’s item duplication should allow you to obtain large amounts of each easily). It is also recommended to have a party of only one Pokémon, this just makes mass checking easier. At the Celadon Game Corner, save in front of the clerk that gives out the prize Pokémon.
 
 Then buy a prize Pokémon (we recommend Scyther<sup>FR</sup>/Pinsir<sup>LG</sup>, but you can look at the comparison table below for using some of the other Game Corner Pokémon), then find the Pokémon’s IVs using an IV calculator (any is fine, as long as it is for generations 3, 4, or 5).
 
@@ -251,7 +251,7 @@ Make sure to adjust the stats before following the instructions in the next sect
 
 ## Mail corrupting the donor Pokémon
 
-Place the donor Pokémon in Box 3, Slot 1. Then trigger the mail glitch. What you will write will depend on the adjustment type, and how you adjusted your Pokémon specifically. A graphic has also been provided as a visual aid.
+Place the donor Pokémon in Box 3, Slot 1. Then trigger the question mark Mail. What you will write will depend on the adjustment type, and how you adjusted your Pokémon specifically. A graphic has also been provided as a visual aid.
 
 <table>
 <thead>

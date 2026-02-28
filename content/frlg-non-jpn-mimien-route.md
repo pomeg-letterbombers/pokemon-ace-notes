@@ -1,12 +1,12 @@
 ---
 title: "Non-Japanese ACE Setup: MIMIEN Route"
 ---
-In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform MIMIEN the trade Mr. Mime into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the question mark Mail, you will transform MIMIEN the trade Mr. Mime into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
-*   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+*   You have triggered the Mail glitch on your save.
+    +   If not, please read [this article](mail-glitch.md) to learn how to trigger it.
 *   Your save either has the MIMIEN trade available or has the MIMIEN trade Pokémon, and you know its EVs.
     +   MIMIEN cannot be used for this method if its HP EVs is greater than 81, and its Attack EVs is greater than 3.
     +   Its Speed EVs should be within the range of:
@@ -30,7 +30,7 @@ EV train MIMIEN so it has:
 
 After giving it these EVs, place it back into Box 3, Slot 1.
 
-Activate the mail glitch, then set the second word of the glitched mail to the one of the following:
+Trigger the question mark Mail, then set the second word of the glitched mail to the one of the following:
 
 <table>
     <tbody>

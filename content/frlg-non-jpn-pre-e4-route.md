@@ -1,20 +1,20 @@
 ---
 title: "Non-Japanese ACE Setup: Pre-Elite Four Route (HOCK 2.O)"
 ---
-In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the mail glitch, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
+In this route, you will be setting up arbitrary code execution in non-Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the question mark Mail, you will transform an empty slot in the PC into glitch species 0x0351 which is the standard ACE species used in non-Japanese FireRed and LeafGreen.
 
 ## Prequisites
 
-*   Your save has the mail glitch active, and you know how to use it.
-    +   If not, please read [this article](mail-glitch.md) to learn how to activate it.
+*   You have triggered the Mail glitch on your save.
+    +   If not, please read [this article](mail-glitch.md) to learn how to trigger it.
 *   8 HP Ups
-    +   These can be purchased or cloned via the mail glitch.
+    +   These can be purchased or cloned using the question mark Mail.
 
 ## Procedure
 
 Make sure that Box 3, Slot 1 is **empty** before you do this.
 
-Then activate the mail glitch, you should see the following screen
+Then trigger the question mark Mail, you should see the following screen
 
 <figure markdown="span">
 
@@ -165,7 +165,7 @@ Move glitch species 0x0200 into your party then give it:
 
 After giving it these EVs, place it back into Box 3, Slot 1.
 
-Activate the mail glitch again, then set the message of the glitched mail to be the following:
+Trigger the question mark Mail again, then set the message of the glitched mail to be the following:
 
 <div class="admonition note" markdown="block">
 <p class="admonition-title">Note</p>
@@ -352,5 +352,5 @@ Encryption key
 
 ## Credits
 
-*   gifvex and the Pokémon speedrunning community for discovering the ability to corrupt empty slots into glitch Pokémon with the mail glitch.
+*   gifvex and the Pokémon speedrunning community for discovering the ability to corrupt empty slots into glitch Pokémon with the question mark Mail.
 *   Papa Jefé for confirming that this route works on other languages.

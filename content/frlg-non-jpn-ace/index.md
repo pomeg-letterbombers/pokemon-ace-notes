@@ -29,13 +29,13 @@ Here you can find tutorials for setting up ACE in non-Japanese FireRed and LeafG
 
 :   **These routes are only doable on English, Italian, and German language FireRed and LeafGreen.**
 :   These are the routes originally devised by speedrunners to get an ACE species faster. The version of this route for English is largely used by speedrunners to quickly enter the Hall of Fame.
-:   These routes use the mail glitch to convert an empty slot within the PC to an ACE species. Steps vary between languages and game versions.
+:   These routes use the question mark Mail to convert an empty slot within the PC to an ACE species. Steps vary between languages and game versions.
 :   These routes are meant for saves that have **not** entered the Hall of Fame. For those saves that did, the main post-Elite Four route is largely similar except that it allows obtaining the standard ACE species (0x0351) directly.
 
 ## Extra resources
 
 *   [Papa Jefé’s video tutorial (FireRed)](https://www.youtube.com/watch?v=3jkcq8e9NO4&t)
-    *   You do not need to watch the whole video, but the rest of the video contains examples of how ACE can be used along with extensively using mail #255 corruption (mail glitch) in unique ways.
+    *   You do not need to watch the whole video, but the rest of the video contains examples of how ACE can be used along with extensively using the question mark Mail in unique ways.
 *   [Papa Jefé’s video tutorial (LeafGreen)](https://www.youtube.com/watch?v=8d2kd2_iVps)
 *   [Papa Jefé’s written tutorial](https://docs.google.com/document/d/1khCyziorop1M2AI0JNLSaMqK3fV_SfIXeSYmevQ3DfE/)
 *   [merrp’s video demonstration](https://www.youtube.com/watch?v=yVhK4pLC9ac)
