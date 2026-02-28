@@ -461,7 +461,7 @@ After execution, Mail should work normally again.
 Enter the following the box names:
 
 ```
-Box 1: 2 B U n H 2 . o [2BUnH2oo]
+Box 1: 2 B U n H 2 o o [2BUnH2oo]
 Box 2: I P o A T ! q   [IPoAT!q] ← replace 'A' with 'C' for inaccurate emulators
 Box 3: A A ♂ H Q m     [AA♂HQm]
 Box 4: A , J Q m       [A,JQm]
