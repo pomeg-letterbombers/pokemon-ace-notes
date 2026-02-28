@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-does-mail-glitch-work" class="md-skip">
+        <a href="#how-does-question-mark-mail-work" class="md-skip">
           Skip to content
         </a>
       
@@ -1317,10 +1317,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-does-mail-glitch-work" class="md-nav__link">
+  <a href="#how-does-question-mark-mail-work" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How does mail glitch work?
+        How does question mark Mail work?
       
     </span>
   </a>
@@ -1440,10 +1440,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-does-mail-glitch-work" class="md-nav__link">
+  <a href="#how-does-question-mark-mail-work" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How does mail glitch work?
+        How does question mark Mail work?
       
     </span>
   </a>
@@ -1544,8 +1544,8 @@
 
   <h1>Getting ACE in Japanese FireRed and LeafGreen</h1>
 
-<h2 id="how-does-mail-glitch-work">How does mail glitch work?</h2>
-<p>To quickly explain why Japanese FireRed and LeafGreen mail glitch works slightly differently to non-Japanese FireRed and LeafGreen, we will need to talk about how the mail glitch works overall.</p>
+<h2 id="how-does-question-mark-mail-work">How does question mark Mail work?</h2>
+<p>To quickly explain why Japanese FireRed and LeafGreen question mark Mail works slightly differently to non-Japanese FireRed and LeafGreen, we will need to talk about how the question mark Mail works overall.</p>
 <p>In Pokémon FireRed and LeafGreen mail data is structured as follows (courtesy of <a href="https://github.com/pret/pokefirered/blob/d61f9594532a7b3eb53f97d1b40ed99b955128c0/include/global.h#L513">pret</a>):</p>
 <ul>
 <li>Nine 16-bit values representing the words composing the mail message.</li>
@@ -1556,15 +1556,15 @@
 </ul>
 <p>As this data is stored in a struct, these will all start at a word-aligned address (i.e. divisible by four).
 Mails are all stored together in an <a href="https://github.com/pret/pokefirered/blob/d61f9594532a7b3eb53f97d1b40ed99b955128c0/include/global.h#L787">array</a> in <code>SaveBlock1</code>.</p>
-<p>The mail glitch works by setting up a state where the number of occupied party mail slots is greater than the number of party Pokémon holding mail (usually only by one).
+<p>The question mark Mail from a state where the number of occupied party mail slots is greater than the number of party Pokémon holding mail (usually only by one), usually done with the Mail glitch.
 Normally mail should not be able to be removed as a held item from a Pokémon without updating the mail’s associated slot, but in all generation III games, Knock Off and Recycle allows for the removal of mail as a held item without updating the mail slot the mail is associated with, recreating this state.</p>
 <p>After setting up this state, we fill up the rest of the party mail slots, and because of this misalignment, there will be still party Pokémon not holding mail.
 When we attempt to give these Pokémon mail, the code that tries to <a href="https://github.com/pret/pokefirered/blob/d61f9594532a7b3eb53f97d1b40ed99b955128c0/src/mail_data.c#L41">initialise</a> (and assign an ID to) the mail to give to the party Pokémon fails because the party mail slots are all “full”.
 Despite this, the <a href="https://github.com/pret/pokefirered/blob/master/src/party_menu.c#L3535">code</a> for writing the mail will still run, where it grabs the target mail ID to write to from the mail ID stored in the target Pokémon’s data structure, and writes the words for the “mail” there.
 By default, the mail ID stored in the data structure is mail 255 (0xFF) as that is the constant for “no mail”, so the “mail slot” being written to is slot 255<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
-<p>The location of mail slot 255 is what makes Japanese FireRed and LeafGreen mail glitch slightly different from non-Japanese FireRed and LeafGreen.
+<p>The location of mail slot 255 is what makes Japanese FireRed and LeafGreen question mark Mail slightly different from non-Japanese FireRed and LeafGreen.
 In non-Japanese FireRed and LeafGreen games, mail slot 255 starts at the PID of the first slot of box 3.
-In the Japanese games, mail slot 255 starts 40 bytes within the first slot of box 3. The below image illustrates the area of the data structures that is written to by the mail glitch.</p>
+In the Japanese games, mail slot 255 starts 40 bytes within the first slot of box 3. The below image illustrates the area of the data structures that is written to by the question mark Mail.</p>
 <p><img alt="Illustration of the box Pokémon data structure, with the bytes between 0x28 and 0x39 circled, representing the “words” of mail slot 255 in Japanese FireRed and LeafGreen" src="../assets/images/technical-documentation/getting-ace-in-jpn-frlg/jp-mail-slot-255-words.png" width="300px" /></p>
 <p>What this means is that non-Japanese setups will not work on Japanese versions as they rely on changing the PID/TID to adjust the substructure order or the encryption key to get the ACE Pokémon, which cannot be done in Japanese versions.
 Instead the Japanese ACE setups will instead aim to replace the species ID within the growth substructure to be the value of an ACE species, as well as another value (usually experience or effort values depending on the substructure order) to preserve the existing checksum.
@@ -1613,7 +1613,7 @@ This is done through providing a donor Pokémon we will modify, where we already
 </table>
 
 <p>As established earlier, mail slot 255 starts in the middle of substructures data of the first slot of box 3.
-Using this fact, we find out that we can use the mail glitch to replace the value of the species field (a 16-bit value) with our own one.
+Using this fact, we find out that we can use the question mark Mail to replace the value of the species field (a 16-bit value) with our own one.
 However in order to do this, we will need a substructure order where the species field is located within the “words” area of mail slot 255.
 This leaves all substructure orders with growth as the second or third substructure.
 However we will also need some way to modify the value of a different field to correct for the difference from the original checksum, to ensure that the donor Pokémon does not become a bad egg.
@@ -1707,7 +1707,7 @@ For the personality value, it would be a long process of checking the substructu
 And the checksum word tool can probably find more efficient words (in terms of experience, or EV training) to use as checksum words.</p>
 <p>Below are the people or groups that has helped with this in some way.</p>
 <ul>
-<li><a href="https://github.com/luckytyphlosion">luckytyphlosion</a> for discovering mail glitch, and PC swap/grab ACE in Pokémon FireRed and LeafGreen.</li>
+<li><a href="https://github.com/luckytyphlosion">luckytyphlosion</a> for discovering mail glitch, question mark Mail, and PC swap/grab ACE in Pokémon FireRed and LeafGreen.</li>
 <li><a href="https://www.youtube.com/@pokemerrp">merrp</a> for initially handling the exploitation of these new glitches, and creating the initial setup for PC swap/grab ACE in non-Japanese FireRed and LeafGreen.<ul>
 <li><a href="https://www.youtube.com/watch?v=yVhK4pLC9ac">FireRed/LeafGreen Birth Island Warp via 0x351 Grab ACE</a>: the original demonstration video for PC swap/grab ACE.</li>
 </ul>
@@ -1720,7 +1720,7 @@ And the checksum word tool can probably find more efficient words (in terms of e
 <li><a href="https://github.com/pret/pokefirered">pokefirered</a>: decompilation for Pokémon FireRed and LeafGreen.</li>
 </ul>
 </li>
-<li><a href="https://github.com/adrichu00">Adrichu00</a> for tracking down the code responsible for the mail glitch.</li>
+<li><a href="https://github.com/adrichu00">Adrichu00</a> for tracking down the code responsible for the question mark Mail.</li>
 <li><a href="https://bulbapedia.bulbagarden.net/wiki/">Bulbapedia</a> for the pages on the Pokémon data structure and substructures.</li>
 </ul>
 <div class="footnote">
@@ -1752,7 +1752,7 @@ This is because the mail ID of the mail that is removed is still in the data str
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 19, 2025 16:40:59 UTC">July 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 28, 2026 20:54:30 UTC">February 28, 2026</span>
   </span>
 
     
@@ -1806,10 +1806,10 @@ This is because the mail ID of the mail that is removed is still in the data str
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.tabs", "navigation.sections", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
