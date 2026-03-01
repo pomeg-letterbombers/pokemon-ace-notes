@@ -1,10 +1,13 @@
 ---
 title: Box 14 Exit Code (BIOS-less)
 ---
-!!! tip
+<div class="admonition tip" markdown="block">
+<p class="admonition-title">Tip</p>
 
-    Use the [improved Box 14 exit code](frlg-box-14-exit.md) if you are on retail hardware or an accurate emulator with a genuine GBA BIOS.
-    It is much faster to set up.
+Use the [improved Box 14 exit code](frlg-box-14-exit.md) if you are on retail hardware, an accurate emulator with a genuine GBA BIOS, or playing the Switch rerelease.
+It is much faster to set up.
+
+</div>
     
 
 This exit code allows box name codes to be longer by moving the exit code to the name of Box 14, in contrast to the standard exit code spanning the names of Box 10 and 11.
