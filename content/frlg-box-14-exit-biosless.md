@@ -20,8 +20,8 @@ Box  2:	5 R n n U U n  	[5RnnUUn]
 Box  3:	A A y 2 ? q    	[AAy2?q]
 Box  4:	A              	[A]
 Box  5:	A              	[A]
-Box  6:	_ F o H I C o r	[ FoHICor]
-Box  7:	B n            	[Bn]
+Box  6:	_ F o H I o o r	[ FoHIoor]
+Box  7:	x n            	[xn]
 Boxes 8 to 13: (leave as is)
 Box 14:	_ F o          	[ Fo]
 ```

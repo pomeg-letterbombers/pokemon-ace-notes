@@ -75,15 +75,15 @@ Below is the mail message with the words substituted for their respective hexade
     Box  1: C C U n 7 T … o	[CCUn7T…o]
     Box  2: _ _ _ 7 F Q q _	[   7FQq ]
     Box  3: _ _ n F … o _ _	[  nF…o  ]
-    Box  4: _ 9 F Q q _ _ _	[ 9FQq   ]
+    Box  4: _ 9 F Q q      	[ 9FQq]
     Box  5: t F … o – F Q q	[tF…o–FQq]
     Box  6: _ _ _ o F … o _	[   oF…o ]
     Box  7: _ _ ” F Q q _ _	[  ”FQq  ]
-    Box  8: _ F F … o _ _ _	[ FF…o   ]
+    Box  8: _ F F … o      	[ FF…o]
     Box  9: ’ F Q q N G … o	[’FQqNG…o]
     Box 10: _ _ _ ♀ F w q _	[   ♀Fwq ]
     Box 11: _ _ s R … o _ _	[  sR…o  ]
-    Box 12: _ d F ? n _ _ _	[ dF?n   ]
+    Box 12: _ d F ? n      	[ dF?n]
     Box 13: ‘ F Q m _ _ _ _	[‘FQm    ]
     ```
 
