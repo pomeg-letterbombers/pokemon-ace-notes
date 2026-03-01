@@ -398,6 +398,73 @@ minimise the opportunities of running the game code that performs the
 unwanted corruptions to Box 13. For this prevention technique to work,
 you should store 0x0351 in a box other than Box 13 or Box 14.
 
+### I am playing on the Switch rerelease and the codes do not work!
+
+As of 1st March 2026, these Switch rereleases are very recent and have many odd quirks that makes some existing codes for the original FireRed and LeafGreen incompatible.
+
+#### Codes that will need a specific Switch rerelease version
+
+These codes will need a different version written (or rewritten) for the Switch rerelease as the game has been heavily internally modified from the original ROM, and the emulator used for these rereleases has a bunch of emulation quirks.
+
+*   Codes that use ROM addresses
+    +   Codes that hook into scripts within ROM (<i>Run script via NPC</i>)
+    +   Codes that call functions within ROM (Hall of Fame warp, <i>Change Pokémon PID or TID</i>, etc.)
+*   Codes that read and write to static RAM addresses
+    +   RNG seed change codes
+    +   Non-NPC based custom script codes (<i>Teleport anywhere</i> and <i>Run script via GlobalScriptContext</i>)
+    +   Party data manipulation codes
+*   Codes that use GBA behaviors not emulated by the emulator used for the rerelease.
+*   Codes currently unenterable due to tripping Nintendo’s bad word filter.
+
+#### Code adjustments needed for Switch rereleases
+
+You can try making these adjustments to the code and see if it executes properly.
+This accounts for some of the emulation quirks found with the emulator used for the rereleases.
+
+Avoid inserting space characters into the last three characters of Box 4, Box 8, and Box 12. Instead leave them empty and confirm the box name early.
+
+```
+Original:
+Box 4: E _ F R m _ _ _ [E FRm   ]
+
+Adjusted:
+Box 4: E _ F R m       [E FRm]
+```
+
+The emulator used for the rereleases has crashing behaviors on some ARM instructions that normally does not happen on a real GBA or most emulators.
+Exit codes however use these crashing instructions, and thus they must be adjusted to prevent this behavior.
+
+This exit code is found in a number of FireRed and LeafGreeen codes, including all codes in Sleipnir17’s Pastebin for FireRed and LeafGreen swap/grab ACE.
+Box 11 should be adjusted as follows.
+
+```
+Original:
+Box 11: … o _ _ _ _ _ _ […o      ]
+
+Adjusted:
+Box 11: . o             [.o]
+```
+
+This exit code might be found in some newer resources, and can also be placed in Box 5 and 6, as well as Box 2 and 3.
+These boxes should be adjusted as follows.
+
+```
+Original:
+Box 10: _ F o H I C o r [ FoHICor]
+Box 11: B n             [Bn]
+
+Adjusted:
+Box 10: _ F o H I o o r [ FoHIoor]
+Box 11: x n             [xn]
+```
+
+#### The code still does not work
+
+Check [The code isn’t working](#the-code-isnt-working) FAQ entry and see if you made a common mistake.
+
+If you are sure that you have throughly checked for these mistakes and the code is still not working for you, then it is possible that the specific code you are using is not compatible with the Switch rereleases.
+You will have to wait for a version for the Switch rerelease to be made.
+
 ## Pokémon Emerald
 
 ### I do not have a clean DOTS to EV train
