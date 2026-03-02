@@ -1371,6 +1371,56 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#i-am-playing-on-the-switch-rerelease-and-the-codes-do-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I am playing on the Switch rerelease and the codes do not work!
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I am playing on the Switch rerelease and the codes do not work!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codes-that-will-need-a-specific-switch-rerelease-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Codes that will need a specific Switch rerelease version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-adjustments-needed-for-switch-rereleases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code adjustments needed for Switch rereleases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-code-still-does-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The code still does not work
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1819,6 +1869,56 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#i-am-playing-on-the-switch-rerelease-and-the-codes-do-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I am playing on the Switch rerelease and the codes do not work!
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I am playing on the Switch rerelease and the codes do not work!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#codes-that-will-need-a-specific-switch-rerelease-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Codes that will need a specific Switch rerelease version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-adjustments-needed-for-switch-rereleases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code adjustments needed for Switch rereleases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-code-still-does-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The code still does not work
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2241,6 +2341,59 @@ information of 0x0351 (after placing it in a different slot). This should
 minimise the opportunities of running the game code that performs the
 unwanted corruptions to Box 13. For this prevention technique to work,
 you should store 0x0351 in a box other than Box 13 or Box 14.</p>
+<h3 id="i-am-playing-on-the-switch-rerelease-and-the-codes-do-not-work">I am playing on the Switch rerelease and the codes do not work!</h3>
+<p>As of 1st March 2026, these Switch rereleases are very recent and have many odd quirks that makes some existing codes for the original FireRed and LeafGreen incompatible.</p>
+<h4 id="codes-that-will-need-a-specific-switch-rerelease-version">Codes that will need a specific Switch rerelease version</h4>
+<p>These codes will need a different version written (or rewritten) for the Switch rerelease as the game has been heavily internally modified from the original ROM, and the emulator used for these rereleases has a bunch of emulation quirks.</p>
+<ul>
+<li>Codes that use ROM addresses<ul>
+<li>Codes that hook into scripts within ROM (<i>Run script via NPC</i>)</li>
+<li>Codes that call functions within ROM (Hall of Fame warp, <i>Change Pokémon PID or TID</i>, etc.)</li>
+</ul>
+</li>
+<li>Codes that read and write to static RAM addresses<ul>
+<li>RNG seed change codes</li>
+<li>Non-NPC based custom script codes (<i>Teleport anywhere</i> and <i>Run script via GlobalScriptContext</i>)</li>
+<li>Party data manipulation codes</li>
+</ul>
+</li>
+<li>Codes that use GBA behaviors not emulated by the emulator used for the rerelease.</li>
+<li>Codes currently unenterable due to tripping Nintendo’s bad word filter.</li>
+</ul>
+<h4 id="code-adjustments-needed-for-switch-rereleases">Code adjustments needed for Switch rereleases</h4>
+<p>You can try making these adjustments to the code and see if it executes properly.
+This accounts for some of the emulation quirks found with the emulator used for the rereleases.</p>
+<p>Avoid inserting space characters into the last three characters of Box 4, Box 8, and Box 12. Instead leave them empty and confirm the box name early.</p>
+<div class="highlight"><pre><span></span><code>Original:
+Box 4: E _ F R m _ _ _ [E FRm   ]
+
+Adjusted:
+Box 4: E _ F R m       [E FRm]
+</code></pre></div>
+<p>The emulator used for the rereleases has crashing behaviors on some ARM instructions that normally does not happen on a real GBA or most emulators.
+Exit codes however use these crashing instructions, and thus they must be adjusted to prevent this behavior.</p>
+<p>This exit code is found in a number of FireRed and LeafGreeen codes, including all codes in Sleipnir17’s Pastebin for FireRed and LeafGreen swap/grab ACE.
+Box 11 should be adjusted as follows.</p>
+<div class="highlight"><pre><span></span><code>Original:
+Box 11: … o _ _ _ _ _ _ […o      ]
+
+Adjusted:
+Box 11: . o             [.o]
+</code></pre></div>
+<p>This exit code might be found in some newer resources, and can also be placed in Box 5 and 6, as well as Box 2 and 3.
+These boxes should be adjusted as follows.</p>
+<div class="highlight"><pre><span></span><code>Original:
+Box 10: _ F o H I C o r [ FoHICor]
+Box 11: B n             [Bn]
+
+Adjusted:
+Box 10: _ F o H I o o r [ FoHIoor]
+Box 11: x n             [xn]
+</code></pre></div>
+<h4 id="the-code-still-does-not-work">The code still does not work</h4>
+<p>Check <a href="#the-code-isnt-working">The code isn’t working</a> FAQ entry and see if you made a common mistake.</p>
+<p>If you are sure that you have throughly checked for these mistakes and the code is still not working for you, then it is possible that the specific code you are using is not compatible with the Switch rereleases.
+You will have to wait for a version for the Switch rerelease to be made.</p>
 <h2 id="pokémon-emerald">Pokémon Emerald</h2>
 <h3 id="i-do-not-have-a-clean-dots-to-ev-train">I do not have a clean DOTS to EV train</h3>
 <p>The in-game trade SEASOR works the same as DOTS
@@ -2421,7 +2574,7 @@ in their old positions within the internal species list.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 28, 2025 04:43:13 UTC">November 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 1, 2026 16:17:36 UTC">March 1, 2026</span>
   </span>
 
     
