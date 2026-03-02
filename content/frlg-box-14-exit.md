@@ -1,11 +1,16 @@
 ---
 title: "Box 14 Exit Code"
 ---
-!!! warning
+<div class="admonition note" markdown="block">
+<p class="admonition-title">For emulator users</p>
 
-    For best results, make sure you are using real hardware or an accurate emulator (such as mGBA 0.9.0+) with a genuine GBA BIOS.
+Make sure that the emulator you are using is loaded with a genuine GBA BIOS.
 
-    If you do not have, or want to use those, please use the [*BIOS-less* version](frlg-box-14-exit-biosless.md) of this exit code instead.
+If you do not have, or want to use a dump of the BIOS, please use the [*BIOS-less* version](frlg-box-14-exit-biosless.md) of this exit code instead.
+
+The emulator used for the Switch rereleases has a GBA BIOS, you do not need to use the BIOS-less version for these releases.
+
+</div>
 
 This exit code allows box name codes to be longer by moving the exit code to the name of Box 14, in contrast to the standard exit code spanning the names of Box 10 and 11.
 Box name codes using this exit code do not require the use of an additional bootstrap Pokémon.
