@@ -436,10 +436,10 @@ This will also make it impossible to give normal Mail to your Pokémon unless yo
 Make sure that no party member is holding Mail, and then enter the following box names:
 
 ```
-Box 1: 2 B U n H 2 o o [2BUnH2oo]
-Box 2: J o o A T ! q   [JooAT!q] ← replace 'A' with 'C' for inaccurate emulators
-Box 3: A A ♂ H Q m     [AA♂HQm]
-Box 4: A , J Q m       [A,JQm]
+Box 1: 2 B U n n F . o [2BUnnF.o]
+Box 2: A A A A T ! q   [JooAT!q] ← replace 4th 'A' with 'C' for inaccurate emulators
+Box 3: A A ♂ H Q m H 2 [AA♂HQmH2]
+Box 4: o , J Q m       [o,JQm]
 Box 5: B L Q m … O Q m [BLQm…OQm]
 Box 6: _ F o ♂ Q Q m r [ Fo♂QQmr]
 Box 7: v n             [vn]
@@ -461,10 +461,10 @@ After execution, Mail should work normally again.
 Enter the following the box names:
 
 ```
-Box 1: 2 B U n H 2 o o [2BUnH2oo]
-Box 2: I P o A T ! q   [IPoAT!q] ← replace 'A' with 'C' for inaccurate emulators
-Box 3: A A ♂ H Q m     [AA♂HQm]
-Box 4: A , J Q m       [A,JQm]
+Box 1: 2 B U n _ F . o [2BUn F.o]
+Box 2: A A A A T ! q   [AAAAT!q] ← replace 4th 'A' with 'C' for inaccurate emulators
+Box 3: A A ♂ H Q m H 2 [AA♂HQmH2]
+Box 4: o , J Q m       [o,JQm]
 Box 5: B L Q m … O Q m [BLQm…OQm]
 Box 6: _ F o ♂ Q Q m r [ Fo♂QQmr]
 Box 7: v n             [vn]
