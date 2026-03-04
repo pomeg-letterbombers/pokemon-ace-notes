@@ -73,18 +73,18 @@ Below is the mail message with the words substituted for their respective hexade
     
     ```
     Box  1: C C U n 7 T … o	[CCUn7T…o]
-    Box  2: _ _ _ 7 F Q q _	[   7FQq ]
-    Box  3: _ _ n F … o _ _	[  nF…o  ]
-    Box  4: _ 9 F Q q      	[ 9FQq]
+    Box  2: A A A 7 F Q q  	[AAA7FQq]
+    Box  3: A A n F … o    	[AAnF…o]
+    Box  4: A 9 F Q q      	[A9FQq]
     Box  5: t F … o – F Q q	[tF…o–FQq]
-    Box  6: _ _ _ o F … o _	[   oF…o ]
-    Box  7: _ _ ” F Q q _ _	[  ”FQq  ]
-    Box  8: _ F F … o      	[ FF…o]
+    Box  6: A A A o F … o  	[AAAoF…o]
+    Box  7: A A ” F Q q    	[AA”FQq]
+    Box  8: A F F … o      	[AFF…o]
     Box  9: ’ F Q q N G … o	[’FQqNG…o]
-    Box 10: _ _ _ ♀ F w q _	[   ♀Fwq ]
-    Box 11: _ _ s R … o _ _	[  sR…o  ]
-    Box 12: _ d F ? n      	[ dF?n]
-    Box 13: ‘ F Q m _ _ _ _	[‘FQm    ]
+    Box 10: A A A ♀ F w q  	[AAA♀Fwq]
+    Box 11: A A s R … o    	[AAsR…o]
+    Box 12: A d F ? n      	[AdF?n]
+    Box 13: ‘ F Q m        	[‘FQm]
     ```
 
 ## Determining the initial `SBC` offset

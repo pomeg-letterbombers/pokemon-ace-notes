@@ -17,17 +17,17 @@ Make sure Box 10, Slot 19 is empty, then write and execute the following box nam
 
     ```
     Box  1: 4 C U n n R … o	[4CUnnR…o]
-    Box  2: P R o / F Q m _	[PRo/FQm ]
-    Box  3: _ _ s K … o _ _	[  sK…o  ]
-    Box  4: _ v I ? n      	[ vI?n]
+    Box  2: P R o / F Q m  	[PRo/FQm]
+    Box  3: A A s K … o    	[AAsK…o]
+    Box  4: A v I ? n      	[AvI?n]
     Box  5: U N ? n _ F ! q	[UN?n F!q]
-    Box  6: F … o F ‘ ! n _	[F…oF‘!n ]
-    Box  7: _ _ v J ? n _ _	[  vJ?n  ]
-    Box  8: _ U T R o      	[ UTRo]
+    Box  6: F … o F ‘ ! n  	[F…oF‘!n]
+    Box  7: A A v J ? n    	[AAvJ?n]
+    Box  8: A U T R o      	[AUTRo]
     Box  9: … G Q m ’ G Q m	[…GQm’GQm]
-    Box 10: ? … o _ F ! q _	[?…o F!q ]
-    Box 11: _ _ … ” ! n _ _	[  …”!n  ]
-    Box 12: _ C J 9 n      	[ CJ9n]
+    Box 10: ? … o _ F ! q  	[?…o F!q]
+    Box 11: A A … ” ! n    	[AA…”!n]
+    Box 12: A C J 9 n      	[ACJ9n]
     Box 13: k R R o _ F ! q	[kRRo F!q]
     ```
 
@@ -35,17 +35,17 @@ Make sure Box 10, Slot 19 is empty, then write and execute the following box nam
 
     ```
     Box  1: 4 C U n n R … o	[4CUnnR…o]
-    Box  2: P R o / F Q m _	[PRo/FQm ]
-    Box  3: _ _ s K … o _ _	[  sK…o  ]
-    Box  4: _ v I ? n      	[ vI?n]
+    Box  2: P R o / F Q m  	[PRo/FQm]
+    Box  3: A A s K … o    	[AAsK…o]
+    Box  4: A v I ? n      	[AvI?n]
     Box  5: U N ? n _ F ! q	[UN?n F!q]
-    Box  6: F … o F ‘ ! n _	[F…oF‘!n ]
-    Box  7: _ _ v J ? n _ _	[  vJ?n  ]
-    Box  8: _ U T R o      	[ UTRo]
+    Box  6: F … o F ‘ ! n  	[F…oF‘!n]
+    Box  7: A A v J ? n    	[AAvJ?n]
+    Box  8: A U T R o      	[AUTRo]
     Box  9: … G Q m ’ G Q m	[…GQm’GQm]
-    Box 10: ? … o _ F ! q _	[?…o F!q ]
-    Box 11: _ _ … » ! n _ _	[  …»!n  ]
-    Box 12: _ C J 9 n      	[ CJ9n]
+    Box 10: ? … o _ F ! q  	[?…o F!q]
+    Box 11: A A … » ! n    	[AA…»!n]
+    Box 12: A C J 9 n      	[ACJ9n]
     Box 13: k R R o _ F ! q	[kRRo F!q]
     ```
     
@@ -53,17 +53,17 @@ Make sure Box 10, Slot 19 is empty, then write and execute the following box nam
 
     ```
     Box  1: 4 C U n n R … o	[4CUnnR…o]
-    Box  2: P R o / F Q m _	[PRo/FQm ]
-    Box  3: _ _ s K … o _ _	[  sK…o  ]
-    Box  4: _ v I ? n      	[ vI?n]
+    Box  2: P R o / F Q m  	[PRo/FQm]
+    Box  3: A A s K … o    	[AAsK…o]
+    Box  4: A v I ? n      	[AvI?n]
     Box  5: U N ? n _ F ! q	[UN?n F!q]
-    Box  6: F … o F ‘ ! n _	[F…oF‘!n ]
-    Box  7: _ _ v J ? n _ _	[  vJ?n  ]
-    Box  8: _ U T R o      	[ UTRo]
+    Box  6: F … o F ‘ ! n  	[F…oF‘!n]
+    Box  7: A A v J ? n    	[AAvJ?n]
+    Box  8: A U T R o      	[AUTRo]
     Box  9: … G Q m ’ G Q m	[…GQm’GQm]
-    Box 10: ? … o _ F ! q _	[?…o F!q ]
-    Box 11: _ _ … “ ! n _ _	[  …“!n  ]
-    Box 12: _ C J 9 n      	[ CJ9n]
+    Box 10: ? … o _ F ! q  	[?…o F!q]
+    Box 11: A A … “ ! n    	[AA…“!n]
+    Box 12: A C J 9 n      	[ACJ9n]
     Box 13: k R R o _ F ! q	[kRRo F!q]
     ```
     
@@ -104,8 +104,8 @@ Write and execute the following box names:
 
     ```
     Box  1: m … l o y ♀ Q o	[m…loy♀Qo]
-    Box  2: F U n m ” Q o _	[FUnm”Qo ]
-    Box  3: _ _ _ “ ? q z	[   “?qz]
+    Box  2: F U n m ” Q o  	[FUnm”Qo]
+    Box  3: A A _ “ ? q z  	[AA “?qz]
     Box  4: v	[v]
     ```
 
@@ -113,8 +113,8 @@ Write and execute the following box names:
 
     ```
     Box  1: m … l o y ♀ Q o	[m…loy♀Qo]
-    Box  2: F U n m » Q o _	[FUnm»Qo ]
-    Box  3: _ _ _ « ? q z	[   «?qz]
+    Box  2: F U n m » Q o  	[FUnm»Qo]
+    Box  3: A A _ « ? q z  	[AA «?qz]
     Box  4: v	[v]
     ```
 
@@ -122,13 +122,13 @@ Write and execute the following box names:
 
     ```
     Box  1: m … l o y ♀ Q o	[m…loy♀Qo]
-    Box  2: F U n m “ Q o _	[FUnm“Qo ]
-    Box  3: _ _ _ „ ? q z	[   „?qz]
+    Box  2: F U n m “ Q o  	[FUnm“Qo]
+    Box  3: A A _ „ ? q z  	[AA „?qz]
     Box  4: v	[v]
     ```
     
 The game should not crash, and the names of Box 2 and Box 3 should have changed.
-The space at the end of Box 2’s name should have become `Œ`, and the first two spaces of Box 3 should have become `␣m`.
+The space at the end of Box 2’s name should have become `Œ`, and the first two `A` of Box 3 should have become `␣m`.
 This means the code worked, you do not need to keep the names of Boxes 2 and 3, they just serve as a test.
 
 ## How to utilise the bootstrap
