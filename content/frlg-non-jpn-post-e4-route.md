@@ -149,6 +149,7 @@ Before triggering any kind of ACE, make sure that:
 *   Done all prerequisite steps for that particular code (e.g. created specific bootstraps, in correct location, etc.)
 *   You have changed the box names to the ones for your code. Make sure that you have entered these codes correctly!
 *   The entrypoint (Box 13, Slot 7) and all spaces after it are **empty**.
+    Boxes after Box 13 must also be empty.
     +   If the Pokémon occupying these spaces are bootstrap Pokémon (Pokémon containing special data for various ACE setups to use), they should be fine occupying these spaces as long as they are for the form of ACE you are using (the covered form in this tutorial is **grab/swap** ACE).
 
 </div>

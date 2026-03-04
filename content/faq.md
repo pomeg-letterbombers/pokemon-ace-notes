@@ -118,7 +118,7 @@ Examples of ACE areas are:
 *   Japanese Emerald (Thumb):
     Starts Box 12, Slot 15, and all of Boxes 13 and 14
 *   Non-Japanese FireRed and LeafGreen (0x0351):
-    Starts from Box 13, Slot 7, and then all of Box 14.
+    Starts from Box 13, Slot 7, and all of Box 14.
 *   Japanese FireRed and LeafGreen (0xFFC9):
     Last 3 slots of Box 12, and all of Boxes 13, and 14
 
