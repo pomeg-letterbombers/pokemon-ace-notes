@@ -2,6 +2,14 @@
 title: "Japanese ACE Setup: Main Route"
 ---
 
+<div class="admonition info" markdown="block">
+<p class="admonition-title">Info</p>
+
+This guide is an adaptation of [Detelony’s video tutorial](https://www.youtube.com/watch?v=i9d4AyI2l1A).
+Modifications include adding an RNG manipulation section to ease aquisition of suitable Pokémon for people who can RNG mnaipulate, and improved tooling to hopefully make the experience easier.
+
+</div>
+
 In this route, you will be setting up arbitrary code execution in Japanese FireRed or LeafGreen through the PC shift/swap action in the Pokémon Storage System. Through the question mark Mail, you will transform a donor Pokémon into a glitch Pokémon that will then be used to generate glitch species 0xFFC9 which is the standard ACE species used in Japanese FireRed and LeafGreen.
 
 ## Prequisites

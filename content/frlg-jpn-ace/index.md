@@ -3,6 +3,16 @@ title: "Japanese ACE Setup"
 ---
 Here you can find tutorials for setting up ACE in Japanese FireRed and LeafGreen. There is not much choice for native ACE in this language as the question mark Mail modifies a portion of Pokémon data that is more difficult to manipulate.
 
+<div class="admonition info" markdown="block">
+<p class="admonition-title">Info</p>
+
+These tutorials are adaptations of [Detelony’s video tutorial](https://www.youtube.com/watch?v=i9d4AyI2l1A).
+Modifications include adding an RNG manipulation section to ease aquisition of suitable Pokémon for people who can RNG mnaipulate, and improved tooling to hopefully make the experience easier.
+
+A LeafGreen-only derived from the main route has also been added with more concrete steps, as that game has a working in-game trade Pokémon that is useable for the main route. 
+
+</div>
+
 [Main Route](../frlg-jpn-main-route.md)
 
 :   This is the original route that can be used to setup ACE as demonstrated in Detelony’s video tutorial/explanation. This has been adapted to English in written form.

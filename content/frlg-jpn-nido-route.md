@@ -9,6 +9,14 @@ This method uses a **LeafGreen-exclusive** trade Pokémon (ニドくん the Nido
 
 </div>
 
+<div class="admonition info" markdown="block">
+<p class="admonition-title">Info</p>
+
+This tutorial is an adaptation of [Detelony’s video tutorial](https://www.youtube.com/watch?v=i9d4AyI2l1A).
+Modifications include using a in-game trade Pokémon with known values to simplify steps.
+
+</div>
+
 This route uses a trade Pokémon as the donor Pokémon for creating an ACE environment in Japanese FireRed and LeafGreen. This allows for more concrete instructions, as trade Pokémon have known data that is set.
 
 ## Requirements
