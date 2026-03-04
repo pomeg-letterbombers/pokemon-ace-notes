@@ -8,7 +8,7 @@ Make sure that the emulator you are using is loaded with a genuine GBA BIOS.
 
 If you do not have, or want to use a dump of the BIOS, please use the [*BIOS-less* version](frlg-box-14-exit-biosless.md) of this exit code instead.
 
-The emulator used for the Switch rereleases has a GBA BIOS, you do not need to use the BIOS-less version for these releases.
+If you are playing on a Game Boy Advance, DS, DS Lite, 3DS (using open_agb_firm or Virtual Console injects), or the Switch rereleases of FireRed and LeafGreen, none of the above applies to you, these platforms already have a GBA BIOS integrated.
 
 </div>
 
