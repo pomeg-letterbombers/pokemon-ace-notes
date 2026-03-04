@@ -94,7 +94,7 @@ Then write and then execute the following box names:
 
     ```
     ### CODE 1 ###
-    Box  1: C C U n 7 T … o	[CCUn7T…o]
+    Box  1: C C U H 7 T … o	[CCUH7T…o]
     Box  2: A A A 7 F Q q  	[AAA7FQq]
     Box  3: A A n F … o    	[AAnF…o]
     Box  4: A 9 F Q q      	[A9FQq]
@@ -109,7 +109,7 @@ Then write and then execute the following box names:
     Box 13: d F ? n ‘ F Q m	[dF?n‘FQm]
 
     ### CODE 2 ###
-    Box  1: C C U n W M … o	[CCUnWM…o]
+    Box  1: C C U H W M … o	[CCUHWM…o]
     Box  2: A A A k J ? n  	[AAAkJ?n]
     Box  3: A A W P ? n    	[AAWP?n]
     Box  4: A “ F ? n      	[A“F?n]
@@ -117,29 +117,29 @@ Then write and then execute the following box names:
     Box  6: A A A t P ? n  	[AAAtP?n]
     Box  7: A A 0 Q ? n    	[AA0Q?n]
     Box  8: A G T ? n      	[AGT?n]
-    Box  9: – R ! s H K … o	[–R!sHK…o]
+    Box  9: T R ! s H K … o	[TR!sHK…o]
     Box 10: A A A ” H ? n  	[AAA”H?n]
     Box 11: A A z R ? n    	[AAzR?n]
     Box 12: A J R ? n      	[AJR?n]
-    Box 13: – R ! s        	[–R!s]
+    Box 13: T R ! s        	[TR!s]
 
     ### CODE 3 ###
-    Box  1: C C U n z K … o	[CCUnzK…o]
+    Box  1: C C U H z K … o	[CCUHzK…o]
     Box  2: A A A 0 L ? n  	[AAA0L?n]
     Box  3: A A Q P ? n    	[AAQP?n]
     Box  4: A M F ! q      	[AMF!q]
     Box  5: 1 H l o I M ? n	[1HloIM?n]
     Box  6: A A A l P ? n  	[AAAlP?n]
     Box  7: A A F H ? n    	[AAFH?n]
-    Box  8: A – R ! s      	[A–R!s]
+    Box  8: A T R ! s      	[ATR!s]
     Box  9: L I … o R M R n	[LI…oRMRn]
     Box 10: A A A Z Q R n  	[AAAZQRn]
-    Box 11: A A – R ! s    	[AA–R!s]
+    Box 11: A A T R ! s    	[AATR!s]
     Box 12: A              	[A]
     Box 13: A              	[A]
 
     ### CODE 4 ###
-    Box  1: C C U n G H … o	[CCUnGH…o]
+    Box  1: C C U H G H … o	[CCUHGH…o]
     Box  2: A A A t M ? n  	[AAAtM?n]
     Box  3: A A . R ? n    	[AA.R?n]
     Box  4: A C U ? n      	[ACU?n]
@@ -147,14 +147,14 @@ Then write and then execute the following box names:
     Box  6: A A A Y M ? n  	[AAAYM?n]
     Box  7: A A l P ? n    	[AAlP?n]
     Box  8: A … H ? n      	[A…H?n]
-    Box  9: – R ! s P K … o	[–R!sPK…o]
+    Box  9: T R ! s P K … o	[TR!sPK…o]
     Box 10: A A A 6 P ? n  	[AAA6P?n]
     Box 11: A A C S ? n    	[AACS?n]
     Box 12: A G F ? n      	[AGF?n]
-    Box 13: – R ! s        	[–R!s]
+    Box 13: T R ! s        	[TR!s]
 
     ### CODE 5 ###
-    Box  1: C C U n , I l o	[CCUn,Ilo]
+    Box  1: C C U H , I l o	[CCUH,Ilo]
     Box  2: A A A q M ? n  	[AAAqM?n]
     Box  3: A A P P ? n    	[AAPP?n]
     Box  4: A F I ? n      	[AFI?n]
@@ -162,14 +162,14 @@ Then write and then execute the following box names:
     Box  6: A A A 1 M ? n  	[AAA1M?n]
     Box  7: A A x R ? n    	[AAxR?n]
     Box  8: A 0 R ? n      	[A0R?n]
-    Box  9: C U ? n – R ! s	[CU?n–R!s]
+    Box  9: C U ? n T R ! s	[CU?nTR!s]
     Box 10: A A A 4 J l o  	[AAA4Jlo]
     Box 11: A A 0 I ? n    	[AA0I?n]
     Box 12: A k M ? n      	[AkM?n]
-    Box 13: e P ? n – R ! s	[eP?n–R!s]
+    Box 13: e P ? n T R ! s	[eP?nTR!s]
 
     ### CODE 6 ###
-    Box  1: C C U n N I l o	[CCUnNIlo]
+    Box  1: C C U H N I l o	[CCUHNIlo]
     Box  2: A A A b M ? n  	[AAAbM?n]
     Box  3: A A c R ? n    	[AAcR?n]
     Box  4: A 2 S ? n      	[A2S?n]
@@ -177,18 +177,18 @@ Then write and then execute the following box names:
     Box  6: A A A l K … o  	[AAAlK…o]
     Box  7: A A 1 L ? n    	[AA1L?n]
     Box  8: A E O ? n      	[AEO?n]
-    Box  9: G S ? n – R ! s	[GS?n–R!s]
+    Box  9: G S ? n T R ! s	[GS?nTR!s]
     Box 10: A A A m F l o  	[AAAmFlo]
     Box 11: A A y L R o    	[AAyLRo]
     Box 12: A m H R o      	[AmHRo]
-    Box 13: _ H ? n – R ! s	[ H?n–R!s]
+    Box 13: _ H ? n T R ! s	[ H?nTR!s]
     ```
 
 === "FRA"
 
     ```
     ### CODE 1 ###
-    Box  1: C C U n 7 T … o	[CCUn7T…o]
+    Box  1: C C U H 7 T … o	[CCUH7T…o]
     Box  2: A A A 7 F Q q  	[AAA7FQq]
     Box  3: A A n F … o    	[AAnF…o]
     Box  4: A 9 F Q q      	[A9FQq]
@@ -203,7 +203,7 @@ Then write and then execute the following box names:
     Box 13: d F ? n ‘ F Q m	[dF?n‘FQm]
 
     ### CODE 2 ###
-    Box  1: C C U n W M … o	[CCUnWM…o]
+    Box  1: C C U H W M … o	[CCUHWM…o]
     Box  2: A A A k J ? n  	[AAAkJ?n]
     Box  3: A A W P ? n    	[AAWP?n]
     Box  4: A « F ? n      	[A«F?n]
@@ -211,29 +211,29 @@ Then write and then execute the following box names:
     Box  6: A A A t P ? n  	[AAAtP?n]
     Box  7: A A 0 Q ? n    	[AA0Q?n]
     Box  8: A G T ? n      	[AGT?n]
-    Box  9: – R ! s H K … o	[–R!sHK…o]
+    Box  9: T R ! s H K … o	[TR!sHK…o]
     Box 10: A A A » H ? n  	[AAA»H?n]
     Box 11: A A z R ? n    	[AAzR?n]
     Box 12: A J R ? n      	[AJR?n]
-    Box 13: – R ! s        	[–R!s]
+    Box 13: T R ! s        	[TR!s]
 
     ### CODE 3 ###
-    Box  1: C C U n z K … o	[CCUnzK…o]
+    Box  1: C C U H z K … o	[CCUHzK…o]
     Box  2: A A A 0 L ? n  	[AAA0L?n]
     Box  3: A A Q P ? n    	[AAQP?n]
     Box  4: A M F ! q      	[AMF!q]
     Box  5: 1 H l o I M ? n	[1HloIM?n]
     Box  6: A A A l P ? n  	[AAAlP?n]
     Box  7: A A F H ? n    	[AAFH?n]
-    Box  8: A – R ! s      	[A–R!s]
+    Box  8: A T R ! s      	[ATR!s]
     Box  9: L I … o R M R n	[LI…oRMRn]
     Box 10: A A A Z Q R n  	[AAAZQRn]
-    Box 11: A A – R ! s    	[AA–R!s]
+    Box 11: A A T R ! s    	[AATR!s]
     Box 12: A              	[A]
     Box 13: A              	[A]
 
     ### CODE 4 ###
-    Box  1: C C U n G H … o	[CCUnGH…o]
+    Box  1: C C U H G H … o	[CCUHGH…o]
     Box  2: A A A t M ? n  	[AAAtM?n]
     Box  3: A A . R ? n    	[AA.R?n]
     Box  4: A C U ? n      	[ACU?n]
@@ -241,14 +241,14 @@ Then write and then execute the following box names:
     Box  6: A A A Y M ? n  	[AAAYM?n]
     Box  7: A A l P ? n    	[AAlP?n]
     Box  8: A … H ? n      	[A…H?n]
-    Box  9: – R ! s P K … o	[–R!sPK…o]
+    Box  9: T R ! s P K … o	[TR!sPK…o]
     Box 10: A A A 6 P ? n  	[AAA6P?n]
     Box 11: A A C S ? n    	[AACS?n]
     Box 12: A G F ? n      	[AGF?n]
-    Box 13: – R ! s        	[–R!s]
+    Box 13: T R ! s        	[TR!s]
 
     ### CODE 5 ###
-    Box  1: C C U n , I l o	[CCUn,Ilo]
+    Box  1: C C U H , I l o	[CCUH,Ilo]
     Box  2: A A A q M ? n  	[AAAqM?n]
     Box  3: A A P P ? n    	[AAPP?n]
     Box  4: A F I ? n      	[AFI?n]
@@ -256,14 +256,14 @@ Then write and then execute the following box names:
     Box  6: A A A 1 M ? n  	[AAA1M?n]
     Box  7: A A x R ? n    	[AAxR?n]
     Box  8: A 0 R ? n      	[A0R?n]
-    Box  9: C U ? n – R ! s	[CU?n–R!s]
+    Box  9: C U ? n T R ! s	[CU?nTR!s]
     Box 10: A A A 4 J l o  	[AAA4Jlo]
     Box 11: A A 0 I ? n    	[AA0I?n]
     Box 12: A k M ? n      	[AkM?n]
-    Box 13: e P ? n – R ! s	[eP?n–R!s]
+    Box 13: e P ? n T R ! s	[eP?nTR!s]
 
     ### CODE 6 ###
-    Box  1: C C U n N I l o	[CCUnNIlo]
+    Box  1: C C U H N I l o	[CCUHNIlo]
     Box  2: A A A b M ? n  	[AAAbM?n]
     Box  3: A A c R ? n    	[AAcR?n]
     Box  4: A 2 S ? n      	[A2S?n]
@@ -271,18 +271,18 @@ Then write and then execute the following box names:
     Box  6: A A A l K … o  	[AAAlK…o]
     Box  7: A A 1 L ? n    	[AA1L?n]
     Box  8: A E O ? n      	[AEO?n]
-    Box  9: G S ? n – R ! s	[GS?n–R!s]
+    Box  9: G S ? n T R ! s	[GS?nTR!s]
     Box 10: A A A m F l o  	[AAAmFlo]
     Box 11: A A y L R o    	[AAyLRo]
     Box 12: A m H R o      	[AmHRo]
-    Box 13: _ H ? n – R ! s	[ H?n–R!s]
+    Box 13: _ H ? n T R ! s	[ H?nTR!s]
     ```
 
 === "GER"
 
     ```
     ### CODE 1 ###
-    Box  1: C C U n 7 T … o	[CCUn7T…o]
+    Box  1: C C U H 7 T … o	[CCUH7T…o]
     Box  2: A A A 7 F Q q  	[AAA7FQq]
     Box  3: A A n F … o    	[AAnF…o]
     Box  4: A 9 F Q q      	[A9FQq]
@@ -297,7 +297,7 @@ Then write and then execute the following box names:
     Box 13: d F ? n ‘ F Q m	[dF?n‘FQm]
 
     ### CODE 2 ###
-    Box  1: C C U n W M … o	[CCUnWM…o]
+    Box  1: C C U H W M … o	[CCUHWM…o]
     Box  2: A A A k J ? n  	[AAAkJ?n]
     Box  3: A A W P ? n    	[AAWP?n]
     Box  4: A „ F ? n      	[A„F?n]
@@ -305,29 +305,29 @@ Then write and then execute the following box names:
     Box  6: A A A t P ? n  	[AAAtP?n]
     Box  7: A A 0 Q ? n    	[AA0Q?n]
     Box  8: A G T ? n      	[AGT?n]
-    Box  9: – R ! s H K … o	[–R!sHK…o]
+    Box  9: T R ! s H K … o	[TR!sHK…o]
     Box 10: A A A “ H ? n  	[AAA“H?n]
     Box 11: A A ü R ? n    	[AAüR?n]
     Box 12: A B R ? n      	[ABR?n]
-    Box 13: – R ! s        	[–R!s]
+    Box 13: T R ! s        	[TR!s]
 
     ### CODE 3 ###
-    Box  1: C C U n z K … o	[CCUnzK…o]
+    Box  1: C C U H z K … o	[CCUHzK…o]
     Box  2: A A A 0 L ? n  	[AAA0L?n]
     Box  3: A A Q P ? n    	[AAQP?n]
     Box  4: A M F ! q      	[AMF!q]
     Box  5: 1 H l o I M ? n	[1HloIM?n]
     Box  6: A A A l P ? n  	[AAAlP?n]
     Box  7: A A F H ? n    	[AAFH?n]
-    Box  8: A – R ! s      	[A–R!s]
+    Box  8: A T R ! s      	[ATR!s]
     Box  9: L I … o R M R n	[LI…oRMRn]
     Box 10: A A A Z Q R n  	[AAAZQRn]
-    Box 11: A A – R ! s    	[AA–R!s]
+    Box 11: A A T R ! s    	[AATR!s]
     Box 12: A              	[A]
     Box 13: A              	[A]
 
     ### CODE 4 ###
-    Box  1: C C U n G H … o	[CCUnGH…o]
+    Box  1: C C U H G H … o	[CCUHGH…o]
     Box  2: A A A t M ? n  	[AAAtM?n]
     Box  3: A A . R ? n    	[AA.R?n]
     Box  4: A C U ? n      	[ACU?n]
@@ -335,14 +335,14 @@ Then write and then execute the following box names:
     Box  6: A A A Y M ? n  	[AAAYM?n]
     Box  7: A A l P ? n    	[AAlP?n]
     Box  8: A … H ? n      	[A…H?n]
-    Box  9: – R ! s P K … o	[–R!sPK…o]
+    Box  9: T R ! s P K … o	[TR!sPK…o]
     Box 10: A A A 8 P ? n  	[AAA8P?n]
     Box 11: A A ü T ? n    	[AAüT?n]
     Box 12: A 0 F ? n      	[A0F?n]
-    Box 13: – R ! s        	[–R!s]
+    Box 13: T R ! s        	[TR!s]
 
     ### CODE 5 ###
-    Box  1: C C U n , I l o	[CCUn,Ilo]
+    Box  1: C C U H , I l o	[CCUH,Ilo]
     Box  2: A A A q M ? n  	[AAAqM?n]
     Box  3: A A P P ? n    	[AAPP?n]
     Box  4: A F I ? n      	[AFI?n]
@@ -350,14 +350,14 @@ Then write and then execute the following box names:
     Box  6: A A A 1 M ? n  	[AAA1M?n]
     Box  7: A A z R ? n    	[AAzR?n]
     Box  8: A 0 R ? n      	[A0R?n]
-    Box  9: Ö F ? n – R ! s	[ÖF?n–R!s]
+    Box  9: Ö F ? n T R ! s	[ÖF?nTR!s]
     Box 10: A A A 4 J l o  	[AAA4Jlo]
     Box 11: A A 0 I ? n    	[AA0I?n]
     Box 12: A k M ? n      	[AkM?n]
-    Box 13: e P ? n – R ! s	[eP?n–R!s]
+    Box 13: e P ? n T R ! s	[eP?nTR!s]
 
     ### CODE 6 ###
-    Box  1: C C U n b M … o	[CCUnbM…o]
+    Box  1: C C U H b M … o	[CCUHbM…o]
     Box  2: A A A z H ? n  	[AAAzH?n]
     Box  3: A A ü R ? n    	[AAüR?n]
     Box  4: A 6 T ? n      	[A6T?n]
@@ -365,11 +365,11 @@ Then write and then execute the following box names:
     Box  6: A A A 1 L ? n  	[AAA1L?n]
     Box  7: A A E O ? n    	[AAEO?n]
     Box  8: A G S ? n      	[AGS?n]
-    Box  9: – R ! s m F l o	[–R!smFlo]
+    Box  9: T R ! s m F l o	[TR!smFlo]
     Box 10: A A A y L R o  	[AAAyLRo]
     Box 11: A A m H R o    	[AAmHRo]
     Box 12: A _ F ? n      	[A F?n]
-    Box 13: – R ! s        	[–R!s]
+    Box 13: T R ! s        	[TR!s]
 
     ```
 
@@ -668,3 +668,4 @@ By default they change the exit to `BX r0` but follow the annotation on Box 5 to
 - [Adrichu00's method of writing the hexwriter](https://gist.github.com/Adrichu00/49433953af9d6fd7c1cd368d48c68778)
 - RationalPsycho on the Glitch City Research Institute Discord for the glitched mail inputs
 - merrp of the Glitch City Research Institute Discord for the `STR+4` opcode used in the codes.
+- Mettrich for suggesting another way to write these codes that works around Nintendo’s word filter.
