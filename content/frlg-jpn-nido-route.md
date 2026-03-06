@@ -100,13 +100,27 @@ Make sure you save **here**, and do not perform further saves until instructed s
 1.  Move four party members into the boxes with the last party member to move still held by the orange hand (can be activated by pressing SELECT).
 2.  Rename Boxes 1-5 to the following:
 
-    ```
-    Box  1: リ び ‥ o く _ ゼ n	[リび‥oく ゼn]
-    Box  2: _ ‥ t ま _ 1 t ほ	[ ‥tま 1tほ]
-    Box  3: ぁ m _ _ あ い	[ぁm  あい]
-    Box  4: ア B ぢ い い N	[アBぢいいN]
-    Box  5: O	[O]
-    ```
+    === "1.0/1.1 (GBA)"
+
+        ```
+        Box  1:	リ び … ｏ く ＿ ゼ ｎ	[リび…ｏく　ゼｎ]
+        Box  2:	＿ … ｔ ま ＿ １ ｔ ほ	[　…ｔま　１ｔほ]
+        Box  3:	ぁ ｍ ＿ ＿ あ い 　 　	[ぁｍ　　あい] (first ぁ is small, and second あ is regular)
+        Box  4:	ア Ｂ ぢ い い Ｎ 　 　	[アＢぢいいＮ]
+        Box  5:	Ｏ 　 　 　 　 　 　 　	[Ｏ]
+        Box  6+: (anything)
+        ```
+
+    === "1.0.0 (Switch)"
+
+        ```
+        Box  1:	リ び … ｏ く ＿ ゼ ｎ	[リび…ｏく　ゼｎ]
+        Box  2:	＿ … ｔ ま ＿ １ ｔ ほ	[　…ｔま　１ｔほ]
+        Box  3:	ぁ ｍ ＿ ＿ あ い 　 　	[ぁｍ　　あい] (first ぁ is small, and second あ is regular)
+        Box  4:	ア ／ ぢ い い Ｎ 　 　	[ア／ぢいいＮ]
+        Box  5:	Ｏ 　 　 　 　 　 　 　	[Ｏ]
+        Box  6+: (anything)
+        ```
 
 3.  With a Pokémon still in the orange hand, go back to Box 3, and swap the glitch Pokémon with the Pokémon then back again.
 
@@ -150,3 +164,8 @@ You probably don’t want to keep the initial glitch Pokémon (created from the 
 3. Move the glitch Pokémon to the first party slot
 4. Go back to the PC and enter deposit mode
 5. Release the Pokémon by selecting the Pokémon then select release and confirm
+
+## Credits
+
+*   Detelony for the original tutorial and set up for ACE in FireRed and LeafGreen.
+*   flag3 for finding the new address for gPlayerParty in the new Switch rereleases.

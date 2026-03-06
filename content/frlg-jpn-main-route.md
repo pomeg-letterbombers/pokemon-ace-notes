@@ -343,14 +343,27 @@ Make sure that the entrypoint of the initial ACE species, and all box slots foll
 
 Set your box names to the ones shown below:
 
-```
-Box  1:	リ び … ｏ く ＿ ゼ ｎ	[リび…ｏく　ゼｎ]
-Box  2:	＿ … ｔ ま ＿ １ ｔ ほ	[　…ｔま　１ｔほ]
-Box  3:	ぁ ｍ ＿ ＿ あ い 　 　	[ぁｍ　　あい] (first ぁ is small, and second あ is regular)
-Box  4:	ア Ｂ ぢ い い Ｎ 　 　	[アＢぢいいＮ]
-Box  5:	Ｏ 　 　 　 　 　 　 　	[Ｏ]
-Box  6+: (anything)
-```
+=== "1.0/1.1 (GBA)"
+
+    ```
+    Box  1:	リ び … ｏ く ＿ ゼ ｎ	[リび…ｏく　ゼｎ]
+    Box  2:	＿ … ｔ ま ＿ １ ｔ ほ	[　…ｔま　１ｔほ]
+    Box  3:	ぁ ｍ ＿ ＿ あ い 　 　	[ぁｍ　　あい] (first ぁ is small, and second あ is regular)
+    Box  4:	ア Ｂ ぢ い い Ｎ 　 　	[アＢぢいいＮ]
+    Box  5:	Ｏ 　 　 　 　 　 　 　	[Ｏ]
+    Box  6+: (anything)
+    ```
+
+=== "1.0.0 (Switch)"
+
+    ```
+    Box  1:	リ び … ｏ く ＿ ゼ ｎ	[リび…ｏく　ゼｎ]
+    Box  2:	＿ … ｔ ま ＿ １ ｔ ほ	[　…ｔま　１ｔほ]
+    Box  3:	ぁ ｍ ＿ ＿ あ い 　 　	[ぁｍ　　あい] (first ぁ is small, and second あ is regular)
+    Box  4:	ア ／ ぢ い い Ｎ 　 　	[ア／ぢいいＮ]
+    Box  5:	Ｏ 　 　 　 　 　 　 　	[Ｏ]
+    Box  6+: (anything)
+    ```
 
 Make sure you are in the PC’s **Move Pokémon** mode.
 
@@ -411,3 +424,8 @@ You probably don’t want to keep the initial ACE Pokémon in the boxes, to remo
 3. Move the glitch Pokémon to the first party slot.
 4. Go back to the PC and enter deposit mode.
 5. Release the Pokémon by selecting the Pokémon then select release and confirm.
+
+## Credits
+
+*   Detelony for the original tutorial and set up for ACE in FireRed and LeafGreen.
+*   flag3 for finding the new address for gPlayerParty in the new Switch rereleases.
