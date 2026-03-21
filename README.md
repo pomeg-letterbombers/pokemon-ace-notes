@@ -34,8 +34,17 @@ To serve a preview of the website which updates on modification of the pages, ru
 
 ## Licence
 
-© 2025 pokemon-ace-notes contributors.
+© 2025-2026 Luong Truong (final/togebit) and pokemon-ace-notes contributors.
 
-The content of pokemon-ace-notes is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1), the license can also be found in [LICENSE](LICENSE). For the purposes of porting this content to Glitch City Wiki, the content of pokemon-ace-notes is also licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/), the license can also be found in [LICENSE-GLITCH-CITY](LICENSE-GLITCH-CITY).
+The content (text and media) of the pokemon-ace-notes website is
+distributed under these licenses:
 
-Underlying source code used to display the content is licenced under the MIT licence, which can be found in [LICENSE-CODE](LICENSE-CODE).
+* Creative Commons Attribution-ShareAlike 4.0 International
+    + A copy is provided in the LICNESE-CC-BY-SA file.
+    + A web copy is also available at https://creativecommons.org/licenses/by-sa/4.0/
+* Creative Commons Attribution-NonCommercial 4.0 International
+    + A copy is provided in the LICENSE-CC-BY-NC file.
+    + A web copy is also available at https://creativecommons.org/licenses/by-nc/4.0/
+
+The source code that builds the website is provided under the
+MIT License. A copy is provided in the LICENSE-MIT file.

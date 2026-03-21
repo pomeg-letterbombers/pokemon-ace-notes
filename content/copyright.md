@@ -1,0 +1,44 @@
+---
+title: "Copyright"
+hide:
+    - navigation
+    - toc
+---
+
+© 2025-2026 Luong Truong (final/togebit) and pokemon-ace-notes contributors.
+
+The content (text and media) of the pokemon-ace-notes website is
+distributed under these licenses:
+
+* Creative Commons Attribution-ShareAlike 4.0 International
+    + A web copy is available at <https://creativecommons.org/licenses/by-sa/4.0/>
+    + A copy is also provided in the LICNESE-CC-BY-SA file in the Git repository.
+* Creative Commons Attribution-NonCommercial 4.0 International
+    + A web copy is available at <https://creativecommons.org/licenses/by-nc/4.0/>
+    + A copy is also provided in the LICENSE-CC-BY-NC file in the Git repository.
+
+The source code that builds the website is provided under the
+MIT License. A copy is provided in the LICENSE-MIT file in the repository,
+and is also printed below.
+
+## MIT License
+
+© 2025-2026 Luong Truong (final/togebit) and pokemon-ace-notes contributors.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
