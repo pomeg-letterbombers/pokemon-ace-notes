@@ -1,10 +1,6 @@
 ---
-title: "FAQ and Troubleshooting"
-hide:
-    - navigation
+title: "General FAQ"
 ---
-
-# FAQ and Troubleshooting
 
 ## General
 

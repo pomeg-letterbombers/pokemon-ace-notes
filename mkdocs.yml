@@ -27,7 +27,9 @@ nav:
       - "frlg-exit-code-bootstrap.md"
     - "Complex Payloads":
       - "frlg-hex-writer.md"
-  - "FAQ": "faq.md"
+  - "FAQ":
+    - "faq/index.md"
+    - "general-faq.md"
   - "Technical Documentation":
     - "frlg-hexwriter-setup-explanation.md"
     - "frlg-grab-ace-exit.md"
