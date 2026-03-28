@@ -281,6 +281,29 @@ for alternate methods to delete these particular invisible bad eggs.
 
 ![Orange hand grabbing a group of Pokémon from one box to the next](assets/images/faq/group_select.gif)
 
+## My Pokémon/Egg is disappearing when I move them
+
+This means that the Pokémon or Egg does not have the `hasSpecies` flag
+set in its data. They will generally disappear if you try moving them
+using group selection, which is selection of multiple Pokémon using the
+orange cursor.
+
+Moving a single Pokémon/Egg with the orange cursor or the white cursor
+will generally not make the Pokémon or egg disappear, so use these for
+moving Pokémon/Eggs that might potentially disappear with group selection.
+
+For eggs, if you hatch them, the game will set the hasSpecies flag in
+the hatched Pokémon's data which means it will not be affected by
+disappearance issues caused by group selection.
+
+These Pokémon/Egg are known to be generated without `hasSpecies` set:
+
+*   Anything generated from an empty slot using the question mark Mail.
+*   ACE species created using the [ACE3](https://e-sh4rk.github.io/ACE3/) guide before mid-2025.
+*   The [Certificate Exit Bootstrap] created using the [ACE3](https://e-sh4rk.github.io/ACE3/) guide.
+*   Eggs created with the <i>Create 6IV Egg from Nothing</i> code.
+*   Eggs created with the <i>Create Egg with Custom Hidden Power</i> code.
+
 ## How can I make my own ACE code?
 
 For all ACE methods, you must know some ARM/Thumb assembly. The below

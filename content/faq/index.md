@@ -16,6 +16,7 @@ title: "FAQ and Troubleshooting"
     +   [Using a fast (de)cloner glitch Pokémon to delete Pokémon](../general-faq.md#using-a-fast-decloner-glitch-pokémon-to-delete-pokémon)
     +   [Using group selection to clear invisible bad eggs](../general-faq.md#using-group-selection-to-clear-invisible-bad-eggs)
     +   [Using group selection to mass clear invisible bad eggs and ghost data](../general-faq.md#using-group-selection-to-mass-clear-invisible-bad-eggs-and-ghost-data)
+*   [My Pokémon/Egg is disappearing when I move them](../general-faq.md#my-pokémonegg-is-disappearing-when-i-move-them)
 *   [How can I make my own ACE code?](../general-faq.md#how-can-i-make-my-own-ace-code)
 
 ## Pokémon FireRed and LeafGreen
@@ -23,6 +24,7 @@ title: "FAQ and Troubleshooting"
 *   [The 0x0351 mail did not work](../frlg-faq.md#the-0x0351-mail-did-not-work)
 *   [My HOCK turned into a bad egg](../frlg-faq.md#my-hock-turned-into-a-bad-egg)
 *   [Bad eggs are appearing in Box 13](../frlg-faq.md#bad-eggs-are-appearing-in-box-13)
+*   [The glitch Pokémon has a different box sprite](../frlg-faq.md#the-glitch-pokémon-has-a-different-icon)
 *   [I am playing on the Switch rerelease and the codes do not work!](../frlg-faq.md#i-am-playing-on-the-switch-rerelease-and-the-codes-do-not-work)
     +   [Codes that will need a specific Switch rerelease version](../frlg-faq.md#codes-that-will-need-a-specific-switch-rerelease-version)
     +   [Code adjustments needed for Switch rereleases](../frlg-faq.md#code-adjustments-needed-for-switch-rereleases)

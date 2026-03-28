@@ -153,6 +153,14 @@ After confirming the message, a glitch species should appear in Box 3, Slot 1. T
 
 If the glitch species does not have the correct name, or a bad egg appeared instead, do the glitched mail message again, and make sure that Box 3, Slot 1 is **empty**.
 
+<div class="admonition note" markdown="block">
+<p class="admonition-title">Note</p>
+
+This Pokémon (and the ACE species generated from it) does not `hasSpecies` set, it will disappear if you include it in a group selection.
+More information can be found at [this FAQ](general-faq.md#my-pokémonegg-is-disappearing-when-i-move-them).
+
+</div>
+
 Move glitch species 0x0200 into your party then give it:
 
 *   **8** HP Ups
@@ -271,6 +279,15 @@ The words entered for this message are the same, but the position of the second 
 After confirming this message, check Box 3, Slot 1. The 0x0200 should have become glitch species 0x0351, which should have a name like <samp>ËÁÈîÂ Î ËÁ</samp>, level 100, and is male as shown in the image below. This is your ACE Pokémon. If you see this, that means you have successfully setup ACE! Continue reading to learn how to trigger ACE with this Pokémon.
 
 ![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
+
+<div class="admonition note" markdown="block">
+<p class="admonition-title">Note</p>
+
+The glitch Pokémon’s icon may not appear exactly as shown in the screenshots, this is normal.
+Glitch Pokémon in FireRed and LeafGreen will usually appear either as another Pokémon in the boxes with a different color palette, or as a question mark.
+More information about this can be found at [this FAQ](frlg-faq.md#the-glitch-pokémon-has-a-different-box-sprite).
+
+</div>
 
 ## Appendix
 

@@ -21,6 +21,14 @@ In these routes, you will be setting up arbitrary code execution in non-Japanese
 
 **Make sure that Box 3, Slot 1 is empty before performing these instructions**
 
+<div class="admonition note" markdown="block">
+<p class="admonition-title">Note</p>
+
+These glitch Pokémon will not have `hasSpecies` set, they will disappear if you include them in a group selection.
+More information can be found at [this FAQ](general-faq.md#my-pokémonegg-is-disappearing-when-i-move-them).
+
+</div>
+
 ### English and Italian FireRed and LeafGreen
 
 In this section, we will be creating glitch species 0x1453 on English versions or 0x1457 on Italian versions which can be used as a standalone ACE species.

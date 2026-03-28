@@ -408,6 +408,15 @@ After performing the swap, your game should not crash. If that is so, then you h
 
 If you see this, that means the code worked, and you have ACE set up in Japanese FireRed or LeafGreen. You can trigger ACE at any time with this glitch Pokémon by setting the correct box names for your code beforehand then performing the aforementioned swapping with **this** glitch Pokémon.
 
+<div class="admonition note" markdown="block">
+<p class="admonition-title">Note</p>
+
+The glitch Pokémon’s icon may not appear exactly as shown in the screenshots, this is normal.
+Glitch Pokémon in FireRed and LeafGreen will usually appear either as another Pokémon in the boxes with a different color palette, or as a question mark.
+More information about this can be found at [this FAQ](frlg-faq.md#the-glitch-pokémon-has-a-different-box-sprite).
+
+</div>
+
 ### In case of failure
 
 If a **bad egg** appeared in party slot 3, or the game **crashed** after performing the swap, or **nothing** happened after performing the swap, it could be caused by the following:

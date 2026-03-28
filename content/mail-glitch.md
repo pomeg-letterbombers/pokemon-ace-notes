@@ -351,6 +351,11 @@ This allows for changing the substructure order, encryption key, nature, and gen
 Changing the substructure order allows you to easily modify the an existing Pokémon in Box 3, Slot 1.
 Changing the encryption key allows you to create Pokémon directly from an empty slot.
 
+Pokémon and eggs created from an empty slot using the question mark Mail will not have `hasSpecies` set.
+This means that including these in a group selection will cause them to disappear.
+Pokémon hatched from eggs generated with this method will have `hasSpecies` set, meaning they can be included in a group selection without issue.
+More information can be found at [this FAQ](general-faq.md#my-pokémonegg-is-disappearing-when-i-move-them).
+
 Papa Jefé has a [comprehensive video tutorial](https://youtu.be/3jkcq8e9NO4?t=1805) utilising the <abbr title="question mark Mail">QMM</abbr> in this manner.
 
 #### Japanese FireRed and LeafGreen
