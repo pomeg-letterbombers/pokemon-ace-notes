@@ -153,6 +153,14 @@ After confirming the message, a glitch species should appear in Box 3, Slot 1. T
 
 If the glitch species does not have the correct name, or a bad egg appeared instead, do the glitched mail message again, and make sure that Box 3, Slot 1 is **empty**.
 
+<div class="admonition note" markdown="block">
+<p class="admonition-title">Note</p>
+
+This Pokémon (and the ACE species generated from it) does not `hasSpecies` set, it will disappear if you include it in a group selection.
+More information can be found at [this FAQ](general-faq.md#my-pokémonegg-is-disappearing-when-i-move-them).
+
+</div>
+
 Move glitch species 0x0200 into your party then give it:
 
 *   **8** HP Ups

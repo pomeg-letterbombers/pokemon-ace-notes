@@ -144,6 +144,9 @@ The glitch Pokémon’s icon may not appear exactly as shown in the screenshots,
 Glitch Pokémon in FireRed and LeafGreen will usually appear either as another Pokémon in the boxes with a different color palette, or as a question mark.
 More information about this can be found at [this FAQ](frlg-faq.md#the-glitch-pokémon-has-a-different-box-sprite).
 
+This glitch Pokémon does not `hasSpecies` set, it will disappear if you include it in a group selection.
+More information can be found at [this FAQ](general-faq.md#my-pokémonegg-is-disappearing-when-i-move-them).
+
 </div>
 
 ## Appendix
