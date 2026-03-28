@@ -1,14 +1,10 @@
 ---
-title: "FAQ and Troubleshooting"
-hide:
-    - navigation
+title: "General FAQ"
 ---
 
-# FAQ and Troubleshooting
+# General FAQ
 
-## General
-
-### Is there’s a code for \[insert thing you want to do here\]?
+## Is there’s a code for \[insert thing you want to do here\]?
 
 Check these places first to see if there is an ACE code for that purpose:
 
@@ -40,7 +36,7 @@ inclined, you can also learn how to make an ACE code yourself. The FAQ
 should give a quick idea of what is needed to create an ACE code as well,
 as a few resources to help you.
 
-### The code isn’t working
+## The code isn’t working
 
 Before triggering ACE, make sure that you have tried to do the following:
 
@@ -71,7 +67,7 @@ If you have done all of htat and the code still does nothing or causes a
 crash, then read the following items to figure out what might have went
 wrong with your code.
 
-#### You typed the box names wrong
+### You typed the box names wrong
 
 Here are some characters that are commonly mistaken, you should pay close
 attention to them while entering the box names. Different websites use
@@ -96,7 +92,7 @@ such by the code author):
     `‥` (two-dot ellipsis), `.` (full stop, period) and `,` (comma).
 *   `_` (space in CodeGenerator) and `-` (hyphen, dash)
 
-#### You have Pokémon data present in box slots that are meant to be empty
+### You have Pokémon data present in box slots that are meant to be empty
 
 First make sure that you moved any Pokémon out of any box slots targeted
 by the code (unless the code explicitly instructs you to place or leave
@@ -131,16 +127,16 @@ The ghost data must be removed via group selection, see
 [*Using group selection to mass clear invisible bad eggs and ghost data*](#using-group-selection-to-mass-clear-invisible-bad-eggs-and-ghost-data)
 for more information.
 
-#### You made a mistake in the ACE setup itself
+### You made a mistake in the ACE setup itself
 
 Usually, this can be attributed to the wrong ACE species and/or moves, as
 well as other bootstraps associated with the set up. 
 
-### How can I delete bad eggs and/or unwanted glitch Pokémon?
+## How can I delete bad eggs and/or unwanted glitch Pokémon?
 
 There are multiple methods to do this, each will be covered one by one.
 
-#### Using reverse Battle Tower cloning to delete Pokémon and bad eggs
+### Using reverse Battle Tower cloning to delete Pokémon and bad eggs
 
 <div class="admonition note" markdown="block">
 <p class="admonition-title" markdown="span">Note</p>
@@ -175,7 +171,7 @@ Visual demonstration of reverse cloning is available in
 [this video](https://www.youtube.com/watch?v=BapXdh-lYMQ)
 by Sleipnir17.
 
-#### Using a fast (de)cloner glitch Pokémon to delete Pokémon
+### Using a fast (de)cloner glitch Pokémon to delete Pokémon
 
 First make sure that you have a fast cloner Pokémon to begin with. If
 you do not, then create one before proceeding. This guide will also
@@ -214,7 +210,7 @@ by Sleipnir17.
     species, for others (such as 0x3200 on English FireRed), it sometimes
     can result in a freeze.
 
-#### Using group selection to clear invisible bad eggs
+### Using group selection to clear invisible bad eggs
 
 Make sure you are in the PC’s **Move Pokémon** mode.
 
@@ -247,7 +243,7 @@ The GIF demonstration in *Using group selection to mass clear invisible bad eggs
 should apply to this method, just ignore the box switching or the grabbing
 of a whole box.
 
-#### Using group selection to mass clear invisible bad eggs and ghost data
+### Using group selection to mass clear invisible bad eggs and ghost data
 
 Ideally, this movement should start in a box that has all of its slots
 filled with Pokémon. This also assumes that the boxes you want to clear
@@ -285,7 +281,7 @@ for alternate methods to delete these particular invisible bad eggs.
 
 ![Orange hand grabbing a group of Pokémon from one box to the next](assets/images/faq/group_select.gif)
 
-### How can I make my own ACE code?
+## How can I make my own ACE code?
 
 For all ACE methods, you must know some ARM/Thumb assembly. The below
 resources should give you some sort of a grasp on ARM/Thumb assembly.
@@ -339,302 +335,3 @@ tools and resouces can help with scripting in the generation III games:
 *   [HexManiacAdvance](https://github.com/haven1433/HexManiacAdvance)
     by haven1433
 *   [Theocatic’s scripting environment documentation](https://gist.github.com/Theocatic/39ed337ecd590b47fad14f791cf16bb5#notes-on-writing-scripts-for-this-setup)
-
-## Pokémon FireRed and LeafGreen
-
-### The 0x0351 mail did not work
-
-<div class="admonition note" markdown="block">
-<p class="admonition-title" markdown="span">Note</p>
-
-This is for the [Post-Elite Four route](frlg-non-jpn-post-e4-route.md).
-
-If you are doing the [Pre-Elite Four route](frlg-non-jpn-pre-e4-route.md),
-this does not apply to you, go to
-[My HOCK turned into a bad egg](#my-hock-turned-into-a-bad-egg).
-
-</div>
-
-Make sure that you have selected the “MAGIKARP” word from the
-**POKéMON** group, not from A-Z mode or the POKéMON2 group. This is
-because the internal word index used for MAGIKARP differs between the one
-present in the POKéMON group and the one for the POKéMON2 group (which
-also gets used in A-Z mode if you have beaten the Elite Four).
-
-### My HOCK turned into a bad egg
-
-This means one of two causes (in order of likelihood):
-
-- You made a mistake in EV training
-- You entered the wrong mail words
-
-For both cases, provided that you have enough mail, you can just create
-another HOCK. You just simply delete the erroneous bad egg (you can use
-the steps described in
-[*Using group selection to clear invisible bad eggs*](#using-group-selection-to-clear-invisible-bad-eggs))
-and create HOCK again using the guide.
-
-### Bad eggs are appearing in Box 13
-
-This is a known side effect of glitch species 0x0351 (the main grab ACE
-Pokémon used for non-Japanese FireRed and LeafGreen), that has to do with
-its long name. Long story short, due to the long name, another internal
-pointer (variable that stores the address of something) is corrupted with
-an “address” that happens to point to somewhere within Box 13. It just
-turns out that this internal pointer is dereferenced (accessing the stuff
-the pointer “points” to) quite often when performing various actions in
-the PC, and some of these actions also happen to write values to whatever
-was supposed to be accessed via the pointer which causes the bad eggs you
-see in Box 13.
-
-Note that these bad eggs (or rather corruptions) will only ever affect
-the 7th, 8th, or 9th slots of Box 13. Thus you should **never** store
-valuable Pokémon or most special ACE Pokémon in these box slots, to avoid
-possible corruptions.
-
-Additionally, you can always immediately exit the PC upon viewing the
-information of 0x0351 (after placing it in a different slot). This should
-minimise the opportunities of running the game code that performs the
-unwanted corruptions to Box 13. For this prevention technique to work,
-you should store 0x0351 in a box other than Box 13 or Box 14.
-
-### I am playing on the Switch rerelease and the codes do not work!
-
-As of 1st March 2026, these Switch rereleases are very recent and have many odd quirks that makes some existing codes for the original FireRed and LeafGreen incompatible.
-
-#### Codes that will need a specific Switch rerelease version
-
-These codes will need a different version written (or rewritten) for the Switch rerelease as the game has been heavily internally modified from the original ROM, and the emulator used for these rereleases has a bunch of emulation quirks.
-
-*   Codes that use ROM addresses
-    +   Codes that hook into scripts within ROM (<i>Run script via NPC</i>)
-    +   Codes that call functions within ROM (Hall of Fame warp, <i>Change Pokémon PID or TID</i>, etc.)
-*   Codes that read and write to static RAM addresses
-    +   RNG seed change codes
-    +   Non-NPC based custom script codes (<i>Teleport anywhere</i> and <i>Run script via GlobalScriptContext</i>)
-    +   Party data manipulation codes
-*   Codes that use GBA behaviors not emulated by the emulator used for the rerelease.
-*   Codes currently unenterable due to tripping Nintendo’s bad word filter.
-
-#### Code adjustments needed for Switch rereleases
-
-You can try making these adjustments to the code and see if it executes properly.
-This accounts for some of the emulation quirks found with the emulator used for the rereleases.
-
-Avoid inserting space characters into the last three characters of Box 4, Box 8, and Box 12. Instead leave them empty and confirm the box name early.
-
-```
-Original:
-Box 4: E _ F R m _ _ _ [E FRm   ]
-
-Adjusted:
-Box 4: E _ F R m       [E FRm]
-```
-
-The emulator used for the rereleases has crashing behaviors on some ARM instructions that normally does not happen on a real GBA or most emulators.
-Exit codes however use these crashing instructions, and thus they must be adjusted to prevent this behavior.
-
-This exit code is found in a number of FireRed and LeafGreeen codes, including all codes in Sleipnir17’s Pastebin for FireRed and LeafGreen swap/grab ACE.
-Box 11 should be adjusted as follows.
-
-```
-Original:
-Box 11: … o _ _ _ _ _ _ […o      ]
-
-Adjusted:
-Box 11: . o             [.o]
-```
-
-This exit code might be found in some newer resources, and can also be placed in Box 5 and 6, as well as Box 2 and 3.
-These boxes should be adjusted as follows.
-
-```
-Original:
-Box 10: _ F o H I C o r [ FoHICor]
-Box 11: B n             [Bn]
-
-Adjusted:
-Box 10: _ F o H I o o r [ FoHIoor]
-Box 11: x n             [xn]
-```
-
-#### The code still does not work
-
-Check [The code isn’t working](#the-code-isnt-working) FAQ entry and see if you made a common mistake.
-
-If you are sure that you have throughly checked for these mistakes and the code is still not working for you, then it is possible that the specific code you are using is not compatible with the Switch rereleases.
-You will have to wait for a version for the Switch rerelease to be made.
-
-## Pokémon Emerald
-
-### I do not have a clean DOTS to EV train
-
-The in-game trade SEASOR works the same as DOTS
-for the purpose of obtaining glitch species 0x0611.
-You can obtain it from Pacifidlog Town.
-
-If you already used the SEASOR trade
-and you have no clean copies,
-you can also acquire a Pokémon
-that has a corruption type 6, 7, or 8.
-[This YouTube video by Sleipnir17](https://www.youtube.com/watch?v=9ZeP9Np6zeU)
-explains this method more clearly.
-Keep in mind that if you choose to do this route,
-you will need to make sure that
-the Pokémon you are using is compatible with
-an “unmarked Caterpie” initiator (like PLUSES).
-
-Otherwise you can just trade a clean DOTS from a different save file.
-
-### I do not have a clean PLUSES
-
-If you have a clean DOTS,
-then you can follow these instructions to produce a special Pokémon
-that functions the same as PLUSES
-for the Glitzer Popping set up.
-
-1.  Clone it if it is your last copy.
-2.  **Use** **one** Carbos on the DOTS.
-3.  **Evolve** DOTS to a Shiftry.
-
-This DOTS can now be used as a substitute for PLUSES.
-
-As a last resort,
-you can also try to do the corruption without any PLUSES,
-you just need one copy of DOTS (or SEASOR)
-in the 24th slot of Box 2
-and nothing in all of the other slots.
-The success rate of this method is a lot lower
-than the usual Glitzer Popping set up
-used in most ACE guides
-but it will eventually get you the 0x0611 egg.
-
-### My trainer card stats look corrupted
-
-This is a known side effect of hatching glitch species 0x0611
-(the initial glitch Pokémon that is hatched from an egg for ACE)
-that is caused by the game attempting
-to mark glitch species as “caught” in the Pokédex.
-For this particular species,
-the data the game modifies
-to determine
-if this species is “owned”
-also happens to be used for encrypting the save,
-thus causing the corruption.
-
-This corruption has a 50% chance of occurring,
-however it also has a 50% chance of fixing itself
-with each subsequent egg hatch.
-Thus you can simply hatch another 0x0611 to undo the corruption.
-You can save before hatching 0x0611
-and then reset if the corruption remains.
-
-A more reliable way
-of avoiding the corruption
-is to simply not use species 0x0611
-for executing ACE codes.
-Instead you can use the many number of Emerald ACE guides such as
-[this one](https://gist.github.com/claydolwithexplosion/017f1784deebcd118b61d3ad917edb3c)
-or [this one](https://e-sh4rk.github.io/ACE3/)
-that will set you up with a stable species
-that does not rely on the egg hatch mechanic
-(avoiding the issue
-of “registering” 0x0611 in the Pokédex).
-Though if you already have the corruption
-prior to setting up stable ACE
-and none of the 0x0611 executions have fixed up the corruption,
-then try the following code with your new stable ACE species.
-
-For console or new emulators:
-
-```
-Box 1: W ? U n m B . o [W?UnmB.o]
-Box 2: A A A Y … Q n   [AAAY…Qn]
-Box 3: A A , … U m     [AA,…Um]
-Box 4: A C P f m       [ACPfm]
-Box 5: T Q B F C P P m [TQBFCPPm]
-Box 6: R j o D Y J m ? [RjoDYJm?]
-Box 7: B n             [Bn]
-```
-
-For old emulators:
-
-```
-Box 1: W ? U n m B . o [W?UnmB.o]
-Box 2: A A A Y … Q n   [AAAY…Qn]
-Box 3: A A / … U m     [AA/…Um]
-Box 4: A … Q f m       [A…Qfm]
-Box 5: T Q B F … Q P m [TQBF…QPm]
-Box 6: R j o D Y J m ? [RjoDYJm?]
-Box 7: B n             [Bn]
-```
-
-<details class="admonition note" markdown="block">
-
-<summary class="admonition-title">How exactly does the corruption occur?</summary>
-
-The savefile has two arrays of flags
-that are used for keeping track of Pokémon species for the Pokédex.
-One tracks whether a Pokémon species has been owned by the player before,
-while the other tracks whether a Pokémon has been seen by the player before.
-
-The arrays are indexed using a Pokémon’s national Pokédex number
-and the number of flags allocated to each array
-is the number of valid Pokémon species[^2] in the game.
-This system works well for valid Pokémon species,
-but works less great for invalid Pokémon species.
-
-On the surface,
-you might think that glitch species 0x0611
-has the Pokédex number of 3021
-or some other number nearby.
-However the game actually pulls its Pokédex number
-from some other place in the game data
-which is indexed using the Pokémon’s internal index number.
-From there it gets the Pokédex number of 33845
-which is a large value that would place the corresponding flags
-for the species in a place
-far outside the bounds
-from the either of the Pokédex arrays.
-
-In this case the owned flags
-for species 33845 would be located on bit 20
-of the save’s encryption key
-which is used to encrypt the bag, money, miscellaneous data on the trainer card etc.
-The encryption key also changes regularly,
-and on some encryption keys,
-the game sees that species 0x0351 has been owned by the player before
-and leaves the flag as is,
-causing no corruption to occur (or leave the corruption as is).
-On saves with the corruption already,
-the changing encryption key can also unset the owned flag
-and on the next egg hatch,
-the game thinks that
-the player has never owned species 33845
-and sets the owned flags for it again,
-effectively undoing the corruption.
-
-This issue affects all glitch species with
-a Pokédex number greater than 412,
-and occurs on in these cases (not a complete list of cases):
-
-*   Seeing them in a battle
-*   Catching them in a wild battle
-*   Hatching an egg containing the glitch species
-*   Evolving a Pokémon into one of these glitch species
-
-[^2]:
-    Technically,
-    it is slightly more than needed
-    due to the constant that is used
-    for calculating the array size accounting
-    for what were the Unown forms
-    in their old positions within the internal species list.
-    [Source](https://github.com/pret/pokeemerald/blob/c5bbaeab5d2469a12dd323021328f08c0d45f98b/include/global.h#L145)
-
-</details>
-
-## Acknowledgements
-
-*   claydolwithexplosion (Mettrich) created the remedy code
-    for the 0x0611 trainer card corruption.
