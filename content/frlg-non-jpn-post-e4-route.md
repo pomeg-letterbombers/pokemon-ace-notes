@@ -137,6 +137,15 @@ If you see this, that means you have successfully set up ACE! Continue reading t
 
 ![The Pokémon PC interface with the cursor hovering over a question mark. The black and white circled question mark has an unintelligible name, is male, and level 100.](assets/images/frlg/getting-started/non-jpn-ace/0351-in-box.png)
 
+<div class="admonition note" markdown="block">
+<p class="admonition-title">Note</p>
+
+The glitch Pokémon’s icon may not appear exactly as shown in the screenshots, this is normal.
+Glitch Pokémon in FireRed and LeafGreen will usually appear either as another Pokémon in the boxes with a different color palette, or as a question mark.
+More information about this can be found at [this FAQ](frlg-faq.md#the-glitch-pokémon-has-a-different-box-sprite).
+
+</div>
+
 ## Appendix
 
 ### How to trigger ACE
