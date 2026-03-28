@@ -16,6 +16,7 @@ title: "FAQ and Troubleshooting"
     +   [Using a fast (de)cloner glitch Pokémon to delete Pokémon](../general-faq.md#using-a-fast-decloner-glitch-pokémon-to-delete-pokémon)
     +   [Using group selection to clear invisible bad eggs](../general-faq.md#using-group-selection-to-clear-invisible-bad-eggs)
     +   [Using group selection to mass clear invisible bad eggs and ghost data](../general-faq.md#using-group-selection-to-mass-clear-invisible-bad-eggs-and-ghost-data)
+*   [My Pokémon/Egg is disappearing when I move them](../general-faq.md#my-pokémonegg-is-disappearing-when-i-move-them)
 *   [How can I make my own ACE code?](../general-faq.md#how-can-i-make-my-own-ace-code)
 
 ## Pokémon FireRed and LeafGreen
