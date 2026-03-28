@@ -24,6 +24,7 @@ title: "FAQ and Troubleshooting"
 *   [The 0x0351 mail did not work](../frlg-faq.md#the-0x0351-mail-did-not-work)
 *   [My HOCK turned into a bad egg](../frlg-faq.md#my-hock-turned-into-a-bad-egg)
 *   [Bad eggs are appearing in Box 13](../frlg-faq.md#bad-eggs-are-appearing-in-box-13)
+*   [The glitch Pokémon has a different box sprite](../frlg-faq.md#the-glitch-pokémon-has-a-different-icon)
 *   [I am playing on the Switch rerelease and the codes do not work!](../frlg-faq.md#i-am-playing-on-the-switch-rerelease-and-the-codes-do-not-work)
     +   [Codes that will need a specific Switch rerelease version](../frlg-faq.md#codes-that-will-need-a-specific-switch-rerelease-version)
     +   [Code adjustments needed for Switch rereleases](../frlg-faq.md#code-adjustments-needed-for-switch-rereleases)

@@ -60,6 +60,17 @@ minimise the opportunities of running the game code that performs the
 unwanted corruptions to Box 13. For this prevention technique to work,
 you should store 0x0351 in a box other than Box 13 or Box 14.
 
+## The glitch Pokémon has a different box sprite
+
+That is expected when viewing these glitch Pokémon in FireRed and LeafGreen.
+As long as the glitch Pokémon has the correct species name, then you can
+be sure that you have the correct glitch Pokémon.
+
+Glitch Pokémon will usually steal the box sprite of some other Pokémon
+sprite within the same box or the party. They can usually still be
+identified by the sprite appearing with the wrong colors. At other times
+they may appear with the question mark sprite.
+
 ## I am playing on the Switch rerelease and the codes do not work!
 
 As of 1st March 2026, these Switch rereleases are very recent and have many odd quirks that makes some existing codes for the original FireRed and LeafGreen incompatible.
