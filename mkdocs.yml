@@ -29,7 +29,9 @@ nav:
       - "frlg-hex-writer.md"
   - "FAQ":
     - "faq/index.md"
-    - "general-faq.md"
+    - "General": "general-faq.md"
+    - "FireRed and LeafGreen": "frlg-faq.md"
+    - "Emerald": "emerald-faq.md"
   - "Technical Documentation":
     - "frlg-hexwriter-setup-explanation.md"
     - "frlg-grab-ace-exit.md"
