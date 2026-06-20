@@ -26,6 +26,7 @@ nav:
       - "frlg-box-14-exit-biosless.md"
       - "frlg-exit-code-bootstrap.md"
     - "Complex Payloads":
+      - "frlg-weldr.md"
       - "frlg-hex-writer.md"
   - "FAQ":
     - "faq/index.md"
