@@ -333,7 +333,7 @@ Box  3:	A A T S , m    	[AATS,m]
 Box  4:	A / F Q m      	[A/FQm]
 Box  5:	D F Q m        	[DFQm]
 Box  6:	_ F o H I o o r	[ FoHIoor]
-Box  7:	x n            	[xn
+Box  7:	x n            	[xn]
 Box 8+:	(anything)
 ```
 

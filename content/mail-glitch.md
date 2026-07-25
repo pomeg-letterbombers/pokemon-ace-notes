@@ -163,161 +163,161 @@ Below is a table of where each Mail word corresponds to:
 
 === "Non-Japanese"
 
-	<table>
-	<thead>
-		<tr>
-			<th scope="col">Word field</th>
-			<th scope="col">PC Box Slot</th>
-			<th scope="col">Offset</th>
-			<th scope="col">Field</th>
-			<th scope="col">Field offset</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x00</td>
-			<td>Personality value</td>
-			<td>0x00</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x02</td>
-			<td>Personality value</td>
-			<td>0x02</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x04</td>
-			<td>OT ID</td>
-			<td>0x00</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x06</td>
-			<td>OT ID</td>
-			<td>0x02</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x08</td>
-			<td>OT ID</td>
-			<td>0x00</td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x0A</td>
-			<td>OT ID</td>
-			<td>0x02</td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x0C</td>
-			<td>OT ID</td>
-			<td>0x04</td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x0E</td>
-			<td>OT ID</td>
-			<td>0x06</td>
-		</tr>
-		<tr>
-			<td>9</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x10</td>
-			<td>OT ID</td>
-			<td>0x08</td>
-		</tr>
-	</tbody>
-	</table>
+    <table>
+    <thead>
+        <tr>
+            <th scope="col">Word field</th>
+            <th scope="col">PC Box Slot</th>
+            <th scope="col">Offset</th>
+            <th scope="col">Field</th>
+            <th scope="col">Field offset</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x00</td>
+            <td>Personality value</td>
+            <td>0x00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x02</td>
+            <td>Personality value</td>
+            <td>0x02</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x04</td>
+            <td>OT ID</td>
+            <td>0x00</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x06</td>
+            <td>OT ID</td>
+            <td>0x02</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x08</td>
+            <td>OT ID</td>
+            <td>0x00</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x0A</td>
+            <td>OT ID</td>
+            <td>0x02</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x0C</td>
+            <td>OT ID</td>
+            <td>0x04</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x0E</td>
+            <td>OT ID</td>
+            <td>0x06</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x10</td>
+            <td>OT ID</td>
+            <td>0x08</td>
+        </tr>
+    </tbody>
+    </table>
 
 === "Japanese"
 
-	<table>
-	<thead>
-		<tr>
-			<th scope="col">Word field</th>
-			<th scope="col">PC Box Slot</th>
-			<th scope="col">Offset</th>
-			<th scope="col">Field</th>
-			<th scope="col">Field offset</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x28</td>
-			<td>1st Substructure</td>
-			<td>0x08</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x2A</td>
-			<td>1st Substructure</td>
-			<td>0x0A</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x2C</td>
-			<td>2nd Substructure</td>
-			<td>0x00</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x2E</td>
-			<td>2nd Substructure</td>
-			<td>0x02</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x30</td>
-			<td>2nd Substructure</td>
-			<td>0x04</td>
-		</tr>
-		<tr>
-			<td>6</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x32</td>
-			<td>2nd Substructure</td>
-			<td>0x06</td>
-		</tr>
-		<tr>
-			<td>7</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x34</td>
-			<td>2nd Substructure</td>
-			<td>0x08</td>
-		</tr>
-		<tr>
-			<td>8</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x36</td>
-			<td>2nd Substructure</td>
-			<td>0x0A</td>
-		</tr>
-		<tr>
-			<td>9</td>
-			<td>Box 3, Slot 1</td>
-			<td>0x38</td>
-			<td>3rd Substructure</td>
-			<td>0x00</td>
-		</tr>
-	</tbody>
-	</table>
+    <table>
+    <thead>
+        <tr>
+            <th scope="col">Word field</th>
+            <th scope="col">PC Box Slot</th>
+            <th scope="col">Offset</th>
+            <th scope="col">Field</th>
+            <th scope="col">Field offset</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x28</td>
+            <td>1st Substructure</td>
+            <td>0x08</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x2A</td>
+            <td>1st Substructure</td>
+            <td>0x0A</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x2C</td>
+            <td>2nd Substructure</td>
+            <td>0x00</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x2E</td>
+            <td>2nd Substructure</td>
+            <td>0x02</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x30</td>
+            <td>2nd Substructure</td>
+            <td>0x04</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x32</td>
+            <td>2nd Substructure</td>
+            <td>0x06</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x34</td>
+            <td>2nd Substructure</td>
+            <td>0x08</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x36</td>
+            <td>2nd Substructure</td>
+            <td>0x0A</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Box 3, Slot 1</td>
+            <td>0x38</td>
+            <td>3rd Substructure</td>
+            <td>0x00</td>
+        </tr>
+    </tbody>
+    </table>
 
 As word slots occupied with <samp>???</samp> or <samp>(?)</samp> are not considered to be empty, you can also confirm the initial glitched message as is, and the data in Box 3, Slot 1 will be left unmodified.
 
@@ -442,7 +442,7 @@ Make sure that no party member is holding Mail, and then enter the following box
 
 ```
 Box 1: 2 B U n n F . o [2BUnnF.o]
-Box 2: A A A A T ! q   [JooAT!q] ← replace 4th 'A' with 'C' for inaccurate emulators
+Box 2: A A A A T ! q   [AAAAT!q] ← replace 4th 'A' with 'C' for inaccurate emulators
 Box 3: A A ♂ H Q m H 2 [AA♂HQmH2]
 Box 4: o , J Q m       [o,JQm]
 Box 5: B L Q m … O Q m [BLQm…OQm]
